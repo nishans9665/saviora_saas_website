@@ -102,13 +102,11 @@ export function Navbar() {
               </Link>
             ))}
             <hr className="border-slate-200 dark:border-slate-800" />
-            <Link
-              href="/login"
-              className="text-base font-medium text-slate-600 hover:text-primary-500 dark:text-slate-300"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Log in
-            </Link>
+            <Button asChild variant="outline" className="w-full justify-center">
+              <Link href="/login" onClick={() => setMobileMenuOpen(false)}>
+                Log in
+              </Link>
+            </Button>
             <Button asChild className="w-full justify-center">
               <Link href="/register" onClick={() => setMobileMenuOpen(false)}>
                 Get Started Free
