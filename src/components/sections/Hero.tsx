@@ -10,9 +10,33 @@ export function Hero() {
     <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
       {/* Background Gradients */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[800px] max-w-[1200px] opacity-30 pointer-events-none">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary-500 rounded-full mix-blend-multiply filter blur-3xl animate-blob"></div>
-        <div className="absolute top-0 right-1/4 w-96 h-96 bg-accent-500 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000"></div>
-        <div className="absolute -bottom-8 left-1/3 w-96 h-96 bg-emerald-400 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-4000"></div>
+        <motion.div 
+          className="absolute top-0 left-1/4 w-96 h-96 bg-primary-500 rounded-full mix-blend-multiply filter blur-3xl"
+          animate={{
+            x: [0, 50, -20, 0],
+            y: [0, -50, 20, 0],
+            scale: [1, 1.1, 0.9, 1],
+          }}
+          transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
+        />
+        <motion.div 
+          className="absolute top-0 right-1/4 w-96 h-96 bg-accent-500 rounded-full mix-blend-multiply filter blur-3xl"
+          animate={{
+            x: [0, -50, 30, 0],
+            y: [0, 40, -30, 0],
+            scale: [1, 0.9, 1.1, 1],
+          }}
+          transition={{ duration: 12, repeat: Infinity, ease: "linear" }}
+        />
+        <motion.div 
+          className="absolute -bottom-8 left-1/3 w-96 h-96 bg-emerald-400 rounded-full mix-blend-multiply filter blur-3xl"
+          animate={{
+            x: [0, 30, -50, 0],
+            y: [0, 50, -20, 0],
+            scale: [1, 1.2, 0.9, 1],
+          }}
+          transition={{ duration: 14, repeat: Infinity, ease: "linear" }}
+        />
       </div>
 
       <div className="container mx-auto px-4 md:px-6 relative z-10">
