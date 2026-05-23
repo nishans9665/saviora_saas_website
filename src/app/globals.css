@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary-400: #4ADE80;
+  --color-primary-500: #22C55E;
+  --color-primary-600: #16A34A;
+  
+  --color-accent-400: #FB923C;
+  --color-accent-500: #F97316;
+
+  --color-neutral-50: #F8FAFC;
+  --color-neutral-900: #1E293B;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  
+  --font-sans: var(--font-inter);
+}
+
+:root {
+  --background: #F8FAFC;
+  --foreground: #1E293B;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0f172a;
+    --foreground: #F8FAFC;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* Glassmorphism utilities */
+@layer utilities {
+  .glass-panel {
+    @apply bg-white/70 backdrop-blur-md border border-white/20 shadow-lg dark:bg-black/40 dark:border-white/10;
+  }
+
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-sm border border-slate-200/50 shadow-sm dark:bg-slate-900/80 dark:border-slate-800/50 hover:shadow-md transition-all duration-300;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary-600 to-primary-400 dark:from-primary-400 dark:to-primary-500;
+  }
+
+  .text-gradient-accent {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-accent-500 to-accent-400;
+  }
+}
