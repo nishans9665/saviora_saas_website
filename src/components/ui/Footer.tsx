@@ -16,7 +16,7 @@ export function Footer() {
               <Image src={logoSaviora} alt="Saviora" className="h-14 w-auto" />
             </Link>
             <p className="text-slate-500 dark:text-slate-400 max-w-sm mb-6">
-              Track your income, manage expenses, create budgets, and grow your savings with a modern AI-powered personal finance platform.
+              Take control of your money with smart budgeting, expense tracking, savings goals, and financial insights - all in one secure platform.
             </p>
             <div className="flex items-center gap-4">
               <Link href="#" className="text-slate-400 hover:text-primary-500 transition-colors">
