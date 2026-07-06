@@ -14,7 +14,7 @@ const siteUrl = "https://saviora.app";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
 
-  title: {
+  title: { 
     default: "Saviora - Grow Your Financial Future",
     template: "%s | Saviora",
   },
