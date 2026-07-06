@@ -9,7 +9,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "Saviora - Grow Your Financial Future",
-  description: "Track your income, manage expenses, create budgets, and grow your savings with a modern AI-powered personal finance platform.",
+  description: "Saviora is a modern personal finance platform that helps you track income, manage expenses, create budgets, achieve savings goals, and build a stronger financial future.",
 };
 
 export default function RootLayout({

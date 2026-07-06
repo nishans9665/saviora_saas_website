@@ -67,7 +67,7 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            Track your income, manage expenses, create budgets, and grow your savings with a modern AI-powered personal finance platform.
+            Take control of your money with smart budgeting, expense tracking, savings goals, and financial insights - all in one secure platform.
           </motion.p>
 
           <motion.div
