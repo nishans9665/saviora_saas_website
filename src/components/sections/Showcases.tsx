@@ -20,7 +20,7 @@ export function Showcases() {
         
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">
-            Everything in <span className="text-gradient">one place</span>
+            Everything You Need, <span className="text-gradient">All in One Place</span>
           </h2>
           <p className="text-lg text-slate-600 dark:text-slate-400">
             From savings goals to expense breakdowns and financial health monitoring, Saviora has you covered.

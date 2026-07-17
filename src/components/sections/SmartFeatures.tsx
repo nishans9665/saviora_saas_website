@@ -15,7 +15,7 @@ export function SmartFeatures() {
             <div className="space-y-8">
               <div>
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent-50 dark:bg-accent-900/30 text-accent-600 dark:text-accent-400 text-sm font-medium mb-6">
-                  <Sparkles className="w-4 h-4" /> Smart Financial Insights
+                  <Sparkles className="w-4 h-4" /> Smart Assistant Insights
                 </div>
                 <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">
                   Smarter Insights for Better <span className="text-gradient-accent">Financial Health</span>

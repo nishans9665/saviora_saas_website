@@ -56,7 +56,7 @@ export function Features() {
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">
-            Everything you need to <span className="text-gradient">manage your wealth</span>
+            Everything You Need to Master <span className="text-gradient">Your Money</span>
           </h2>
           <p className="text-lg text-slate-600 dark:text-slate-400">
             Saviora provides a comprehensive suite of tools designed to give you complete clarity and control over your financial life.

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { Check, Minus, ArrowRight, Shield, Zap, Globe, Lock, RefreshCw, Star } from "lucide-react";
 import { Button } from "@/components/ui/Button";
@@ -13,7 +13,7 @@ const plans = [
     tagline: "Perfect for trying every Saviora feature.",
     price: "$0",
     period: "",
-    subLabel: "30 Days · No Credit Card Required",
+    subLabel: "30-Day Free Trial · No Credit Card Required",
     buttonText: "Start Free Trial",
     buttonVariant: "outline" as const,
     recommended: false,
@@ -65,10 +65,10 @@ const plans = [
     tagline: "Best value for long-term planning.",
     price: "$29.99",
     period: "/year",
-    subLabel: "Only $2.50/month · Save 16%",
+    subLabel: "Only $2.50/month • Save 16%",
     buttonText: "Start Yearly Plan",
     buttonVariant: "outline" as const,
-    recommended: false,
+    recommended: false, 
     badge: "Best Value",
     features: [
       "Everything in Pro Monthly",
@@ -132,7 +132,6 @@ function CheckCell({ value }: { value: boolean }) {
 }
 
 export function Pricing() {
-  const [tableOpen, setTableOpen] = useState(false);
 
   return (
     <section className="py-24 relative overflow-hidden" id="pricing">
@@ -335,65 +334,59 @@ export function Pricing() {
         {/* ── FEATURE COMPARISON TABLE ──────────────────── */}
         <AnimatedSection className="mb-20">
           <div className="max-w-4xl mx-auto">
-            <button
-              onClick={() => setTableOpen((o) => !o)}
-              className="flex items-center gap-2 mx-auto text-sm font-semibold text-primary-500 hover:text-primary-600 transition-colors mb-6"
-            >
-              <span className={`transition-transform duration-300 ${tableOpen ? "rotate-90" : ""}`}>▶</span>
-              {tableOpen ? "Hide" : "Show"} Full Feature Comparison
-            </button>
+            <h3 className="text-center text-xl font-bold text-slate-900 dark:text-white mb-8">
+              Full Feature Comparison
+            </h3>
 
-            {tableOpen && (
-              <div className="rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-lg">
-                <div className="overflow-x-auto">
-                  <table className="w-full text-sm">
-                    <thead>
-                      <tr className="bg-slate-50 dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800">
-                        <th className="text-left py-4 px-6 font-semibold text-slate-700 dark:text-slate-300 w-1/2">
-                          Feature
-                        </th>
-                        <th className="text-center py-4 px-4 font-semibold text-slate-600 dark:text-slate-400 w-1/6">
-                          🟢 Free Trial
-                        </th>
-                        <th className="text-center py-4 px-4 font-semibold text-primary-500 w-1/6 bg-primary-500/5">
-                          ⭐ Pro Monthly
-                        </th>
-                        <th className="text-center py-4 px-4 font-semibold text-amber-500 dark:text-amber-400 w-1/6">
-                          💎 Pro Yearly
-                        </th>
+            <div className="rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-lg">
+              <div className="overflow-x-auto">
+                <table className="w-full text-sm">
+                  <thead>
+                    <tr className="bg-slate-50 dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800">
+                      <th className="text-left py-4 px-6 font-semibold text-slate-700 dark:text-slate-300 w-1/2">
+                        Feature
+                      </th>
+                      <th className="text-center py-4 px-4 font-semibold text-slate-600 dark:text-slate-400 w-1/6">
+                        🟢 Free Trial
+                      </th>
+                      <th className="text-center py-4 px-4 font-semibold text-primary-500 w-1/6 bg-primary-500/5">
+                        ⭐ Pro Monthly
+                      </th>
+                      <th className="text-center py-4 px-4 font-semibold text-amber-500 dark:text-amber-400 w-1/6">
+                        💎 Pro Yearly
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-slate-100 dark:divide-slate-800/60">
+                    {comparisonFeatures.map((row, i) => (
+                      <tr
+                        key={i}
+                        className={`hover:bg-slate-50 dark:hover:bg-slate-900/40 transition-colors ${
+                          i % 2 === 0 ? "" : "bg-slate-50/50 dark:bg-slate-900/20"
+                        }`}
+                      >
+                        <td className="py-3 px-6 font-medium text-slate-700 dark:text-slate-300">
+                          {row.name}
+                        </td>
+                        <CheckCell value={row.freeTrial} />
+                        <td className="bg-primary-500/[0.03] text-center py-3 px-4">
+                          {row.proMonthly ? (
+                            <span className="inline-flex items-center justify-center w-7 h-7 rounded-full bg-primary-500/15">
+                              <Check className="w-4 h-4 text-primary-500" />
+                            </span>
+                          ) : (
+                            <span className="inline-flex items-center justify-center w-7 h-7">
+                              <Minus className="w-4 h-4 text-slate-300 dark:text-slate-600" />
+                            </span>
+                          )}
+                        </td>
+                        <CheckCell value={row.proYearly} />
                       </tr>
-                    </thead>
-                    <tbody className="divide-y divide-slate-100 dark:divide-slate-800/60">
-                      {comparisonFeatures.map((row, i) => (
-                        <tr
-                          key={i}
-                          className={`hover:bg-slate-50 dark:hover:bg-slate-900/40 transition-colors ${
-                            i % 2 === 0 ? "" : "bg-slate-50/50 dark:bg-slate-900/20"
-                          }`}
-                        >
-                          <td className="py-3 px-6 font-medium text-slate-700 dark:text-slate-300">
-                            {row.name}
-                          </td>
-                          <CheckCell value={row.freeTrial} />
-                          <td className="bg-primary-500/[0.03] text-center py-3 px-4">
-                            {row.proMonthly ? (
-                              <span className="inline-flex items-center justify-center w-7 h-7 rounded-full bg-primary-500/15">
-                                <Check className="w-4 h-4 text-primary-500" />
-                              </span>
-                            ) : (
-                              <span className="inline-flex items-center justify-center w-7 h-7">
-                                <Minus className="w-4 h-4 text-slate-300 dark:text-slate-600" />
-                              </span>
-                            )}
-                          </td>
-                          <CheckCell value={row.proYearly} />
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
+                    ))}
+                  </tbody>
+                </table>
               </div>
-            )}
+            </div>
           </div>
         </AnimatedSection>
 
@@ -404,8 +397,8 @@ export function Pricing() {
               <div className="absolute -top-20 left-1/2 -translate-x-1/2 w-72 h-72 bg-primary-500/20 rounded-full blur-[80px] pointer-events-none" />
               <div className="relative z-10">
                 <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 leading-tight">
-                  Ready to take control of <br className="hidden md:block" />
-                  <span className="text-gradient">your finances?</span>
+                  Ready to Build a Better <br className="hidden md:block" />
+                  <span className="text-gradient">Financial Future?</span>
                 </h2>
                 <p className="text-slate-400 mb-8 text-base">
                   Join thousands of users building better financial habits with Saviora.
@@ -414,7 +407,7 @@ export function Pricing() {
                   size="lg"
                   className="bg-primary-500 hover:bg-primary-600 text-white border-none shadow-xl shadow-primary-500/30 hover:shadow-primary-500/50 px-10 py-4 text-base font-semibold rounded-2xl transition-all duration-200"
                 >
-                  Start Free Trial
+                  Start Free for 30 Days
                   <ArrowRight className="w-5 h-5 ml-2 inline" />
                 </Button>
                 <p className="text-xs text-slate-500 mt-4">
