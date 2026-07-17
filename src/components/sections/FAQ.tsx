@@ -7,24 +7,44 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const faqs = [
   {
-    question: "Is Saviora secure?",
-    answer: "Yes, security is our top priority. We use bank-level 256-bit AES encryption to protect your data. We never sell your data to third parties, and we have strict access controls in place."
+    question: "What is Saviora?",
+    answer: "Saviora is a modern personal finance platform that helps you track income, manage expenses, create monthly budgets, achieve savings goals, and gain valuable financial insights - all in one secure and easy-to-use application."
   },
   {
-    question: "Can I use multiple currencies?",
-    answer: "Absolutely! Saviora supports over 50 global currencies with real-time exchange rates, making it perfect for international users, expats, and frequent travelers."
+    question: "Is Saviora free to use?",
+    answer: "Yes. Every new user receives a 30-day free trial with full access to all premium features. After your trial ends, you can continue using Saviora by subscribing to the Monthly or Yearly Pro plan."
   },
   {
-    question: "Is there a mobile app?",
-    answer: "Yes, Saviora is available on both iOS and Android. Your data syncs instantly across all your devices, whether you're using our web dashboard or mobile app."
+    question: "Can I manage multiple currencies?",
+    answer: "Yes. Saviora supports multiple currencies and country-specific settings, making it easy to manage your finances wherever you are in the world."
+  },
+  {
+    question: "Is my financial data secure?",
+    answer: "Absolutely. Your financial information is protected using secure authentication, encrypted communication (HTTPS), and industry-standard security practices. Only you can access your personal financial data."
   },
   {
     question: "Can I export my financial reports?",
-    answer: "Yes, Pro and Business plan users can export detailed financial reports in CSV, PDF, and Excel formats, making tax season and accountant meetings a breeze."
+    answer: "Yes. You can export your income, expenses, budgets, savings goals, and financial reports in PDF and CSV formats for personal records, accounting, or tax preparation."
   },
   {
-    question: "Is my financial data protected?",
-    answer: "We employ industry-leading security practices. We connect to your banks using secure, read-only connections via trusted aggregators like Plaid, meaning we can't move your money, and we never store your banking credentials."
+    question: "Can I set monthly budgets and savings goals?",
+    answer: "Yes. Saviora allows you to create personalized monthly budgets, track category spending, monitor your progress, and set savings goals with visual progress indicators."
+  },
+  {
+    question: "Can I access Saviora on my phone?",
+    answer: "Yes. Saviora is fully responsive and works seamlessly on desktops, tablets, and mobile browsers. A dedicated mobile application is currently under development and will be available soon."
+  },
+  {
+    question: "What happens when my free trial ends?",
+    answer: "Your account and financial data remain safe. To continue creating and managing new income, expenses, budgets, and savings goals, simply upgrade to a Saviora Pro subscription."
+  },
+  {
+    question: "What happens if I cancel my subscription?",
+    answer: "You can cancel your subscription at any time. Your plan will remain active until the end of your billing cycle, after which you'll be downgraded to the Free plan. All your historical data will be securely preserved for future access."
+  },
+  {
+    question: "How do I contact support?",
+    answer: "Need assistance? Our Saviora Support Team is ready to help. Contact us by emailing support@saviora.app or submit a support ticket through the in-app Support Center. You can track your ticket status, receive updates, and communicate directly with our support team. We strive to respond to all support requests within 24 hours during business days."
   }
 ];
 

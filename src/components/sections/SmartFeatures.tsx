@@ -15,13 +15,13 @@ export function SmartFeatures() {
             <div className="space-y-8">
               <div>
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent-50 dark:bg-accent-900/30 text-accent-600 dark:text-accent-400 text-sm font-medium mb-6">
-                  <Sparkles className="w-4 h-4" /> AI-Powered
+                  <Sparkles className="w-4 h-4" /> Smart Financial Insights
                 </div>
                 <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">
-                  Smarter insights for better <span className="text-gradient-accent">financial health</span>
+                  Smarter Insights for Better <span className="text-gradient-accent">Financial Health</span>
                 </h2>
                 <p className="text-lg text-slate-600 dark:text-slate-400">
-                  Our advanced AI analyzes your spending patterns, identifies areas where you can save, and provides personalized recommendations to grow your wealth.
+                  Gain a clear understanding of your finances with spending analysis, budget tracking, savings progress, and detailed reports. Monitor your financial health and make informed decisions to grow your financial future.
                 </p>
               </div>
 
@@ -53,7 +53,7 @@ export function SmartFeatures() {
               {/* Mockup Card */}
               <div className="glass-card rounded-2xl p-8 border-t border-l border-white/40 dark:border-white/10 shadow-2xl relative z-10">
                 <div className="flex justify-between items-center mb-8">
-                  <h3 className="font-semibold text-slate-900 dark:text-white">AI Assistant Insights</h3>
+                  <h3 className="font-semibold text-slate-900 dark:text-white">Financial Insights</h3>
                   <Sparkles className="w-5 h-5 text-accent-500" />
                 </div>
                 

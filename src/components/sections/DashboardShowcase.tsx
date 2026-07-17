@@ -31,10 +31,10 @@ export function DashboardShowcase() {
       <div className="container mx-auto px-4 md:px-6">
         <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">
-            A beautiful bird&apos;s-eye view of your <span className="text-gradient">net worth</span>
+            Watch Your Wealth Grow, One Smart <span className="text-gradient">Decision at a Time</span>
           </h2>
           <p className="text-lg text-slate-600 dark:text-slate-400">
-            Monitor your total balance, recent transactions, and spending analytics from a beautifully crafted dashboard.
+            From daily spending to long - term savings, Saviora transforms your financial data into clear, actionable insights - helping you stay in control and grow your financial future with confidence.
           </p>
         </AnimatedSection>
 

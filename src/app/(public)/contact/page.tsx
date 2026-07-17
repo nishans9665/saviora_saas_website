@@ -38,7 +38,7 @@ export default function ContactPage() {
               <MessageSquare className="w-4 h-4" /> Get in touch
             </span>
             <h1 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6">
-              Let's <span className="text-gradient">Connect</span>
+              Let&apos;s <span className="text-gradient">Connect</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-600 dark:text-slate-400">
               Have questions about Saviora? Want to explore enterprise options? Our team is here to help you grow your financial future.
