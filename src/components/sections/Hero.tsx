@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, Play, LineChart, PieChart, ShieldCheck } from "lucide-react";
+import { ArrowRight, Play, LineChart, PieChart, ShieldCheck, Rocket } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 
 export function Hero() {
@@ -46,8 +46,9 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <span className="inline-block py-1 px-3 rounded-full bg-primary-50 dark:bg-primary-900/30 text-primary-600 dark:text-primary-400 text-sm font-medium mb-6 border border-primary-100 dark:border-primary-800/50">
-              Introducing Saviora AI Insights 🚀
+            <span className="inline-flex items-center gap-2 py-1 px-3 rounded-full bg-primary-50 dark:bg-primary-900/30 text-primary-600 dark:text-primary-400 text-sm font-medium mb-6 border border-accent-900/30 dark:border-accent-500/20">
+              <Rocket className="w-4 h-4 animate-bounce-slow" />
+              <span>Introducing a Smarter Way to Manage Money</span>
             </span>
           </motion.div>
 
