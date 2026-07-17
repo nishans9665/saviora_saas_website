@@ -2,7 +2,7 @@
 
 import React from "react";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
-import { Check, Minus, ArrowRight, Shield, Zap, Globe, Lock, RefreshCw, Star } from "lucide-react";
+import { Check, Minus, ArrowRight, Shield, Zap, Globe, Lock, RefreshCw, Star, Circle, Gem } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 
 const plans = [
@@ -347,13 +347,22 @@ export function Pricing() {
                         Feature
                       </th>
                       <th className="text-center py-4 px-4 font-semibold text-slate-600 dark:text-slate-400 w-1/6">
-                        🟢 Free Trial
+                        <div className="flex items-center justify-center gap-1.5">
+                          <Circle className="w-3 h-3 fill-emerald-500 text-emerald-500" />
+                          <span>Free Trial</span>
+                        </div>
                       </th>
                       <th className="text-center py-4 px-4 font-semibold text-primary-500 w-1/6 bg-primary-500/5">
-                        ⭐ Pro Monthly
+                        <div className="flex items-center justify-center gap-1.5">
+                          <Star className="w-3 h-3 fill-amber-500 text-amber-500" />
+                          <span>Pro Monthly</span>
+                        </div>
                       </th>
                       <th className="text-center py-4 px-4 font-semibold text-amber-500 dark:text-amber-400 w-1/6">
-                        💎 Pro Yearly
+                        <div className="flex items-center justify-center gap-1.5">
+                          <Gem className="w-3 h-3 fill-blue-500 text-blue-500" />
+                          <span>Pro Yearly</span>
+                        </div>
                       </th>
                     </tr>
                   </thead>
