@@ -61,6 +61,6 @@ body {
 /* Limit maximum container width on desktop screens to keep layout aligned */
 @media (min-width: 1200px) {
   .container {
-    max-width: 1200px !important;
+    max-width: 1290px !important;
   }
 }
