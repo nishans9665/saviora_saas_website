@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 
 export function SmartFeatures() {
   return (
-    <section className="py-24 relative">
+    <section className="py-24 relative overflow-hidden">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           

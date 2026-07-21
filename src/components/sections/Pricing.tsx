@@ -402,24 +402,24 @@ export function Pricing() {
         {/* ── BOTTOM CTA ────────────────────────────────── */}
         <AnimatedSection>
           <div className="relative max-w-3xl mx-auto rounded-3xl overflow-hidden">
-            <div className="bg-slate-950 dark:bg-slate-900 border border-slate-800 rounded-3xl p-12 text-center relative overflow-hidden">
+            <div className="bg-slate-950 dark:bg-slate-900 border border-slate-800 rounded-3xl px-6 py-10 sm:p-12 text-center relative overflow-hidden">
               <div className="absolute -top-20 left-1/2 -translate-x-1/2 w-72 h-72 bg-primary-500/20 rounded-full blur-[80px] pointer-events-none" />
               <div className="relative z-10">
-                <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 leading-tight">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 leading-tight">
                   Ready to Build a Better <br className="hidden md:block" />
                   <span className="text-gradient">Financial Future?</span>
                 </h2>
-                <p className="text-slate-400 mb-8 text-base">
+                <p className="text-slate-400 mb-8 text-sm sm:text-base">
                   Join thousands of users building better financial habits with Saviora.
                 </p>
                 <Button
                   size="lg"
-                  className="bg-primary-500 hover:bg-primary-600 text-white border-none shadow-xl shadow-primary-500/30 hover:shadow-primary-500/50 px-10 py-4 text-base font-semibold rounded-2xl transition-all duration-200"
+                  className="w-full sm:w-auto bg-primary-500 hover:bg-primary-600 text-white border-none shadow-xl shadow-primary-500/30 hover:shadow-primary-500/50 px-6 sm:px-10 py-3.5 sm:py-4 text-base font-semibold rounded-2xl transition-all duration-200"
                 >
                   Start Free for 30 Days
                   <ArrowRight className="w-5 h-5 ml-2 inline" />
                 </Button>
-                <p className="text-xs text-slate-500 mt-4">
+                <p className="text-[10px] sm:text-xs text-slate-500 mt-4">
                   No credit card required · 30-day full access · Cancel anytime
                 </p>
               </div>
