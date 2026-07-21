@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import logoSaviora from "@/assets/logo/logo-saviora-web.svg";
+import logoSaviora from "@/assets/logo/logo-saviora-web-tag.svg";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();

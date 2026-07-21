@@ -7,7 +7,7 @@ import { Menu, X, ArrowRight } from "lucide-react";
 import { Button } from "./Button";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
-import logoSaviora from "@/assets/logo/logo-saviora-web.svg";
+import logoSaviora from "@/assets/logo/logo-saviora-web-tag.svg";
 
 export function Navbar() {
   const { scrollY } = useScroll();
@@ -45,7 +45,7 @@ export function Navbar() {
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
-          <Image src={logoSaviora} alt="Saviora" className="h-14 w-auto" />
+          <Image src={logoSaviora} alt="Saviora" className="h-15 w-auto" />
         </Link>
 
         {/* Desktop Nav */}
