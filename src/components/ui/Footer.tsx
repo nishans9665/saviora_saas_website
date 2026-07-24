@@ -128,7 +128,7 @@ export function Footer() {
                 <Link href="/terms-and-conditions" className="text-slate-500 hover:text-primary-500 dark:text-slate-400 dark:hover:text-primary-400 transition-colors">Terms & Conditions</Link>
               </li>
               <li>
-                <Link href="/cookies" className="text-slate-500 hover:text-primary-500 dark:text-slate-400 dark:hover:text-primary-400 transition-colors">Cookie Policy</Link>
+                <Link href="/refund-policy" className="text-slate-500 hover:text-primary-500 dark:text-slate-400 dark:hover:text-primary-400 transition-colors">Returns & Refunds Policy</Link>
               </li>
             </ul>
           </div>
