@@ -122,13 +122,13 @@ export function Footer() {
             <h3 className="font-semibold text-slate-900 dark:text-slate-100 mb-4">Legal</h3>
             <ul className="space-y-3">
               <li>
-                <Link href="/privacy" className="text-slate-500 hover:text-primary-500 dark:text-slate-400 dark:hover:text-primary-400 transition-colors">Privacy Policy</Link>
+                <Link href="/privacy-policy" className="text-slate-500 hover:text-primary-500 dark:text-slate-400 dark:hover:text-primary-400 transition-colors">Privacy Policy</Link>
               </li>
               <li>
-                <Link href="/terms" className="text-slate-500 hover:text-primary-500 dark:text-slate-400 dark:hover:text-primary-400 transition-colors">Terms of Service</Link>
+                <Link href="/terms-and-conditions" className="text-slate-500 hover:text-primary-500 dark:text-slate-400 dark:hover:text-primary-400 transition-colors">Terms & Conditions</Link>
               </li>
               <li>
-                <Link href="/cookies" className="text-slate-500 hover:text-primary-500 dark:text-slate-400 dark:hover:text-primary-400 transition-colors">Cookie Policy</Link>
+                <Link href="/refund-policy" className="text-slate-500 hover:text-primary-500 dark:text-slate-400 dark:hover:text-primary-400 transition-colors">Returns & Refunds Policy</Link>
               </li>
             </ul>
           </div>

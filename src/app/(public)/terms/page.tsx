@@ -1,2 +1,5 @@
-import React from 'react';
-export default function Page() { return <div className='p-24 text-center text-2xl font-bold capitalize'>terms Page Stub</div>; }
+import { redirect } from "next/navigation";
+
+export default function TermsPage() {
+  redirect("/terms-and-conditions");
+}
