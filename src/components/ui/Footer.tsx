@@ -9,7 +9,7 @@ export function Footer() {
     const socialLinks = [
       {
         name: "Facebook",
-        href: "#",
+        href: "https://www.facebook.com/savioraglobal/",
         icon: (
           <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
@@ -18,18 +18,18 @@ export function Footer() {
       },
       {
         name: "LinkedIn",
-        href: "#",
+        href: "https://www.linkedin.com/company/savioraofficial/",
         icon: (
           <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-            <rect x="2" y="9" width="4" height="12" />
+            <path d="M2 9h4v12H2z" />
             <circle cx="4" cy="4" r="2" />
           </svg>
         )
       },
       {
         name: "X",
-        href: "#",
+        href: "https://x.com/SavioraOfficial",
         icon: (
           <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
             <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
@@ -63,16 +63,30 @@ export function Footer() {
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 mb-12">
             <div className="col-span-2 lg:col-span-2">
               <Link href="/" className="flex items-center gap-2 mb-4">
-                <Image src={logoSaviora} alt="Saviora" className="h-14 w-auto" />
+                <Image src={logoSaviora} alt="Saviora" width={250} height={80} unoptimized priority className="h-15 w-auto object-contain" />
               </Link>
-              <p className="text-slate-500 dark:text-slate-400 max-w-sm mb-6">
-                Take control of your money with smart budgeting, expense tracking, savings goals, and financial insights - all in one secure platform.
+              <p className="text-slate-500 dark:text-slate-400 max-w-sm mb-4">
+                Take control of your finances with smart budgeting, expense tracking, savings goals, and powerful financial insights - all in one secure platform.
               </p>
+
+              <div className="space-y-2 mb-6">
+                <div className="flex items-center gap-2 text-xs font-medium text-slate-700 dark:text-slate-300">
+                  <span className="text-emerald-500 font-bold">✓</span> Secure Payments
+                </div>
+                <div className="flex items-center gap-2 text-xs font-medium text-slate-700 dark:text-slate-300">
+                  <span className="text-emerald-500 font-bold">✓</span> 30-Day Free Trial
+                </div>
+                <div className="flex items-center gap-2 text-xs font-medium text-slate-700 dark:text-slate-300">
+                  <span className="text-emerald-500 font-bold">✓</span> Cancel Anytime
+                </div>
+              </div>
               <div className="flex items-center gap-4">
                 {socialLinks.map((social) => (
                   <Link
                     key={social.name}
                     href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-slate-400 hover:text-primary-500 dark:hover:text-primary-400 transition-colors"
                     aria-label={social.name}
                   >
@@ -137,13 +151,24 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="pt-8 border-t border-slate-200 dark:border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-slate-500 dark:text-slate-400 text-sm">
-            © {currentYear} Saviora Inc. All rights reserved.
+        <div className="pt-8 border-t border-slate-200 dark:border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-500 dark:text-slate-400">
+          <p>
+            © {currentYear} Saviora. All rights reserved.
+          </p>
+          <p>
+            Powered by{" "}
+            <a
+              href="http://codefoxit.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium text-slate-700 dark:text-slate-300 hover:text-primary-500 dark:hover:text-primary-400 decoration-slate-300 dark:decoration-slate-700 underline-offset-4 transition-colors"
+            >
+              CodefoxIT
+            </a>
           </p>
           <div className="flex items-center gap-2">
             <div className="w-2 h-2 rounded-full bg-green-500"></div>
-            <span className="text-sm text-slate-500 dark:text-slate-400">All systems operational</span>
+            <span>All systems operational</span>
           </div>
         </div>
       </div>
