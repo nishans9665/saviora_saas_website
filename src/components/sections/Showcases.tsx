@@ -38,11 +38,20 @@ export function Showcases() {
                 </div>
                 <h3 className="font-semibold text-lg text-slate-900 dark:text-white">Savings Goals</h3>
               </div>
-              <p className="text-slate-600 dark:text-slate-400 mb-8 flex-grow">
+              <p className="text-slate-600 dark:text-slate-400 mb-6">
                 Visualize your progress towards major life milestones with smart projections.
               </p>
               
-              <div className="space-y-6">
+              <div className="space-y-4 mt-auto">
+                <div>
+                  <div className="flex justify-between text-sm mb-2">
+                    <span className="font-medium text-slate-900 dark:text-white">Emergency Fund</span>
+                    <span className="text-slate-500">$4,500 / $5,000</span>
+                  </div>
+                  <div className="w-full h-2 bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
+                    <div className="h-full bg-purple-500 rounded-full w-[90%]"></div>
+                  </div>
+                </div>
                 <div>
                   <div className="flex justify-between text-sm mb-2">
                     <span className="font-medium text-slate-900 dark:text-white">New Car</span>
