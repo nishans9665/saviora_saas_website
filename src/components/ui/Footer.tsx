@@ -8,6 +8,17 @@ export function Footer() {
 
     const socialLinks = [
       {
+        name: "LinkedIn",
+        href: "https://www.linkedin.com/company/savioraofficial/",
+        icon: (
+          <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+            <path d="M2 9h4v12H2z" />
+            <circle cx="4" cy="4" r="2" />
+          </svg>
+        )
+      },
+      {
         name: "Facebook",
         href: "https://www.facebook.com/savioraglobal/",
         icon: (
@@ -17,13 +28,13 @@ export function Footer() {
         )
       },
       {
-        name: "LinkedIn",
-        href: "https://www.linkedin.com/company/savioraofficial/",
+        name: "Instagram",
+        href: "https://www.instagram.com/savioraglobal/",
         icon: (
           <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-            <path d="M2 9h4v12H2z" />
-            <circle cx="4" cy="4" r="2" />
+            <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+            <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
           </svg>
         )
       },
@@ -36,19 +47,19 @@ export function Footer() {
           </svg>
         )
       },
-      {
-        name: "YouTube",
-        href: "#",
-        icon: (
-          <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z" />
-            <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" />
-          </svg>
-        )
-      },
+      // {
+      //   name: "YouTube",
+      //   href: "#",
+      //   icon: (
+      //     <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      //       <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z" />
+      //       <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" />
+      //     </svg>
+      //   ) 
+      // },
       {
         name: "TikTok",
-        href: "#",
+        href: "https://www.tiktok.com/@savioraofficial",
         icon: (
           <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
@@ -80,14 +91,14 @@ export function Footer() {
                   <span className="text-emerald-500 font-bold">✓</span> Cancel Anytime
                 </div>
               </div>
-              <div className="flex items-center gap-4">
+              <div className="flex items-center gap-3">
                 {socialLinks.map((social) => (
                   <Link
                     key={social.name}
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-slate-400 hover:text-primary-500 dark:hover:text-primary-400 transition-colors"
+                    className="p-2 rounded-lg bg-slate-100 text-slate-800 hover:bg-slate-200 dark:bg-slate-800/90 dark:text-slate-200 dark:hover:bg-slate-700 dark:hover:text-white transition-all flex items-center justify-center"
                     aria-label={social.name}
                   >
                     {social.icon}
