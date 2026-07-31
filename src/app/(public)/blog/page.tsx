@@ -1,2 +1,17 @@
-import React from 'react';
-export default function Page() { return <div className='p-24 text-center text-2xl font-bold capitalize'>blog Page Stub</div>; }
+import React from "react";
+import { ComingSoon } from "@/components/ui/ComingSoon";
+
+export const metadata = {
+  title: "Blog - Saviora",
+  description: "Financial insights, budgeting tips, and personal finance guides from Saviora.",
+};
+
+export default function BlogPage() {
+  return (
+    <ComingSoon 
+      title="Saviora Blog - Coming Soon"
+      subtitle="Our team of finance experts and writers are crafting in-depth guides, budgeting strategies, and money management tips for you."
+      category="✍️ Saviora Blog"
+    />
+  );
+}
