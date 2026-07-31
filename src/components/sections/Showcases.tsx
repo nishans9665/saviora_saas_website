@@ -21,7 +21,7 @@ export function Showcases() {
     setMounted(true);
   }, []);
   return (
-    <section className="py-24 relative overflow-hidden bg-slate-50 dark:bg-slate-900/20">
+    <section id="showcases" className="py-24 relative overflow-hidden bg-slate-50 dark:bg-slate-900/20">
       <div className="container mx-auto px-4 md:px-6">
         
         <div className="text-center max-w-3xl mx-auto mb-16">

@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { ShieldCheck } from "lucide-react";
 import logoSaviora from "@/assets/logo/logo-saviora-web-tag.svg";
 import stripeSecureImg from "@/assets/stripe-secure-img2.svg";
 
@@ -112,20 +113,20 @@ export function Footer() {
             <h3 className="font-semibold text-slate-900 dark:text-slate-100 mb-4">Product</h3>
             <ul className="space-y-3">
               <li>
-                <Link href="/features" className="text-slate-500 hover:text-primary-500 dark:text-slate-400 dark:hover:text-primary-400 transition-colors">Features</Link>
+                <Link href="/#features" className="text-slate-500 hover:text-primary-500 dark:text-slate-400 dark:hover:text-primary-400 transition-colors">Features</Link>
               </li>
               <li>
-                <Link href="/pricing" className="text-slate-500 hover:text-primary-500 dark:text-slate-400 dark:hover:text-primary-400 transition-colors">Pricing</Link>
+                <Link href="/#pricing" className="text-slate-500 hover:text-primary-500 dark:text-slate-400 dark:hover:text-primary-400 transition-colors">Pricing</Link>
               </li>
               <li>
-                <Link href="/savings" className="text-slate-500 hover:text-primary-500 dark:text-slate-400 dark:hover:text-primary-400 transition-colors">Savings Goals</Link>
+                <Link href="/#showcases" className="text-slate-500 hover:text-primary-500 dark:text-slate-400 dark:hover:text-primary-400 transition-colors">Savings Goals</Link>
               </li>
               <li>
-                <Link href="/dashboard" className="text-slate-500 hover:text-primary-500 dark:text-slate-400 dark:hover:text-primary-400 transition-colors">Dashboard</Link>
+                <Link href="/#dashboard" className="text-slate-500 hover:text-primary-500 dark:text-slate-400 dark:hover:text-primary-400 transition-colors">Dashboard</Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href="/changelog" className="text-slate-500 hover:text-primary-500 dark:text-slate-400 dark:hover:text-primary-400 transition-colors">Changelog</Link>
-              </li>
+              </li> */}
             </ul>
           </div>
 
@@ -187,9 +188,9 @@ export function Footer() {
               CodefoxIT
             </a>
           </p>
-          <div className="flex items-center gap-2">
-            <div className="w-2 h-2 rounded-full bg-green-500"></div>
-            <span>All systems operational</span>
+          <div className="flex items-center gap-1.5 text-xs text-slate-500 dark:text-slate-400">
+            <ShieldCheck className="w-4 h-4 text-emerald-500 flex-shrink-0" />
+            <span>Your financial data is protected</span>
           </div>
         </div>
       </div>
