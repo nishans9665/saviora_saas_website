@@ -63,12 +63,12 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-slate-900 dark:text-white mb-1">Email Us</h4>
-                    <p className="text-slate-600 dark:text-slate-400 text-sm">info@saviora.app</p>
-                    <p className="text-slate-600 dark:text-slate-400 text-sm">support@saviora.com</p>
+                    <a href="mailto:info@saviora.app" className="block text-slate-600 dark:text-slate-400 text-sm hover:text-primary-600 dark:hover:text-primary-400 transition-colors">info@saviora.app</a>
+                    <a href="mailto:support@saviora.com" className="block text-slate-600 dark:text-slate-400 text-sm hover:text-primary-600 dark:hover:text-primary-400 transition-colors">support@saviora.com</a>
                   </div>
                 </div>  
 
-                {/* Response Time */}
+                {/* Response Time */} 
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 rounded-xl bg-accent-100 dark:bg-accent-900/50 flex items-center justify-center flex-shrink-0 text-accent-600 dark:text-accent-400 shadow-2xs">
                     <Clock className="w-6 h-6" />
