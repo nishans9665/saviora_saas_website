@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { ShieldCheck } from "lucide-react";
 import logoSaviora from "@/assets/logo/logo-saviora-web-tag.svg";
 import stripeSecureImg from "@/assets/stripe-secure-img2.svg";
 
@@ -187,9 +188,9 @@ export function Footer() {
               CodefoxIT
             </a>
           </p>
-          <div className="flex items-center gap-2">
-            <div className="w-2 h-2 rounded-full bg-green-500"></div>
-            <span>All systems operational</span>
+          <div className="flex items-center gap-1.5 text-xs text-slate-500 dark:text-slate-400">
+            <ShieldCheck className="w-4 h-4 text-emerald-500 flex-shrink-0" />
+            <span>Your financial data is protected</span>
           </div>
         </div>
       </div>
