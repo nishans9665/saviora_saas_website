@@ -95,7 +95,7 @@ export function Showcases() {
               
               <div className="h-[180px] w-full mt-auto relative min-h-[180px]">
                 {mounted && (
-                  <ResponsiveContainer width="100%" height="100%" minWidth={0} minHeight={0}>
+                  <ResponsiveContainer width="100%" height="100%" minWidth={0} minHeight={0} initialDimension={{ width: 250, height: 180 }}>
                     <RechartsPieChart>
                       <Pie
                         data={expenseData}
