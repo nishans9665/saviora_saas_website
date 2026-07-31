@@ -5,7 +5,7 @@ import { Navbar } from "@/components/ui/Navbar";
 import { Footer } from "@/components/ui/Footer";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { Button } from "@/components/ui/Button";
-import { Mail, Phone, MapPin, MessageSquare, Send } from "lucide-react";
+import { Mail, Clock, BookOpen, ShieldCheck, MessageSquare, Send } from "lucide-react";
 import { motion } from "framer-motion";
 
 export default function ContactPage() {
@@ -41,7 +41,7 @@ export default function ContactPage() {
               Let&apos;s <span className="text-gradient">Connect</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-600 dark:text-slate-400">
-              Have questions about Saviora? Want to explore enterprise options? Our team is here to help you grow your financial future.
+              Have questions about Saviora? Want to explore features or get support? Our team is here to help you grow your financial future.
             </p>
           </AnimatedSection>
 
@@ -49,45 +49,58 @@ export default function ContactPage() {
             {/* Contact Details */}
             <AnimatedSection delay={0.1} direction="right" className="space-y-8">
               <div>
-                <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-6">Contact Information</h3>
-                <p className="text-slate-600 dark:text-slate-400 mb-8">
-                  Fill out the form and our team will get back to you within 24 hours. For immediate assistance, feel free to call us.
+                <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">Contact Information</h3>
+                <p className="text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">
+                  Fill out the form and our dedicated support team will get back to you promptly. You can also reach us via direct support emails below.
                 </p>
               </div>
 
               <div className="space-y-6">
+                {/* Email Support */}
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-primary-100 dark:bg-primary-900/50 flex items-center justify-center flex-shrink-0 text-primary-600 dark:text-primary-400">
+                  <div className="w-12 h-12 rounded-xl bg-primary-100 dark:bg-primary-900/50 flex items-center justify-center flex-shrink-0 text-primary-600 dark:text-primary-400 shadow-2xs">
                     <Mail className="w-6 h-6" />
                   </div>
                   <div>
                     <h4 className="font-semibold text-slate-900 dark:text-white mb-1">Email Us</h4>
-                    <p className="text-slate-600 dark:text-slate-400">support@saviora.com</p>
-                    <p className="text-slate-600 dark:text-slate-400">sales@saviora.com</p>
+                    <p className="text-slate-600 dark:text-slate-400 text-sm">support@saviora.com</p>
+                    <p className="text-slate-600 dark:text-slate-400 text-sm">sales@saviora.com</p>
                   </div>
                 </div>
 
+                {/* Response Time */}
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-accent-100 dark:bg-accent-900/50 flex items-center justify-center flex-shrink-0 text-accent-600 dark:text-accent-400">
-                    <Phone className="w-6 h-6" />
+                  <div className="w-12 h-12 rounded-xl bg-accent-100 dark:bg-accent-900/50 flex items-center justify-center flex-shrink-0 text-accent-600 dark:text-accent-400 shadow-2xs">
+                    <Clock className="w-6 h-6" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-slate-900 dark:text-white mb-1">Call Us</h4>
-                    <p className="text-slate-600 dark:text-slate-400">+1 (800) 123-4567</p>
-                    <p className="text-slate-500 text-sm mt-1">Mon-Fri from 8am to 5pm PST</p>
+                    <h4 className="font-semibold text-slate-900 dark:text-white mb-1">Response Time</h4>
+                    <p className="text-slate-600 dark:text-slate-400 text-sm">24/7 Global Customer Support</p>
+                    <p className="text-slate-500 text-xs mt-1">Average response time: 2 to 4 hours</p>
                   </div>
                 </div>
 
+                {/* Help Center */}
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-emerald-100 dark:bg-emerald-900/50 flex items-center justify-center flex-shrink-0 text-emerald-600 dark:text-emerald-400">
-                    <MapPin className="w-6 h-6" />
+                  <div className="w-12 h-12 rounded-xl bg-blue-100 dark:bg-blue-900/50 flex items-center justify-center flex-shrink-0 text-blue-600 dark:text-blue-400 shadow-2xs">
+                    <BookOpen className="w-6 h-6" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-slate-900 dark:text-white mb-1">Office</h4>
-                    <p className="text-slate-600 dark:text-slate-400">
-                      100 Innovation Drive<br />
-                      Suite 300<br />
-                      San Francisco, CA 94103
+                    <h4 className="font-semibold text-slate-900 dark:text-white mb-1">Help Center &amp; Guides</h4>
+                    <p className="text-slate-600 dark:text-slate-400 text-sm">Instant answers, tutorials, and FAQs</p>
+                    <p className="text-slate-500 text-xs mt-1">Self-service resources available anytime</p>
+                  </div>
+                </div>
+
+                {/* Security Guarantee */}
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-xl bg-emerald-100 dark:bg-emerald-900/50 flex items-center justify-center flex-shrink-0 text-emerald-600 dark:text-emerald-400 shadow-2xs">
+                    <ShieldCheck className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-slate-900 dark:text-white mb-1">Data Privacy Protected</h4>
+                    <p className="text-slate-600 dark:text-slate-400 text-sm">
+                      Your communications and data are 256-bit SSL encrypted.
                     </p>
                   </div>
                 </div>
@@ -96,7 +109,7 @@ export default function ContactPage() {
 
             {/* Contact Form */}
             <AnimatedSection delay={0.2} direction="left">
-              <div className="glass-card rounded-3xl p-8 shadow-xl">
+              <div className="glass-card rounded-3xl p-8 shadow-xl border border-slate-200/80 dark:border-slate-800/80">
                 {isSubmitted ? (
                   <motion.div 
                     initial={{ opacity: 0, scale: 0.9 }}
