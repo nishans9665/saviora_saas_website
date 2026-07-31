@@ -2,9 +2,10 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import logoSaviora from "@/assets/logo/logo-saviora-web-tag.svg";
+import stripeSecureImg from "@/assets/logo/stripe-secure-img.svg";
 
 export function Footer() {
-  const currentYear = new Date().getFullYear();
+  const currentYear = 2026;
 
     const socialLinks = [
       {
@@ -148,7 +149,7 @@ export function Footer() {
 
           <div>
             <h3 className="font-semibold text-slate-900 dark:text-slate-100 mb-4">Legal</h3>
-            <ul className="space-y-3">
+            <ul className="space-y-3 mb-4">
               <li>
                 <Link href="/privacy-policy" className="text-slate-500 hover:text-primary-500 dark:text-slate-400 dark:hover:text-primary-400 transition-colors">Privacy Policy</Link>
               </li>
@@ -159,6 +160,15 @@ export function Footer() {
                 <Link href="/refund-policy" className="text-slate-500 hover:text-primary-500 dark:text-slate-400 dark:hover:text-primary-400 transition-colors">Returns & Refunds Policy</Link>
               </li>
             </ul>
+            <div className="pt-2">
+              <Image
+                src={stripeSecureImg}
+                alt="Stripe Secure Payments"
+                width={200}
+                height={70}
+                className="h-auto w-44 object-contain"
+              />
+            </div>
           </div>
         </div>
 

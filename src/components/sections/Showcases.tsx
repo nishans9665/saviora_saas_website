@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { PieChart as RechartsPieChart, Pie, Cell, ResponsiveContainer, Tooltip } from "recharts";
 import { Target, TrendingUp, HeartPulse } from "lucide-react";
@@ -14,6 +14,12 @@ const expenseData = [
 const COLORS = ["#16A34A", "#F97316", "#3B82F6", "#8B5CF6"];
 
 export function Showcases() {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setMounted(true);
+  }, []);
   return (
     <section className="py-24 relative overflow-hidden bg-slate-50 dark:bg-slate-900/20">
       <div className="container mx-auto px-4 md:px-6">
@@ -87,28 +93,30 @@ export function Showcases() {
                 Understand exactly where your money goes every month with beautiful charts.
               </p>
               
-              <div className="h-[180px] w-full mt-auto relative">
-                <ResponsiveContainer width="100%" height="100%">
-                  <RechartsPieChart>
-                    <Pie
-                      data={expenseData}
-                      cx="50%"
-                      cy="50%"
-                      innerRadius={50}
-                      outerRadius={80}
-                      paddingAngle={5}
-                      dataKey="value"
-                      stroke="none"
-                    >
-                      {expenseData.map((entry, index) => (
-                        <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-                      ))}
-                    </Pie>
-                    <Tooltip 
-                      contentStyle={{ borderRadius: '8px', border: 'none', boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)' }}
-                    />
-                  </RechartsPieChart>
-                </ResponsiveContainer>
+              <div className="h-[180px] w-full mt-auto relative min-h-[180px]">
+                {mounted && (
+                  <ResponsiveContainer width="100%" height="100%" minWidth={0} minHeight={0}>
+                    <RechartsPieChart>
+                      <Pie
+                        data={expenseData}
+                        cx="50%"
+                        cy="50%"
+                        innerRadius={50}
+                        outerRadius={80}
+                        paddingAngle={5}
+                        dataKey="value"
+                        stroke="none"
+                      >
+                        {expenseData.map((entry, index) => (
+                          <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                        ))}
+                      </Pie>
+                      <Tooltip 
+                        contentStyle={{ borderRadius: '8px', border: 'none', boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)' }}
+                      />
+                    </RechartsPieChart>
+                  </ResponsiveContainer>
+                )}
                 {/* Center text for donut */}
                 <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
                   <span className="text-xs text-slate-500 font-medium mt-1">Total</span>
