@@ -113,20 +113,20 @@ export function Footer() {
             <h3 className="font-semibold text-slate-900 dark:text-slate-100 mb-4">Product</h3>
             <ul className="space-y-3">
               <li>
-                <Link href="/features" className="text-slate-500 hover:text-primary-500 dark:text-slate-400 dark:hover:text-primary-400 transition-colors">Features</Link>
+                <Link href="/#features" className="text-slate-500 hover:text-primary-500 dark:text-slate-400 dark:hover:text-primary-400 transition-colors">Features</Link>
               </li>
               <li>
-                <Link href="/pricing" className="text-slate-500 hover:text-primary-500 dark:text-slate-400 dark:hover:text-primary-400 transition-colors">Pricing</Link>
+                <Link href="/#pricing" className="text-slate-500 hover:text-primary-500 dark:text-slate-400 dark:hover:text-primary-400 transition-colors">Pricing</Link>
               </li>
               <li>
-                <Link href="/savings" className="text-slate-500 hover:text-primary-500 dark:text-slate-400 dark:hover:text-primary-400 transition-colors">Savings Goals</Link>
+                <Link href="/#showcases" className="text-slate-500 hover:text-primary-500 dark:text-slate-400 dark:hover:text-primary-400 transition-colors">Savings Goals</Link>
               </li>
               <li>
-                <Link href="/dashboard" className="text-slate-500 hover:text-primary-500 dark:text-slate-400 dark:hover:text-primary-400 transition-colors">Dashboard</Link>
+                <Link href="/#dashboard" className="text-slate-500 hover:text-primary-500 dark:text-slate-400 dark:hover:text-primary-400 transition-colors">Dashboard</Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href="/changelog" className="text-slate-500 hover:text-primary-500 dark:text-slate-400 dark:hover:text-primary-400 transition-colors">Changelog</Link>
-              </li>
+              </li> */}
             </ul>
           </div>
 
