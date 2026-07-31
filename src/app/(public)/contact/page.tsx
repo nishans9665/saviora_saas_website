@@ -63,9 +63,10 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-slate-900 dark:text-white mb-1">Email Us</h4>
+                    <p className="text-slate-600 dark:text-slate-400 text-sm">info@saviora.app</p>
                     <p className="text-slate-600 dark:text-slate-400 text-sm">support@saviora.com</p>
                   </div>
-                </div> 
+                </div>  
 
                 {/* Response Time */}
                 <div className="flex items-start gap-4">
