@@ -259,6 +259,7 @@ export function Pricing() {
 
                   {/* CTA Button */}
                   <Button
+                    asChild
                     variant={plan.buttonVariant}
                     className={`w-full mb-8 py-3 text-sm font-semibold rounded-xl transition-all duration-200 ${
                       plan.recommended
@@ -268,8 +269,10 @@ export function Pricing() {
                         : ""
                     }`}
                   >
-                    {plan.buttonText}
-                    <ArrowRight className="w-4 h-4 ml-2 inline" />
+                    <Link href="https://cloud.saviora.app/register" target="_blank">
+                      {plan.buttonText}
+                      <ArrowRight className="w-4 h-4 ml-2 inline" />
+                    </Link>
                   </Button>
 
                   {/* Features */}
