@@ -28,9 +28,14 @@ export function FinalCTA() {
               </p>
               
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <Button asChild size="lg" className="w-full sm:w-auto text-base">
-                  <Link href="https://cloud.saviora.app/register" target="_blank">
-                    Create Free Account <ArrowRight className="w-5 h-5 ml-2" />
+                <Button
+                  asChild
+                  size="lg"
+                  className="group w-full sm:w-auto text-base bg-emerald-500 hover:bg-emerald-600 text-white font-semibold shadow-lg shadow-emerald-500/30 hover:shadow-xl hover:shadow-emerald-500/45 hover:-translate-y-0.5 active:translate-y-0 px-8 py-3.5 rounded-full transition-all duration-300"
+                >
+                  <Link href="https://cloud.saviora.app/register" target="_blank" className="flex items-center justify-center">
+                    <span>Create Free Account</span>
+                    <ArrowRight className="w-5 h-5 ml-2 transition-transform duration-300 group-hover:translate-x-1.5" />
                   </Link>
                 </Button>
                 <Button asChild size="lg" variant="outline" className="w-full sm:w-auto text-base text-white border-slate-700 hover:bg-slate-800 dark:border-slate-700 dark:hover:bg-slate-800">
