@@ -11,7 +11,7 @@ export default function AboutPage() {
     <ComingSoon 
       title="About Saviora - Coming Soon"
       subtitle="We are preparing our full story on how Saviora was born to empower everyday people with smart financial control. Stay tuned!"
-      category="✨ About Saviora"
+      category=" About Saviora"
     />
   );
 }

@@ -11,7 +11,7 @@ export default function CareersPage() {
     <ComingSoon 
       title="Careers at Saviora - Coming Soon"
       subtitle="We are growing fast and will soon be opening remote positions across engineering, product design, marketing, and customer support!"
-      category="🚀 Join Our Team"
+      category=" Join Our Team"
     />
   );
 }
