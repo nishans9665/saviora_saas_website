@@ -63,11 +63,11 @@ export function Navbar() {
 
         {/* Desktop Actions */}
         <div className="hidden md:flex items-center gap-4">
-          <Link href="/login" className="text-sm font-medium text-slate-600 hover:text-primary-500 dark:text-slate-300 transition-colors">
+          <Link href="https://cloud.saviora.app/login" target="_blank" className="text-sm font-medium text-slate-600 hover:text-primary-500 dark:text-slate-300 transition-colors">
             Log in
           </Link>
           <Button asChild size="sm">
-            <Link href="/register">
+            <Link href="https://cloud.saviora.app/register" target="_blank">
               Get Started <ArrowRight className="w-4 h-4 ml-1" />
             </Link>
           </Button>
@@ -103,12 +103,12 @@ export function Navbar() {
             ))}
             <hr className="border-slate-200 dark:border-slate-800" />
             <Button asChild variant="outline" className="w-full justify-center">
-              <Link href="/login" onClick={() => setMobileMenuOpen(false)}>
+              <Link href="https://cloud.saviora.app/login" target="_blank" onClick={() => setMobileMenuOpen(false)}>
                 Log in
               </Link>
             </Button>
             <Button asChild className="w-full justify-center">
-              <Link href="/register" onClick={() => setMobileMenuOpen(false)}>
+              <Link href="https://cloud.saviora.app/register" target="_blank" onClick={() => setMobileMenuOpen(false)}>
                 Get Started Free
               </Link>
             </Button>
