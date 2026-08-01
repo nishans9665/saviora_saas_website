@@ -11,7 +11,7 @@ export default function BlogPage() {
     <ComingSoon 
       title="Saviora Blog - Coming Soon"
       subtitle="Our team of finance experts and writers are crafting in-depth guides, budgeting strategies, and money management tips for you."
-      category="✍️ Saviora Blog"
+      category=" Saviora Blog"
     />
   );
 }

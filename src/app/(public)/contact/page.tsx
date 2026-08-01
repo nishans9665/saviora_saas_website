@@ -5,21 +5,60 @@ import { Navbar } from "@/components/ui/Navbar";
 import { Footer } from "@/components/ui/Footer";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { Button } from "@/components/ui/Button";
-import { Mail, Clock, BookOpen, ShieldCheck, MessageSquare, Send } from "lucide-react";
+import { Mail, Clock, BookOpen, ShieldCheck, MessageSquare, Send, AlertCircle } from "lucide-react";
 import { motion } from "framer-motion";
 
 export default function ContactPage() {
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { id, value } = e.target;
+    setFormData((prev) => ({ ...prev, [id]: value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    // Simulate API call
-    setTimeout(() => {
-      setIsSubmitting(false);
+    setErrorMessage("");
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || "Failed to send message.");
+      }
+
       setIsSubmitted(true);
-    }, 1500);
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        subject: "",
+        message: "",
+      });
+    } catch (err: unknown) {
+      const msg = err instanceof Error ? err.message : "An unexpected error occurred.";
+      setErrorMessage(msg);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -129,6 +168,13 @@ export default function ContactPage() {
                   </motion.div>
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-6">
+                    {errorMessage && (
+                      <div className="p-4 rounded-xl bg-red-50 dark:bg-red-950/40 border border-red-200 dark:border-red-800 text-red-700 dark:text-red-300 text-sm flex items-start gap-3">
+                        <AlertCircle className="w-5 h-5 flex-shrink-0 text-red-500 mt-0.5" />
+                        <div>{errorMessage}</div>
+                      </div>
+                    )}
+
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div className="space-y-2">
                         <label htmlFor="firstName" className="text-sm font-medium text-slate-700 dark:text-slate-300">
@@ -137,6 +183,8 @@ export default function ContactPage() {
                         <input
                           type="text"
                           id="firstName"
+                          value={formData.firstName}
+                          onChange={handleChange}
                           required
                           className="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-white/50 dark:bg-slate-900/50 focus:outline-none focus:ring-2 focus:ring-primary-500 transition-all text-slate-900 dark:text-white"
                           placeholder="John"
@@ -149,6 +197,8 @@ export default function ContactPage() {
                         <input
                           type="text"
                           id="lastName"
+                          value={formData.lastName}
+                          onChange={handleChange}
                           required
                           className="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-white/50 dark:bg-slate-900/50 focus:outline-none focus:ring-2 focus:ring-primary-500 transition-all text-slate-900 dark:text-white"
                           placeholder="Doe"
@@ -163,6 +213,8 @@ export default function ContactPage() {
                       <input
                         type="email"
                         id="email"
+                        value={formData.email}
+                        onChange={handleChange}
                         required
                         className="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-white/50 dark:bg-slate-900/50 focus:outline-none focus:ring-2 focus:ring-primary-500 transition-all text-slate-900 dark:text-white"
                         placeholder="john@example.com"
@@ -176,6 +228,8 @@ export default function ContactPage() {
                       <input
                         type="text"
                         id="subject"
+                        value={formData.subject}
+                        onChange={handleChange}
                         required
                         className="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-white/50 dark:bg-slate-900/50 focus:outline-none focus:ring-2 focus:ring-primary-500 transition-all text-slate-900 dark:text-white"
                         placeholder="How can we help?"
@@ -188,6 +242,8 @@ export default function ContactPage() {
                       </label>
                       <textarea
                         id="message"
+                        value={formData.message}
+                        onChange={handleChange}
                         required
                         rows={5}
                         className="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-white/50 dark:bg-slate-900/50 focus:outline-none focus:ring-2 focus:ring-primary-500 transition-all text-slate-900 dark:text-white resize-none"
