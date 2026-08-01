@@ -261,7 +261,7 @@ export function Pricing() {
                   <Button
                     asChild
                     variant={plan.buttonVariant}
-                    className={`w-full mb-8 py-3 text-sm font-semibold rounded-xl transition-all duration-200 ${
+                    className={`group w-full mb-8 py-3 text-sm font-semibold rounded-xl transition-all duration-300 hover:-translate-y-0.5 ${
                       plan.recommended
                         ? "bg-primary-500 hover:bg-primary-600 text-white border-none shadow-lg shadow-primary-500/30 hover:shadow-primary-500/50"
                         : plan.id === "pro-yearly"
@@ -269,9 +269,9 @@ export function Pricing() {
                         : ""
                     }`}
                   >
-                    <Link href="https://cloud.saviora.app/register" target="_blank">
-                      {plan.buttonText}
-                      <ArrowRight className="w-4 h-4 ml-2 inline" />
+                    <Link href="https://cloud.saviora.app/register" target="_blank" className="flex items-center justify-center">
+                      <span>{plan.buttonText}</span>
+                      <ArrowRight className="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1.5" />
                     </Link>
                   </Button>
 
