@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { Button } from "@/components/ui/Button";
 import { ArrowRight } from "lucide-react";
@@ -27,11 +28,15 @@ export function FinalCTA() {
               </p>
               
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <Button size="lg" className="w-full sm:w-auto text-base">
-                  Create Free Account <ArrowRight className="w-5 h-5 ml-2" />
+                <Button asChild size="lg" className="w-full sm:w-auto text-base">
+                  <Link href="https://cloud.saviora.app/register" target="_blank">
+                    Create Free Account <ArrowRight className="w-5 h-5 ml-2" />
+                  </Link>
                 </Button>
-                <Button size="lg" variant="outline" className="w-full sm:w-auto text-base text-white border-slate-700 hover:bg-slate-800 dark:border-slate-700 dark:hover:bg-slate-800">
-                  Contact Sales
+                <Button asChild size="lg" variant="outline" className="w-full sm:w-auto text-base text-white border-slate-700 hover:bg-slate-800 dark:border-slate-700 dark:hover:bg-slate-800">
+                  <Link href="/contact">
+                    Contact Us
+                  </Link>
                 </Button>
               </div>
               <p className="text-sm text-slate-400 mt-6">

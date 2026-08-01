@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { Check, Minus, ArrowRight, Shield, Zap, Globe, Lock, RefreshCw, Star, Circle, Gem } from "lucide-react";
 import { Button } from "@/components/ui/Button";
@@ -413,11 +414,14 @@ export function Pricing() {
                   Join thousands of users building better financial habits with Saviora.
                 </p>
                 <Button
+                  asChild
                   size="lg"
                   className="w-full sm:w-auto bg-primary-500 hover:bg-primary-600 text-white border-none shadow-xl shadow-primary-500/30 hover:shadow-primary-500/50 px-6 sm:px-10 py-3.5 sm:py-4 text-base font-semibold rounded-2xl transition-all duration-200"
                 >
-                  Start Free for 30 Days
-                  <ArrowRight className="w-5 h-5 ml-2 inline" />
+                  <Link href="https://cloud.saviora.app/register" target="_blank">
+                    Start Free for 30 Days
+                    <ArrowRight className="w-5 h-5 ml-2 inline" />
+                  </Link>
                 </Button>
                 <p className="text-[10px] sm:text-xs text-slate-500 mt-4">
                   No credit card required · 30-day full access · Cancel anytime
