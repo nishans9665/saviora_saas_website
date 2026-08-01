@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight, Play, LineChart, PieChart, ShieldCheck, Rocket } from "lucide-react";
 import { Button } from "@/components/ui/Button";
@@ -77,8 +78,10 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
           >
-            <Button size="lg" className="w-full sm:w-auto text-base">
-              Get Started Free <ArrowRight className="w-5 h-5 ml-2" />
+            <Button asChild size="lg" className="w-full sm:w-auto text-base">
+              <Link href="https://cloud.saviora.app/register">
+                Get Started Free <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
             </Button>
             <Button size="lg" variant="outline" className="w-full sm:w-auto text-base">
               <Play className="w-5 h-5 mr-2" /> Watch Demo
