@@ -83,7 +83,7 @@ export function Hero() {
             <Button
               asChild
               size="lg"
-              className="group relative overflow-hidden w-full sm:w-auto text-base bg-emerald-500 hover:bg-emerald-600 text-white font-semibold shadow-lg shadow-emerald-500/30 hover:shadow-xl hover:shadow-emerald-500/45 hover:-translate-y-0.5 active:translate-y-0 px-8 py-3.5 rounded-full transition-all duration-300 cursor-pointer"
+              className="group relative overflow-hidden w-full sm:w-auto text-base bg-primary-500 hover:bg-primary-600 text-white font-semibold shadow-md shadow-primary-500/30 hover:shadow-lg hover:shadow-primary-500/50 hover:-translate-y-0.5 active:translate-y-0 px-8 py-3.5 rounded-full transition-all duration-300 cursor-pointer"
             >
               <Link href="https://cloud.saviora.app/register" target="_blank" className="flex items-center justify-center">
                 <span>Get Started Free</span>
@@ -96,7 +96,7 @@ export function Hero() {
               onClick={() => setIsDemoOpen(true)}
               className="group w-full sm:w-auto text-base bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border border-slate-200/90 dark:border-slate-800 text-slate-800 dark:text-slate-100 shadow-sm hover:shadow-xl hover:border-slate-300 dark:hover:border-slate-700 hover:bg-white dark:hover:bg-slate-900 px-7 py-3.5 rounded-full transition-all duration-300 flex items-center justify-center cursor-pointer"
             >
-              <span className="w-8 h-8 rounded-full bg-emerald-500/10 dark:bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 flex items-center justify-center mr-2.5 transition-all duration-300 group-hover:bg-emerald-500 group-hover:text-white group-hover:scale-110 shadow-sm">
+              <span className="w-8 h-8 rounded-full bg-primary-500/10 dark:bg-primary-500/20 text-primary-600 dark:text-primary-400 flex items-center justify-center mr-2.5 transition-all duration-300 group-hover:bg-primary-500 group-hover:text-white group-hover:scale-110 shadow-sm">
                 <Play className="w-3.5 h-3.5 fill-current ml-0.5" />
               </span>
               <span className="font-semibold">Watch Demo</span>
@@ -225,7 +225,7 @@ export function Hero() {
                     <h4 className="text-white font-semibold text-base">Ready to transform your finances?</h4>
                     <p className="text-xs sm:text-sm text-slate-400">Start your 30-day free trial today. No credit card required.</p>
                   </div>
-                  <Button asChild size="lg" className="w-full sm:w-auto text-sm px-6 bg-emerald-500 hover:bg-emerald-600 text-white">
+                  <Button asChild size="lg" className="w-full sm:w-auto text-sm px-6 bg-primary-500 hover:bg-primary-600 text-white">
                     <Link href="https://cloud.saviora.app/register" target="_blank">
                       Start Free Trial <ArrowRight className="w-4 h-4 ml-2" />
                     </Link>
