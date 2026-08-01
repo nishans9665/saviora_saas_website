@@ -31,7 +31,7 @@ export function FinalCTA() {
                 <Button
                   asChild
                   size="lg"
-                  className="group w-full sm:w-auto text-base bg-emerald-500 hover:bg-emerald-600 text-white font-semibold shadow-lg shadow-emerald-500/30 hover:shadow-xl hover:shadow-emerald-500/45 hover:-translate-y-0.5 active:translate-y-0 px-8 py-3.5 rounded-full transition-all duration-300"
+                  className="group w-full sm:w-auto text-base bg-primary-500 hover:bg-primary-600 text-white font-semibold shadow-md shadow-primary-500/30 hover:shadow-lg hover:shadow-primary-500/50 hover:-translate-y-0.5 active:translate-y-0 px-8 py-3.5 rounded-full transition-all duration-300"
                 >
                   <Link href="https://cloud.saviora.app/register" target="_blank" className="flex items-center justify-center">
                     <span>Create Free Account</span>
