@@ -88,10 +88,10 @@ export const metadata: Metadata = {
 
     images: [
       {
-        url: "/assets/logo/icon.svg",
+        url: `${siteUrl}/assets/logo/social-share-logo.png`,
         width: 1200,
-        height: 630,
-        alt: "Saviora - Personal Finance Platform",
+        height: 1200,
+        alt: "Saviora - Grow Your Financial Future",
         type: "image/png",
       },
     ],
@@ -102,7 +102,7 @@ export const metadata: Metadata = {
     title: "Saviora - Grow Your Financial Future",
     description:
       "Manage your finances with smart budgeting, expense tracking, savings goals, and financial insights.",
-    images: ["/assets/logo/icon.svg"],
+    images: [`${siteUrl}/assets/logo/social-share-logo.png`],
     creator: "@Saviora",
   },
 
