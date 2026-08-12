@@ -130,6 +130,12 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
+
+  verification: {
+    other: {
+      "p:domain_verify": "d1f19d7c6085d9fca56614f1f4bb3e3f",
+    },
+  },
 };
 
 export default function RootLayout({
