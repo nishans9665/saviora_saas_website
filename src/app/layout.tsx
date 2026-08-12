@@ -89,8 +89,15 @@ export const metadata: Metadata = {
     images: [
       {
         url: `${siteUrl}/assets/logo/social-share-logo.png`,
+        width: 600,
+        height: 600,
+        alt: "Saviora - Grow Your Financial Future",
+        type: "image/png",
+      },
+      {
+        url: `${siteUrl}/images/og-image.png`,
         width: 1200,
-        height: 1200,
+        height: 630,
         alt: "Saviora - Grow Your Financial Future",
         type: "image/png",
       },
