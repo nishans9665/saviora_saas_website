@@ -9,6 +9,8 @@ const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
   display: "swap",
+  preload: true,
+  fallback: ["system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "sans-serif"],
 });
 
 const siteUrl = "https://saviora.app";
@@ -161,35 +163,46 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: `
               (function() {
-                try {
-                  var clean = function() {
+                if (typeof window === 'undefined') return;
+                var clean = function() {
+                  try {
                     var els = document.querySelectorAll('[bis_skin_checked]');
                     for (var i = 0; i < els.length; i++) {
                       els[i].removeAttribute('bis_skin_checked');
                     }
-                  };
-                  clean();
-                  if (typeof window !== 'undefined' && window.MutationObserver) {
-                    var observer = new MutationObserver(function(mutations) {
-                      for (var i = 0; i < mutations.length; i++) {
-                        if (mutations[i].attributeName === 'bis_skin_checked') {
-                          mutations[i].target.removeAttribute('bis_skin_checked');
-                        }
+                  } catch (e) {}
+                };
+                clean();
+                if (document.readyState === 'loading') {
+                  document.addEventListener('DOMContentLoaded', clean);
+                }
+                if (window.MutationObserver) {
+                  var observer = new MutationObserver(function(mutations) {
+                    for (var i = 0; i < mutations.length; i++) {
+                      var m = mutations[i];
+                      if (m.attributeName === 'bis_skin_checked') {
+                        m.target.removeAttribute('bis_skin_checked');
                       }
-                    });
-                    if (document.documentElement) {
-                      observer.observe(document.documentElement, {
-                        attributes: true,
-                        subtree: true,
-                        attributeFilter: ['bis_skin_checked']
-                      });
                     }
+                  });
+                  if (document.documentElement) {
+                    observer.observe(document.documentElement, {
+                      attributes: true,
+                      subtree: true,
+                      attributeFilter: ['bis_skin_checked']
+                    });
                   }
-                } catch (e) {}
+                  setTimeout(function() {
+                    clean();
+                    observer.disconnect();
+                  }, 3000);
+                }
               })();
             `,
           }}
         />
+        <link rel="dns-prefetch" href="https://cloud.saviora.app" />
+        <link rel="preconnect" href="https://cloud.saviora.app" crossOrigin="anonymous" />
       </head>
       <body className="min-h-full flex flex-col bg-background text-foreground" suppressHydrationWarning>
         {children}
