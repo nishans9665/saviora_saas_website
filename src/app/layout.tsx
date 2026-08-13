@@ -159,6 +159,48 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                if (typeof window === 'undefined') return;
+                var clean = function() {
+                  try {
+                    var els = document.querySelectorAll('[bis_skin_checked]');
+                    for (var i = 0; i < els.length; i++) {
+                      els[i].removeAttribute('bis_skin_checked');
+                    }
+                  } catch (e) {}
+                };
+                clean();
+                if (document.readyState === 'loading') {
+                  document.addEventListener('DOMContentLoaded', clean);
+                }
+                if (window.MutationObserver) {
+                  var observer = new MutationObserver(function(mutations) {
+                    for (var i = 0; i < mutations.length; i++) {
+                      var m = mutations[i];
+                      if (m.attributeName === 'bis_skin_checked') {
+                        m.target.removeAttribute('bis_skin_checked');
+                      }
+                    }
+                  });
+                  if (document.documentElement) {
+                    observer.observe(document.documentElement, {
+                      attributes: true,
+                      subtree: true,
+                      attributeFilter: ['bis_skin_checked']
+                    });
+                  }
+                  setTimeout(function() {
+                    clean();
+                    observer.disconnect();
+                  }, 3000);
+                }
+              })();
+            `,
+          }}
+        />
         <link rel="dns-prefetch" href="https://cloud.saviora.app" />
         <link rel="preconnect" href="https://cloud.saviora.app" crossOrigin="anonymous" />
       </head>
