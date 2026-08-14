@@ -13,7 +13,7 @@ import {
 
 const features = [
   {
-    title: "Income Management",
+    title: "Income Tracking",
     description: "Track multiple income streams with real-time analytics and predictive forecasting.",
     icon: Wallet,
     color: "bg-emerald-100 text-emerald-600 dark:bg-emerald-900/50 dark:text-emerald-400"

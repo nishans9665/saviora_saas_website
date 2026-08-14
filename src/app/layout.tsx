@@ -41,14 +41,17 @@ export const metadata: Metadata = {
 
   keywords: [
     "Saviora",
-    "Personal Finance",
-    "Budget Planner",
-    "Budget Tracking",
+    "personal finance app",
+    "budget app",
+    "budget planner",
+    "tracking expenses",
     "Expense Tracker",
     "Income Tracker",
     "Savings Goals",
+    "expense tracker app",
     "Money Manager",
     "Financial Planning",
+    "personal budget app",
     "Personal Budget",
     "Budget Management",
     "Expense Management",
@@ -59,6 +62,7 @@ export const metadata: Metadata = {
     "Money Management App",
     "Finance Software",
     "Budget App",
+    "savings goal tracker",
     "Personal Finance Software",
   ],
 
