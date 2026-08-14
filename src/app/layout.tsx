@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   },
 
   description:
-    "Saviora is a modern personal finance platform that helps you track income, manage expenses, create budgets, achieve savings goals, and build a stronger financial future.",
+    "Saviora is a smart personal finance app to track income and expenses, manage budgets, set savings goals, and take control of your financial future.",
 
   applicationName: "Saviora",
 
@@ -82,7 +82,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Saviora - Grow Your Financial Future",
     description:
-      "Track income, manage expenses, create budgets, achieve savings goals, and build your financial future with Saviora.",
+      "Saviora is a smart personal finance app to track income and expenses, manage budgets, set savings goals, and take control of your financial future.",
     url: siteUrl,
     siteName: "Saviora",
     locale: "en_US",
@@ -110,7 +110,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Saviora - Grow Your Financial Future",
     description:
-      "Manage your finances with smart budgeting, expense tracking, savings goals, and financial insights.",
+      "Saviora is a smart personal finance app to track income and expenses, manage budgets, set savings goals, and take control of your financial future.",
     images: [`${siteUrl}/assets/logo/social-share-logo.png`],
     creator: "@Saviora",
   },
