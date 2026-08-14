@@ -71,7 +71,7 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            Take control of your money with smart budgeting, expense tracking, savings goals, and financial insights - all in one secure platform.
+            Track income and expenses, manage monthly budgets, set savings goals, and understand your financial health - all in one secure platform.
           </motion.p>
 
           <motion.div
@@ -127,7 +127,7 @@ export function Hero() {
             </div>
             <div>
               <h3 className="font-semibold text-slate-900 dark:text-white mb-1">Expense Tracking</h3>
-              <p className="text-sm text-slate-500 dark:text-slate-400">Categorize and monitor your daily expenses with AI assistance.</p>
+              <p className="text-sm text-slate-500 dark:text-slate-400">Track multiple income streams with real-time analytics and predictive forecasting.</p>
             </div>
           </div>
 

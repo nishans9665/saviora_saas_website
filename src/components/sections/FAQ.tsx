@@ -7,6 +7,10 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const faqs = [
   {
+    question: "What is a personal finance app?",
+    answer: "A personal finance app is a digital tool that helps you manage your money in one place. It can help you track income and expenses, create and manage budgets, monitor spending, and set savings goals. Saviora brings these tools together to help you stay organized and take better control of your financial future."
+  },
+  {
     question: "What is Saviora?",
     answer: "Saviora is a modern personal finance platform that helps you track income, manage expenses, create monthly budgets, achieve savings goals, and gain valuable financial insights - all in one secure and easy-to-use application."
   },
