@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
 
   title: { 
-    default: "Saviora - Grow Your Financial Future",
+    default: "Saviora - Smart Personal Finance & Budget App",
     template: "%s | Saviora",
   },
 
