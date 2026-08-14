@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import React from "react";
 import { Analytics } from "@vercel/analytics/next";
@@ -14,6 +14,11 @@ const inter = Inter({
 });
 
 const siteUrl = "https://saviora.app";
+
+export const viewport: Viewport = {
+  themeColor: "#F8FAFC",
+  colorScheme: "light",
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -160,6 +165,7 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${inter.variable} h-full antialiased`}
+      style={{ colorScheme: "light" }}
       suppressHydrationWarning
     >
       <head>
