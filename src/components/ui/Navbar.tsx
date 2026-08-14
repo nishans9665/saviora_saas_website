@@ -45,7 +45,7 @@ export function Navbar() {
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
-          <Image src={logoSaviora} alt="Saviora" width={200} height={71} unoptimized priority className="h-12 w-auto object-contain" />
+          <Image src={logoSaviora} alt="Saviora" width={200} height={71} unoptimized priority className="h-14 w-auto object-contain" />
         </Link>
 
         {/* Desktop Nav */}

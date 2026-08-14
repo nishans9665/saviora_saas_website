@@ -125,12 +125,22 @@ export const metadata: Metadata = {
   },
 
   icons: {
-    // Next.js App Router auto-serves src/app/icon.svg as /icon.svg
-    // We also expose it via /favicon.svg in public/ for broad browser support
     icon: [
+      { url: "/favicon-48x48.png", sizes: "48x48", type: "image/png" },
+      { url: "/favicon-96x96.png", sizes: "96x96", type: "image/png" },
+      { url: "/favicon.png", sizes: "32x32", type: "image/png" },
       { url: "/favicon.svg", type: "image/svg+xml" },
     ],
-    shortcut: "/favicon.svg",
+    shortcut: ["/favicon.ico", "/favicon-48x48.png"],
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+    other: [
+      {
+        rel: "apple-touch-icon-precomposed",
+        url: "/apple-touch-icon.png",
+      },
+    ],
   },
 
   manifest: "/site.webmanifest",
@@ -213,6 +223,12 @@ export default function RootLayout({
         />
         <link rel="dns-prefetch" href="https://cloud.saviora.app" />
         <link rel="preconnect" href="https://cloud.saviora.app" crossOrigin="anonymous" />
+        {/* Google Search Favicon Crawler requirements */}
+        <link rel="icon" href="/favicon-48x48.png" sizes="48x48" type="image/png" />
+        <link rel="icon" href="/favicon-96x96.png" sizes="96x96" type="image/png" />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
       </head>
       <body className="min-h-full flex flex-col bg-background text-foreground" suppressHydrationWarning>
         {children}
