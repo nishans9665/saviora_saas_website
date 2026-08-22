@@ -96,7 +96,7 @@ export function Footer() {
                 <span className="text-emerald-500 font-bold">✓</span> Secure Payments
               </div>
               <div className="flex items-center gap-2 text-xs font-medium text-slate-700 dark:text-slate-300">
-                <span className="text-emerald-500 font-bold">✓</span> 30-Day Free Trial
+                <span className="text-emerald-500 font-bold">✓</span> 90-Day Free Trial
               </div>
               <div className="flex items-center gap-2 text-xs font-medium text-slate-700 dark:text-slate-300">
                 <span className="text-emerald-500 font-bold">✓</span> Cancel Anytime

@@ -14,7 +14,7 @@ const plans = [
     tagline: "Perfect for trying every Saviora feature.",
     price: "$0",
     period: "",
-    subLabel: "30-Day Free Trial · No Credit Card Required",
+    subLabel: "90-Day Free Trial · No Credit Card Required",
     buttonText: "Start Free Trial",
     buttonVariant: "outline" as const,
     recommended: false,
@@ -88,7 +88,7 @@ const plans = [
 ];
 
 const comparisonFeatures = [
-  { name: "30-Day Full Access",           freeTrial: true,  proMonthly: false, proYearly: false },
+  { name: "90-Day Full Access",           freeTrial: true,  proMonthly: false, proYearly: false },
   { name: "Unlimited Income",             freeTrial: true,  proMonthly: true,  proYearly: true  },
   { name: "Unlimited Expenses",           freeTrial: true,  proMonthly: true,  proYearly: true  },
   { name: "Unlimited Budgets",            freeTrial: true,  proMonthly: true,  proYearly: true  },
@@ -108,7 +108,7 @@ const comparisonFeatures = [
 ];
 
 const trustPoints = [
-  { icon: Star,      text: "30-Day Full Premium Trial" },
+  { icon: Star,      text: "90-Day Full Premium Trial" },
   { icon: Shield,    text: "No Credit Card Required" },
   { icon: RefreshCw, text: "Cancel Anytime" },
   { icon: Lock,      text: "SSL Encrypted" },
@@ -149,7 +149,7 @@ export function Pricing() {
             <div className="relative rounded-2xl overflow-hidden border border-primary-500/30 bg-gradient-to-r from-primary-600/10 via-primary-500/5 to-emerald-500/10 backdrop-blur-sm p-6 text-center">
               <p className="text-sm font-semibold text-primary-500 uppercase tracking-widest mb-2">🎉 Launch Offer</p>
               <p className="text-slate-700 dark:text-slate-200 text-base font-medium">
-                Start your <span className="font-bold text-slate-900 dark:text-white">30-Day Free Trial</span> today.
+                Start your <span className="font-bold text-slate-900 dark:text-white">90-Day Free Trial</span> today.
                 Then continue for only{" "}
                 <span className="font-bold text-primary-500">$2.99/month</span>{" "}
                 or{" "}
@@ -168,7 +168,7 @@ export function Pricing() {
           </h2>
           <p className="text-lg text-slate-600 dark:text-slate-400 mb-2">
             Choose the perfect plan to take control of your finances.
-            Start with a <strong className="text-slate-800 dark:text-slate-200">30-day free trial</strong> and upgrade anytime.
+            Start with a <strong className="text-slate-800 dark:text-slate-200">90-day free trial</strong> and upgrade anytime.
           </p>
           <p className="text-sm text-slate-500 dark:text-slate-500 font-medium">
             No hidden fees. Cancel anytime.
@@ -422,12 +422,12 @@ export function Pricing() {
                   className="w-full sm:w-auto bg-primary-500 hover:bg-primary-600 text-white border-none shadow-xl shadow-primary-500/30 hover:shadow-primary-500/50 px-6 sm:px-10 py-3.5 sm:py-4 text-base font-semibold rounded-2xl transition-all duration-200"
                 >
                   <Link href="https://cloud.saviora.app/register" target="_blank">
-                    Start Free for 30 Days
+                    Start Free for 90 Days
                     <ArrowRight className="w-5 h-5 ml-2 inline" />
                   </Link>
                 </Button>
                 <p className="text-[10px] sm:text-xs text-slate-500 mt-4">
-                  No credit card required · 30-day full access · Cancel anytime
+                  No credit card required · 90-day full access · Cancel anytime
                 </p>
               </div>
             </div>

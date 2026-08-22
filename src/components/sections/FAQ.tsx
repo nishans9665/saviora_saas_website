@@ -16,7 +16,7 @@ const faqs = [
   },
   {
     question: "Is Saviora free to use?",
-    answer: "Yes. Every new user receives a 30-day free trial with full access to all premium features. After your trial ends, you can continue using Saviora by subscribing to the Monthly or Yearly Pro plan."
+    answer: "Yes. Every new user receives a 90-day free trial with full access to all premium features. After your trial ends, you can continue using Saviora by subscribing to the Monthly or Yearly Pro plan."
   },
   {
     question: "Can I manage multiple currencies?",
