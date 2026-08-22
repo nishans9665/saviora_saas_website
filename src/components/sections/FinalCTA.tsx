@@ -45,7 +45,7 @@ export function FinalCTA() {
                 </Button>
               </div>
               <p className="text-sm text-slate-400 mt-6">
-                Fully functional 30-day trial for Pro features.
+                Fully functional 90-day trial for Pro features.
               </p>
             </div>
           </div>

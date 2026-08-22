@@ -223,7 +223,7 @@ export function Hero() {
                 <div className="p-6 rounded-2xl bg-gradient-to-r from-emerald-950/50 to-slate-950 border border-emerald-500/20 flex flex-col sm:flex-row items-center justify-between gap-4">
                   <div>
                     <h4 className="text-white font-semibold text-base">Ready to transform your finances?</h4>
-                    <p className="text-xs sm:text-sm text-slate-400">Start your 30-day free trial today. No credit card required.</p>
+                    <p className="text-xs sm:text-sm text-slate-400">Start your 90-day free trial today. No credit card required.</p>
                   </div>
                   <Button asChild size="lg" className="w-full sm:w-auto text-sm px-6 bg-primary-500 hover:bg-primary-600 text-white">
                     <Link href="https://cloud.saviora.app/register" target="_blank">
