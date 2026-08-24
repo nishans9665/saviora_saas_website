@@ -24,12 +24,12 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
 
   title: { 
-    default: "Saviora - Smart Personal Finance & Budget App",
+    default: "Free Expense Tracker & Budget Planning App | Saviora",
     template: "%s | Saviora",
   },
 
   description:
-    "Saviora is a smart personal finance app to track income and expenses, manage budgets, set savings goals, and take control of your financial future.",
+    "Saviora is a free personal finance management system. Track daily expenses, plan budgets, manage income, and reach your savings goals effortlessly.",
 
   applicationName: "Saviora",
 
@@ -45,8 +45,10 @@ export const metadata: Metadata = {
   publisher: "Saviora",
 
   keywords: [
-    "Saviora",
-    "personal finance app",
+    "Saviora Free",
+    "Free Expense Tracker",
+    "Budget Planning App",
+    "Personal Finance Management System",
     "budget app",
     "budget planner",
     "tracking expenses",
@@ -166,6 +168,8 @@ export const metadata: Metadata = {
   },
 };
 
+import { CookieConsent } from "@/components/ui/CookieConsent";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -232,6 +236,7 @@ export default function RootLayout({
       </head>
       <body className="min-h-full flex flex-col bg-background text-foreground" suppressHydrationWarning>
         {children}
+        <CookieConsent />
         <Analytics />
         <GoogleAnalytics gaId="G-5QRMZ7FN8M" />
       </body>

@@ -1,17 +1,30 @@
 import React from "react";
-import { ComingSoon } from "@/components/ui/ComingSoon";
+import type { Metadata } from "next";
+import { AboutUsClient } from "@/components/about/AboutUsClient";
 
-export const metadata = {
-  title: "About Us - Saviora",
-  description: "Learn more about Saviora's mission, team, and financial management platform.",
+export const metadata: Metadata = {
+  title: "About Saviora | Personal Finance & Money Management App",
+  description:
+    "Learn how Saviora makes personal finance simpler with income and expense tracking, budgeting, savings goals, financial insights, and tools to build better money habits.",
+  alternates: {
+    canonical: "/about",
+  },
+  openGraph: {
+    title: "About Saviora | Personal Finance & Money Management App",
+    description:
+      "Learn how Saviora makes personal finance simpler with income and expense tracking, budgeting, savings goals, financial insights, and tools to build better money habits.",
+    url: "https://saviora.app/about",
+    siteName: "Saviora",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Saviora | Personal Finance & Money Management App",
+    description:
+      "Learn how Saviora makes personal finance simpler with income and expense tracking, budgeting, savings goals, financial insights, and tools to build better money habits.",
+  },
 };
 
 export default function AboutPage() {
-  return (
-    <ComingSoon 
-      title="About Saviora - Coming Soon"
-      subtitle="We are preparing our full story on how Saviora was born to empower everyday people with smart financial control. Stay tuned!"
-      category="About Saviora"
-    />
-  );
+  return <AboutUsClient />;
 }

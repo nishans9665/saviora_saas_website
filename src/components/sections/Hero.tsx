@@ -71,7 +71,7 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            Track income and expenses, manage monthly budgets, set savings goals, and understand your financial health - all in one secure platform.
+            Free personal finance management system and smart expense tracker. Plan monthly budgets, track daily income and spending, and reach your savings goals - all in one secure platform.
           </motion.p>
 
           <motion.div
