@@ -490,7 +490,7 @@ export function AboutUsClient() {
                 Your Money. Your Goals. Your Way.
               </h2>
               <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300">
-                Everyone manages money differently. Saviora is designed to adapt to your financial life—not the other way around.
+                Everyone manages money differently. Saviora is designed to adapt to your financial life - not the other way around.
               </p>
             </AnimatedSection>
 
@@ -747,7 +747,7 @@ export function AboutUsClient() {
                     </h3>
 
                     <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-                      Our mission is to make personal finance easier to understand and easier to manage. Saviora brings everyday money tracking, budgeting, savings goals, and financial insights together in one simple platform—helping people manage their money with greater clarity and confidence.
+                      Our mission is to make personal finance easier to understand and easier to manage. Saviora brings everyday money tracking, budgeting, savings goals, and financial insights together in one simple platform - helping people manage their money with greater clarity and confidence.
                     </p>
                   </div>
                 </div>
@@ -772,7 +772,7 @@ export function AboutUsClient() {
                     </h3>
 
                     <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-                      We believe financial progress starts with understanding the money you already have. Saviora&apos;s vision is to make personal finance more accessible, transparent, and practical—helping people build better habits, make informed decisions, and move confidently toward their financial goals.
+                      We believe financial progress starts with understanding the money you already have. Saviora&apos;s vision is to make personal finance more accessible, transparent, and practical - helping people build better habits, make informed decisions, and move confidently toward their financial goals.
                     </p>
                   </div>
                 </div>
@@ -786,7 +786,7 @@ export function AboutUsClient() {
                   &ldquo;Understand your money. Improve your habits. Build your future.&rdquo;
                 </p>
                 <span className="text-[11px] sm:text-xs text-slate-400 font-medium uppercase tracking-widest">
-                  — SAVIORA PHILOSOPHY
+                  SAVIORA PHILOSOPHY
                 </span>
               </div>
             </AnimatedSection>
