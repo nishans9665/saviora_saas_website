@@ -104,7 +104,7 @@ export function AboutUsClient() {
                   className="w-full sm:w-auto"
                 >
                   <Button size="lg" className="w-full sm:w-auto shadow-lg shadow-emerald-600/20 text-sm sm:text-base font-semibold px-6 sm:px-8 py-3.5 rounded-xl justify-center">
-                    Start Free
+                    Get Started Free
                     <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 ml-1" />
                   </Button>
                 </a>
@@ -899,7 +899,7 @@ export function AboutUsClient() {
                 <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4 max-w-xs sm:max-w-none mx-auto mb-6">
                   <a href="https://cloud.saviora.app/register" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
                     <Button size="lg" className="w-full sm:w-auto text-sm sm:text-base font-semibold px-6 sm:px-8 py-3.5 rounded-xl shadow-lg shadow-emerald-600/30 justify-center">
-                      Start Free
+                      Get Started Free
                       <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 ml-1" />
                     </Button>
                   </a>

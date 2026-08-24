@@ -157,6 +157,9 @@ export function Footer() {
                 <Link href="/blog" className="text-slate-500 hover:text-primary-500 dark:text-slate-400 dark:hover:text-primary-400 transition-colors">Blog</Link>
               </li>
               <li>
+                <Link href="/#faq" className="text-slate-500 hover:text-primary-500 dark:text-slate-400 dark:hover:text-primary-400 transition-colors">FAQ</Link>
+              </li>
+              <li>
                 <Link href="/careers" className="text-slate-500 hover:text-primary-500 dark:text-slate-400 dark:hover:text-primary-400 transition-colors">Careers</Link>
               </li>
               <li>
