@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -7,6 +9,12 @@ import stripeSecureImg from "@/assets/stripe-secure-img2.svg";
 
 export function Footer() {
   const currentYear = 2026;
+
+  const handleOpenCookieSettings = () => {
+    if (typeof window !== "undefined") {
+      window.dispatchEvent(new CustomEvent("openCookiePreferences"));
+    }
+  };
 
   const socialLinks = [
     {
@@ -168,6 +176,15 @@ export function Footer() {
               </li>
               <li>
                 <Link href="/refund-policy" className="text-slate-500 hover:text-primary-500 dark:text-slate-400 dark:hover:text-primary-400 transition-colors">Returns & Refunds Policy</Link>
+              </li>
+              <li>
+                <button
+                  type="button"
+                  onClick={handleOpenCookieSettings}
+                  className="text-slate-500 hover:text-primary-500 dark:text-slate-400 dark:hover:text-primary-400 transition-colors text-left cursor-pointer"
+                >
+                  Cookie Settings
+                </button>
               </li>
             </ul>
             <div className="pt-2">
