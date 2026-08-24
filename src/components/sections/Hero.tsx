@@ -10,7 +10,7 @@ export function Hero() {
   const [isDemoOpen, setIsDemoOpen] = useState(false);
 
   return (
-    <section className="relative pt-36 sm:pt-40 md:pt-36 lg:pt-32 pb-16 md:pb-24 overflow-hidden">
+    <section className="relative pt-36 sm:pt-44 md:pt-44 lg:pt-40 pb-16 md:pb-24 overflow-hidden">
       {/* Background Gradients */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[600px] sm:h-[800px] max-w-[1200px] opacity-30 pointer-events-none">
         <motion.div 
