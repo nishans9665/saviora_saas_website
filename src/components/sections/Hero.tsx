@@ -10,9 +10,9 @@ export function Hero() {
   const [isDemoOpen, setIsDemoOpen] = useState(false);
 
   return (
-    <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
+    <section className="relative pt-36 sm:pt-44 md:pt-44 lg:pt-40 pb-16 md:pb-24 overflow-hidden">
       {/* Background Gradients */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[800px] max-w-[1200px] opacity-30 pointer-events-none">
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[600px] sm:h-[800px] max-w-[1200px] opacity-30 pointer-events-none">
         <motion.div 
           className="absolute top-0 left-1/4 w-96 h-96 bg-primary-500 rounded-full mix-blend-multiply filter blur-3xl"
           animate={{
@@ -49,14 +49,14 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <span className="inline-flex items-center gap-2 py-1 px-3 rounded-full bg-primary-50 dark:bg-primary-900/30 text-primary-600 dark:text-primary-400 text-sm font-medium mb-6 border border-accent-900/30 dark:border-accent-500/20">
+            <span className="inline-flex items-center gap-2 py-1 px-3.5 rounded-full bg-primary-50 dark:bg-primary-900/30 text-primary-600 dark:text-primary-400 text-xs sm:text-sm font-medium mb-4 sm:mb-5 border border-accent-900/30 dark:border-accent-500/20">
               <Rocket className="w-4 h-4 animate-bounce-slow" />
               <span>Introducing a Smarter Way to Manage Money</span>
             </span>
           </motion.div>
 
           <motion.h1
-            className="text-5xl md:text-7xl font-bold tracking-tight text-slate-900 dark:text-white mb-8"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-slate-900 dark:text-white mb-4 sm:mb-6"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
@@ -66,7 +66,7 @@ export function Hero() {
           </motion.h1>
 
           <motion.p
-            className="text-lg md:text-xl text-slate-600 dark:text-slate-400 mb-10 max-w-2xl mx-auto"
+            className="text-base sm:text-lg md:text-xl text-slate-600 dark:text-slate-400 mb-6 sm:mb-8 max-w-2xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
@@ -106,7 +106,7 @@ export function Hero() {
 
         {/* Floating Features - Hero Bottom */}
         <motion.div
-          className="mt-24 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto"
+          className="mt-12 sm:mt-16 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.5 }}
@@ -169,7 +169,7 @@ export function Hero() {
                     <span className="w-3 h-3 rounded-full bg-amber-500/80" />
                     <span className="w-3 h-3 rounded-full bg-emerald-500/80" />
                   </div>
-                  <span className="text-xs text-slate-400 font-mono hidden sm:inline-block">Saviora App Tour & Live Preview</span>
+                  <span className="text-xs text-slate-400 font-mono hidden sm:inline-block">Saviora App Tour &amp; Live Preview</span>
                 </div>
                 <button
                   onClick={() => setIsDemoOpen(false)}
@@ -198,7 +198,7 @@ export function Hero() {
                     <div className="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center mb-3">
                       <TrendingUp className="w-5 h-5" />
                     </div>
-                    <h4 className="text-white font-semibold text-base mb-1">Income & Expenses</h4>
+                    <h4 className="text-white font-semibold text-base mb-1">Income &amp; Expenses</h4>
                     <p className="text-xs text-slate-400">Track every transaction with intelligent auto-categorization.</p>
                   </div>
 
@@ -227,7 +227,7 @@ export function Hero() {
                   </div>
                   <Button asChild size="lg" className="w-full sm:w-auto text-sm px-6 bg-primary-500 hover:bg-primary-600 text-white">
                     <Link href="https://cloud.saviora.app/register" target="_blank">
-                      Start Free Trial <ArrowRight className="w-4 h-4 ml-2" />
+                      Get Started Free <ArrowRight className="w-4 h-4 ml-2" />
                     </Link>
                   </Button>
                 </div>

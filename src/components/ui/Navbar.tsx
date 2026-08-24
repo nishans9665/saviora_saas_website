@@ -8,6 +8,7 @@ import { Button } from "./Button";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import logoSaviora from "@/assets/logo/logo-saviora-web-tag.svg";
+import { AnnouncementBar } from "./AnnouncementBar";
 
 export function Navbar() {
   const { scrollY } = useScroll();
@@ -26,7 +27,7 @@ export function Navbar() {
     { name: "Features", href: "/#features" },
     { name: "Pricing", href: "/#pricing" },
     { name: "FAQ", href: "/#faq" },
-     { name: "About Us", href: "/about" },
+    { name: "About Us", href: "/about" },
     { name: "Contact Us", href: "/contact" },
   ];
 
@@ -35,14 +36,15 @@ export function Navbar() {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         isScrolled
-          ? "bg-white/70 backdrop-blur-md border-b border-slate-200/50 shadow-sm dark:bg-slate-900/70 dark:border-slate-800/50 py-3"
-          : "bg-transparent py-5"
+          ? "bg-white/80 backdrop-blur-md border-b border-slate-200/50 shadow-sm dark:bg-slate-900/80 dark:border-slate-800/50"
+          : "bg-transparent"
       )}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
+      <AnnouncementBar />
+      <div className="container mx-auto px-4 md:px-6 flex items-center justify-between py-3 sm:py-4">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
           <Image src={logoSaviora} alt="Saviora" width={200} height={71} unoptimized priority className="h-14 w-auto object-contain" />

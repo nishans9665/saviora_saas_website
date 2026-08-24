@@ -3,24 +3,24 @@
 import React from "react";
 import Link from "next/link";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
-import { Check, Minus, ArrowRight, Shield, Zap, Globe, Lock, RefreshCw, Star, Circle, Gem } from "lucide-react";
+import { Check, Minus, ArrowRight, Shield, Zap, Globe, Lock, RefreshCw, Star, Circle, Gem, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/Button";
+import { LAUNCH_OFFER } from "@/lib/offer-config";
 
 const plans = [
   {
     id: "free-trial",
-    // emoji: "🟢",
     name: "Free Trial",
-    tagline: "Perfect for trying every Saviora feature.",
+    tagline: "Full access to Saviora Pro for 90 days.",
     price: "$0",
     period: "",
-    subLabel: "90-Day Free Trial · No Credit Card Required",
-    buttonText: "Start Free Trial",
+    subLabel: "90-day free trial · No credit card required",
+    buttonText: LAUNCH_OFFER.pricingTrialCta,
     buttonVariant: "outline" as const,
     recommended: false,
     badge: null,
     features: [
-      "Full Premium Access",
+      "Full Saviora Pro Access",
       "Unlimited Income Tracking",
       "Unlimited Expense Tracking",
       "Unlimited Budgets",
@@ -35,13 +35,12 @@ const plans = [
   },
   {
     id: "pro-monthly",
-    // emoji: "⭐",
     name: "Saviora Pro",
     tagline: "Everything you need to manage your finances for life.",
-    price: "$2.99",
+    price: LAUNCH_OFFER.monthlyPrice,
     period: "/month",
     subLabel: "Billed monthly · Cancel anytime",
-    buttonText: "Upgrade to Pro",
+    buttonText: LAUNCH_OFFER.monthlyCta,
     buttonVariant: "default" as const,
     recommended: true,
     badge: "Most Popular",
@@ -61,16 +60,15 @@ const plans = [
   },
   {
     id: "pro-yearly",
-    // emoji: "💎",
     name: "Pro Yearly",
     tagline: "Best value for long-term planning.",
-    price: "$29.99",
+    price: LAUNCH_OFFER.yearlyPrice,
     period: "/year",
-    subLabel: "Only $2.50/month • Save 16%",
-    buttonText: "Start Yearly Plan",
+    subLabel: `Only ${LAUNCH_OFFER.yearlyMonthlyEquivalent}/month · Save ${LAUNCH_OFFER.yearlySavings}`,
+    buttonText: LAUNCH_OFFER.yearlyCta,
     buttonVariant: "outline" as const,
     recommended: false, 
-    badge: "Best Value",
+    badge: "BEST VALUE",
     features: [
       "Everything in Pro Monthly",
       "Save $5.89 Every Year",
@@ -133,12 +131,11 @@ function CheckCell({ value }: { value: boolean }) {
 }
 
 export function Pricing() {
-
   return (
     <section className="py-24 relative overflow-hidden" id="pricing">
       {/* Subtle background glow */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[500px] bg-primary-500/5 rounded-full blur-[120px]" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[500px] bg-emerald-500/5 rounded-full blur-[120px]" />
       </div>
 
       <div className="container mx-auto px-4 md:px-6 relative z-10">
@@ -146,16 +143,19 @@ export function Pricing() {
         {/* ── LAUNCH BANNER ─────────────────────────────── */}
         <AnimatedSection className="mb-14">
           <div className="max-w-2xl mx-auto">
-            <div className="relative rounded-2xl overflow-hidden border border-primary-500/30 bg-gradient-to-r from-primary-600/10 via-primary-500/5 to-emerald-500/10 backdrop-blur-sm p-6 text-center">
-              <p className="text-sm font-semibold text-primary-500 uppercase tracking-widest mb-2">🎉 Launch Offer</p>
-              <p className="text-slate-700 dark:text-slate-200 text-base font-medium">
-                Start your <span className="font-bold text-slate-900 dark:text-white">90-Day Free Trial</span> today.
-                Then continue for only{" "}
-                <span className="font-bold text-primary-500">$2.99/month</span>{" "}
-                or{" "}
-                <span className="font-bold text-primary-500">$29.99/year</span>{" "}
-                <span className="inline-block bg-primary-500/20 text-primary-600 dark:text-primary-400 text-xs font-bold px-2 py-0.5 rounded-full ml-1">Save 16%</span>
+            <div className="relative rounded-2xl overflow-hidden border border-emerald-500/30 bg-gradient-to-r from-emerald-600/10 via-emerald-500/5 to-teal-500/10 backdrop-blur-sm p-6 text-center shadow-xs">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 text-xs font-bold uppercase tracking-wider mb-3 border border-emerald-200 dark:border-emerald-800">
+                <Sparkles className="w-3.5 h-3.5" /> {LAUNCH_OFFER.primaryBadge}
+              </span>
+              <h3 className="text-lg sm:text-xl font-bold text-slate-900 dark:text-white mb-2">
+                {LAUNCH_OFFER.pricingBannerTitle}
+              </h3>
+              <p className="text-slate-600 dark:text-slate-300 text-sm sm:text-base font-medium">
+                {LAUNCH_OFFER.pricingBannerSubtitle}
               </p>
+              <div className="mt-3 text-xs font-semibold text-emerald-600 dark:text-emerald-400">
+                ✓ {LAUNCH_OFFER.trustText}
+              </div>
             </div>
           </div>
         </AnimatedSection>
@@ -193,7 +193,7 @@ export function Pricing() {
                       className={`text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider shadow-lg ${
                         plan.recommended
                           ? "bg-gradient-to-r from-primary-500 to-primary-400 text-white"
-                          : "bg-gradient-to-r from-amber-400 to-orange-400 text-white"
+                          : "bg-gradient-to-r from-amber-500 to-orange-500 text-white"
                       }`}
                     >
                       {plan.badge}
@@ -204,7 +204,6 @@ export function Pricing() {
                 <div className="p-8 flex flex-col flex-grow">
                   {/* Plan header */}
                   <div className="mb-6">
-                    {/* <div className="text-3xl mb-3">{plan.emoji}</div> */}
                     <h3
                       className={`text-xl font-bold mb-1 ${
                         plan.recommended ? "text-white" : "text-slate-900 dark:text-white"
@@ -243,7 +242,7 @@ export function Pricing() {
                     </div>
                     <p
                       className={`text-xs mt-1 font-medium ${
-                        plan.recommended ? "text-primary-400" : "text-slate-400 dark:text-slate-500"
+                        plan.recommended ? "text-primary-400" : "text-slate-500 dark:text-slate-400"
                       }`}
                     >
                       {plan.subLabel}
@@ -269,7 +268,7 @@ export function Pricing() {
                         : ""
                     }`}
                   >
-                    <Link href="https://cloud.saviora.app/register" target="_blank" className="flex items-center justify-center">
+                    <Link href={LAUNCH_OFFER.registerUrl} target="_blank" className="flex items-center justify-center">
                       <span>{plan.buttonText}</span>
                       <ArrowRight className="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1.5" />
                     </Link>
@@ -281,12 +280,12 @@ export function Pricing() {
                       <li key={idx} className="flex items-center gap-3">
                         <span
                           className={`flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center ${
-                            plan.recommended ? "bg-primary-500/20" : "bg-primary-500/10"
+                            plan.recommended ? "bg-emerald-500/20" : "bg-emerald-500/10"
                           }`}
                         >
                           <Check
                             className={`w-3 h-3 ${
-                              plan.recommended ? "text-primary-400" : "text-primary-500"
+                              plan.recommended ? "text-emerald-400" : "text-emerald-500"
                             }`}
                           />
                         </span>
@@ -320,10 +319,10 @@ export function Pricing() {
                 return (
                   <div
                     key={i}
-                    className="flex flex-col items-center gap-2 text-center p-4 rounded-2xl bg-white dark:bg-slate-900/60 border border-slate-100 dark:border-slate-800 hover:border-primary-500/30 hover:shadow-md transition-all duration-200"
+                    className="flex flex-col items-center gap-2 text-center p-4 rounded-2xl bg-white dark:bg-slate-900/60 border border-slate-100 dark:border-slate-800 hover:border-emerald-500/30 hover:shadow-md transition-all duration-200"
                   >
-                    <span className="w-9 h-9 rounded-xl bg-primary-500/10 flex items-center justify-center">
-                      <Icon className="w-4 h-4 text-primary-500" />
+                    <span className="w-9 h-9 rounded-xl bg-emerald-500/10 flex items-center justify-center">
+                      <Icon className="w-4 h-4 text-emerald-500" />
                     </span>
                     <p className="text-xs font-medium text-slate-600 dark:text-slate-400 leading-tight">
                       {tp.text}
@@ -356,9 +355,9 @@ export function Pricing() {
                           <span>Free Trial</span>
                         </div>
                       </th>
-                      <th className="text-center py-4 px-4 font-semibold text-primary-500 w-1/6 bg-primary-500/5">
+                      <th className="text-center py-4 px-4 font-semibold text-emerald-600 dark:text-emerald-400 w-1/6 bg-emerald-500/5">
                         <div className="flex items-center justify-center gap-1.5">
-                          <Star className="w-3 h-3 fill-amber-500 text-amber-500" />
+                          <Star className="w-3 h-3 fill-emerald-500 text-emerald-500" />
                           <span>Pro Monthly</span>
                         </div>
                       </th>
@@ -382,10 +381,10 @@ export function Pricing() {
                           {row.name}
                         </td>
                         <CheckCell value={row.freeTrial} />
-                        <td className="bg-primary-500/[0.03] text-center py-3 px-4">
+                        <td className="bg-emerald-500/[0.03] text-center py-3 px-4">
                           {row.proMonthly ? (
-                            <span className="inline-flex items-center justify-center w-7 h-7 rounded-full bg-primary-500/15">
-                              <Check className="w-4 h-4 text-primary-500" />
+                            <span className="inline-flex items-center justify-center w-7 h-7 rounded-full bg-emerald-500/15">
+                              <Check className="w-4 h-4 text-emerald-500" />
                             </span>
                           ) : (
                             <span className="inline-flex items-center justify-center w-7 h-7">
@@ -407,7 +406,7 @@ export function Pricing() {
         <AnimatedSection>
           <div className="relative max-w-3xl mx-auto rounded-3xl overflow-hidden">
             <div className="bg-slate-950 dark:bg-slate-900 border border-slate-800 rounded-3xl px-6 py-10 sm:p-12 text-center relative overflow-hidden">
-              <div className="absolute -top-20 left-1/2 -translate-x-1/2 w-72 h-72 bg-primary-500/20 rounded-full blur-[80px] pointer-events-none" />
+              <div className="absolute -top-20 left-1/2 -translate-x-1/2 w-72 h-72 bg-emerald-500/20 rounded-full blur-[80px] pointer-events-none" />
               <div className="relative z-10">
                 <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 leading-tight">
                   Ready to Build a Better <br className="hidden md:block" />
@@ -421,13 +420,13 @@ export function Pricing() {
                   size="lg"
                   className="w-full sm:w-auto bg-primary-500 hover:bg-primary-600 text-white border-none shadow-xl shadow-primary-500/30 hover:shadow-primary-500/50 px-6 sm:px-10 py-3.5 sm:py-4 text-base font-semibold rounded-2xl transition-all duration-200"
                 >
-                  <Link href="https://cloud.saviora.app/register" target="_blank">
-                    Start Free for 90 Days
+                  <Link href={LAUNCH_OFFER.registerUrl} target="_blank">
+                    {LAUNCH_OFFER.pricingTrialCta}
                     <ArrowRight className="w-5 h-5 ml-2 inline" />
                   </Link>
                 </Button>
                 <p className="text-[10px] sm:text-xs text-slate-500 mt-4">
-                  No credit card required · 90-day full access · Cancel anytime
+                  {LAUNCH_OFFER.trustText} · 90-day full access · Cancel anytime
                 </p>
               </div>
             </div>
