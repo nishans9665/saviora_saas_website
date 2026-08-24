@@ -169,6 +169,7 @@ export const metadata: Metadata = {
 };
 
 import { CookieConsent } from "@/components/ui/CookieConsent";
+import { LaunchOfferModal } from "@/components/ui/LaunchOfferModal";
 
 export default function RootLayout({
   children,
@@ -236,6 +237,7 @@ export default function RootLayout({
       </head>
       <body className="min-h-full flex flex-col bg-background text-foreground" suppressHydrationWarning>
         {children}
+        <LaunchOfferModal />
         <CookieConsent />
         <Analytics />
         <GoogleAnalytics gaId="G-5QRMZ7FN8M" />

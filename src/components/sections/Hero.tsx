@@ -169,7 +169,7 @@ export function Hero() {
                     <span className="w-3 h-3 rounded-full bg-amber-500/80" />
                     <span className="w-3 h-3 rounded-full bg-emerald-500/80" />
                   </div>
-                  <span className="text-xs text-slate-400 font-mono hidden sm:inline-block">Saviora App Tour & Live Preview</span>
+                  <span className="text-xs text-slate-400 font-mono hidden sm:inline-block">Saviora App Tour &amp; Live Preview</span>
                 </div>
                 <button
                   onClick={() => setIsDemoOpen(false)}
@@ -198,7 +198,7 @@ export function Hero() {
                     <div className="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center mb-3">
                       <TrendingUp className="w-5 h-5" />
                     </div>
-                    <h4 className="text-white font-semibold text-base mb-1">Income & Expenses</h4>
+                    <h4 className="text-white font-semibold text-base mb-1">Income &amp; Expenses</h4>
                     <p className="text-xs text-slate-400">Track every transaction with intelligent auto-categorization.</p>
                   </div>
 
@@ -227,7 +227,7 @@ export function Hero() {
                   </div>
                   <Button asChild size="lg" className="w-full sm:w-auto text-sm px-6 bg-primary-500 hover:bg-primary-600 text-white">
                     <Link href="https://cloud.saviora.app/register" target="_blank">
-                      Start Free Trial <ArrowRight className="w-4 h-4 ml-2" />
+                      Get Started Free <ArrowRight className="w-4 h-4 ml-2" />
                     </Link>
                   </Button>
                 </div>
