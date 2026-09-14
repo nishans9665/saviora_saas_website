@@ -4,6 +4,7 @@ import { Navbar } from "@/components/ui/Navbar";
 import { Footer } from "@/components/ui/Footer";
 import { Pricing } from "@/components/sections/Pricing";
 import { FAQ } from "@/components/sections/FAQ";
+import { FinalCTA } from "@/components/sections/FinalCTA";
 
 export const metadata: Metadata = {
   title: "Pricing & 90-Day Launch Offer | Saviora Pro",
@@ -27,6 +28,7 @@ export default function PricingPage() {
       <main className="min-h-screen pt-20">
         <Pricing />
         <FAQ />
+        <FinalCTA />
       </main>
       <Footer />
     </>
