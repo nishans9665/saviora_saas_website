@@ -6,7 +6,6 @@ import { Features } from "@/components/sections/Features";
 import { DashboardShowcase } from "@/components/sections/DashboardShowcase";
 import { SmartFeatures } from "@/components/sections/SmartFeatures";
 import { Showcases } from "@/components/sections/Showcases";
-import { Pricing } from "@/components/sections/Pricing";
 // import { Testimonials } from "@/components/sections/Testimonials";
 import { FAQ } from "@/components/sections/FAQ";
 import { FinalCTA } from "@/components/sections/FinalCTA";
@@ -22,7 +21,6 @@ export default function Home() {
         <DashboardShowcase />
         <SmartFeatures />
         <Showcases />
-        <Pricing />
         {/* <Testimonials /> */}
         <FAQ />
         <FinalCTA />
