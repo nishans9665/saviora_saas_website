@@ -48,7 +48,7 @@ export function Hero() {
   }, []);
 
   return (
-    <section className="relative pt-24 sm:pt-28 md:pt-28 lg:pt-24 pb-12 md:pb-16 overflow-hidden bg-gradient-to-b from-slate-50/80 via-white to-slate-50/50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950">
+    <section className="relative pt-24 sm:pt-28 md:pt-32 lg:pt-28 xl:pt-32 pb-12 md:pb-16 overflow-hidden bg-gradient-to-b from-slate-50/80 via-white to-slate-50/50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950">
       
       {/* Ultra-Smooth Full-Bleed Ambient Background Glows */}
       <div className="absolute inset-0 w-full h-full pointer-events-none overflow-hidden z-0">
@@ -79,9 +79,9 @@ export function Hero() {
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 xl:gap-12 items-center">
           
-          {/* LEFT COLUMN: Copywriting & CTAs (Shifted up ~20px) */}
+          {/* LEFT COLUMN: Copywriting & CTAs */}
           <motion.div 
-            className="lg:col-span-5 text-left lg:-mt-5"
+            className="lg:col-span-5 text-left"
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
