@@ -16,9 +16,9 @@ export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
 
   useMotionValueEvent(scrollY, "change", (latest) => {
-    if (latest > 50) {
+    if (latest > 50 && !isScrolled) {
       setIsScrolled(true);
-    } else {
+    } else if (latest <= 50 && isScrolled) {
       setIsScrolled(false);
     }
   });
