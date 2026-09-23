@@ -48,7 +48,7 @@ export function Hero() {
   }, []);
 
   return (
-    <section className="relative pt-20 sm:pt-28 md:pt-32 lg:pt-28 xl:pt-32 pb-10 sm:pb-16 overflow-hidden bg-gradient-to-b from-slate-50/80 via-white to-slate-50/50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950">
+    <section className="relative pt-32 sm:pt-36 md:pt-36 lg:pt-28 xl:pt-32 pb-10 sm:pb-16 overflow-hidden bg-gradient-to-b from-slate-50/80 via-white to-slate-50/50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950">
       
       {/* Ultra-Smooth Full-Bleed Ambient Background Glows */}
       <div className="absolute inset-0 w-full h-full pointer-events-none overflow-hidden z-0">
@@ -56,24 +56,10 @@ export function Hero() {
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-[1600px] h-[650px] bg-[radial-gradient(ellipse_75%_60%_at_50%_0%,rgba(34,197,94,0.08),transparent_80%)] dark:bg-[radial-gradient(ellipse_75%_60%_at_50%_0%,rgba(34,197,94,0.14),transparent_80%)]" />
 
         {/* Soft Ambient Glow Behind Left Content */}
-        <motion.div 
-          className="absolute -top-24 -left-20 w-[650px] h-[650px] bg-emerald-400/08 dark:bg-emerald-500/10 rounded-full filter blur-[120px]"
-          animate={{
-            x: [0, 30, -20, 0],
-            y: [0, -30, 20, 0],
-          }}
-          transition={{ duration: 14, repeat: Infinity, ease: "easeInOut" }}
-        />
+        <div className="absolute -top-24 -left-20 w-[550px] h-[550px] bg-emerald-400/10 dark:bg-emerald-500/10 rounded-full blur-[100px] pointer-events-none transform-gpu" />
 
         {/* Soft Orange Glow Overlay Behind Right Dashboard */}
-        <motion.div 
-          className="absolute -top-10 -right-20 w-[650px] h-[650px] bg-amber-400/15 dark:bg-amber-500/15 rounded-full filter blur-[120px]"
-          animate={{
-            x: [0, -30, 20, 0],
-            y: [0, 30, -20, 0],
-          }}
-          transition={{ duration: 16, repeat: Infinity, ease: "easeInOut" }}
-        />
+        <div className="absolute -top-10 -right-20 w-[550px] h-[550px] bg-amber-400/12 dark:bg-amber-500/12 rounded-full blur-[100px] pointer-events-none transform-gpu" />
       </div>
 
       <div className="container mx-auto px-4 md:px-6 relative z-10">
