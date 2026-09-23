@@ -48,7 +48,7 @@ export function Hero() {
   }, []);
 
   return (
-    <section className="relative pt-20 sm:pt-28 md:pt-32 lg:pt-28 xl:pt-32 pb-10 sm:pb-16 overflow-hidden bg-gradient-to-b from-slate-50/80 via-white to-slate-50/50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950">
+    <section className="relative pt-32 sm:pt-36 md:pt-36 lg:pt-28 xl:pt-32 pb-10 sm:pb-16 overflow-hidden bg-gradient-to-b from-slate-50/80 via-white to-slate-50/50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950">
       
       {/* Ultra-Smooth Full-Bleed Ambient Background Glows */}
       <div className="absolute inset-0 w-full h-full pointer-events-none overflow-hidden z-0">
