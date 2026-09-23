@@ -48,7 +48,7 @@ export function Hero() {
   }, []);
 
   return (
-    <section className="relative pt-24 sm:pt-28 md:pt-32 lg:pt-28 xl:pt-32 pb-12 md:pb-16 overflow-hidden bg-gradient-to-b from-slate-50/80 via-white to-slate-50/50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950">
+    <section className="relative pt-20 sm:pt-28 md:pt-32 lg:pt-28 xl:pt-32 pb-10 sm:pb-16 overflow-hidden bg-gradient-to-b from-slate-50/80 via-white to-slate-50/50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950">
       
       {/* Ultra-Smooth Full-Bleed Ambient Background Glows */}
       <div className="absolute inset-0 w-full h-full pointer-events-none overflow-hidden z-0">
@@ -91,17 +91,17 @@ export function Hero() {
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="inline-block mb-4 sm:mb-5"
+              className="inline-block mb-3.5 sm:mb-5"
             >
-              <span className="inline-flex items-center gap-2 py-1.5 px-3.5 rounded-full bg-emerald-50/80 dark:bg-emerald-950/50 text-[#16a34a] dark:text-emerald-400 text-xs sm:text-sm font-semibold border border-[#22c55e]/20 shadow-sm">
-                <Rocket className="w-4 h-4 text-[#22c55e] animate-bounce-slow" />
+              <span className="inline-flex items-center gap-1.5 sm:gap-2 py-1.5 px-3 sm:px-3.5 rounded-full bg-emerald-50/80 dark:bg-emerald-950/50 text-[#16a34a] dark:text-emerald-400 text-xs sm:text-sm font-semibold border border-[#22c55e]/20 shadow-sm">
+                <Rocket className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#22c55e] animate-bounce-slow flex-shrink-0" />
                 <span>Your All-in-One Personal Finance App</span>
               </span>
             </motion.div>
 
             {/* Headline */}
             <motion.h1
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-4xl xl:text-5xl font-bold tracking-tight text-slate-900 dark:text-white leading-[1.12] mb-5"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-4xl xl:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-[1.14] sm:leading-[1.12] mb-4 sm:mb-5"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }} 
@@ -112,7 +112,7 @@ export function Hero() {
 
             {/* Description Paragraph */}
             <motion.p
-              className="text-base sm:text-lg text-slate-600 dark:text-slate-350 mb-6 max-w-xl leading-relaxed"
+              className="text-sm sm:text-base md:text-lg text-slate-600 dark:text-slate-350 mb-5 sm:mb-6 max-w-xl leading-relaxed"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
@@ -122,19 +122,19 @@ export function Hero() {
 
             {/* Saviora Pro 90 Days Free Seamless Glass Callout Box */}
             <motion.div
-              className="mb-7 p-3.5 sm:p-4 max-w-md bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border border-slate-200/80 dark:border-slate-800 rounded-2xl flex items-center gap-3.5 shadow-sm shadow-emerald-500/5 transition-all hover:border-[#22c55e]/30 hover:shadow-md"
+              className="mb-5 sm:mb-7 p-3 sm:p-4 max-w-md bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border border-slate-200/80 dark:border-slate-800 rounded-2xl flex items-center gap-3 sm:gap-3.5 shadow-sm shadow-emerald-500/5 transition-all hover:border-[#22c55e]/30 hover:shadow-md"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.25 }}
             >
-              <div className="w-10 h-10 rounded-xl bg-[#22c55e]/10 text-[#22c55e] dark:text-emerald-400 flex items-center justify-center flex-shrink-0 font-bold shadow-inner">
-                <Gift className="w-5 h-5 text-[#22c55e]" />
+              <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-[#22c55e]/10 text-[#22c55e] dark:text-emerald-400 flex items-center justify-center flex-shrink-0 font-bold shadow-inner">
+                <Gift className="w-4 h-4 sm:w-5 sm:h-5 text-[#22c55e]" />
               </div>
               <div>
-                <p className="text-sm sm:text-base font-bold text-slate-900 dark:text-white tracking-tight">
+                <p className="text-xs sm:text-base font-bold text-slate-900 dark:text-white tracking-tight">
                   Get Pro <span className="text-[#16a34a] dark:text-emerald-400">FREE for 90 Days</span>
                 </p>
-                <p className="text-xs text-slate-500 dark:text-slate-400 font-medium">
+                <p className="text-[11px] sm:text-xs text-slate-500 dark:text-slate-400 font-medium">
                   No credit card required
                 </p>
               </div>
@@ -142,7 +142,7 @@ export function Hero() {
 
             {/* Action Buttons */}
             <motion.div
-              className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 mb-7"
+              className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-3.5 mb-6 sm:mb-7"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
@@ -150,21 +150,21 @@ export function Hero() {
               <Button
                 asChild
                 size="lg"
-                className="group relative overflow-hidden text-base bg-[#22c55e] hover:bg-[#16a34a] text-white font-semibold shadow-lg shadow-[#22c55e]/25 hover:shadow-xl hover:shadow-[#22c55e]/35 hover:-translate-y-0.5 active:translate-y-0 px-8 py-4 rounded-full transition-all duration-300 cursor-pointer text-center"
+                className="group relative overflow-hidden text-sm sm:text-base bg-[#22c55e] hover:bg-[#16a34a] text-white font-semibold shadow-lg shadow-[#22c55e]/25 hover:shadow-xl hover:shadow-[#22c55e]/35 hover:-translate-y-0.5 active:translate-y-0 px-6 sm:px-8 py-3.5 sm:py-4 rounded-full transition-all duration-300 cursor-pointer text-center"
               >
                 <Link href="https://cloud.saviora.app/register" target="_blank" className="flex items-center justify-center">
                   <span>Start 90 Days Free</span>
-                  <ArrowRight className="w-5 h-5 ml-2 transition-transform duration-300 group-hover:translate-x-1.5" />
+                  <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 ml-2 transition-transform duration-300 group-hover:translate-x-1.5" />
                 </Link>
               </Button>
               <Button
                 size="lg"
                 variant="outline"
                 onClick={() => setIsDemoOpen(true)}
-                className="group text-base bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border border-slate-200 dark:border-slate-800 text-slate-800 dark:text-slate-100 shadow-sm hover:shadow-md hover:border-slate-300 dark:hover:border-slate-700 px-6 py-4 rounded-full transition-all duration-300 flex items-center justify-center cursor-pointer"
+                className="group text-sm sm:text-base bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border border-slate-200 dark:border-slate-800 text-slate-800 dark:text-slate-100 shadow-sm hover:shadow-md hover:border-slate-300 dark:hover:border-slate-700 px-5 sm:px-6 py-3.5 sm:py-4 rounded-full transition-all duration-300 flex items-center justify-center cursor-pointer"
               >
-                <span className="w-7 h-7 rounded-full bg-[#22c55e]/15 text-[#22c55e] dark:text-emerald-400 flex items-center justify-center mr-2.5 transition-all duration-300 group-hover:bg-[#22c55e] group-hover:text-white group-hover:scale-110">
-                  <Play className="w-3.5 h-3.5 fill-current ml-0.5" />
+                <span className="w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-[#22c55e]/15 text-[#22c55e] dark:text-emerald-400 flex items-center justify-center mr-2 transition-all duration-300 group-hover:bg-[#22c55e] group-hover:text-white group-hover:scale-110">
+                  <Play className="w-3 h-3 sm:w-3.5 sm:h-3.5 fill-current ml-0.5" />
                 </span>
                 <span className="font-semibold">See How It Works</span>
               </Button>
@@ -172,21 +172,21 @@ export function Hero() {
 
             {/* Micro Trust Badges Row */}
             <motion.div 
-              className="flex flex-wrap items-center gap-5 text-xs font-semibold text-slate-500 dark:text-slate-400"
+              className="flex flex-wrap items-center justify-start gap-x-4 sm:gap-x-5 gap-y-2 text-xs font-semibold text-slate-500 dark:text-slate-400"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.4 }}
             >
-              <div className="flex items-center gap-2">
-                <CreditCard className="w-4 h-4 text-[#22c55e]" />
+              <div className="flex items-center gap-1.5">
+                <CreditCard className="w-3.5 h-3.5 text-[#22c55e]" />
                 <span>No credit card required</span>
               </div>
-              <div className="flex items-center gap-2">
-                <Calendar className="w-4 h-4 text-[#22c55e]" />
+              <div className="flex items-center gap-1.5">
+                <Calendar className="w-3.5 h-3.5 text-[#22c55e]" />
                 <span>90 days Pro access</span>
               </div>
-              <div className="flex items-center gap-2">
-                <ShieldCheck className="w-4 h-4 text-[#22c55e]" />
+              <div className="flex items-center gap-1.5">
+                <ShieldCheck className="w-3.5 h-3.5 text-[#22c55e]" />
                 <span>Secure &amp; private</span>
               </div>
             </motion.div>
@@ -194,7 +194,7 @@ export function Hero() {
 
           {/* RIGHT COLUMN: Real Interactive Dashboard Mockup (Clean & Simple Laptop View) */}
           <motion.div
-            className="lg:col-span-7 relative mt-6 lg:mt-0 w-full"
+            className="lg:col-span-7 relative mt-6 lg:mt-0 w-full min-w-0"
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
@@ -267,32 +267,32 @@ export function Hero() {
               </div>
 
               {/* Main Content Area */}
-              <div className="flex-1 flex flex-col bg-slate-50/60 dark:bg-slate-900/10">
+              <div className="flex-1 flex flex-col bg-slate-50/60 dark:bg-slate-900/10 min-w-0">
                 {/* Header Bar */}
-                <div className="bg-white dark:bg-slate-900 border-b border-slate-200/60 dark:border-slate-800/80 px-4 py-3 flex flex-wrap gap-2 justify-between items-center">
-                  <div>
-                    <h3 className="font-bold text-sm sm:text-base text-slate-900 dark:text-white">Financial Overview</h3>
+                <div className="bg-white dark:bg-slate-900 border-b border-slate-200/60 dark:border-slate-800/80 px-3 sm:px-4 py-2.5 flex items-center justify-between gap-2 overflow-x-auto no-scrollbar">
+                  <div className="flex-shrink-0">
+                    <h3 className="font-bold text-xs sm:text-base text-slate-900 dark:text-white">Financial Overview</h3>
                     <p className="hidden sm:block text-[11px] text-slate-500 dark:text-slate-400">Welcome back! Here&apos;s what&apos;s happening with your money today.</p>
                   </div>
-                  <div className="flex items-center gap-2 flex-shrink-0">
-                    <div className="flex items-center gap-1.5 bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 px-2.5 py-1 rounded-lg text-xs font-medium text-slate-700 dark:text-slate-300">
-                      <Calendar className="w-3.5 h-3.5 text-slate-400" />
+                  <div className="flex items-center gap-1.5 sm:gap-2 flex-shrink-0">
+                    <div className="flex items-center gap-1 bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 px-2 py-1 rounded-lg text-[11px] sm:text-xs font-medium text-slate-700 dark:text-slate-300">
+                      <Calendar className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-slate-400" />
                       <span>June 2026</span>
-                      <ChevronDown className="w-3 h-3 text-slate-400 ml-1" />
+                      <ChevronDown className="w-3 h-3 text-slate-400 ml-0.5" />
                     </div>
-                    <div className="flex items-center gap-1 bg-emerald-50 dark:bg-emerald-950/20 text-[#16a34a] dark:text-emerald-400 px-2 py-1 rounded-lg text-[10px] font-bold border border-emerald-100 dark:border-emerald-900/20">
+                    <div className="flex items-center gap-1 bg-emerald-50 dark:bg-emerald-950/20 text-[#16a34a] dark:text-emerald-400 px-1.5 py-0.5 sm:px-2 sm:py-1 rounded-lg text-[9px] sm:text-[10px] font-bold border border-emerald-100 dark:border-emerald-900/20">
                       <span className="w-1.5 h-1.5 rounded-full bg-[#22c55e] animate-pulse" />
                       OPEN
                     </div>
-                    <button className="bg-[#22c55e] hover:bg-[#16a34a] text-white font-semibold text-xs px-2.5 py-1 rounded-lg shadow-sm transition-colors">
+                    <button className="hidden xs:inline-block bg-[#22c55e] hover:bg-[#16a34a] text-white font-semibold text-[10px] sm:text-xs px-2 py-1 rounded-lg shadow-sm transition-colors whitespace-nowrap">
                       Close Month
                     </button>
-                    <div className="relative w-7 h-7 rounded-full border border-slate-200 dark:border-slate-800 flex items-center justify-center text-slate-500 dark:text-slate-400 hover:bg-slate-50 cursor-pointer">
-                      <Bell className="w-3.5 h-3.5" />
+                    <div className="relative w-6 h-6 sm:w-7 sm:h-7 rounded-full border border-slate-200 dark:border-slate-800 flex items-center justify-center text-slate-500 dark:text-slate-400 hover:bg-slate-50 cursor-pointer">
+                      <Bell className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
                       <span className="absolute top-1 right-1 w-1.5 h-1.5 bg-rose-500 rounded-full" />
                     </div>
-                    <div className="flex items-center gap-1.5 border-l border-slate-200 dark:border-slate-800 pl-2">
-                      <div className="w-7 h-7 rounded-full bg-gradient-to-br from-violet-500 to-indigo-500 flex items-center justify-center text-white text-[10px] font-bold">
+                    <div className="flex items-center gap-1.5 border-l border-slate-200 dark:border-slate-800 pl-1.5 sm:pl-2">
+                      <div className="w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-gradient-to-br from-violet-500 to-indigo-500 flex items-center justify-center text-white text-[9px] sm:text-[10px] font-bold">
                         JD
                       </div>
                       <span className="hidden sm:inline text-xs font-semibold text-slate-700 dark:text-slate-300">John Doe</span>
