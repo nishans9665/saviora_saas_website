@@ -57,6 +57,6 @@ body {
 /* Desktop screen container width for balanced full-width layout */
 @media (min-width: 1200px) {
   .container {
-    max-width: 1450px !important;
+    max-width: 1350px !important;
   }
 }

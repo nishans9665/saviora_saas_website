@@ -31,12 +31,12 @@ import { Button } from "@/components/ui/Button";
 import logoSaviora from "@/assets/logo/logo-saviora-web.svg";
 
 const realDashboardChartData = [
-  { name: "Jan", income: 70000, expenses: 62000 },
-  { name: "Feb", income: 75000, expenses: 58000 },
-  { name: "Mar", income: 82000, expenses: 64000 },
-  { name: "Apr", income: 95000, expenses: 75000 },
-  { name: "May", income: 105000, expenses: 80000 },
-  { name: "Jun", income: 125000, expenses: 99500 },
+  { name: "Jan", income: 5200, expenses: 3100 },
+  { name: "Feb", income: 5500, expenses: 2900 },
+  { name: "Mar", income: 5800, expenses: 3400 },
+  { name: "Apr", income: 6400, expenses: 3200 },
+  { name: "May", income: 7100, expenses: 3600 },
+  { name: "Jun", income: 8500, expenses: 4350 },
 ];
 
 export function Hero() {
@@ -48,7 +48,7 @@ export function Hero() {
   }, []);
 
   return (
-    <section className="relative pt-32 sm:pt-36 md:pt-36 lg:pt-32 pb-16 md:pb-24 overflow-hidden bg-gradient-to-b from-slate-50/80 via-white to-slate-50/50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950">
+    <section className="relative pt-24 sm:pt-28 md:pt-28 lg:pt-24 pb-12 md:pb-16 overflow-hidden bg-gradient-to-b from-slate-50/80 via-white to-slate-50/50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950">
       
       {/* Ultra-Smooth Full-Bleed Ambient Background Glows */}
       <div className="absolute inset-0 w-full h-full pointer-events-none overflow-hidden z-0">
@@ -79,9 +79,9 @@ export function Hero() {
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 xl:gap-12 items-center">
           
-          {/* LEFT COLUMN: Copywriting & CTAs */}
+          {/* LEFT COLUMN: Copywriting & CTAs (Shifted up ~20px) */}
           <motion.div 
-            className="lg:col-span-5 text-left"
+            className="lg:col-span-5 text-left lg:-mt-5"
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
@@ -101,10 +101,10 @@ export function Hero() {
 
             {/* Headline */}
             <motion.h1
-              className="text-4xl sm:text-5xl md:text-6xl lg:text-5xl xl:text-6xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-[1.12] mb-5"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-4xl xl:text-5xl font-bold tracking-tight text-slate-900 dark:text-white leading-[1.12] mb-5"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
+              transition={{ duration: 0.5, delay: 0.1 }} 
             >
               Take Control of Your Money with{" "}
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#16a34a] via-[#22c55e] to-emerald-400 underline decoration-[#22c55e]/30 underline-offset-8">Saviora</span>
@@ -132,7 +132,7 @@ export function Hero() {
               </div>
               <div>
                 <p className="text-sm sm:text-base font-bold text-slate-900 dark:text-white tracking-tight">
-                  Get Saviora Pro <span className="text-[#16a34a] dark:text-emerald-400">FREE for 90 Days</span>
+                  Get Pro <span className="text-[#16a34a] dark:text-emerald-400">FREE for 90 Days</span>
                 </p>
                 <p className="text-xs text-slate-500 dark:text-slate-400 font-medium">
                   No credit card required
@@ -192,18 +192,18 @@ export function Hero() {
             </motion.div>
           </motion.div>
 
-          {/* RIGHT COLUMN: Full Real Interactive Dashboard Mockup */}
+          {/* RIGHT COLUMN: Real Interactive Dashboard Mockup (Clean & Simple Laptop View) */}
           <motion.div
-            className="lg:col-span-7 relative mt-4 lg:mt-0"
-            initial={{ opacity: 0, scale: 0.97 }}
-            animate={{ opacity: 1, scale: 1 }}
+            className="lg:col-span-7 relative mt-6 lg:mt-0 w-full"
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
           >
             {/* MAIN REAL DASHBOARD CONTAINER */}
-            <div className="rounded-2xl border border-slate-200/90 dark:border-slate-800 bg-white dark:bg-slate-950 shadow-2xl shadow-slate-900/10 overflow-hidden relative z-10 flex flex-col xl:flex-row h-auto">
+            <div className="w-full rounded-2xl border border-slate-200/90 dark:border-slate-800 bg-white dark:bg-slate-950 shadow-xl shadow-slate-900/10 overflow-hidden relative z-10 flex flex-col 2xl:flex-row h-auto">
               
-              {/* Sidebar Mockup (Left Side) */}
-              <div className="hidden xl:flex flex-col w-56 bg-white dark:bg-slate-900 border-r border-slate-200/60 dark:border-slate-800 p-4 justify-between flex-shrink-0">
+              {/* Sidebar Mockup (Visible on 2XL screens) */}
+              <div className="hidden 2xl:flex flex-col w-48 bg-white dark:bg-slate-900 border-r border-slate-200/60 dark:border-slate-800 p-3.5 justify-between flex-shrink-0">
                 <div>
                   {/* Logo */}
                   <div className="flex items-center gap-2 mb-6">
@@ -303,21 +303,23 @@ export function Hero() {
                 {/* Dashboard Widgets */}
                 <div className="p-3.5 sm:p-4 space-y-3.5">
                   {/* Stat Cards Grid */}
-                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
+                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
                     {[
-                      { title: "Monthly Balance", value: "$25,500.00", subtitle: "Net for June 2026", icon: Wallet, color: "text-[#16a34a] bg-emerald-50 dark:bg-emerald-950/30" },
-                      { title: "Monthly Income", value: "$125,000.00", subtitle: "Current month earnings", icon: TrendingUp, color: "text-blue-500 bg-blue-50 dark:bg-blue-950/30" },
-                      { title: "Monthly Expenses", value: "$99,500.00", subtitle: "Current month spending", icon: TrendingDown, color: "text-orange-500 bg-orange-50 dark:bg-orange-950/30" },
-                      { title: "Total Savings", value: "$45,000.00", subtitle: "Total goal contributions", icon: Target, color: "text-purple-500 bg-purple-50 dark:bg-purple-950/30" },
+                      { title: "Monthly Balance", value: "$4,150.00", subtitle: "Net for June 2026", icon: Wallet, color: "text-[#16a34a] bg-emerald-50 dark:bg-emerald-950/30" },
+                      { title: "Monthly Income", value: "$8,500.00", subtitle: "Current month earnings", icon: TrendingUp, color: "text-blue-500 bg-blue-50 dark:bg-blue-950/30" },
+                      { title: "Monthly Expenses", value: "$4,350.00", subtitle: "Current month spending", icon: TrendingDown, color: "text-orange-500 bg-orange-50 dark:bg-orange-950/30" },
+                      { title: "Total Savings", value: "$6,200.00", subtitle: "Total goal contributions", icon: Target, color: "text-purple-500 bg-purple-50 dark:bg-purple-950/30" },
                     ].map((card, i) => (
-                      <div key={i} className="bg-white dark:bg-slate-900 border border-slate-200/60 dark:border-slate-800/80 p-3 rounded-xl flex justify-between items-start">
-                        <div>
-                          <span className="text-[9px] text-slate-400 font-medium block">{card.title}</span>
-                          <h4 className="text-xs sm:text-sm font-bold text-slate-900 dark:text-white mt-0.5">{card.value}</h4>
-                          <span className="text-[8px] text-slate-400 block mt-0.5">{card.subtitle}</span>
+                      <div key={i} className="bg-white dark:bg-slate-900 border border-slate-200/70 dark:border-slate-800 p-2 sm:p-2.5 rounded-xl flex flex-col justify-between shadow-xs min-w-0">
+                        <div className="flex items-center justify-between gap-1 mb-0.5">
+                          <span className="text-[9px] sm:text-[10px] font-semibold text-slate-500 dark:text-slate-400 whitespace-nowrap leading-none">{card.title}</span>
+                          <div className={`p-1 rounded-md flex-shrink-0 ${card.color}`}>
+                            <card.icon className="w-3 h-3" />
+                          </div>
                         </div>
-                        <div className={`p-1.5 rounded-lg flex-shrink-0 ${card.color}`}>
-                          <card.icon className="w-3.5 h-3.5" />
+                        <div>
+                          <h4 className="text-xs sm:text-sm font-bold text-slate-900 dark:text-white tracking-tight whitespace-nowrap">{card.value}</h4>
+                          <span className="text-[8px] text-slate-400 dark:text-slate-500 font-medium block mt-0.5 whitespace-nowrap leading-none">{card.subtitle}</span>
                         </div>
                       </div>
                     ))}
@@ -419,9 +421,9 @@ export function Hero() {
                       </div>
                       <div className="divide-y divide-slate-100 dark:divide-slate-800/60 text-xs">
                         {[
-                          { name: "food", desc: "Jul 1 - FOOD & GROCERIES", amount: "-$1,000.00", isIncome: false },
-                          { name: "Salary", desc: "Jun 30 - INCOME", amount: "+$125,000.00", isIncome: true },
-                          { name: "Netflix", desc: "Jun 28 - SUBSCRIPTIONS", amount: "-$1,490.00", isIncome: false },
+                          { name: "food", desc: "Jul 1 - FOOD & GROCERIES", amount: "-$185.00", isIncome: false },
+                          { name: "Salary", desc: "Jun 30 - INCOME", amount: "+$5,500.00", isIncome: true },
+                          { name: "Netflix", desc: "Jun 28 - SUBSCRIPTIONS", amount: "-$14.99", isIncome: false },
                         ].map((tx, idx) => (
                           <div key={idx} className="py-1.5 flex items-center justify-between first:pt-0 last:pb-0">
                             <div className="flex items-center gap-2">
@@ -456,8 +458,8 @@ export function Hero() {
                         </div>
                         <div className="space-y-1.5">
                           {[
-                            { name: "Food & Groceries", spent: 8500, total: 15000, color: "bg-[#22c55e]" },
-                            { name: "Rent & Utilities", spent: 45000, total: 45000, color: "bg-orange-500" },
+                            { name: "Food & Groceries", spent: 650, total: 800, color: "bg-[#22c55e]" },
+                            { name: "Rent & Utilities", spent: 1800, total: 2000, color: "bg-orange-500" },
                           ].map((bgt, idx) => {
                             const percent = Math.min(100, Math.round((bgt.spent / bgt.total) * 100));
                             return (
@@ -490,12 +492,65 @@ export function Hero() {
 
                 </div>
               </div>
-
             </div>
 
           </motion.div>
 
         </div>
+
+        {/* Feature Highlight Cards */}
+        <motion.div
+          initial={{ opacity: 0, y: 25 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="mt-12 sm:mt-16 grid grid-cols-1 md:grid-cols-3 gap-5 lg:gap-6 max-w-6xl mx-auto"
+        >
+          {/* Card 1: Track Your Money */}
+          <div className="bg-white/90 dark:bg-slate-900/90 backdrop-blur-xl border border-slate-200/80 dark:border-slate-800 p-5 sm:p-6 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 flex items-start gap-4">
+            <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-amber-50 dark:bg-amber-950/50 border border-amber-100 dark:border-amber-900/50 flex items-center justify-center flex-shrink-0">
+              <Wallet className="w-5 h-5 sm:w-6 sm:h-6 text-amber-500" />
+            </div>
+            <div>
+              <h3 className="font-bold text-slate-900 dark:text-white text-base mb-1">
+                Track Your Expenses
+              </h3>
+              <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
+                Easily record income and expenses and see where your money goes each month.
+              </p>
+            </div>
+          </div>
+
+          {/* Card 2: Plan Your Budget */}
+          <div className="bg-white/90 dark:bg-slate-900/90 backdrop-blur-xl border border-slate-200/80 dark:border-slate-800 p-5 sm:p-6 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 flex items-start gap-4">
+            <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-emerald-50 dark:bg-emerald-950/50 border border-emerald-100 dark:border-emerald-900/50 flex items-center justify-center flex-shrink-0">
+              <PieChart className="w-5 h-5 sm:w-6 sm:h-6 text-[#22c55e]" />
+            </div>
+            <div>
+              <h3 className="font-bold text-slate-900 dark:text-white text-base mb-1">
+                Plan Your Budget
+              </h3>
+              <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
+                Set monthly budgets, monitor your spending, and stay on track with your financial goals.
+              </p>
+            </div>
+          </div>
+
+          {/* Card 3: Reach Your Goals */}
+          <div className="bg-white/90 dark:bg-slate-900/90 backdrop-blur-xl border border-slate-200/80 dark:border-slate-800 p-5 sm:p-6 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 flex items-start gap-4">
+            <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-rose-50 dark:bg-rose-950/50 border border-rose-100 dark:border-rose-900/50 flex items-center justify-center flex-shrink-0">
+              <Target className="w-5 h-5 sm:w-6 sm:h-6 text-rose-500" />
+            </div>
+            <div>
+              <h3 className="font-bold text-slate-900 dark:text-white text-base mb-1">
+                Reach Your Savings Goals
+              </h3>
+              <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
+                Set savings targets, track your progress, and build better money habits over time.
+              </p>
+            </div>
+          </div>
+        </motion.div>
+
       </div>
 
       {/* Interactive Demo Showcase Modal */}

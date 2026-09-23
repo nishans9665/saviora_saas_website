@@ -21,12 +21,12 @@ import Image from "next/image";
 import logoSaviora from "@/assets/logo/logo-saviora-web.svg";
 
 const chartData = [
-  { name: "Jan", income: 85000, expenses: 62000 },
-  { name: "Feb", income: 90000, expenses: 58000 },
-  { name: "Mar", income: 95000, expenses: 64000 },
-  { name: "Apr", income: 110000, expenses: 75000 },
-  { name: "May", income: 115000, expenses: 80000 },
-  { name: "Jun", income: 125000, expenses: 99500 },
+  { name: "Jan", income: 5200, expenses: 3100 },
+  { name: "Feb", income: 5500, expenses: 2900 },
+  { name: "Mar", income: 5800, expenses: 3400 },
+  { name: "Apr", income: 6400, expenses: 3200 },
+  { name: "May", income: 7100, expenses: 3600 },
+  { name: "Jun", income: 8500, expenses: 4350 },
 ];
 
 export function DashboardShowcase() {
@@ -160,19 +160,21 @@ export function DashboardShowcase() {
                   {/* Stat Cards */}
                   <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
                     {[
-                      { title: "Monthly Balance", value: "$25,500.00", subtitle: "Net for June 2026", icon: Wallet, color: "text-emerald-500 bg-emerald-50 dark:bg-emerald-950/30" },
-                      { title: "Monthly Income", value: "$125,000.00", subtitle: "Current month earnings", icon: TrendingUp, color: "text-blue-500 bg-blue-50 dark:bg-blue-950/30" },
-                      { title: "Monthly Expenses", value: "$99,500.00", subtitle: "Current month spending", icon: TrendingDown, color: "text-orange-500 bg-orange-50 dark:bg-orange-950/30" },
-                      { title: "Total Savings", value: "$45,000.00", subtitle: "Total goal contributions", icon: Target, color: "text-purple-500 bg-purple-50 dark:bg-purple-950/30" },
+                      { title: "Monthly Balance", value: "$4,150.00", subtitle: "Net for June 2026", icon: Wallet, color: "text-emerald-500 bg-emerald-50 dark:bg-emerald-950/30" },
+                      { title: "Monthly Income", value: "$8,500.00", subtitle: "Current month earnings", icon: TrendingUp, color: "text-blue-500 bg-blue-50 dark:bg-blue-950/30" },
+                      { title: "Monthly Expenses", value: "$4,350.00", subtitle: "Current month spending", icon: TrendingDown, color: "text-orange-500 bg-orange-50 dark:bg-orange-950/30" },
+                      { title: "Total Savings", value: "$6,200.00", subtitle: "Total goal contributions", icon: Target, color: "text-purple-500 bg-purple-50 dark:bg-purple-950/30" },
                     ].map((card, i) => (
-                      <div key={i} className="bg-white dark:bg-slate-900 border border-slate-200/60 dark:border-slate-800/80 p-4 rounded-xl flex justify-between items-start">
-                        <div className="space-y-1">
-                          <span className="text-[10px] text-slate-400 font-medium">{card.title}</span>
-                          <h4 className="text-sm sm:text-base font-bold text-slate-900 dark:text-white">{card.value}</h4>
-                          <span className="text-[9px] text-slate-400 block">{card.subtitle}</span>
+                      <div key={i} className="bg-white dark:bg-slate-900 border border-slate-200/70 dark:border-slate-800 p-3.5 sm:p-4 rounded-xl flex flex-col justify-between shadow-xs min-w-0">
+                        <div className="flex items-center justify-between gap-1 mb-1.5">
+                          <span className="text-xs font-semibold text-slate-500 dark:text-slate-400 whitespace-nowrap truncate">{card.title}</span>
+                          <div className={`p-1.5 rounded-md flex-shrink-0 ${card.color}`}>
+                            <card.icon className="w-4 h-4" />
+                          </div>
                         </div>
-                        <div className={`p-2 rounded-lg flex-shrink-0 ${card.color}`}>
-                          <card.icon className="w-3.5 h-3.5" />
+                        <div>
+                          <h4 className="text-base sm:text-lg font-extrabold text-slate-900 dark:text-white tracking-tight whitespace-nowrap">{card.value}</h4>
+                          <span className="text-[10px] text-slate-400 dark:text-slate-500 font-medium block mt-0.5 whitespace-nowrap truncate">{card.subtitle}</span>
                         </div>
                       </div>
                     ))}
@@ -234,9 +236,9 @@ export function DashboardShowcase() {
                         </div>
                         <div className="divide-y divide-slate-100 dark:divide-slate-800/60">
                           {[
-                            { name: "food", desc: "Jul 1 - FOOD & GROCERIES", amount: "-$1,000.00", isIncome: false },
-                            { name: "Salary", desc: "Jun 30 - INCOME", amount: "+$125,000.00", isIncome: true },
-                            { name: "Netflix", desc: "Jun 28 - SUBSCRIPTIONS", amount: "-$1,490.00", isIncome: false },
+                            { name: "food", desc: "Jul 1 - FOOD & GROCERIES", amount: "-$185.00", isIncome: false },
+                            { name: "Salary", desc: "Jun 30 - INCOME", amount: "+$5,500.00", isIncome: true },
+                            { name: "Netflix", desc: "Jun 28 - SUBSCRIPTIONS", amount: "-$14.99", isIncome: false },
                           ].map((tx, idx) => (
                             <div key={idx} className="py-2.5 flex items-center justify-between first:pt-0 last:pb-0">
                               <div className="flex items-center gap-3">
@@ -314,8 +316,8 @@ export function DashboardShowcase() {
                         </div>
                         <div className="space-y-2.5">
                           {[
-                            { name: "Food & Groceries", spent: 8500, total: 15000, color: "bg-emerald-500" },
-                            { name: "Rent & Utilities", spent: 45000, total: 45000, color: "bg-orange-500" },
+                            { name: "Food & Groceries", spent: 650, total: 800, color: "bg-emerald-500" },
+                            { name: "Rent & Utilities", spent: 1800, total: 2000, color: "bg-orange-500" },
                           ].map((bgt, idx) => {
                             const percent = Math.min(100, Math.round((bgt.spent / bgt.total) * 100));
                             return (
