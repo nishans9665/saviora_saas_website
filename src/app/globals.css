@@ -54,9 +54,9 @@ body {
   }
 }
 
-/* Limit maximum container width on desktop screens to keep layout aligned */
+/* Desktop screen container width for balanced full-width layout */
 @media (min-width: 1200px) {
   .container {
-    max-width: 1290px !important;
+    max-width: 1350px !important;
   }
 }
