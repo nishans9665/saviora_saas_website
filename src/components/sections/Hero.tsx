@@ -92,7 +92,7 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }} 
           >
-            Take Control of Your Money<br className="hidden sm:inline" />{" "}
+            Take Control of Your <br className="hidden sm:inline" />{" "}Money
             with{" "}
             <span className="text-[#22c55e] dark:text-emerald-400 relative inline-block">
               Saviora
@@ -109,7 +109,7 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            Track your income and expenses, manage monthly budgets, and achieve your savings goals with Saviora — your simple, all-in-one personal finance app.
+            Track your income and expenses, manage monthly budgets, and achieve your savings goals with Saviora - your simple, all-in-one personal finance app.
           </motion.p>
 
           {/* Action Buttons */}
