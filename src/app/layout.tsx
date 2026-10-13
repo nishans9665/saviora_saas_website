@@ -24,12 +24,12 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
 
   title: { 
-    default: "Free Expense Tracker & Budget Planning App | Saviora",
+    default: "Saviora – Personal Finance & Budget Tracker",
     template: "%s | Saviora",
   },
 
   description:
-    "Saviora is a free personal finance management system. Track daily expenses, plan budgets, manage income, and reach your savings goals effortlessly.",
+    "Manage your money with Saviora. Track income and expenses, plan monthly budgets, monitor savings goals, and understand your finances in one place.",
 
   applicationName: "Saviora",
 
@@ -45,32 +45,20 @@ export const metadata: Metadata = {
   publisher: "Saviora",
 
   keywords: [
-    "Saviora Free",
-    "Free Expense Tracker",
-    "Budget Planning App",
-    "Personal Finance Management System",
-    "budget app",
-    "budget planner",
-    "tracking expenses",
-    "Expense Tracker",
-    "Income Tracker",
-    "Savings Goals",
+    "personal finance app",
+    "personal finance management",
+    "money management app",
     "expense tracker app",
-    "Money Manager",
-    "Financial Planning",
-    "personal budget app",
-    "Personal Budget",
-    "Budget Management",
-    "Expense Management",
-    "Finance Dashboard",
-    "Monthly Budget",
-    "Cash Flow",
-    "Financial Reports",
-    "Money Management App",
-    "Finance Software",
-    "Budget App",
+    "budget planner app",
     "savings goal tracker",
-    "Personal Finance Software",
+    "track monthly expenses",
+    "monthly budget tracker",
+    "manage income and expenses",
+    "financial planning app",
+    "personal budget app",
+    "cash flow tracker",
+    "Saviora",
+    "Saviora Pro",
   ],
 
   alternates: {
@@ -91,9 +79,9 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "Saviora - Grow Your Financial Future",
+    title: "Saviora – Personal Finance & Budget Tracker",
     description:
-      "Saviora is a smart personal finance app to track income and expenses, manage budgets, set savings goals, and take control of your financial future.",
+      "Manage your money with Saviora. Track income and expenses, plan monthly budgets, monitor savings goals, and understand your finances in one place.",
     url: siteUrl,
     siteName: "Saviora",
     locale: "en_US",
@@ -104,14 +92,14 @@ export const metadata: Metadata = {
         url: `${siteUrl}/assets/logo/social-share-logo.png`,
         width: 600,
         height: 600,
-        alt: "Saviora - Grow Your Financial Future",
+        alt: "Saviora – Personal Finance & Budget Tracker",
         type: "image/png",
       },
       {
         url: `${siteUrl}/images/og-image.png`,
         width: 1200,
         height: 630,
-        alt: "Saviora - Grow Your Financial Future",
+        alt: "Saviora – Personal Finance & Budget Tracker",
         type: "image/png",
       },
     ],
@@ -119,9 +107,9 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Saviora - Grow Your Financial Future",
+    title: "Saviora – Personal Finance & Budget Tracker",
     description:
-      "Saviora is a smart personal finance app to track income and expenses, manage budgets, set savings goals, and take control of your financial future.",
+      "Manage your money with Saviora. Track income and expenses, plan monthly budgets, monitor savings goals, and understand your finances in one place.",
     images: [`${siteUrl}/assets/logo/social-share-logo.png`],
     creator: "@Saviora",
   },

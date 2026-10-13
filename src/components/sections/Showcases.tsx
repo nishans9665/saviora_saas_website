@@ -26,10 +26,10 @@ export function Showcases() {
         
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">
-            Everything You Need, <span className="text-gradient">All in One Place</span>
+            Track Expenses, Plan Budgets &amp; <span className="text-gradient">Reach Savings Goals</span>
           </h2>
           <p className="text-lg text-slate-600 dark:text-slate-400">
-            From savings goals to expense breakdowns and financial health monitoring, Saviora has you covered.
+            See how Saviora unifies your daily cash flow, monthly spending limits, and financial milestones in one easy-to-use platform.
           </p>
         </div>
 
@@ -42,10 +42,10 @@ export function Showcases() {
                 <div className="w-10 h-10 rounded-full bg-emerald-100 dark:bg-emerald-900/50 flex items-center justify-center text-emerald-600 dark:text-emerald-400">
                   <Target className="w-5 h-5" />
                 </div>
-                <h3 className="font-semibold text-lg text-slate-900 dark:text-white">Savings Goals</h3>
+                <h3 className="font-semibold text-lg text-slate-900 dark:text-white">Savings Goal Tracker</h3>
               </div>
               <p className="text-slate-600 dark:text-slate-400 mb-6">
-                Visualize your progress towards major life milestones with smart projections.
+                Set clear target amounts, log periodic contributions, and watch your progress toward major life milestones.
               </p>
               
               <div className="space-y-4 mt-auto">
@@ -167,6 +167,10 @@ export function Showcases() {
           </AnimatedSection>
 
         </div>
+
+        <p className="text-center mt-12 text-xs text-slate-400 dark:text-slate-500 font-medium">
+          * Illustrative demo values shown above. Saviora adapts to your real accounts, categories, and targets.
+        </p>
       </div>
     </section>
   );

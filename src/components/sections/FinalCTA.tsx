@@ -24,7 +24,7 @@ export function FinalCTA() {
                 </span>
               </h2>
               <p className="text-lg md:text-xl text-slate-300 max-w-2xl mx-auto mb-10">
-                Join thousands of users who have transformed their finances with Saviora. Get started for free, no credit card required.
+                Track your expenses, take control of monthly budgets, and reach your savings goals with Saviora. Try all Pro features free for 90 days.
               </p>
               
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -34,18 +34,18 @@ export function FinalCTA() {
                   className="group w-full sm:w-auto text-base bg-primary-500 hover:bg-primary-600 text-white font-semibold shadow-md shadow-primary-500/30 hover:shadow-lg hover:shadow-primary-500/50 hover:-translate-y-0.5 active:translate-y-0 px-8 py-3.5 rounded-full transition-all duration-300"
                 >
                   <Link href="https://cloud.saviora.app/register" target="_blank" className="flex items-center justify-center">
-                    <span>Create Free Account</span>
+                    <span>Start 90 Days Free</span>
                     <ArrowRight className="w-5 h-5 ml-2 transition-transform duration-300 group-hover:translate-x-1.5" />
                   </Link>
                 </Button>
                 <Button asChild size="lg" variant="outline" className="w-full sm:w-auto text-base text-white border-slate-700 hover:bg-slate-800 dark:border-slate-700 dark:hover:bg-slate-800">
-                  <Link href="/contact">
-                    Contact Us
+                  <Link href="/pricing">
+                    View Pricing &amp; Plans
                   </Link>
                 </Button>
               </div>
               <p className="text-sm text-slate-400 mt-6">
-                Fully functional 90-day trial for Pro features.
+                No credit card required • Cancel anytime • Full Pro access
               </p>
             </div>
           </div>
