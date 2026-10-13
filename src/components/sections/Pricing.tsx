@@ -413,7 +413,7 @@ export function Pricing() {
                   <span className="text-gradient">Financial Future?</span>
                 </h2>
                 <p className="text-slate-400 mb-8 text-sm sm:text-base">
-                  Join thousands of users building better financial habits with Saviora.
+                  Start building better financial habits with Saviora today.
                 </p>
                 <Button
                   asChild

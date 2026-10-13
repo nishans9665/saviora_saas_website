@@ -81,7 +81,7 @@ export function Hero() {
           >
             <span className="inline-flex items-center gap-2 py-1.5 px-4 rounded-full bg-emerald-50 dark:bg-emerald-950/60 text-[#16a34a] dark:text-emerald-400 text-xs sm:text-sm font-semibold border border-[#22c55e]/25 shadow-xs">
               <Sparkles className="w-3.5 h-3.5 text-[#22c55e] flex-shrink-0" />
-              <span>Your All-in-One Personal Finance App</span>
+              <span>Smart Personal Finance &amp; Budget Tracking</span>
             </span>
           </motion.div>
 
@@ -109,7 +109,7 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            Track your income and expenses, manage monthly budgets, and achieve your savings goals with Saviora - your simple, all-in-one personal finance app.
+            Manage your money with Saviora. Track income and expenses, plan monthly budgets, monitor savings goals, and understand your finances in one place.
           </motion.p>
 
           {/* Action Buttons */}
@@ -167,7 +167,7 @@ export function Hero() {
         </div>
 
         {/* DASHBOARD PREVIEW SHOWCASE WITH SCROLL ANIMATION */}
-        <div ref={dashboardRef} className="w-full max-w-6xl mx-auto">
+        <div id="dashboard" ref={dashboardRef} className="w-full max-w-6xl mx-auto scroll-mt-28">
           <motion.div
             style={shouldReduceMotion ? {} : { opacity, scale, y: translateY }}
             transition={{ duration: 0.6, ease: "easeOut" }}
@@ -466,6 +466,10 @@ export function Hero() {
               </div>
             </div>
           </motion.div>
+          {/* Illustrative Demo Disclosure */}
+          <p className="text-center mt-3 text-[11px] sm:text-xs text-slate-400 dark:text-slate-500 font-medium">
+            * Illustrative dashboard demo. Saviora lets you customize categories, budget limits, and savings goals for your personal finances.
+          </p>
         </div>
 
         {/* FEATURE CARDS BELOW DASHBOARD */}
@@ -477,49 +481,58 @@ export function Hero() {
           className="mt-16 sm:mt-20 grid grid-cols-1 md:grid-cols-3 gap-5 lg:gap-6 max-w-6xl mx-auto"
         >
           {/* Card 1: Track Your Expenses */}
-          <div className="bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 p-6 rounded-2xl shadow-xs hover:shadow-md transition-all duration-300 flex items-start gap-4 group">
+          <Link
+            href="#features"
+            className="bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 p-6 rounded-2xl shadow-xs hover:shadow-md hover:border-emerald-300 dark:hover:border-emerald-800 transition-all duration-300 flex items-start gap-4 group"
+          >
             <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-emerald-50 dark:bg-emerald-950/50 border border-emerald-100 dark:border-emerald-900/50 flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform">
               <Wallet className="w-5 h-5 sm:w-6 sm:h-6 text-[#22c55e]" />
             </div>
             <div>
-              <h3 className="font-bold text-slate-900 dark:text-white text-base mb-1">
-                Track Your Expenses
+              <h3 className="font-bold text-slate-900 dark:text-white text-base mb-1 group-hover:text-[#16a34a] dark:group-hover:text-emerald-400 transition-colors">
+                Expense Tracker App
               </h3>
               <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
-                Easily record income and expenses and see where your money goes.
+                Easily record everyday income and expenses, organize by category, and review spending trends.
               </p>
             </div>
-          </div>
+          </Link>
 
           {/* Card 2: Plan Your Budget */}
-          <div className="bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 p-6 rounded-2xl shadow-xs hover:shadow-md transition-all duration-300 flex items-start gap-4 group">
+          <Link
+            href="#features"
+            className="bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 p-6 rounded-2xl shadow-xs hover:shadow-md hover:border-emerald-300 dark:hover:border-emerald-800 transition-all duration-300 flex items-start gap-4 group"
+          >
             <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-emerald-50 dark:bg-emerald-950/50 border border-emerald-100 dark:border-emerald-900/50 flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform">
               <PieChart className="w-5 h-5 sm:w-6 sm:h-6 text-[#22c55e]" />
             </div>
             <div>
-              <h3 className="font-bold text-slate-900 dark:text-white text-base mb-1">
-                Plan Your Budget
+              <h3 className="font-bold text-slate-900 dark:text-white text-base mb-1 group-hover:text-[#16a34a] dark:group-hover:text-emerald-400 transition-colors">
+                Budget Planner Tools
               </h3>
               <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
-                Set monthly budgets, monitor your spending, and stay on track.
+                Set monthly category budgets, define sensible spending limits, and stay on track all month.
               </p>
             </div>
-          </div>
+          </Link>
 
           {/* Card 3: Reach Your Savings Goals */}
-          <div className="bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 p-6 rounded-2xl shadow-xs hover:shadow-md transition-all duration-300 flex items-start gap-4 group">
+          <Link
+            href="#showcases"
+            className="bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 p-6 rounded-2xl shadow-xs hover:shadow-md hover:border-emerald-300 dark:hover:border-emerald-800 transition-all duration-300 flex items-start gap-4 group"
+          >
             <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-emerald-50 dark:bg-emerald-950/50 border border-emerald-100 dark:border-emerald-900/50 flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform">
               <Target className="w-5 h-5 sm:w-6 sm:h-6 text-[#22c55e]" />
             </div>
             <div>
-              <h3 className="font-bold text-slate-900 dark:text-white text-base mb-1">
-                Reach Your Savings Goals
+              <h3 className="font-bold text-slate-900 dark:text-white text-base mb-1 group-hover:text-[#16a34a] dark:group-hover:text-emerald-400 transition-colors">
+                Savings Goal Tracker
               </h3>
               <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
-                Set savings targets, track your progress, and build better money habits.
+                Set milestone targets, log periodic contributions, and watch your savings grow visually.
               </p>
             </div>
-          </div>
+          </Link>
         </motion.div>
 
       </div>

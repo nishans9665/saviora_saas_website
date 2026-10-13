@@ -4,54 +4,7 @@ import React, { useState } from "react";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-
-const faqs = [
-  {
-    question: "What is a personal finance app?",
-    answer: "A personal finance app is a digital tool that helps you manage your money in one place. It can help you track income and expenses, create and manage budgets, monitor spending, and set savings goals. Saviora brings these tools together to help you stay organized and take better control of your financial future."
-  },
-  {
-    question: "What is Saviora?",
-    answer: "Saviora is a modern personal finance platform that helps you track income, manage expenses, create monthly budgets, achieve savings goals, and gain valuable financial insights - all in one secure and easy-to-use application."
-  },
-  {
-    question: "Is Saviora free to use?",
-    answer: "Yes. Every new user receives a 90-day free trial with full access to all premium features. After your trial ends, you can continue using Saviora by subscribing to the Monthly or Yearly Pro plan."
-  },
-  {
-    question: "Can I manage multiple currencies?",
-    answer: "Yes. Saviora supports multiple currencies and country-specific settings, making it easy to manage your finances wherever you are in the world."
-  },
-  {
-    question: "Is my financial data secure?",
-    answer: "Absolutely. Your financial information is protected using secure authentication, encrypted communication (HTTPS), and industry-standard security practices. Only you can access your personal financial data."
-  },
-  {
-    question: "Can I export my financial reports?",
-    answer: "Yes. You can export your income, expenses, budgets, savings goals, and financial reports in PDF and CSV formats for personal records, accounting, or tax preparation."
-  },
-  {
-    question: "Can I set monthly budgets and savings goals?",
-    answer: "Yes. Saviora allows you to create personalized monthly budgets, track category spending, monitor your progress, and set savings goals with visual progress indicators."
-  },
-  {
-    question: "Can I access Saviora on my phone?",
-    answer: "Yes. Saviora is fully responsive and works seamlessly on desktops, tablets, and mobile browsers. A dedicated mobile application is currently under development and will be available soon."
-  },
-  {
-    question: "What happens when my free trial ends?",
-    answer: "Your account and financial data remain safe. To continue creating and managing new income, expenses, budgets, and savings goals, simply upgrade to a Saviora Pro subscription."
-  },
-  {
-    question: "What happens if I cancel my subscription?",
-    answer: "You can cancel your subscription at any time. Your plan will remain active until the end of your billing cycle, after which you'll be downgraded to the Free plan. All your historical data will be securely preserved for future access."
-  },
-  {
-    question: "How do I contact support?",
-    answer: "Need assistance? Our Saviora Support Team is ready to help. Contact us by emailing support@saviora.app or submit a support ticket through the in-app Support Center. You can track your ticket status, receive updates, and communicate directly with our support team. We strive to respond to all support requests within 24 hours during business days."
-  }
-];
-
+import { faqs } from "@/lib/faqs";
 export function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
