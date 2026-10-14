@@ -10,26 +10,53 @@ import {
   ChevronDown, 
   LayoutDashboard, 
   TrendingUp, 
-  TrendingDown, 
-  Wallet, 
+  CreditCard, 
+  BarChart2,
+  PieChart, 
   Target, 
-  BarChart3, 
   Settings, 
-  Briefcase, 
-  Laptop, 
-  PieChart,
-  Sparkles
+  Sparkles,
+  Briefcase,
+  Laptop,
+  Coins
 } from "lucide-react";
 import { Button } from "@/components/ui/Button";
-import logoSaviora from "@/assets/logo/logo-saviora-web.svg";
+import logoSaviora from "@/assets/logo/logo-saviora-web-tag.svg";
 
-const monthlyData = [
-  { month: "Jan", height: "45%", value: "$3,800" },
-  { month: "Feb", height: "55%", value: "$4,100" },
-  { month: "Mar", height: "65%", value: "$4,650" },
-  { month: "Apr", height: "72%", value: "$4,900" },
-  { month: "May", height: "82%", value: "$5,150" },
-  { month: "Jun", height: "96%", value: "$5,420" },
+const monthlyChartBars = [
+  { month: "Jan", height: "42%" },
+  { month: "Feb", height: "55%" },
+  { month: "Mar", height: "65%" },
+  { month: "Apr", height: "72%" },
+  { month: "May", height: "85%" },
+  { month: "Jun", height: "98%" },
+];
+
+const simpleTransactions = [
+  {
+    title: "Salary",
+    category: "Main Job",
+    date: "Jun 1, 2026",
+    amount: "+$3,500.00",
+    icon: Briefcase,
+    iconColor: "bg-slate-100 text-slate-700",
+  },
+  {
+    title: "Freelance Project",
+    category: "Client Work",
+    date: "May 28, 2026",
+    amount: "+$1,450.00",
+    icon: Laptop,
+    iconColor: "bg-sky-50 text-sky-600",
+  },
+  {
+    title: "Investment Dividend",
+    category: "Investments",
+    date: "May 15, 2026",
+    amount: "+$470.00",
+    icon: Coins,
+    iconColor: "bg-rose-50 text-rose-500",
+  },
 ];
 
 export function IncomeHero() {
@@ -44,29 +71,29 @@ export function IncomeHero() {
   };
 
   return (
-    <section className="relative pt-28 sm:pt-32 md:pt-36 pb-16 sm:pb-24 overflow-hidden bg-gradient-to-b from-emerald-50/30 via-slate-50/50 to-white">
+    <section className="relative pt-28 sm:pt-32 md:pt-36 pb-16 sm:pb-24 overflow-hidden bg-gradient-to-b from-[#22c55e]/5 via-slate-50/50 to-white">
       {/* Ambient background aura */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden z-0">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[520px] bg-[radial-gradient(ellipse_70%_50%_at_50%_0%,rgba(34,197,94,0.14),transparent_75%)]" />
-        <div className="absolute top-20 right-[-100px] w-96 h-96 bg-emerald-400/10 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[560px] bg-[radial-gradient(ellipse_75%_55%_at_50%_0%,rgba(34,197,94,0.15),transparent_75%)]" />
+        <div className="absolute top-20 right-[-100px] w-96 h-96 bg-[#22c55e]/10 rounded-full blur-3xl pointer-events-none" />
       </div>
 
       <div className="container mx-auto px-4 md:px-6 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-10 items-center">
           
           {/* Left Column: Heading, Copy & CTAs */}
           <div className="lg:col-span-6 xl:col-span-6 text-left flex flex-col items-start">
             
             {/* Eyebrow Badge */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 border border-emerald-200/70 text-emerald-700 text-xs font-semibold uppercase tracking-wider mb-6 shadow-xs">
-              <Sparkles className="w-3.5 h-3.5 text-emerald-600 flex-shrink-0" />
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#22c55e]/10 border border-[#22c55e]/25 text-[#16a34a] text-xs font-semibold uppercase tracking-wider mb-6 shadow-xs">
+              <Sparkles className="w-3.5 h-3.5 text-[#22c55e] flex-shrink-0" />
               <span>INCOME TRACKING</span>
             </div>
 
             {/* H1 Headline */}
             <h1 className="text-4xl sm:text-5xl lg:text-[52px] font-extrabold tracking-tight text-slate-900 leading-[1.14] mb-6">
               Track Your Income in{" "}
-              <span className="text-emerald-500 relative inline-block">
+              <span className="text-[#22c55e] relative inline-block">
                 One Simple Place
               </span>
             </h1>
@@ -81,7 +108,7 @@ export function IncomeHero() {
               <Button
                 asChild
                 size="lg"
-                className="bg-emerald-500 hover:bg-emerald-600 text-white font-semibold rounded-full px-7 py-3.5 shadow-md shadow-emerald-500/25 hover:shadow-lg hover:shadow-emerald-500/35 hover:-translate-y-0.5 transition-all duration-300 justify-center cursor-pointer"
+                className="bg-[#22c55e] hover:bg-[#16a34a] text-white font-semibold rounded-full px-7 py-3.5 shadow-md shadow-[#22c55e]/25 hover:shadow-lg hover:shadow-[#22c55e]/35 hover:-translate-y-0.5 transition-all duration-300 justify-center cursor-pointer"
                 onClick={handlePrimaryCtaClick}
               >
                 <Link href="https://cloud.saviora.app/register" target="_blank" className="flex items-center justify-center">
@@ -105,82 +132,81 @@ export function IncomeHero() {
             {/* Trust Indicators */}
             <div className="flex flex-wrap items-center gap-x-6 gap-y-2.5 text-xs sm:text-sm font-medium text-slate-600">
               <div className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-emerald-500 flex-shrink-0" />
+                <CheckCircle2 className="w-4 h-4 text-[#22c55e] flex-shrink-0" />
                 <span>Simple and easy to use</span>
               </div>
               <div className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-emerald-500 flex-shrink-0" />
+                <CheckCircle2 className="w-4 h-4 text-[#22c55e] flex-shrink-0" />
                 <span>Works across all your devices</span>
               </div>
               <div className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-emerald-500 flex-shrink-0" />
+                <CheckCircle2 className="w-4 h-4 text-[#22c55e] flex-shrink-0" />
                 <span>No credit card required</span>
               </div>
             </div>
 
           </div>
 
-          {/* Right Column: Saviora Income Dashboard Mockup */}
+          {/* Right Column: Clean, Premium Saviora Income Mockup */}
           <div className="lg:col-span-6 xl:col-span-6 w-full">
             <div className="relative mx-auto max-w-xl lg:max-w-none">
               
-              {/* Subtle background glow under card */}
-              <div className="absolute -inset-1.5 bg-gradient-to-r from-emerald-500/15 to-emerald-300/15 rounded-3xl blur-xl opacity-70 pointer-events-none" />
+              {/* Subtle background ambient aura under card */}
+              <div className="absolute -inset-1.5 bg-gradient-to-r from-[#22c55e]/15 to-teal-400/15 rounded-3xl blur-xl opacity-75 pointer-events-none" />
 
-              {/* Main Card */}
-              <div className="relative rounded-2xl sm:rounded-3xl border border-slate-200/90 bg-white shadow-xl shadow-slate-900/5 overflow-hidden flex flex-col md:flex-row">
+              {/* Main Card Frame */}
+              <div className="relative rounded-2xl sm:rounded-3xl border border-slate-200/90 bg-white shadow-xl shadow-slate-900/5 overflow-hidden flex flex-col sm:flex-row text-left">
                 
-                {/* Mini Sidebar */}
+                {/* Left Mini Sidebar */}
                 <div className="hidden sm:flex flex-col w-44 bg-slate-50/70 border-r border-slate-100 p-3.5 justify-between flex-shrink-0">
                   <div>
-                    {/* Brand header */}
-                    <div className="flex items-center justify-between pb-3 mb-2 border-b border-slate-200/60">
-                      <div className="flex items-center gap-1.5">
-                        <Image src={logoSaviora} alt="Saviora" className="h-6 w-auto object-contain" />
-                      </div>
+                    {/* Brand Header */}
+                    <div className="flex items-center justify-between pb-3 mb-2.5 border-b border-slate-200/60">
+                      <Image src={logoSaviora} alt="Saviora" className="h-6 w-auto object-contain" />
                       <ChevronDown className="w-3.5 h-3.5 text-slate-400" />
                     </div>
 
-                    {/* Nav Items */}
+                    {/* Nav List */}
                     <nav className="space-y-1">
                       <div className="flex items-center gap-2 px-2.5 py-1.5 rounded-lg text-xs font-medium text-slate-500 hover:text-slate-800 transition-colors">
-                        <LayoutDashboard className="w-3.5 h-3.5" />
+                        <LayoutDashboard className="w-3.5 h-3.5 text-slate-400" />
                         <span>Dashboard</span>
                       </div>
-                      <div className="flex items-center gap-2 px-2.5 py-1.5 rounded-lg text-xs font-semibold text-emerald-700 bg-emerald-100/60 transition-colors">
-                        <TrendingUp className="w-3.5 h-3.5 text-emerald-600" />
+                      <div className="flex items-center gap-2 px-2.5 py-1.5 rounded-lg text-xs font-bold text-[#16a34a] bg-[#22c55e]/15 border border-[#22c55e]/20 transition-colors">
+                        <TrendingUp className="w-3.5 h-3.5 text-[#22c55e]" />
                         <span>Income</span>
                       </div>
                       <div className="flex items-center gap-2 px-2.5 py-1.5 rounded-lg text-xs font-medium text-slate-500 hover:text-slate-800 transition-colors">
-                        <TrendingDown className="w-3.5 h-3.5" />
+                        <CreditCard className="w-3.5 h-3.5 text-slate-400" />
                         <span>Expenses</span>
                       </div>
                       <div className="flex items-center gap-2 px-2.5 py-1.5 rounded-lg text-xs font-medium text-slate-500 hover:text-slate-800 transition-colors">
-                        <Wallet className="w-3.5 h-3.5" />
+                        <PieChart className="w-3.5 h-3.5 text-slate-400" />
                         <span>Budgets</span>
                       </div>
                       <div className="flex items-center gap-2 px-2.5 py-1.5 rounded-lg text-xs font-medium text-slate-500 hover:text-slate-800 transition-colors">
-                        <Target className="w-3.5 h-3.5" />
+                        <Target className="w-3.5 h-3.5 text-slate-400" />
                         <span>Savings Goals</span>
                       </div>
                       <div className="flex items-center gap-2 px-2.5 py-1.5 rounded-lg text-xs font-medium text-slate-500 hover:text-slate-800 transition-colors">
-                        <BarChart3 className="w-3.5 h-3.5" />
+                        <BarChart2 className="w-3.5 h-3.5 text-slate-400" />
                         <span>Reports</span>
                       </div>
                       <div className="flex items-center gap-2 px-2.5 py-1.5 rounded-lg text-xs font-medium text-slate-500 hover:text-slate-800 transition-colors">
-                        <Settings className="w-3.5 h-3.5" />
+                        <Settings className="w-3.5 h-3.5 text-slate-400" />
                         <span>Settings</span>
                       </div>
                     </nav>
                   </div>
 
-                  <div className="pt-4 border-t border-slate-200/60">
+                  {/* Sidebar Bottom: Plan Badge */}
+                  <div className="pt-3 border-t border-slate-200/60">
                     <div className="text-[10px] text-slate-400 font-medium">Saviora Pro Trial</div>
-                    <div className="text-[11px] font-semibold text-emerald-600">89 Days Remaining</div>
+                    <div className="text-[11px] font-bold text-[#16a34a]">89 Days Remaining</div>
                   </div>
                 </div>
 
-                {/* Dashboard Main Workspace */}
+                {/* Main Workspace Area */}
                 <div className="flex-1 p-4 sm:p-5 flex flex-col justify-between bg-white min-w-0">
                   
                   {/* Top Bar */}
@@ -191,15 +217,15 @@ export function IncomeHero() {
                     </div>
                     <button 
                       type="button"
-                      className="inline-flex items-center gap-1.5 bg-emerald-500 hover:bg-emerald-600 text-white text-xs font-semibold px-3 py-1.5 rounded-lg shadow-xs transition-colors"
-                      aria-label="Add Income button mockup"
+                      className="inline-flex items-center gap-1.5 bg-[#22c55e] hover:bg-[#16a34a] text-white text-xs font-semibold px-3 py-1.5 rounded-lg shadow-xs transition-colors cursor-default"
+                      aria-label="Add Income button"
                     >
                       <Plus className="w-3.5 h-3.5" />
                       <span>Add Income</span>
                     </button>
                   </div>
 
-                  {/* Total Income Metric Box with Chart */}
+                  {/* Total Income Card with Monthly Chart */}
                   <div className="bg-slate-50/70 border border-slate-100 rounded-xl p-3.5 mb-3.5">
                     <div className="flex items-center justify-between mb-1.5">
                       <span className="text-[11px] font-medium text-slate-500">Total Income</span>
@@ -211,28 +237,28 @@ export function IncomeHero() {
 
                     <div className="flex items-baseline gap-2 mb-3">
                       <span className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">$5,420.00</span>
-                      <span className="inline-flex items-center text-[11px] font-bold text-emerald-600 bg-emerald-50 px-1.5 py-0.5 rounded-full border border-emerald-100">
+                      <span className="inline-flex items-center text-[11px] font-bold text-[#16a34a] bg-[#22c55e]/10 px-2 py-0.5 rounded-full border border-[#22c55e]/20">
                         ↑ 15%
                       </span>
                     </div>
 
-                    {/* Monthly Bar Chart */}
+                    {/* Clean Monthly Bar Chart */}
                     <div className="pt-2">
-                      <div className="h-24 flex items-end justify-between gap-2 px-1">
-                        {monthlyData.map((item, index) => (
+                      <div className="h-24 flex items-end justify-between gap-2.5 px-1">
+                        {monthlyChartBars.map((bar, index) => (
                           <div key={index} className="flex-1 flex flex-col items-center gap-1.5 group">
-                            <div className="w-full h-20 bg-slate-100 rounded-t-sm flex items-end overflow-hidden relative">
+                            <div className="w-full h-20 bg-slate-100 rounded-t-md flex items-end overflow-hidden">
                               <div 
-                                className={`w-full rounded-t-sm transition-all duration-500 ${
-                                  index === monthlyData.length - 1 
-                                    ? "bg-emerald-500" 
-                                    : "bg-emerald-400/80 group-hover:bg-emerald-500/90"
+                                className={`w-full rounded-t-md transition-all duration-500 ${
+                                  index === monthlyChartBars.length - 1 
+                                    ? "bg-[#22c55e]" 
+                                    : "bg-[#22c55e]/80 group-hover:bg-[#22c55e]"
                                 }`}
-                                style={{ height: item.height }}
+                                style={{ height: bar.height }}
                               />
                             </div>
                             <span className="text-[10px] font-medium text-slate-400 group-hover:text-slate-600 transition-colors">
-                              {item.month}
+                              {bar.month}
                             </span>
                           </div>
                         ))}
@@ -244,62 +270,36 @@ export function IncomeHero() {
                   <div>
                     <div className="flex items-center justify-between mb-2">
                       <span className="text-xs font-bold text-slate-800">Recent Income</span>
-                      <span className="text-[11px] font-semibold text-emerald-600 hover:text-emerald-700 cursor-pointer">
+                      <span className="text-[11px] font-semibold text-[#16a34a] hover:text-[#15803d] cursor-pointer">
                         View all →
                       </span>
                     </div>
 
                     <div className="space-y-2">
-                      {/* Item 1 */}
-                      <div className="flex items-center justify-between p-2 rounded-lg bg-slate-50/50 hover:bg-slate-50 border border-slate-100/80 transition-colors">
-                        <div className="flex items-center gap-2.5 min-w-0">
-                          <div className="w-7 h-7 rounded-lg bg-slate-200/80 text-slate-700 flex items-center justify-center flex-shrink-0">
-                            <Briefcase className="w-3.5 h-3.5" />
-                          </div>
-                          <div className="truncate">
-                            <p className="text-xs font-semibold text-slate-900 truncate">Salary</p>
-                            <p className="text-[10px] text-slate-400 truncate">Main Job</p>
-                          </div>
-                        </div>
-                        <div className="text-right flex-shrink-0">
-                          <p className="text-xs font-bold text-emerald-600">+ $3,000.00</p>
-                          <p className="text-[10px] text-slate-400">Jun 1, 2024</p>
-                        </div>
-                      </div>
+                      {simpleTransactions.map((tx, idx) => {
+                        const Icon = tx.icon;
+                        return (
+                          <div 
+                            key={idx}
+                            className="flex items-center justify-between p-2.5 rounded-xl bg-slate-50/60 hover:bg-slate-50 border border-slate-100 transition-colors"
+                          >
+                            <div className="flex items-center gap-2.5 min-w-0">
+                              <div className={`w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 ${tx.iconColor}`}>
+                                <Icon className="w-4 h-4" />
+                              </div>
+                              <div className="truncate">
+                                <p className="text-xs font-bold text-slate-900 truncate leading-tight">{tx.title}</p>
+                                <p className="text-[10px] text-slate-400 truncate">{tx.category}</p>
+                              </div>
+                            </div>
 
-                      {/* Item 2 */}
-                      <div className="flex items-center justify-between p-2 rounded-lg bg-slate-50/50 hover:bg-slate-50 border border-slate-100/80 transition-colors">
-                        <div className="flex items-center gap-2.5 min-w-0">
-                          <div className="w-7 h-7 rounded-lg bg-sky-100 text-sky-600 flex items-center justify-center flex-shrink-0">
-                            <Laptop className="w-3.5 h-3.5" />
+                            <div className="text-right flex-shrink-0">
+                              <p className="text-xs font-extrabold text-[#16a34a]">{tx.amount}</p>
+                              <p className="text-[10px] text-slate-400">{tx.date}</p>
+                            </div>
                           </div>
-                          <div className="truncate">
-                            <p className="text-xs font-semibold text-slate-900 truncate">Freelance Project</p>
-                            <p className="text-[10px] text-slate-400 truncate">Freelance</p>
-                          </div>
-                        </div>
-                        <div className="text-right flex-shrink-0">
-                          <p className="text-xs font-bold text-emerald-600">+ $1,200.00</p>
-                          <p className="text-[10px] text-slate-400">May 28, 2024</p>
-                        </div>
-                      </div>
-
-                      {/* Item 3 */}
-                      <div className="flex items-center justify-between p-2 rounded-lg bg-slate-50/50 hover:bg-slate-50 border border-slate-100/80 transition-colors">
-                        <div className="flex items-center gap-2.5 min-w-0">
-                          <div className="w-7 h-7 rounded-lg bg-rose-100 text-rose-600 flex items-center justify-center flex-shrink-0">
-                            <PieChart className="w-3.5 h-3.5" />
-                          </div>
-                          <div className="truncate">
-                            <p className="text-xs font-semibold text-slate-900 truncate">Investment Dividend</p>
-                            <p className="text-[10px] text-slate-400 truncate">Investment</p>
-                          </div>
-                        </div>
-                        <div className="text-right flex-shrink-0">
-                          <p className="text-xs font-bold text-emerald-600">+ $250.00</p>
-                          <p className="text-[10px] text-slate-400">May 15, 2024</p>
-                        </div>
-                      </div>
+                        );
+                      })}
                     </div>
                   </div>
 

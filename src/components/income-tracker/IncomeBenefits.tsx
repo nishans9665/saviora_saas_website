@@ -55,8 +55,8 @@ export function IncomeBenefits() {
                         <LayoutDashboard className="w-3.5 h-3.5" />
                         <span>Dashboard</span>
                       </div>
-                      <div className="flex items-center gap-2 px-2 py-1.5 rounded-md text-[11px] font-semibold text-emerald-700 bg-emerald-100/60">
-                        <TrendingUp className="w-3.5 h-3.5 text-emerald-600" />
+                      <div className="flex items-center gap-2 px-2 py-1.5 rounded-md text-[11px] font-semibold text-[#16a34a] bg-[#22c55e]/15">
+                        <TrendingUp className="w-3.5 h-3.5 text-[#22c55e]" />
                         <span>Income</span>
                       </div>
                       <div className="flex items-center gap-2 px-2 py-1.5 rounded-md text-[11px] font-medium text-slate-500">
@@ -172,7 +172,7 @@ export function IncomeBenefits() {
                     <div className="flex items-center gap-2 pt-1.5">
                       <button
                         type="button"
-                        className="bg-emerald-500 hover:bg-emerald-600 text-white text-xs font-semibold px-4 py-2 rounded-lg transition-colors shadow-xs"
+                        className="bg-[#22c55e] hover:bg-[#16a34a] text-white text-xs font-semibold px-4 py-2 rounded-lg transition-colors shadow-xs cursor-pointer"
                       >
                         Save Income
                       </button>
@@ -192,8 +192,8 @@ export function IncomeBenefits() {
 
           {/* Right Column: Benefits Content */}
           <div className="lg:col-span-6 order-1 lg:order-2 text-left">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 border border-emerald-200/70 text-emerald-700 text-xs font-semibold uppercase tracking-wider mb-4 shadow-xs">
-              <Sparkles className="w-3.5 h-3.5 text-emerald-600 flex-shrink-0" />
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#22c55e]/10 border border-[#22c55e]/25 text-[#16a34a] text-xs font-semibold uppercase tracking-wider mb-4 shadow-xs">
+              <Sparkles className="w-3.5 h-3.5 text-[#22c55e] flex-shrink-0" />
               <span>A CLEARER FINANCIAL PICTURE</span>
             </div>
 
@@ -208,7 +208,7 @@ export function IncomeBenefits() {
             <ul className="space-y-3.5">
               {benefitsList.map((benefit, index) => (
                 <li key={index} className="flex items-center gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-emerald-500 flex-shrink-0" />
+                  <CheckCircle2 className="w-5 h-5 text-[#22c55e] flex-shrink-0" />
                   <span className="text-base font-medium text-slate-700">
                     {benefit}
                   </span>

@@ -6,9 +6,9 @@ import { Sparkles, FileText, FolderOpen, BarChart3, ArrowRight } from "lucide-re
 const steps = [
   {
     stepNumber: "1",
-    badgeColor: "bg-emerald-500 text-white",
+    badgeColor: "bg-[#22c55e] text-white",
     icon: FileText,
-    iconColor: "bg-emerald-50 text-emerald-600 border-emerald-100",
+    iconColor: "bg-[#22c55e]/10 text-[#16a34a] border-[#22c55e]/25",
     title: "Add Your Income",
     description: "Enter the amount, date, and relevant details for each income entry.",
   },
@@ -37,14 +37,14 @@ export function IncomeHowItWorks() {
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-14 sm:mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 border border-emerald-200/70 text-emerald-700 text-xs font-semibold uppercase tracking-wider mb-4 shadow-xs">
-            <Sparkles className="w-3.5 h-3.5 text-emerald-600 flex-shrink-0" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#22c55e]/10 border border-[#22c55e]/25 text-[#16a34a] text-xs font-semibold uppercase tracking-wider mb-4 shadow-xs">
+            <Sparkles className="w-3.5 h-3.5 text-[#22c55e] flex-shrink-0" />
             <span>HOW IT WORKS</span>
           </div>
 
           <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 mb-4">
             Start Tracking Your Income in{" "}
-            <span className="text-emerald-500">Three Steps</span>
+            <span className="text-[#22c55e]">Three Steps</span>
           </h2>
 
           <p className="text-base sm:text-lg text-slate-600 max-w-xl mx-auto leading-relaxed">

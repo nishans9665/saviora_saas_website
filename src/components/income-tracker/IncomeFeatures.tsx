@@ -9,7 +9,7 @@ const keyFeatures = [
     description:
       "Add income entries with the details you need, including amount, date, category, and notes.",
     icon: CreditCard,
-    colorClasses: "bg-emerald-50 text-emerald-600 border-emerald-100",
+    colorClasses: "bg-[#22c55e]/10 text-[#16a34a] border-[#22c55e]/25",
   },
   {
     title: "Multiple Income Sources",
@@ -41,8 +41,8 @@ export function IncomeFeatures() {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14 sm:mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 border border-emerald-200/70 text-emerald-700 text-xs font-semibold uppercase tracking-wider mb-4 shadow-xs">
-            <Sparkles className="w-3.5 h-3.5 text-emerald-600 flex-shrink-0" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#22c55e]/10 border border-[#22c55e]/25 text-[#16a34a] text-xs font-semibold uppercase tracking-wider mb-4 shadow-xs">
+            <Sparkles className="w-3.5 h-3.5 text-[#22c55e] flex-shrink-0" />
             <span>KEY FEATURES</span>
           </div>
 

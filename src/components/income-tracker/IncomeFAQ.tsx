@@ -51,7 +51,7 @@ const rightFaqs: FAQItem[] = [
     answer: (
       <span>
         Saviora uses industry-standard encryption and secure cloud infrastructure to protect your personal financial records. Your data remains private and confidential. Please refer to our official{" "}
-        <Link href="/privacy-policy" className="text-emerald-600 underline hover:text-emerald-700 font-medium">
+        <Link href="/privacy-policy" className="text-[#16a34a] underline hover:text-[#15803d] font-medium">
           Privacy Policy
         </Link>{" "}
         for more information on our data protection practices.
@@ -87,14 +87,14 @@ export function IncomeFAQ() {
               aria-expanded={isOpen}
               aria-controls={`panel-${item.id}`}
               onClick={() => toggleItem(item.id)}
-              className="w-full px-5 sm:px-6 py-4 sm:py-5 text-left flex justify-between items-center gap-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-inset cursor-pointer"
+              className="w-full px-5 sm:px-6 py-4 sm:py-5 text-left flex justify-between items-center gap-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#22c55e] focus-visible:ring-inset cursor-pointer"
             >
               <h3 className="font-semibold text-base sm:text-lg text-slate-900 leading-snug">
                 {item.question}
               </h3>
               <ChevronDown
                 className={`w-5 h-5 text-slate-400 flex-shrink-0 transition-transform duration-300 ${
-                  isOpen ? "rotate-180 text-emerald-500" : ""
+                  isOpen ? "rotate-180 text-[#22c55e]" : ""
                 }`}
               />
             </button>
@@ -122,8 +122,8 @@ export function IncomeFAQ() {
         {/* Top Header with Contact Support button */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 sm:mb-14">
           <div>
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 border border-emerald-200/70 text-emerald-700 text-xs font-semibold uppercase tracking-wider mb-4 shadow-xs">
-              <Sparkles className="w-3.5 h-3.5 text-emerald-600 flex-shrink-0" />
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#22c55e]/10 border border-[#22c55e]/25 text-[#16a34a] text-xs font-semibold uppercase tracking-wider mb-4 shadow-xs">
+              <Sparkles className="w-3.5 h-3.5 text-[#22c55e] flex-shrink-0" />
               <span>FREQUENTLY ASKED QUESTIONS</span>
             </div>
             <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900">

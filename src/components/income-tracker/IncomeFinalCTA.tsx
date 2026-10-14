@@ -21,18 +21,18 @@ export function IncomeFinalCTA() {
       <div className="container mx-auto px-4 md:px-6">
         
         {/* Banner Container */}
-        <div className="relative rounded-3xl border border-emerald-200/80 bg-gradient-to-br from-emerald-50/60 via-slate-50/50 to-emerald-50/30 p-8 sm:p-12 lg:p-14 overflow-hidden shadow-sm">
+        <div className="relative rounded-3xl border border-[#22c55e]/30 bg-gradient-to-br from-[#22c55e]/10 via-slate-50/50 to-[#22c55e]/5 p-8 sm:p-12 lg:p-14 overflow-hidden shadow-sm">
           
           {/* Ambient Glow */}
-          <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-emerald-400/10 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#22c55e]/10 rounded-full blur-3xl pointer-events-none" />
           <div className="absolute -bottom-24 -left-24 w-80 h-80 bg-teal-400/10 rounded-full blur-2xl pointer-events-none" />
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center relative z-10">
             
             {/* Left Content */}
             <div className="lg:col-span-7 text-left">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-100/70 border border-emerald-300/60 text-emerald-800 text-xs font-semibold uppercase tracking-wider mb-4 shadow-xs">
-                <Sparkles className="w-3.5 h-3.5 text-emerald-600 flex-shrink-0" />
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#22c55e]/15 border border-[#22c55e]/30 text-[#16a34a] text-xs font-semibold uppercase tracking-wider mb-4 shadow-xs">
+                <Sparkles className="w-3.5 h-3.5 text-[#22c55e] flex-shrink-0" />
                 <span>READY TO TAKE CONTROL?</span>
               </div>
 
@@ -49,7 +49,7 @@ export function IncomeFinalCTA() {
                 <Button
                   asChild
                   size="lg"
-                  className="bg-emerald-500 hover:bg-emerald-600 text-white font-semibold rounded-full px-7 py-3.5 shadow-md shadow-emerald-500/25 hover:shadow-lg hover:shadow-emerald-500/35 hover:-translate-y-0.5 transition-all duration-300 justify-center cursor-pointer"
+                  className="bg-[#22c55e] hover:bg-[#16a34a] text-white font-semibold rounded-full px-7 py-3.5 shadow-md shadow-[#22c55e]/25 hover:shadow-lg hover:shadow-[#22c55e]/35 hover:-translate-y-0.5 transition-all duration-300 justify-center cursor-pointer"
                   onClick={handleTrialClick}
                 >
                   <Link href="https://cloud.saviora.app/register" target="_blank" className="flex items-center justify-center">
@@ -73,15 +73,15 @@ export function IncomeFinalCTA() {
               {/* Trust Indicators */}
               <div className="flex flex-wrap items-center gap-x-6 gap-y-2.5 text-xs sm:text-sm font-medium text-slate-600">
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-500 flex-shrink-0" />
+                  <CheckCircle2 className="w-4 h-4 text-[#22c55e] flex-shrink-0" />
                   <span>Full access to all features</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-500 flex-shrink-0" />
+                  <CheckCircle2 className="w-4 h-4 text-[#22c55e] flex-shrink-0" />
                   <span>No credit card required</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-500 flex-shrink-0" />
+                  <CheckCircle2 className="w-4 h-4 text-[#22c55e] flex-shrink-0" />
                   <span>Cancel anytime</span>
                 </div>
               </div>
@@ -104,7 +104,7 @@ export function IncomeFinalCTA() {
                         <span>62%</span>
                       </div>
                       <div className="h-1.5 w-full bg-slate-100 rounded-full overflow-hidden">
-                        <div className="h-full bg-emerald-500 rounded-full w-[62%]" />
+                        <div className="h-full bg-[#22c55e] rounded-full w-[62%]" />
                       </div>
                     </div>
                     <div>
@@ -138,7 +138,7 @@ export function IncomeFinalCTA() {
                   {/* App Screen Header */}
                   <div className="flex items-center justify-between pb-2 mb-2 border-b border-slate-100">
                     <div className="flex items-center gap-1">
-                      <div className="w-4 h-4 rounded bg-emerald-500 flex items-center justify-center text-[9px] text-white font-bold">
+                      <div className="w-4 h-4 rounded bg-[#22c55e] flex items-center justify-center text-[9px] text-white font-bold">
                         S
                       </div>
                       <span className="text-[11px] font-bold text-slate-800">Income</span>
@@ -150,15 +150,15 @@ export function IncomeFinalCTA() {
                   <div className="bg-slate-50 rounded-xl p-2.5 mb-2.5 border border-slate-100">
                     <div className="text-[9px] text-slate-400 font-medium">Total Income</div>
                     <div className="text-base font-extrabold text-slate-900">$5,420.00</div>
-                    <div className="text-[9px] font-bold text-emerald-600 mt-0.5">↑ 15% this month</div>
+                    <div className="text-[9px] font-bold text-[#16a34a] mt-0.5">↑ 15% this month</div>
                     
                     {/* Mini Sparkline Bars */}
                     <div className="flex items-end gap-1 h-8 mt-2 pt-1 border-t border-slate-200/50">
-                      <div className="flex-1 bg-emerald-200 rounded-t h-[40%]" />
-                      <div className="flex-1 bg-emerald-300 rounded-t h-[55%]" />
-                      <div className="flex-1 bg-emerald-300 rounded-t h-[65%]" />
-                      <div className="flex-1 bg-emerald-400 rounded-t h-[75%]" />
-                      <div className="flex-1 bg-emerald-500 rounded-t h-[95%]" />
+                      <div className="flex-1 bg-[#22c55e]/30 rounded-t h-[40%]" />
+                      <div className="flex-1 bg-[#22c55e]/50 rounded-t h-[55%]" />
+                      <div className="flex-1 bg-[#22c55e]/60 rounded-t h-[65%]" />
+                      <div className="flex-1 bg-[#22c55e]/80 rounded-t h-[75%]" />
+                      <div className="flex-1 bg-[#22c55e] rounded-t h-[95%]" />
                     </div>
                   </div>
 
@@ -169,14 +169,14 @@ export function IncomeFinalCTA() {
                         <Briefcase className="w-3 h-3 text-slate-600" />
                         <span className="font-semibold text-slate-800">Salary</span>
                       </div>
-                      <span className="font-bold text-emerald-600">+$3,000</span>
+                      <span className="font-bold text-[#16a34a]">+$3,500</span>
                     </div>
                     <div className="flex items-center justify-between p-1.5 rounded-lg bg-slate-50 text-[10px]">
                       <div className="flex items-center gap-1.5">
                         <Laptop className="w-3 h-3 text-sky-600" />
                         <span className="font-semibold text-slate-800">Freelance</span>
                       </div>
-                      <span className="font-bold text-emerald-600">+$1,200</span>
+                      <span className="font-bold text-[#16a34a]">+$1,450</span>
                     </div>
                   </div>
                 </div>
