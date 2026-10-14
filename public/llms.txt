@@ -10,6 +10,7 @@ Saviora gives users full visibility and control over their personal finances. Wi
 
 - [Homepage](https://saviora.app): Overview of Saviora personal finance platform, interactive dashboard previews, and quick start.
 - [Features](https://saviora.app/features): Income tracking, expense categorization, custom budget allocations, savings projections, and cash flow insights.
+- [Income Tracker](https://saviora.app/income-tracker): Dedicated income tracker feature landing page for recording earnings, organizing income sources, and reviewing monthly income trends.
 - [Pricing](https://saviora.app/pricing): Saviora Pro pricing details ($2.99/month or $29.99/year) with an introductory 90-day free trial. No credit card required.
 - [About Us](https://saviora.app/about): Saviora's founding mission, values, and dedication to privacy-preserving financial management.
 - [Contact Support](https://saviora.app/contact): Customer support desk, user feedback, and inquiry form.

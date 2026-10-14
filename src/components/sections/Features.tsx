@@ -19,7 +19,10 @@ const features = [
     title: "Income Tracking",
     description: "Track multiple income streams, organize cash inflows, and monitor monthly earning trends over time.",
     icon: Wallet,
-    color: "bg-emerald-100 text-emerald-600 dark:bg-emerald-900/50 dark:text-emerald-400"
+    color: "bg-emerald-100 text-emerald-600 dark:bg-emerald-900/50 dark:text-emerald-400",
+    href: "/income-tracker",
+    badge: "Available Now",
+    ctaText: "Explore Income Tracker",
   },
   {
     title: "Expense Tracking",
@@ -69,17 +72,50 @@ export function Features() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {features.map((feature, index) => (
             <AnimatedSection key={index} delay={index * 0.1}>
-              <div className="glass-card p-8 rounded-3xl h-full group hover:-translate-y-1 transition-all duration-300">
-                <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-6 transition-transform group-hover:scale-110 ${feature.color}`}>
-                  <feature.icon className="w-7 h-7" />
+              {feature.href ? (
+                <Link
+                  href={feature.href}
+                  className="glass-card p-8 rounded-3xl h-full group hover:-translate-y-1.5 hover:shadow-xl hover:border-emerald-300 dark:hover:border-emerald-600 transition-all duration-300 flex flex-col justify-between block relative"
+                >
+                  <div>
+                    <div className="flex items-center justify-between mb-6">
+                      <div className={`w-14 h-14 rounded-2xl flex items-center justify-center transition-transform group-hover:scale-110 ${feature.color}`}>
+                        <feature.icon className="w-7 h-7" />
+                      </div>
+                      {feature.badge && (
+                        <span className="inline-flex items-center text-xs font-semibold px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-700 dark:bg-emerald-950/60 dark:text-emerald-400 border border-emerald-200/60">
+                          {feature.badge}
+                        </span>
+                      )}
+                    </div>
+                    <div className="flex items-center justify-between mb-3">
+                      <h3 className="text-xl font-semibold text-slate-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
+                        {feature.title}
+                      </h3>
+                      <ArrowRight className="w-5 h-5 text-emerald-600 dark:text-emerald-400 opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all duration-300" />
+                    </div>
+                    <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
+                      {feature.description}
+                    </p>
+                  </div>
+                  <div className="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800/80 flex items-center text-sm font-semibold text-emerald-600 dark:text-emerald-400">
+                    <span>{feature.ctaText || "Learn more"}</span>
+                    <ArrowRight className="w-4 h-4 ml-1.5 transition-transform duration-300 group-hover:translate-x-1" />
+                  </div>
+                </Link>
+              ) : (
+                <div className="glass-card p-8 rounded-3xl h-full group hover:-translate-y-1 transition-all duration-300">
+                  <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-6 transition-transform group-hover:scale-110 ${feature.color}`}>
+                    <feature.icon className="w-7 h-7" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                    {feature.title}
+                  </h3>
+                  <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
+                    {feature.description}
+                  </p>
                 </div>
-                <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-3">
-                  {feature.title}
-                </h3>
-                <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
-                  {feature.description}
-                </p>
-              </div>
+              )}
             </AnimatedSection>
           ))}
         </div>
