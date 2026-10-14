@@ -1,9 +1,13 @@
 import React from "react";
+import type { Metadata } from "next";
 import { ComingSoon } from "@/components/ui/ComingSoon";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Coming Soon - Saviora",
   description: "Exciting new features and pages are coming soon to Saviora.",
+  alternates: {
+    canonical: "/coming-soon",
+  },
 };
 
 export default function ComingSoonPage() {

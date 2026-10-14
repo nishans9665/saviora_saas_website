@@ -1,11 +1,15 @@
 import React from "react";
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Sparkles, CheckCircle2, ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Changelog - Saviora",
   description: "See the latest updates, features, and fixes released for Saviora.",
+  alternates: {
+    canonical: "/changelog",
+  },
 };
 
 const updates = [

@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: "Terms & Conditions",
   description:
     "Review Saviora's official Terms & Conditions governing your use of our personal finance platform, account responsibilities, disclaimers, and service policies.",
+  alternates: {
+    canonical: "/terms-and-conditions",
+  },
   keywords: [
     "Saviora Terms and Conditions",
     "Terms of Service",

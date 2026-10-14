@@ -61,10 +61,6 @@ export const metadata: Metadata = {
     "Saviora Pro",
   ],
 
-  alternates: {
-    canonical: "/",
-  },
-
   robots: {
     index: true,
     follow: true,
