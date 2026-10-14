@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: "Privacy Policy",
   description:
     "Learn how Saviora collects, uses, stores, and protects your personal and financial information. Complete privacy rights, security standards, and data retention details.",
+  alternates: {
+    canonical: "/privacy-policy",
+  },
   keywords: [
     "Saviora Privacy Policy",
     "Data Protection",

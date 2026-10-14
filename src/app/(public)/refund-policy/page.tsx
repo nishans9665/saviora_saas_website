@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: "Returns & Refunds Policy",
   description:
     "Review Saviora's official Returns & Refunds Policy. Learn about 14-day refund eligibility, technical support assistance, device compatibility, and refund request procedures.",
+  alternates: {
+    canonical: "/refund-policy",
+  },
   keywords: [
     "Saviora Refund Policy",
     "Returns and Refunds",

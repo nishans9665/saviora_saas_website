@@ -20,6 +20,31 @@ const nextConfig: NextConfig = {
   images: {
     formats: ["image/avif", "image/webp"],
   },
+  async redirects() {
+    return [
+      {
+        source: "/:path*",
+        has: [
+          {
+            type: "host",
+            value: "www.saviora.app",
+          },
+        ],
+        destination: "https://saviora.app/:path*",
+        permanent: true,
+      },
+      {
+        source: "/terms",
+        destination: "/terms-and-conditions",
+        permanent: true,
+      },
+      {
+        source: "/privacy",
+        destination: "/privacy-policy",
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [
       {
