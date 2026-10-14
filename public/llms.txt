@@ -1,0 +1,29 @@
+# Saviora
+
+> Saviora is a modern personal finance and budget tracking SaaS platform designed to help individuals and households manage income, track daily expenses, plan monthly budgets, and reach savings goals with actionable financial analytics and privacy-first security.
+
+## Overview
+
+Saviora gives users full visibility and control over their personal finances. With intuitive income and expense logging, automated category budgeting, milestone savings targets, and health score analytics, Saviora makes financial management clear, simple, and stress-free.
+
+## Key Links & Resources
+
+- [Homepage](https://saviora.app): Overview of Saviora personal finance platform, interactive dashboard previews, and quick start.
+- [Features](https://saviora.app/features): Income tracking, expense categorization, custom budget allocations, savings projections, and cash flow insights.
+- [Pricing](https://saviora.app/pricing): Saviora Pro pricing details ($2.99/month or $29.99/year) with an introductory 90-day free trial. No credit card required.
+- [About Us](https://saviora.app/about): Saviora's founding mission, values, and dedication to privacy-preserving financial management.
+- [Contact Support](https://saviora.app/contact): Customer support desk, user feedback, and inquiry form.
+
+## Legal, Privacy & Policies
+
+- [Terms & Conditions](https://saviora.app/terms-and-conditions): Official user agreement, acceptable use, account responsibilities, and service policies.
+- [Privacy Policy](https://saviora.app/privacy-policy): Detailed explanations of data storage, zero selling of personal financial records, encryption standards, and privacy rights.
+- [Refund Policy](https://saviora.app/refund-policy): 14-day refund guarantee rules, subscription billing, and cancellation procedures.
+
+## Platform Specifications
+
+- **Product:** Saviora Personal Finance & Budget Planner
+- **Target Audience:** Individuals, freelancers, and families seeking smart money management tools
+- **Official Domain:** https://saviora.app
+- **Trial Period:** 90 Days Free (Full Pro Access)
+- **Pricing:** $2.99/month or $29.99/year
