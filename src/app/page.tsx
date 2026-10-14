@@ -14,13 +14,13 @@ export const metadata: Metadata = {
   description:
     "Track income and expenses, plan monthly budgets, and monitor savings goals with Saviora, your personal finance app. Start your 90-day Pro trial today.",
   alternates: {
-    canonical: "https://saviora.app",
+    canonical: "https://saviora.app/",
   },
   openGraph: {
     title: "Free Expense Tracker & Budget Planner App | Saviora",
     description:
       "Track income and expenses, plan monthly budgets, and monitor savings goals with Saviora, your personal finance app. Start your 90-day Pro trial today.",
-    url: "https://saviora.app",
+    url: "https://saviora.app/",
     siteName: "Saviora",
     locale: "en_US",
     type: "website",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
         url: "https://saviora.app/images/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Free Expense Tracker & Budget Planner App | Saviora",
+        alt: "Saviora personal finance app for expense tracking and budgeting",
       },
     ],
   },

@@ -7,17 +7,36 @@ import { FAQ } from "@/components/sections/FAQ";
 import { FinalCTA } from "@/components/sections/FinalCTA";
 
 export const metadata: Metadata = {
-  title: "Pricing & 90-Day Launch Offer | Saviora Pro",
+  title: {
+    absolute: "Saviora Pricing | Plans & 90-Day Free Trial",
+  },
   description:
-    "Try Saviora Pro free for 90 days with full access. Simple, transparent pricing starting at $2.99/month or $29.99/year. No credit card required.",
+    "Explore Saviora pricing and features. Try Saviora Pro free for 90 days, then choose the monthly or yearly plan that fits your needs.",
   alternates: {
     canonical: "/pricing",
   },
   openGraph: {
-    title: "Pricing & 90-Day Launch Offer | Saviora Pro",
+    title: "Saviora Pricing | Plans & 90-Day Free Trial",
     description:
-      "Try Saviora Pro free for 90 days with full access. Simple, transparent pricing starting at $2.99/month or $29.99/year. No credit card required.",
+      "Explore Saviora pricing and features. Try Saviora Pro free for 90 days, then choose the monthly or yearly plan that fits your needs.",
     url: "https://saviora.app/pricing",
+    siteName: "Saviora",
+    type: "website",
+    images: [
+      {
+        url: "https://saviora.app/images/android-chrome-512x512.png",
+        width: 512,
+        height: 512,
+        alt: "Saviora personal finance app for expense tracking and budgeting",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Saviora Pricing | Plans & 90-Day Free Trial",
+    description:
+      "Explore Saviora pricing and features. Try Saviora Pro free for 90 days, then choose the monthly or yearly plan that fits your needs.",
+    images: ["https://saviora.app/images/android-chrome-512x512.png"],
   },
 };
 
