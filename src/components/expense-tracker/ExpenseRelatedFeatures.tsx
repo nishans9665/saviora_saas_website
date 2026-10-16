@@ -26,8 +26,8 @@ const relatedFeatures = [
     description: "Set goals and track your savings progress.",
     icon: Target,
     iconColor: "bg-purple-50 text-purple-600 border-purple-100",
-    href: "/#showcases",
-    ariaLabel: "Learn more about Savings Goals on the Saviora showcase section",
+    href: "/features",
+    ariaLabel: "Learn more about Savings Goals on the Saviora features page",
   },
   {
     title: "Financial Analytics",

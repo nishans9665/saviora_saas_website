@@ -112,7 +112,7 @@ export function ExpenseHero() {
                 className="bg-[#ea580c] hover:bg-[#c2410c] text-white font-semibold rounded-full px-7 py-3.5 shadow-md shadow-[#ea580c]/25 hover:shadow-lg hover:shadow-[#ea580c]/35 hover:-translate-y-0.5 transition-all duration-300 justify-center cursor-pointer"
                 onClick={handlePrimaryCtaClick}
               >
-                <Link href="https://cloud.saviora.app/register" target="_blank" className="flex items-center justify-center">
+                <Link href="https://cloud.saviora.app/register" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center">
                   <span>Start Your 90-Day Pro Trial</span>
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Link>
@@ -278,7 +278,8 @@ export function ExpenseHero() {
                   <div>
                     <div className="flex items-center justify-between mb-2">
                       <span className="text-xs font-bold text-slate-800">Recent Expenses</span>
-                      <span 
+                      <button 
+                        type="button"
                         onClick={() => {
                           const formEl = document.getElementById("add-expense-showcase");
                           if (formEl) {
@@ -286,9 +287,10 @@ export function ExpenseHero() {
                           }
                         }}
                         className="text-[11px] font-semibold text-[#ea580c] hover:text-[#c2410c] cursor-pointer"
+                        aria-label="View all recent expenses demo"
                       >
                         View all →
-                      </span>
+                      </button>
                     </div>
 
                     <div className="space-y-2">
