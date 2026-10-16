@@ -3,7 +3,7 @@
 import * as React from "react";
 import Link from "next/link";
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
-import { Menu, X, ArrowRight, ChevronDown, TrendingUp, Sparkles } from "lucide-react";
+import { Menu, X, ArrowRight, ChevronDown, TrendingUp, Sparkles, Receipt } from "lucide-react";
 import { Button } from "./Button";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
@@ -37,13 +37,21 @@ export function Navbar() {
   }, []);
 
   const featureSubmenu = [
-    {
+     {
       name: "Income Tracker",
       description: "Track earnings, sources, and monthly cash flow",
       href: "/income-tracker",
       icon: TrendingUp,
-      badge: "New",
+      badge: "Popular",
       iconColor: "bg-emerald-50 text-emerald-600 dark:bg-emerald-950/60 dark:text-emerald-400 border-emerald-100 dark:border-emerald-900/40",
+    },
+    {
+      name: "Expense Tracker",
+      description: "Record daily spending, organize categories, and track habits",
+      href: "/expense-tracker",
+      icon: Receipt,
+      badge: "New",
+      iconColor: "bg-orange-50 text-[#c2410c] dark:bg-orange-950/60 dark:text-orange-400 border-orange-100 dark:border-orange-900/40",
     },
     {
       name: "All Features Overview",
@@ -53,7 +61,7 @@ export function Navbar() {
       iconColor: "bg-blue-50 text-blue-600 dark:bg-blue-950/60 dark:text-blue-400 border-blue-100 dark:border-blue-900/40",
     },
   ];
-
+ 
   const standardNavLinks = [
     { name: "Pricing", href: "/pricing" },
     { name: "FAQ", href: "/#faq" },

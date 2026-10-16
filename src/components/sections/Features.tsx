@@ -28,7 +28,10 @@ const features = [
     title: "Expense Tracking",
     description: "Record daily expenses, categorize transactions into clear buckets, and review where your money goes.",
     icon: Receipt,
-    color: "bg-rose-100 text-rose-600 dark:bg-rose-900/50 dark:text-rose-400"
+    color: "bg-orange-100 text-[#ea580c] dark:bg-orange-950/50 dark:text-orange-400",
+    href: "/expense-tracker",
+    badge: "Available Now",
+    ctaText: "Explore Expense Tracker",
   },
   {
     title: "Monthly Budget Planning",

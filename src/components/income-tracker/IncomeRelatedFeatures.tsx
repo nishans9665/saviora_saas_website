@@ -9,9 +9,9 @@ const relatedFeatures = [
     title: "Expense Tracking",
     description: "See where your money goes and manage your spending.",
     icon: Receipt,
-    iconColor: "bg-rose-50 text-rose-500 border-rose-100",
-    href: "/features",
-    ariaLabel: "Learn more about Expense Tracking on the Saviora features page",
+    iconColor: "bg-orange-50 text-[#ea580c] border-orange-100",
+    href: "/expense-tracker",
+    ariaLabel: "Learn more about Expense Tracking with Saviora",
   },
   {
     title: "Budget Planning",
