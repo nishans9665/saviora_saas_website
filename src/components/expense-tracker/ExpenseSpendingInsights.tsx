@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Link from "next/link";
 import { 
   Sparkles, 
   CheckCircle2, 
@@ -243,9 +244,14 @@ export function ExpenseSpendingInsights() {
 
                 <div className="mt-5 pt-3 border-t border-slate-100 flex items-center justify-between text-xs text-slate-400">
                   <span>Updated automatically as you record expenses</span>
-                  <span className="font-semibold text-[#ea580c] hover:text-[#c2410c] hover:underline cursor-pointer flex items-center gap-0.5">
-                    View reports <ChevronRight className="w-3.5 h-3.5" />
-                  </span>
+                  <Link 
+                    href="/features" 
+                    className="font-semibold text-[#ea580c] hover:text-[#c2410c] hover:underline cursor-pointer flex items-center gap-0.5"
+                    aria-label="View financial reports on features page"
+                  >
+                    <span>View reports</span>
+                    <ChevronRight className="w-3.5 h-3.5" />
+                  </Link>
                 </div>
 
               </div>

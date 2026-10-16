@@ -44,10 +44,10 @@ export function ExpenseFinalCTA() {
           <div className="absolute top-0 right-0 w-96 h-96 bg-[#ea580c]/10 rounded-full blur-3xl pointer-events-none" />
           <div className="absolute -bottom-20 -left-20 w-72 h-72 bg-amber-500/10 rounded-full blur-2xl pointer-events-none" />
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 xl:gap-14 items-center relative z-10">
             
             {/* Left Content */}
-            <div className="lg:col-span-7 text-left">
+            <div className="lg:col-span-5 text-left">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#ea580c]/15 border border-[#ea580c]/30 text-[#ea580c] text-xs font-semibold uppercase tracking-wider mb-3.5 shadow-xs">
                 <Sparkles className="w-3.5 h-3.5 text-[#ea580c] flex-shrink-0" />
                 <span>READY TO TAKE CONTROL?</span>
@@ -57,7 +57,7 @@ export function ExpenseFinalCTA() {
                 Take Control of Your Spending with Saviora
               </h2>
 
-              <p className="text-sm sm:text-base text-slate-600 leading-relaxed max-w-xl mb-6">
+              <p className="text-sm sm:text-base text-slate-600 leading-relaxed max-w-md mb-6">
                 Start organizing your expenses, understand your spending habits, and build a clearer picture of your finances with Saviora. Try Saviora Pro free for 90 days and explore all features.
               </p>
 
@@ -69,7 +69,7 @@ export function ExpenseFinalCTA() {
                   className="bg-[#ea580c] hover:bg-[#c2410c] text-white font-semibold rounded-full px-6 py-3 shadow-md shadow-[#ea580c]/20 hover:shadow-lg hover:shadow-[#ea580c]/30 hover:-translate-y-0.5 transition-all duration-300 justify-center cursor-pointer text-sm"
                   onClick={handleTrialClick}
                 >
-                  <Link href="https://cloud.saviora.app/register" target="_blank" className="flex items-center justify-center">
+                  <Link href="https://cloud.saviora.app/register" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center">
                     <span>Start Your 90-Day Pro Trial</span>
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </Link>
@@ -104,16 +104,16 @@ export function ExpenseFinalCTA() {
               </div>
             </div>
 
-            {/* Right Visual: Authentic Saviora Smartphone + Expense Category Visual (Reference 3) */}
-            <div className="lg:col-span-5 flex justify-center lg:justify-end items-center">
+            {/* Right Visual: Perfectly Spaced Category Breakdown Card + Smartphone Layout */}
+            <div className="lg:col-span-7 flex justify-center lg:justify-end items-center pt-2 sm:pt-4 lg:pt-0">
               
-              <div className="relative flex items-center justify-center">
+              <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-end gap-5 lg:gap-6 xl:gap-7">
                 
-                {/* Secondary Floating Card: Category Breakdown (Reference 3) */}
-                <div className="hidden sm:block absolute -left-12 lg:-left-20 top-8 z-0 w-52 bg-white rounded-2xl p-4 border border-slate-200/90 shadow-xl shadow-slate-900/10 text-left scale-90 lg:scale-95">
+                {/* Secondary Card: Category Breakdown with generous spacing */}
+                <div className="hidden sm:block w-52 sm:w-56 bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-5 border border-slate-200/90 shadow-xl shadow-slate-900/5 text-left flex-shrink-0 transition-transform duration-300 hover:-translate-y-1">
                   <div className="flex items-center justify-between pb-2 mb-2 border-b border-slate-100">
-                    <span className="text-[11px] font-bold text-slate-800">Categories</span>
-                    <span className="text-[10px] text-slate-400">Oct 2026</span>
+                    <span className="text-xs font-bold text-slate-800">Categories</span>
+                    <span className="text-[10px] font-semibold text-slate-400">Oct 2026</span>
                   </div>
                   
                   {/* Category Donut Preview Circle */}
@@ -121,38 +121,44 @@ export function ExpenseFinalCTA() {
                     <div className="w-20 h-20 rounded-full border-4 border-[#ea580c] border-t-amber-500 border-r-sky-500 border-b-rose-500 flex items-center justify-center text-center">
                       <div>
                         <div className="text-[11px] font-extrabold text-slate-900">$4,350</div>
-                        <div className="text-[8px] text-slate-400 font-bold">TOTAL</div>
+                        <div className="text-[8px] text-slate-400 font-bold uppercase tracking-wider">TOTAL</div>
                       </div>
                     </div>
                   </div>
 
-                  <div className="space-y-1.5 text-[10px]">
+                  <div className="space-y-2 text-[11px]">
                     <div className="flex items-center justify-between">
-                      <span className="flex items-center gap-1 text-slate-600">
-                        <span className="w-1.5 h-1.5 rounded-full bg-[#ea580c]" /> Food & Dining
+                      <span className="flex items-center gap-1.5 text-slate-600 font-medium">
+                        <span className="w-2 h-2 rounded-full bg-[#ea580c]" /> Food & Dining
                       </span>
-                      <span className="font-bold text-slate-800">32%</span>
+                      <span className="font-bold text-slate-900">32%</span>
                     </div>
                     <div className="flex items-center justify-between">
-                      <span className="flex items-center gap-1 text-slate-600">
-                        <span className="w-1.5 h-1.5 rounded-full bg-sky-500" /> Housing
+                      <span className="flex items-center gap-1.5 text-slate-600 font-medium">
+                        <span className="w-2 h-2 rounded-full bg-sky-500" /> Housing
                       </span>
-                      <span className="font-bold text-slate-800">28%</span>
+                      <span className="font-bold text-slate-900">28%</span>
                     </div>
                     <div className="flex items-center justify-between">
-                      <span className="flex items-center gap-1 text-slate-600">
-                        <span className="w-1.5 h-1.5 rounded-full bg-amber-500" /> Transport
+                      <span className="flex items-center gap-1.5 text-slate-600 font-medium">
+                        <span className="w-2 h-2 rounded-full bg-amber-500" /> Transport
                       </span>
-                      <span className="font-bold text-slate-800">15%</span>
+                      <span className="font-bold text-slate-900">15%</span>
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <span className="flex items-center gap-1.5 text-slate-600 font-medium">
+                        <span className="w-2 h-2 rounded-full bg-rose-500" /> Shopping
+                      </span>
+                      <span className="font-bold text-slate-900">12%</span>
                     </div>
                   </div>
                 </div>
 
-                {/* Smartphone Device Frame (Reference 3) */}
-                <div className="relative z-10 w-[260px] sm:w-[275px] h-[470px] sm:h-[490px] rounded-[38px] border-[6px] border-slate-900 bg-white shadow-2xl shadow-slate-900/20 overflow-hidden text-left flex flex-col justify-between select-none">
+                {/* Smartphone Device Frame (Clean Previous Preview Layout) */}
+                <div className="w-[255px] sm:w-[270px] h-[475px] sm:h-[495px] rounded-[38px] border-[6px] border-slate-900 bg-white shadow-2xl shadow-slate-900/15 overflow-hidden text-left flex flex-col justify-between select-none flex-shrink-0 transition-transform duration-300 hover:-translate-y-1">
                   
                   {/* Status Bar */}
-                  <div className="pt-2 px-5 pb-1 bg-white flex items-center justify-between text-[10px] font-bold text-slate-900 flex-shrink-0">
+                  <div className="pt-2.5 px-5 pb-1 bg-white flex items-center justify-between text-[10px] font-bold text-slate-900 flex-shrink-0">
                     <span>9:41 AM</span>
                     <div className="w-16 h-3 bg-slate-900 rounded-full" />
                     <div className="flex items-center gap-1">
