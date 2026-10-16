@@ -229,29 +229,42 @@ export function Navbar() {
               </button>
 
               {mobileFeaturesOpen && (
-                <div className="mt-2 pl-3 border-l-2 border-emerald-500 space-y-2">
-                  <Link
-                    href="/income-tracker"
-                    className="flex items-center justify-between text-sm font-medium text-slate-700 dark:text-slate-200 hover:text-emerald-600 py-1"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    <span className="flex items-center gap-2">
-                      <TrendingUp className="w-4 h-4 text-emerald-500" />
-                      <span>Income Tracker</span>
-                    </span>
-                    <span className="text-[10px] font-bold px-1.5 py-0.5 rounded-full bg-emerald-100 text-emerald-700 dark:bg-emerald-950/60 dark:text-emerald-400">
-                      New
-                    </span>
-                  </Link>
-
-                  <Link
-                    href="/#features"
-                    className="flex items-center gap-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-emerald-600 py-1"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    <Sparkles className="w-4 h-4 text-blue-500" />
-                    <span>Features Overview</span>
-                  </Link>
+                <div className="mt-2 pl-3 border-l-2 border-slate-200 dark:border-slate-800 space-y-1.5">
+                  {featureSubmenu.map((item) => {
+                    const Icon = item.icon;
+                    return (
+                      <Link
+                        key={item.name}
+                        href={item.href}
+                        className="flex items-center justify-between text-sm font-medium text-slate-700 dark:text-slate-200 hover:text-primary-600 dark:hover:text-primary-400 py-1.5 px-2 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors"
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        <span className="flex items-center gap-2.5">
+                          <span
+                            className={cn(
+                              "w-7 h-7 rounded-lg flex items-center justify-center flex-shrink-0 border",
+                              item.iconColor
+                            )}
+                          >
+                            <Icon className="w-3.5 h-3.5" />
+                          </span>
+                          <span>{item.name}</span>
+                        </span>
+                        {item.badge && (
+                          <span
+                            className={cn(
+                              "text-[10px] font-bold px-1.5 py-0.5 rounded-full",
+                              item.badge === "New"
+                                ? "bg-orange-100 text-[#ea580c] dark:bg-orange-950/60 dark:text-orange-400"
+                                : "bg-emerald-100 text-emerald-700 dark:bg-emerald-950/60 dark:text-emerald-400"
+                            )}
+                          >
+                            {item.badge}
+                          </span>
+                        )}
+                      </Link>
+                    );
+                  })}
                 </div>
               )}
             </div>
