@@ -3,7 +3,7 @@
 import * as React from "react";
 import Link from "next/link";
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
-import { Menu, X, ArrowRight, ChevronDown, TrendingUp, Sparkles, Receipt } from "lucide-react";
+import { Menu, X, ArrowRight, ChevronDown, TrendingUp, Sparkles, Receipt, PieChart } from "lucide-react";
 import { Button } from "./Button";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
@@ -50,8 +50,16 @@ export function Navbar() {
       description: "Record daily spending, organize categories, and track habits",
       href: "/expense-tracker",
       icon: Receipt,
-      badge: "New",
+      badge: "Popular",
       iconColor: "bg-orange-50 text-[#c2410c] dark:bg-orange-950/60 dark:text-orange-400 border-orange-100 dark:border-orange-900/40",
+    },
+    {
+      name: "Monthly Budget Planning",
+      description: "Category spending limits, remaining balances, and strict controls",
+      href: "/monthly-budget-planning",
+      icon: PieChart,
+      badge: "New",
+      iconColor: "bg-emerald-50 text-emerald-700 dark:bg-emerald-950/60 dark:text-emerald-400 border-emerald-100 dark:border-emerald-900/40",
     },
     {
       name: "All Features Overview",
