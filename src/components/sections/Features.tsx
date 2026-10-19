@@ -37,7 +37,10 @@ const features = [
     title: "Monthly Budget Planning",
     description: "Set monthly category spending limits, monitor remaining balances, and maintain healthy spending habits.",
     icon: PieChart,
-    color: "bg-blue-100 text-blue-600 dark:bg-blue-900/50 dark:text-blue-400"
+    color: "bg-emerald-100 text-emerald-600 dark:bg-emerald-950/50 dark:text-emerald-400",
+    href: "/monthly-budget-planning",
+    badge: "Available Now",
+    ctaText: "Explore Budget Planning",
   },
   {
     title: "Savings Goal Tracker",
