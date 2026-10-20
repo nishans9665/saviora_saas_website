@@ -17,18 +17,18 @@ import {
 import { Button } from "@/components/ui/Button";
 
 const sampleTransactions = [
-  { date: "10/20/2026", title: "Apple Flagship Store - Hardware & Display", category: "SHOPPING", payment: "Bank Transfer", amount: "-$8,946.00", status: "Completed" },
-  { date: "10/19/2026", title: "Apex Memorial Health Clinic - Annual Checkup", category: "HEALTHCARE", payment: "Bank Transfer", amount: "-$892.00", status: "Received" },
-  { date: "10/18/2026", title: "Adobe Creative Cloud - Enterprise Suite", category: "SUBSCRIPTIONS", payment: "Credit Card", amount: "-$484.00", status: "Completed" },
-  { date: "10/17/2026", title: "FedEx Express - Business Freight & Shipping", category: "MISCELLANEOUS", payment: "Bank Transfer", amount: "-$245.00", status: "Completed" },
-  { date: "10/16/2026", title: "Pacific Gas & Electric - Commercial Utility", category: "UTILITIES", payment: "Bank Transfer", amount: "-$945.00", status: "Completed" },
-  { date: "10/15/2026", title: "Equinox Fitness - Quarterly Health Membership", category: "PERSONAL CARE", payment: "Credit Card", amount: "-$515.00", status: "Completed" },
-  { date: "10/14/2026", title: "Spotify Family - Annual Premium Streaming", category: "SUBSCRIPTIONS", payment: "Credit Card", amount: "-$85.00", status: "Completed" },
-  { date: "10/12/2026", title: "IKEA Workspace - Ergonomic Office Setup", category: "SHOPPING", payment: "Bank Transfer", amount: "-$589.00", status: "Completed" },
-  { date: "10/10/2026", title: "Stanford Online - Data Analysis Certification", category: "EDUCATION", payment: "Bank Transfer", amount: "-$884.00", status: "Completed" },
-  { date: "10/08/2026", title: "Sallie Mae Education - Monthly Loan Payment", category: "DEBT & LOANS", payment: "Bank Transfer", amount: "-$845.00", status: "Completed" },
-  { date: "10/05/2026", title: "National Association - Annual Professional Dues", category: "MISCELLANEOUS", payment: "Bank Transfer", amount: "-$741.00", status: "Completed" },
-  { date: "10/02/2026", title: "Namecheap Cloud - Annual Hosting & Domains", category: "BUSINESS", payment: "Cash", amount: "-$84.00", status: "Completed" },
+  { date: "10/20/2026", title: "Apple Store - AirPods Pro & Case", category: "SHOPPING", payment: "Credit Card", amount: "-$269.00", status: "Completed" },
+  { date: "10/19/2026", title: "City Health Clinic - Co-pay & Prescription", category: "HEALTHCARE", payment: "Credit Card", amount: "-$65.00", status: "Received" },
+  { date: "10/18/2026", title: "Adobe Creative Cloud - Photography Plan", category: "SUBSCRIPTIONS", payment: "Credit Card", amount: "-$19.99", status: "Completed" },
+  { date: "10/17/2026", title: "Trader Joe's - Weekly Organic Groceries", category: "FOOD & GROCERIES", payment: "Credit Card", amount: "-$142.50", status: "Completed" },
+  { date: "10/16/2026", title: "Metro Electric & Clean Energy", category: "UTILITIES", payment: "Bank Transfer", amount: "-$118.40", status: "Completed" },
+  { date: "10/15/2026", title: "Equinox Fitness - Monthly Gym Pass", category: "PERSONAL CARE", payment: "Credit Card", amount: "-$85.00", status: "Completed" },
+  { date: "10/14/2026", title: "Spotify & Netflix - Media Streaming", category: "SUBSCRIPTIONS", payment: "Credit Card", amount: "-$28.98", status: "Completed" },
+  { date: "10/12/2026", title: "IKEA - Ergonomic Desk Lamp & Organizer", category: "SHOPPING", payment: "Credit Card", amount: "-$74.50", status: "Completed" },
+  { date: "10/10/2026", title: "Coursera - Data Science Specialization", category: "EDUCATION", payment: "Credit Card", amount: "-$49.00", status: "Completed" },
+  { date: "10/08/2026", title: "Sallie Mae - Monthly Student Loan EMI", category: "DEBT & LOANS", payment: "Bank Transfer", amount: "-$285.00", status: "Completed" },
+  { date: "10/05/2026", title: "Shell Gas Station - Full Tank Fuel", category: "TRANSPORTATION", payment: "Credit Card", amount: "-$54.20", status: "Completed" },
+  { date: "10/02/2026", title: "Namecheap - Personal Portfolio Domain", category: "SUBSCRIPTIONS", payment: "Cash", amount: "-$14.50", status: "Completed" },
 ];
 
 export function DetailedExpenseReports() {

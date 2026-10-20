@@ -105,16 +105,16 @@ export function AnalyticsFinalCTA() {
               <div className="hidden sm:block absolute -left-10 top-4 w-80 bg-white rounded-2xl border border-slate-200/80 p-4 shadow-xl opacity-90 -rotate-2 pointer-events-none">
                 <div className="flex items-center justify-between pb-2 mb-2 border-b border-slate-100">
                   <div className="text-xs font-bold text-slate-900">Expense Analytics</div>
-                  <span className="text-[9px] bg-emerald-100 text-[#16a34a] px-2 py-0.5 rounded font-bold">221 Records</span>
+                  <span className="text-[9px] bg-emerald-100 text-[#16a34a] px-2 py-0.5 rounded font-bold">79 Records</span>
                 </div>
                 <div className="grid grid-cols-2 gap-2 text-[10px] mb-2">
                   <div className="bg-slate-50 p-2 rounded-lg">
                     <span className="text-slate-400 block text-[8px]">Total Outflow</span>
-                    <span className="font-extrabold text-slate-900 text-xs">$984,113.65</span>
+                    <span className="font-extrabold text-slate-900 text-xs">$4,250.00</span>
                   </div>
                   <div className="bg-slate-50 p-2 rounded-lg">
                     <span className="text-slate-400 block text-[8px]">Top Category</span>
-                    <span className="font-extrabold text-slate-900 text-xs">Education</span>
+                    <span className="font-extrabold text-slate-900 text-xs">Housing & Rent</span>
                   </div>
                 </div>
                 <div className="h-1.5 w-full bg-slate-100 rounded-full overflow-hidden">
@@ -147,21 +147,21 @@ export function AnalyticsFinalCTA() {
                     {/* Total Expense Card */}
                     <div className="bg-amber-50/70 border border-amber-200/70 rounded-xl p-3 mb-2.5">
                       <span className="text-[9px] font-semibold text-amber-800 block">Total Expenses</span>
-                      <span className="text-lg font-extrabold text-slate-900 block mt-0.5">$984,113.65</span>
+                      <span className="text-lg font-extrabold text-slate-900 block mt-0.5">$4,250.00</span>
                       <div className="flex items-center justify-between text-[9px] text-slate-500 mt-1">
-                        <span>Top: Education</span>
-                        <span className="font-bold text-[#16a34a]">23.1% Share</span>
+                        <span>Top: Housing & Rent</span>
+                        <span className="font-bold text-[#16a34a]">34.1% Share</span>
                       </div>
                     </div>
 
                     {/* Mini Highlights */}
                     <div className="bg-white border border-slate-200/90 rounded-xl p-2.5 shadow-2xs space-y-1.5">
                       <div className="flex items-center justify-between text-[10px]">
-                        <span className="text-slate-500">Bank Transfer</span>
-                        <span className="font-bold text-slate-900">98.2%</span>
+                        <span className="text-slate-500">Credit Card</span>
+                        <span className="font-bold text-slate-900">62.0%</span>
                       </div>
                       <div className="w-full bg-slate-100 rounded-full h-1 overflow-hidden">
-                        <div className="bg-blue-600 h-full w-[98%]" />
+                        <div className="bg-blue-600 h-full w-[62%]" />
                       </div>
                     </div>
                   </div>

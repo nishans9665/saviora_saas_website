@@ -6,31 +6,31 @@ import { AnimatedSection } from "@/components/ui/AnimatedSection";
 
 const paymentMethods = [
   {
-    name: "Bank Transfer",
-    amount: "$984,113.65",
-    percentage: "98.2%",
-    count: "216 transactions",
-    icon: Landmark,
+    name: "Credit Card",
+    amount: "$2,635.00",
+    percentage: "62.0%",
+    count: "48 transactions",
+    icon: CreditCard,
     color: "bg-blue-600",
-    barHeight: "98%",
+    barHeight: "85%",
   },
   {
-    name: "Credit Card",
-    amount: "$12,450.00",
-    percentage: "1.3%",
+    name: "Bank Transfer",
+    amount: "$1,360.00",
+    percentage: "32.0%",
     count: "4 transactions",
-    icon: CreditCard,
+    icon: Landmark,
     color: "bg-purple-500",
-    barHeight: "15%",
+    barHeight: "44%",
   },
   {
     name: "Cash",
-    amount: "$4,550.00",
-    percentage: "0.5%",
-    count: "1 transaction",
+    amount: "$255.00",
+    percentage: "6.0%",
+    count: "27 transactions",
     icon: Wallet,
     color: "bg-emerald-500",
-    barHeight: "8%",
+    barHeight: "15%",
   },
 ];
 
@@ -92,8 +92,8 @@ export function PaymentMethodBreakdown() {
             </div>
 
             <div className="pt-4 flex items-center justify-between text-xs text-slate-500">
-              <span>Primary payment driver: Bank Transfer</span>
-              <span className="font-bold text-slate-800">Total: $1,001,113.65</span>
+              <span>Primary payment driver: Credit Card (62%)</span>
+              <span className="font-bold text-slate-800">Total: $4,250.00</span>
             </div>
           </div>
 

@@ -224,7 +224,7 @@ export function AnalyticsHero() {
                           <DollarSign className="w-2.5 h-2.5" />
                         </div>
                       </div>
-                      <div className="text-xs sm:text-sm font-extrabold text-slate-900 truncate">$984,113.65</div>
+                      <div className="text-xs sm:text-sm font-extrabold text-slate-900 truncate">$4,250.00</div>
                     </div>
 
                     {/* Card 2: Top Category */}
@@ -235,7 +235,7 @@ export function AnalyticsHero() {
                           <PieChart className="w-2.5 h-2.5" />
                         </div>
                       </div>
-                      <div className="text-xs sm:text-sm font-extrabold text-slate-900 truncate">Education</div>
+                      <div className="text-xs sm:text-sm font-extrabold text-slate-900 truncate">Housing & Rent</div>
                     </div>
 
                     {/* Card 3: Most Used Payment */}
@@ -246,7 +246,7 @@ export function AnalyticsHero() {
                           <CreditCard className="w-2.5 h-2.5" />
                         </div>
                       </div>
-                      <div className="text-xs sm:text-sm font-extrabold text-slate-900 truncate">Bank Transfer</div>
+                      <div className="text-xs sm:text-sm font-extrabold text-slate-900 truncate">Credit Card</div>
                     </div>
 
                     {/* Card 4: Avg. Daily Spend */}
@@ -257,7 +257,7 @@ export function AnalyticsHero() {
                           <TrendingDown className="w-2.5 h-2.5" />
                         </div>
                       </div>
-                      <div className="text-xs sm:text-sm font-extrabold text-slate-900 truncate">$65,607.58</div>
+                      <div className="text-xs sm:text-sm font-extrabold text-slate-900 truncate">$137.10</div>
                     </div>
 
                     {/* Card 5: Monthly Growth */}
@@ -268,7 +268,7 @@ export function AnalyticsHero() {
                           <TrendingDown className="w-2.5 h-2.5" />
                         </div>
                       </div>
-                      <div className="text-xs sm:text-sm font-extrabold text-slate-900 truncate">0.0%</div>
+                      <div className="text-xs sm:text-sm font-extrabold text-slate-900 truncate">-2.4%</div>
                     </div>
 
                     {/* Card 6: Transactions */}
@@ -279,7 +279,7 @@ export function AnalyticsHero() {
                           <Clock className="w-2.5 h-2.5" />
                         </div>
                       </div>
-                      <div className="text-xs sm:text-sm font-extrabold text-slate-900 truncate">221</div>
+                      <div className="text-xs sm:text-sm font-extrabold text-slate-900 truncate">79</div>
                     </div>
                   </div>
 
@@ -297,7 +297,7 @@ export function AnalyticsHero() {
                           <svg className="w-full h-full -rotate-90" viewBox="0 0 36 36">
                             <path
                               className="text-emerald-500"
-                              strokeDasharray="23, 100"
+                              strokeDasharray="23.1, 100"
                               strokeWidth="5"
                               stroke="currentColor"
                               fill="none"
@@ -305,8 +305,8 @@ export function AnalyticsHero() {
                             />
                             <path
                               className="text-orange-500"
-                              strokeDasharray="18, 100"
-                              strokeDashoffset="-23"
+                              strokeDasharray="18.4, 100"
+                              strokeDashoffset="-23.1"
                               strokeWidth="5"
                               stroke="currentColor"
                               fill="none"
@@ -314,8 +314,8 @@ export function AnalyticsHero() {
                             />
                             <path
                               className="text-blue-500"
-                              strokeDasharray="14, 100"
-                              strokeDashoffset="-41"
+                              strokeDasharray="14.2, 100"
+                              strokeDashoffset="-41.5"
                               strokeWidth="5"
                               stroke="currentColor"
                               fill="none"
@@ -323,8 +323,53 @@ export function AnalyticsHero() {
                             />
                             <path
                               className="text-purple-500"
-                              strokeDasharray="9, 100"
-                              strokeDashoffset="-55"
+                              strokeDasharray="9.2, 100"
+                              strokeDashoffset="-55.7"
+                              strokeWidth="5"
+                              stroke="currentColor"
+                              fill="none"
+                              d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+                            />
+                            <path
+                              className="text-cyan-500"
+                              strokeDasharray="7.6, 100"
+                              strokeDashoffset="-64.9"
+                              strokeWidth="5"
+                              stroke="currentColor"
+                              fill="none"
+                              d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+                            />
+                            <path
+                              className="text-rose-500"
+                              strokeDasharray="6.2, 100"
+                              strokeDashoffset="-72.5"
+                              strokeWidth="5"
+                              stroke="currentColor"
+                              fill="none"
+                              d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+                            />
+                            <path
+                              className="text-amber-500"
+                              strokeDasharray="6.2, 100"
+                              strokeDashoffset="-78.7"
+                              strokeWidth="5"
+                              stroke="currentColor"
+                              fill="none"
+                              d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+                            />
+                            <path
+                              className="text-teal-500"
+                              strokeDasharray="5.0, 100"
+                              strokeDashoffset="-84.9"
+                              strokeWidth="5"
+                              stroke="currentColor"
+                              fill="none"
+                              d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+                            />
+                            <path
+                              className="text-slate-400"
+                              strokeDasharray="10.1, 100"
+                              strokeDashoffset="-89.9"
                               strokeWidth="5"
                               stroke="currentColor"
                               fill="none"
@@ -335,15 +380,15 @@ export function AnalyticsHero() {
                         <div className="text-[9px] space-y-0.5 truncate">
                           <div className="flex items-center gap-1 truncate font-medium text-slate-700">
                             <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 flex-shrink-0" />
-                            <span className="truncate">Education: $227k (23%)</span>
+                            <span className="truncate">Housing: $1,450 (34%)</span>
                           </div>
                           <div className="flex items-center gap-1 truncate font-medium text-slate-700">
                             <span className="w-1.5 h-1.5 rounded-full bg-orange-500 flex-shrink-0" />
-                            <span className="truncate">Food: $181k (18%)</span>
+                            <span className="truncate">Food: $780 (18%)</span>
                           </div>
                           <div className="flex items-center gap-1 truncate font-medium text-slate-700">
                             <span className="w-1.5 h-1.5 rounded-full bg-blue-500 flex-shrink-0" />
-                            <span className="truncate">Entertainment: $139k</span>
+                            <span className="truncate">Transit: $420 (10%)</span>
                           </div>
                         </div>
                       </div>
@@ -367,17 +412,19 @@ export function AnalyticsHero() {
                           <svg className="w-full h-full" viewBox="0 0 100 40" preserveAspectRatio="none">
                             {/* Income line */}
                             <path
-                              d="M0,38 Q50,38 75,30 T100,5"
+                              d="M0,24 C30,22 65,16 100,6"
                               fill="none"
                               stroke="#22c55e"
                               strokeWidth="2.5"
+                              strokeLinecap="round"
                             />
                             {/* Expenses line */}
                             <path
-                              d="M0,38 Q50,38 75,32 T100,18"
+                              d="M0,30 C35,29 70,26 100,18"
                               fill="none"
                               stroke="#ef4444"
                               strokeWidth="2.5"
+                              strokeLinecap="round"
                             />
                           </svg>
                           <div className="flex justify-between text-[8px] text-slate-400 mt-0.5">
