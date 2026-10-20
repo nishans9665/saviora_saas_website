@@ -17,18 +17,18 @@ import {
 import { Button } from "@/components/ui/Button";
 
 const sampleTransactions = [
-  { date: "10/20/2026", title: "Apple Store - AirPods Pro & Case", category: "SHOPPING", payment: "Credit Card", amount: "-$269.00", status: "Completed" },
-  { date: "10/19/2026", title: "City Health Clinic - Co-pay & Prescription", category: "HEALTHCARE", payment: "Credit Card", amount: "-$65.00", status: "Received" },
-  { date: "10/18/2026", title: "Adobe Creative Cloud - Photography Plan", category: "SUBSCRIPTIONS", payment: "Credit Card", amount: "-$19.99", status: "Completed" },
-  { date: "10/17/2026", title: "Trader Joe's - Weekly Organic Groceries", category: "FOOD & GROCERIES", payment: "Credit Card", amount: "-$142.50", status: "Completed" },
-  { date: "10/16/2026", title: "Metro Electric & Clean Energy", category: "UTILITIES", payment: "Bank Transfer", amount: "-$118.40", status: "Completed" },
-  { date: "10/15/2026", title: "Equinox Fitness - Monthly Gym Pass", category: "PERSONAL CARE", payment: "Credit Card", amount: "-$85.00", status: "Completed" },
-  { date: "10/14/2026", title: "Spotify & Netflix - Media Streaming", category: "SUBSCRIPTIONS", payment: "Credit Card", amount: "-$28.98", status: "Completed" },
-  { date: "10/12/2026", title: "IKEA - Ergonomic Desk Lamp & Organizer", category: "SHOPPING", payment: "Credit Card", amount: "-$74.50", status: "Completed" },
-  { date: "10/10/2026", title: "Coursera - Data Science Specialization", category: "EDUCATION", payment: "Credit Card", amount: "-$49.00", status: "Completed" },
-  { date: "10/08/2026", title: "Sallie Mae - Monthly Student Loan EMI", category: "DEBT & LOANS", payment: "Bank Transfer", amount: "-$285.00", status: "Completed" },
-  { date: "10/05/2026", title: "Shell Gas Station - Full Tank Fuel", category: "TRANSPORTATION", payment: "Credit Card", amount: "-$54.20", status: "Completed" },
-  { date: "10/02/2026", title: "Namecheap - Personal Portfolio Domain", category: "SUBSCRIPTIONS", payment: "Cash", amount: "-$14.50", status: "Completed" },
+  { date: "10/20/2026", title: "Monthly Apartment Rent", category: "Housing & Rent", payment: "Bank Transfer", amount: "-$1,450.00", status: "Completed" },
+  { date: "10/19/2026", title: "Weekly Supermarket Groceries", category: "Food & Groceries", payment: "Credit Card", amount: "-$142.50", status: "Completed" },
+  { date: "10/18/2026", title: "Electricity & Power Bill", category: "Utilities & Bills", payment: "Bank Transfer", amount: "-$118.40", status: "Completed" },
+  { date: "10/17/2026", title: "Home Fiber Internet Bill", category: "Utilities & Bills", payment: "Credit Card", amount: "-$65.00", status: "Completed" },
+  { date: "10/16/2026", title: "Car Gasoline & Fuel Refill", category: "Transportation", payment: "Credit Card", amount: "-$54.20", status: "Completed" },
+  { date: "10/15/2026", title: "Family Dinner & Dining Out", category: "Entertainment & Dining", payment: "Credit Card", amount: "-$68.50", status: "Completed" },
+  { date: "10/14/2026", title: "Monthly Gym & Fitness Pass", category: "Personal Care", payment: "Credit Card", amount: "-$45.00", status: "Completed" },
+  { date: "10/12/2026", title: "Streaming Subscriptions (Netflix & Spotify)", category: "Subscriptions & Streaming", payment: "Credit Card", amount: "-$28.98", status: "Completed" },
+  { date: "10/10/2026", title: "Doctor Consultation & Prescription", category: "Healthcare & Wellness", payment: "Credit Card", amount: "-$35.00", status: "Received" },
+  { date: "10/08/2026", title: "Autumn Clothing & Footwear", category: "Shopping & Apparel", payment: "Credit Card", amount: "-$85.00", status: "Completed" },
+  { date: "10/05/2026", title: "Student Loan Monthly Repayment", category: "Education & Courses", payment: "Bank Transfer", amount: "-$185.00", status: "Completed" },
+  { date: "10/02/2026", title: "Morning Coffee & Bakery Breakfast", category: "Food & Groceries", payment: "Cash", amount: "-$12.50", status: "Completed" },
 ];
 
 export function DetailedExpenseReports() {
@@ -97,7 +97,7 @@ export function DetailedExpenseReports() {
           </p>
         </div>
 
-        {/* Detailed Expense Report Table (Matches Screenshot 1) */}
+        {/* Detailed Expense Report Table */}
         <div className="max-w-6xl mx-auto bg-white rounded-3xl border border-slate-200/90 shadow-xl shadow-slate-900/5 p-5 sm:p-8 mb-10 overflow-hidden">
           {/* Top Controls Bar */}
           <div className="flex flex-col lg:flex-row lg:items-center justify-between pb-6 mb-6 border-b border-slate-100 gap-4">
@@ -107,7 +107,7 @@ export function DetailedExpenseReports() {
               </div>
               <div>
                 <h3 className="text-lg font-bold text-slate-900">Detailed Expense Report</h3>
-                <p className="text-xs text-slate-400">Searchable ledger of recorded outflows</p>
+                <p className="text-xs text-slate-400">Searchable ledger of recorded personal outflows</p>
               </div>
             </div>
 
@@ -118,7 +118,7 @@ export function DetailedExpenseReports() {
                 <Search className="w-3.5 h-3.5 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none" />
                 <input
                   type="text"
-                  placeholder="Search..."
+                  placeholder="Search (e.g. Groceries, Rent)..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
                   className="w-full pl-8 pr-3 py-1.5 text-xs rounded-xl border border-slate-200 bg-white text-slate-900 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
@@ -133,15 +133,16 @@ export function DetailedExpenseReports() {
                   className="appearance-none pl-3 pr-7 py-1.5 text-xs rounded-xl border border-slate-200 bg-white text-slate-800 focus:outline-none focus:ring-2 focus:ring-emerald-500 cursor-pointer"
                 >
                   <option value="All Categories">All Categories</option>
-                  <option value="SHOPPING">Shopping</option>
-                  <option value="HEALTHCARE">Healthcare</option>
-                  <option value="SUBSCRIPTIONS">Subscriptions</option>
-                  <option value="UTILITIES">Utilities</option>
-                  <option value="PERSONAL CARE">Personal Care</option>
-                  <option value="EDUCATION">Education</option>
-                  <option value="DEBT & LOANS">Debt & Loans</option>
-                  <option value="BUSINESS">Business</option>
-                  <option value="MISCELLANEOUS">Miscellaneous</option>
+                  <option value="Housing & Rent">Housing & Rent</option>
+                  <option value="Food & Groceries">Food & Groceries</option>
+                  <option value="Utilities & Bills">Utilities & Bills</option>
+                  <option value="Transportation">Transportation</option>
+                  <option value="Entertainment & Dining">Entertainment & Dining</option>
+                  <option value="Shopping & Apparel">Shopping & Apparel</option>
+                  <option value="Healthcare & Wellness">Healthcare & Wellness</option>
+                  <option value="Subscriptions & Streaming">Subscriptions & Streaming</option>
+                  <option value="Personal Care">Personal Care</option>
+                  <option value="Education & Courses">Education & Courses</option>
                 </select>
                 <ChevronDown className="w-3 h-3 text-slate-400 absolute right-2.5 top-1/2 -translate-y-1/2 pointer-events-none" />
               </div>
