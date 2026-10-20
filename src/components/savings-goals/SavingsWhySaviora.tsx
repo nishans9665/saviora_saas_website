@@ -36,7 +36,7 @@ export function SavingsWhySaviora() {
               </h2>
 
               <p className="text-base sm:text-lg text-slate-600 leading-relaxed mb-8 max-w-2xl">
-                Saviora combines powerful savings goal tracking with income tracking, expense management, budgeting, and analytics—so you can manage your entire financial life in one place.
+                Saviora combines powerful savings goal tracking with income tracking, expense management, budgeting, and analytics - so you can manage your entire financial life in one place.
               </p>
 
               {/* 2-Column Checklist */}
