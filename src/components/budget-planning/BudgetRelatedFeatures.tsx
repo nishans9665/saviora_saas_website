@@ -36,8 +36,8 @@ const relatedFeatures = [
       "Set milestone targets, track regular contributions, and watch your emergency and dream funds grow.",
     icon: Target,
     iconColor: "bg-purple-50 text-purple-700 border-purple-200",
-    href: "/features",
-    ariaLabel: "Learn more about Savings Goals with Saviora",
+    href: "/savings-goals",
+    ariaLabel: "Learn more about Savings Goal Tracker with Saviora",
   },
   {
     title: "Financial Analytics",
