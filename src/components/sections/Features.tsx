@@ -55,7 +55,10 @@ const features = [
     title: "Financial Analytics & Reports",
     description: "Interactive visual charts and category breakdowns to help you understand your cash flow and habits.",
     icon: BarChart4,
-    color: "bg-amber-100 text-amber-600 dark:bg-amber-900/50 dark:text-amber-400"
+    color: "bg-amber-100 text-amber-600 dark:bg-amber-900/50 dark:text-amber-400",
+    href: "/financial-analytics",
+    badge: "Available Now",
+    ctaText: "Explore Financial Analytics",
   },
   {
     title: "Multi-Currency Management",

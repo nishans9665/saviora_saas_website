@@ -35,8 +35,8 @@ const relatedFeatures = [
     description: "Review your financial activity and reports.",
     icon: BarChart3,
     iconColor: "bg-amber-50 text-amber-600 border-amber-100",
-    href: "/features",
-    ariaLabel: "Learn more about Financial Analytics on the Saviora features page",
+    href: "/financial-analytics",
+    ariaLabel: "Learn more about Financial Analytics with Saviora",
   },
 ];
 
