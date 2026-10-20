@@ -168,9 +168,9 @@ export function Showcases() {
 
         </div>
 
-        <p className="text-center mt-12 text-xs text-slate-400 dark:text-slate-500 font-medium">
+        {/* <p className="text-center mt-12 text-xs text-slate-400 dark:text-slate-500 font-medium">
           * Illustrative demo values shown above. Saviora adapts to your real accounts, categories, and targets.
-        </p>
+        </p> */}
       </div>
     </section>
   );

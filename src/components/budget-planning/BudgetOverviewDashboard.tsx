@@ -315,9 +315,9 @@ export function BudgetOverviewDashboard() {
             })}
           </div>
 
-          <div className="mt-5 text-center text-xs text-slate-400">
+          {/* <div className="mt-5 text-center text-xs text-slate-400">
             Previewing illustrative categories: Groceries (Safe), Transportation (Warning), Housing (Safe), Entertainment (Overspent).
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

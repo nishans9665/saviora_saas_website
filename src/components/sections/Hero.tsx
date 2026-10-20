@@ -467,9 +467,9 @@ export function Hero() {
             </div>
           </motion.div>
           {/* Illustrative Demo Disclosure */}
-          <p className="text-center mt-3 text-[11px] sm:text-xs text-slate-400 dark:text-slate-500 font-medium">
+          {/* <p className="text-center mt-3 text-[11px] sm:text-xs text-slate-400 dark:text-slate-500 font-medium">
             * Illustrative dashboard demo. Saviora lets you customize categories, budget limits, and savings goals for your personal finances.
-          </p>
+          </p> */}
         </div>
 
         {/* FEATURE CARDS BELOW DASHBOARD */}

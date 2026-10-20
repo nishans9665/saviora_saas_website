@@ -226,9 +226,9 @@ export function BudgetStrictLimit() {
                   )}
                 </div>
 
-                <div className="mt-4 text-center text-[10px] text-slate-400">
+                {/* <div className="mt-4 text-center text-[10px] text-slate-400">
                   Illustrative product preview with sample values: $500 limit, $465 spent, $35 remaining.
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

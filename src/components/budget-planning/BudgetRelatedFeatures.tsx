@@ -45,7 +45,7 @@ const relatedFeatures = [
       "Review monthly reports, net cash flow breakdowns, and visual trends across all your accounts.",
     icon: BarChart3,
     iconColor: "bg-amber-50 text-amber-700 border-amber-200",
-    href: "/features",
+    href: "/financial-analytics",
     ariaLabel: "Learn more about Financial Analytics with Saviora",
   },
 ];

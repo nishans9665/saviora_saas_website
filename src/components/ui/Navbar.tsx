@@ -3,7 +3,7 @@
 import * as React from "react";
 import Link from "next/link";
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
-import { Menu, X, ArrowRight, ChevronDown, TrendingUp, Sparkles, Receipt, PieChart, Target } from "lucide-react";
+import { Menu, X, ArrowRight, ChevronDown, TrendingUp, Sparkles, Receipt, PieChart, Target, BarChart4 } from "lucide-react";
 import { Button } from "./Button";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
@@ -66,8 +66,16 @@ export function Navbar() {
       description: "Define targets, record contributions, and track progress",
       href: "/savings-goals",
       icon: Target,
-      badge: "New",
+      badge: "Popular",
       iconColor: "bg-purple-50 text-purple-600 dark:bg-purple-950/60 dark:text-purple-400 border-purple-100 dark:border-purple-900/40",
+    },
+    {
+      name: "Financial Analytics & Reports",
+      description: "Visual expense reports, category shares, and cash flow trends",
+      href: "/financial-analytics",
+      icon: BarChart4,
+      badge: "New",
+      iconColor: "bg-amber-50 text-amber-700 dark:bg-amber-950/60 dark:text-amber-400 border-amber-100 dark:border-amber-900/40",
     },
     {
       name: "All Features Overview",
