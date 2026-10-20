@@ -46,7 +46,10 @@ const features = [
     title: "Savings Goal Tracker",
     description: "Set milestone targets, track regular contributions, and watch your savings progress grow visually.",
     icon: Target,
-    color: "bg-purple-100 text-purple-600 dark:bg-purple-900/50 dark:text-purple-400"
+    color: "bg-purple-100 text-purple-600 dark:bg-purple-900/50 dark:text-purple-400",
+    href: "/savings-goals",
+    badge: "Available Now",
+    ctaText: "Explore Savings Goals",
   },
   {
     title: "Financial Analytics & Reports",
