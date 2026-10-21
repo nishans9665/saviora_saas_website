@@ -64,7 +64,10 @@ const features = [
     title: "Multi-Currency Management",
     description: "Manage your finances in USD, EUR, GBP, or other global currencies with flexible regional settings.",
     icon: Globe2,
-    color: "bg-cyan-100 text-cyan-600 dark:bg-cyan-900/50 dark:text-cyan-400"
+    color: "bg-cyan-100 text-cyan-600 dark:bg-cyan-900/50 dark:text-cyan-400",
+    href: "/multi-currency-management",
+    badge: "Available Now",
+    ctaText: "Explore Multi-Currency",
   }
 ];
 
