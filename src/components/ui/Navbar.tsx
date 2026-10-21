@@ -3,7 +3,7 @@
 import * as React from "react";
 import Link from "next/link";
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
-import { Menu, X, ArrowRight, ChevronDown, TrendingUp, Sparkles, Receipt, PieChart, Target, BarChart4 } from "lucide-react";
+import { Menu, X, ArrowRight, ChevronDown, TrendingUp, Sparkles, Receipt, PieChart, Target, BarChart4, Globe2 } from "lucide-react";
 import { Button } from "./Button";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
@@ -76,6 +76,14 @@ export function Navbar() {
       icon: BarChart4,
       badge: "New",
       iconColor: "bg-amber-50 text-amber-700 dark:bg-amber-950/60 dark:text-amber-400 border-amber-100 dark:border-amber-900/40",
+    },
+    {
+      name: "Multi-Currency Management",
+      description: "Manage finances in your preferred main currency and regional settings",
+      href: "/multi-currency-management",
+      icon: Globe2,
+      badge: "New",
+      iconColor: "bg-cyan-50 text-cyan-700 dark:bg-cyan-950/60 dark:text-cyan-400 border-cyan-100 dark:border-cyan-900/40",
     },
     {
       name: "All Features Overview",

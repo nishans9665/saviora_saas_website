@@ -148,6 +148,9 @@ export function Footer() {
                 <Link href="/financial-analytics" className="text-slate-500 hover:text-primary-500 dark:text-slate-400 dark:hover:text-primary-400 transition-colors">Financial Analytics</Link>
               </li>
               <li>
+                <Link href="/multi-currency-management" className="text-slate-500 hover:text-primary-500 dark:text-slate-400 dark:hover:text-primary-400 transition-colors">Multi-Currency</Link>
+              </li>
+              <li>
                 <Link href="/#dashboard" className="text-slate-500 hover:text-primary-500 dark:text-slate-400 dark:hover:text-primary-400 transition-colors">Dashboard</Link>
               </li>
               {/* <li>
