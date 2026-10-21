@@ -77,8 +77,8 @@ export function GlobalPreferencesSection() {
                   </p>
                 </div>
                 <div className="mt-6 pt-4 border-t border-slate-100 flex items-center gap-2 text-xs font-semibold text-emerald-700">
-                  <CheckCircle2 className="w-4 h-4 text-primary-500" />
-                  <span>Configured without artificial limitations</span>
+                  {/* <CheckCircle2 className="w-4 h-4 text-primary-500" /> */}
+                  {/* <span>Configured without artificial limitations</span> */}
                 </div>
               </div>
             );

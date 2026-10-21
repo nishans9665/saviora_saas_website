@@ -97,7 +97,7 @@ export function CurrencyFAQ() {
         </div>
 
         {/* 2-Column Accordion */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6 items-start max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-1 gap-4 lg:gap-6 items-start max-w-6xl mx-auto">
           {renderColumn(leftFaqs)}
           {renderColumn(rightFaqs)}
         </div>

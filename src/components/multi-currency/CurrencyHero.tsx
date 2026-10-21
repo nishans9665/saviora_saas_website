@@ -2,12 +2,14 @@
 
 import React from "react";
 import Link from "next/link";
-import Image from "next/image";
+import { LocalizationSettingsMockup } from "./LocalizationSettingsMockup";
 import {
   Globe2,
   ArrowRight,
-  ArrowUpRight,
   CheckCircle2,
+  Sliders,
+  DollarSign,
+  Calendar,
   Sparkles,
 } from "lucide-react";
 import { Button } from "@/components/ui/Button";
@@ -41,7 +43,7 @@ export function CurrencyHero() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-10 items-center">
           
           {/* Left Column: Heading, Copy & CTAs */}
-          <div className="lg:col-span-6 xl:col-span-6 text-left flex flex-col items-start">
+          <div className="lg:col-span-5 xl:col-span-5 text-left flex flex-col items-start">
             
             {/* Eyebrow Badge */}
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-100/80 border border-emerald-200/80 text-emerald-800 text-xs font-semibold uppercase tracking-wider mb-6 shadow-xs">
@@ -111,54 +113,57 @@ export function CurrencyHero() {
 
           </div>
 
-          {/* Right Column: Genuine Dashboard Preview Showcase */}
-          <div className="lg:col-span-6 xl:col-span-6 w-full">
+          {/* Right Column: Real Localization Settings Mockup */}
+          <div className="lg:col-span-7 xl:col-span-7 w-full">
             <div className="relative mx-auto max-w-xl lg:max-w-none">
               
-              {/* Subtle background glow */}
-              <div className="absolute -inset-2 bg-gradient-to-r from-primary-400/20 via-emerald-400/15 to-teal-400/20 rounded-3xl blur-2xl opacity-75 pointer-events-none" />
+              {/* Subtle background glow - warm emerald/green */}
+              <div className="absolute -inset-2 bg-gradient-to-r from-emerald-400/20 via-primary-400/15 to-emerald-500/20 rounded-3xl blur-2xl opacity-75 pointer-events-none" />
 
               {/* Main Card Wrapper */}
-              <div className="relative rounded-2xl sm:rounded-3xl border border-slate-200/90 bg-white p-4 sm:p-6 shadow-xl shadow-slate-900/5">
+              <div className="relative rounded-2xl sm:rounded-3xl border border-slate-200/90 bg-white shadow-xl shadow-slate-900/5 overflow-hidden">
                 
-                {/* Top Toolbar */}
-                <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-3.5 mb-3.5 border-b border-slate-200/70 gap-2 text-xs">
+                {/* Browser-style Top Bar */}
+                <div className="px-4 py-3 bg-slate-50/90 border-b border-slate-100 flex items-center justify-between text-xs text-slate-500">
                   <div className="flex items-center gap-2">
-                    <span className="font-bold text-slate-800 text-xs sm:text-sm">Saviora Financial Dashboard Preview</span>
-                    <span className="px-2 py-0.5 rounded-md bg-emerald-100 text-emerald-800 font-semibold text-[10px] sm:text-[11px]">
-                      Verified USD Display
+                    <span className="w-2.5 h-2.5 rounded-full bg-rose-400/80 inline-block" />
+                    <span className="w-2.5 h-2.5 rounded-full bg-amber-400/80 inline-block" />
+                    <span className="w-2.5 h-2.5 rounded-full bg-emerald-400/80 inline-block" />
+                    <span className="ml-2 font-medium text-slate-600 hidden sm:inline-flex items-center gap-1.5">
+                      <Sliders className="w-3 h-3 text-primary-600" />
+                      Saviora App · Settings → Localization
                     </span>
                   </div>
-                  <div className="text-slate-500 flex items-center gap-1.5 text-[11px] sm:text-xs">
-                    <span className="w-2 h-2 rounded-full bg-primary-500 animate-pulse" />
-                    <span>Financial Period: October 2026 · Status: Open</span>
+                  <div className="inline-flex items-center gap-1.5 text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200/60 font-medium">
+                    <span className="w-1.5 h-1.5 rounded-full bg-primary-500 animate-pulse" />
+                    Live Product View
                   </div>
                 </div>
 
-                {/* Real Dashboard Image */}
-                <div className="relative w-full aspect-[1024/486] rounded-xl sm:rounded-2xl overflow-hidden border border-slate-200/80 bg-slate-50 shadow-xs">
-                  <Image
-                    src="/images/features/multi-currency/saviora-dashboard-overview.png"
-                    alt="Saviora Financial Overview dashboard displaying Monthly Balance $1,628,156.35, Monthly Income $2,649,392.00, Monthly Expenses $1,021,235.65, and Total Savings $1,827,131.25"
-                    fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
-                    priority
-                    className="object-cover object-top"
-                  />
-                </div>
+                {/* Real Product Visual: Vector-sharp Code Mockup */}
+                <LocalizationSettingsMockup />
 
-                {/* Verified Data Caption */}
-                <div className="mt-3.5 pt-3 flex flex-wrap items-center justify-between gap-2.5 text-xs text-slate-500">
-                  <div className="flex items-center gap-1.5 text-slate-700 font-medium text-[11px] sm:text-xs">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-primary-500 flex-shrink-0" />
-                    <span>Currency symbol and amounts are verified consistently across all primary summary cards</span>
+                {/* Floating Highlight Chips */}
+                <div className="p-4 sm:p-5 bg-white border-t border-slate-100/90 flex flex-wrap items-center justify-between gap-3 text-xs">
+                  <div className="flex items-center gap-2">
+                    <div className="w-7 h-7 rounded-lg bg-emerald-50 text-primary-600 border border-emerald-100 flex items-center justify-center font-bold">
+                      <DollarSign className="w-4 h-4" />
+                    </div>
+                    <div>
+                      <span className="block font-semibold text-slate-900">Main Currency</span>
+                      <span className="text-slate-500">Configures financial symbols across the app</span>
+                    </div>
                   </div>
-                  <Link
-                    href="/financial-analytics"
-                    className="text-primary-600 hover:text-primary-700 font-semibold inline-flex items-center text-[11px] sm:text-xs whitespace-nowrap"
-                  >
-                    Explore Analytics Reports <ArrowUpRight className="w-3.5 h-3.5 ml-0.5" />
-                  </Link>
+                  
+                  <div className="flex items-center gap-2">
+                    <div className="w-7 h-7 rounded-lg bg-emerald-50 text-primary-600 border border-emerald-100 flex items-center justify-center font-bold">
+                      <Calendar className="w-4 h-4" />
+                    </div>
+                    <div>
+                      <span className="block font-semibold text-slate-900">Regional Sync</span>
+                      <span className="text-slate-500">Independent timezone, country & fiscal cycle</span>
+                    </div>
+                  </div>
                 </div>
 
               </div>

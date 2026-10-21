@@ -73,10 +73,10 @@ export function CurrencySelection() {
     SUPPORTED_CURRENCIES[0]
   );
 
-  const sampleBalance = 1628156.35;
-  const sampleIncome = 2649392.0;
-  const sampleExpenses = 1021235.65;
-  const sampleSavings = 1827131.25;
+  const sampleBalance = 1156.35;
+  const sampleIncome = 4392.0;
+  const sampleExpenses = 2235.65;
+  const sampleSavings = 27131.25;
 
   return (
     <section className="py-20 sm:py-24 bg-white relative" id="currency-selection">

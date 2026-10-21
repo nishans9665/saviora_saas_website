@@ -140,11 +140,6 @@ export function RegionalPreferences() {
                     {item.description}
                   </p>
                 </div>
-
-                <div className="mt-5 pt-3 border-t border-slate-100 flex items-center gap-1.5 text-xs text-slate-500 font-medium">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-primary-500 flex-shrink-0" />
-                  <span>Independently configurable</span>
-                </div>
               </div>
             );
           })}
