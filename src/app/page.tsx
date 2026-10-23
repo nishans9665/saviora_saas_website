@@ -46,11 +46,18 @@ const jsonLdData = [
   {
     "@context": "https://schema.org",
     "@type": "Organization",
+    "@id": "https://saviora.app/#organization",
     name: "Saviora",
     url: "https://saviora.app",
     logo: "https://saviora.app/icon.png",
     description:
       "Saviora provides an all-in-one personal finance app for expense tracking, monthly budgeting, and savings goal planning.",
+    contactPoint: {
+      "@type": "ContactPoint",
+      contactType: "customer support",
+      email: "support@saviora.com",
+      availableLanguage: ["English"],
+    },
     sameAs: [
       "https://x.com/SavioraOfficial",
       "https://www.linkedin.com/company/savioraofficial/",
@@ -63,9 +70,13 @@ const jsonLdData = [
   {
     "@context": "https://schema.org",
     "@type": "WebSite",
+    "@id": "https://saviora.app/#website",
     name: "Saviora",
     url: "https://saviora.app",
     description: "Personal Finance & Budget Tracker",
+    publisher: {
+      "@id": "https://saviora.app/#organization",
+    },
   },
   {
     "@context": "https://schema.org",

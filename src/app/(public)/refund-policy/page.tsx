@@ -31,6 +31,51 @@ export const metadata: Metadata = {
   },
 };
 
+const jsonLdData = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://saviora.app/refund-policy#webpage",
+    url: "https://saviora.app/refund-policy",
+    name: "Returns & Refunds Policy | Saviora",
+    description:
+      "Review Saviora's official Returns & Refunds Policy. Learn about 14-day refund eligibility, technical support assistance, device compatibility, and refund request procedures.",
+    isPartOf: {
+      "@type": "WebSite",
+      "@id": "https://saviora.app/#website",
+      name: "Saviora",
+      url: "https://saviora.app",
+    },
+    breadcrumb: {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: "https://saviora.app",
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Returns & Refunds Policy",
+          item: "https://saviora.app/refund-policy",
+        },
+      ],
+    },
+  },
+];
+
 export default function RefundPolicyPage() {
-  return <RefundPolicyClient />;
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(jsonLdData).replace(/</g, "\\u003c"),
+        }}
+      />
+      <RefundPolicyClient />
+    </>
+  );
 }

@@ -31,6 +31,51 @@ export const metadata: Metadata = {
   },
 };
 
+const jsonLdData = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://saviora.app/privacy-policy#webpage",
+    url: "https://saviora.app/privacy-policy",
+    name: "Privacy Policy | Saviora",
+    description:
+      "Learn how Saviora collects, uses, stores, and protects your personal and financial information. Complete privacy rights, security standards, and data retention details.",
+    isPartOf: {
+      "@type": "WebSite",
+      "@id": "https://saviora.app/#website",
+      name: "Saviora",
+      url: "https://saviora.app",
+    },
+    breadcrumb: {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: "https://saviora.app",
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Privacy Policy",
+          item: "https://saviora.app/privacy-policy",
+        },
+      ],
+    },
+  },
+];
+
 export default function PrivacyPolicyPage() {
-  return <PrivacyPolicyClient />;
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(jsonLdData).replace(/</g, "\\u003c"),
+        }}
+      />
+      <PrivacyPolicyClient />
+    </>
+  );
 }
