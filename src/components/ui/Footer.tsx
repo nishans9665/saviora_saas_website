@@ -221,7 +221,7 @@ export function Footer() {
           <p>
             Powered by{" "}
             <a
-              href="http://codefoxit.com/"
+              href="https://codefoxit.com/"
               target="_blank"
               rel="noopener noreferrer"
               className="font-medium text-slate-700 dark:text-slate-300 hover:text-primary-500 dark:hover:text-primary-400 decoration-slate-300 dark:decoration-slate-700 underline-offset-4 transition-colors"

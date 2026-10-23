@@ -36,9 +36,50 @@ const updates = [
   },
 ];
 
+const jsonLdData = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://saviora.app/changelog#webpage",
+    url: "https://saviora.app/changelog",
+    name: "Changelog - Saviora",
+    description: "See the latest updates, features, and fixes released for Saviora.",
+    isPartOf: {
+      "@type": "WebSite",
+      "@id": "https://saviora.app/#website",
+      name: "Saviora",
+      url: "https://saviora.app",
+    },
+    breadcrumb: {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: "https://saviora.app",
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Changelog",
+          item: "https://saviora.app/changelog",
+        },
+      ],
+    },
+  },
+];
+
 export default function ChangelogPage() {
   return (
-    <div className="py-20 min-h-screen bg-slate-50 dark:bg-slate-950">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(jsonLdData).replace(/</g, "\\u003c"),
+        }}
+      />
+      <div className="py-20 min-h-screen bg-slate-50 dark:bg-slate-950">
       <div className="container mx-auto px-4 md:px-6 max-w-4xl">
         <div className="mb-8">
           <Button asChild variant="outline" size="sm" className="gap-2">
@@ -96,5 +137,6 @@ export default function ChangelogPage() {
         </div>
       </div>
     </div>
+    </>
   );
 }
