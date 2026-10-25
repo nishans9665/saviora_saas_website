@@ -1,0 +1,205 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+enum AdminRole {
+  SUPER_ADMIN
+  ADMIN
+  EDITOR
+}
+
+enum PostStatus {
+  DRAFT
+  PUBLISHED
+  SCHEDULED
+  ARCHIVED
+}
+
+enum LeadStatus {
+  NEW
+  IN_PROGRESS
+  CONTACTED
+  RESOLVED
+  SPAM
+}
+
+model AdminUser {
+  id           String         @id @default(cuid())
+  name         String
+  email        String         @unique
+  passwordHash String
+  role         AdminRole      @default(EDITOR)
+  isActive     Boolean        @default(true)
+  lastLoginAt  DateTime?
+  createdAt    DateTime       @default(now())
+  updatedAt    DateTime       @updatedAt
+
+  sessions     AdminSession[]
+  authoredPosts BlogPost[]
+  assignedLeads ContactLead[] @relation("AssignedAdminLeads")
+  leadNotes    LeadNote[]
+  auditLogs    AuditLog[]
+
+  @@index([email])
+  @@index([role])
+}
+
+model AdminSession {
+  id           String     @id @default(cuid())
+  adminUserId  String
+  sessionToken String     @unique @db.VarChar(512)
+  expiresAt    DateTime
+  createdAt    DateTime   @default(now())
+  revokedAt    DateTime?
+
+  adminUser    AdminUser  @relation(fields: [adminUserId], references: [id], onDelete: Cascade)
+
+  @@index([adminUserId])
+  @@index([sessionToken])
+}
+
+model BlogPost {
+  id               String         @id @default(cuid())
+  title            String         @db.VarChar(255)
+  slug             String         @unique @db.VarChar(255)
+  excerpt          String?        @db.Text
+  content          String         @db.LongText
+  featuredImage    String?        @db.VarChar(512)
+  featuredImageAlt String?        @db.VarChar(255)
+  authorId         String
+  status           PostStatus     @default(DRAFT)
+  publishedAt      DateTime?
+  scheduledAt      DateTime?
+  seoTitle         String?        @db.VarChar(255)
+  metaDescription  String?        @db.Text
+  canonicalUrl     String?        @db.VarChar(512)
+  openGraphImage   String?        @db.VarChar(512)
+  createdAt        DateTime       @default(now())
+  updatedAt        DateTime       @updatedAt
+
+  author           AdminUser      @relation(fields: [authorId], references: [id], onDelete: Restrict)
+  categories       PostCategory[]
+  tags             PostTag[]
+
+  @@index([slug])
+  @@index([status])
+  @@index([publishedAt])
+  @@index([authorId])
+}
+
+model BlogCategory {
+  id          String         @id @default(cuid())
+  name        String         @db.VarChar(100)
+  slug        String         @unique @db.VarChar(100)
+  description String?        @db.Text
+  createdAt   DateTime       @default(now())
+  updatedAt   DateTime       @updatedAt
+
+  posts       PostCategory[]
+
+  @@index([slug])
+}
+
+model BlogTag {
+  id        String    @id @default(cuid())
+  name      String    @db.VarChar(100)
+  slug      String    @unique @db.VarChar(100)
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+
+  posts     PostTag[]
+
+  @@index([slug])
+}
+
+model PostCategory {
+  postId     String
+  categoryId String
+
+  post       BlogPost     @relation(fields: [postId], references: [id], onDelete: Cascade)
+  category   BlogCategory @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+
+  @@id([postId, categoryId])
+  @@index([categoryId])
+}
+
+model PostTag {
+  postId String
+  tagId  String
+
+  post   BlogPost @relation(fields: [postId], references: [id], onDelete: Cascade)
+  tag    BlogTag  @relation(fields: [tagId], references: [id], onDelete: Cascade)
+
+  @@id([postId, tagId])
+  @@index([tagId])
+}
+
+model ContactLead {
+  id              String      @id @default(cuid())
+  name            String      @db.VarChar(150)
+  email           String      @db.VarChar(150)
+  phone           String?     @db.VarChar(50)
+  subject         String      @db.VarChar(255)
+  message         String      @db.Text
+  source          String      @default("contact_page") @db.VarChar(100)
+  status          LeadStatus  @default(NEW)
+  assignedAdminId String?
+  submittedAt     DateTime    @default(now())
+  updatedAt       DateTime    @updatedAt
+
+  assignedAdmin   AdminUser?  @relation("AssignedAdminLeads", fields: [assignedAdminId], references: [id], onDelete: SetNull)
+  notes           LeadNote[]
+
+  @@index([status])
+  @@index([submittedAt])
+  @@index([assignedAdminId])
+  @@index([email])
+}
+
+model LeadNote {
+  id          String      @id @default(cuid())
+  leadId      String
+  adminUserId String
+  note        String      @db.Text
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+
+  lead        ContactLead @relation(fields: [leadId], references: [id], onDelete: Cascade)
+  adminUser   AdminUser   @relation(fields: [adminUserId], references: [id], onDelete: Restrict)
+
+  @@index([leadId])
+  @@index([adminUserId])
+}
+
+model WebsiteSetting {
+  id        String   @id @default(cuid())
+  key       String   @unique @db.VarChar(100)
+  value     String   @db.LongText
+  group     String   @default("general") @db.VarChar(50)
+  updatedAt DateTime @updatedAt
+
+  @@index([key])
+  @@index([group])
+}
+
+model AuditLog {
+  id          String     @id @default(cuid())
+  adminUserId String?
+  action      String     @db.VarChar(100)
+  entityType  String     @db.VarChar(100)
+  entityId    String?    @db.VarChar(100)
+  details     String?    @db.Text
+  ipAddress   String?    @db.VarChar(64)
+  createdAt   DateTime   @default(now())
+
+  adminUser   AdminUser? @relation(fields: [adminUserId], references: [id], onDelete: SetNull)
+
+  @@index([adminUserId])
+  @@index([action])
+  @@index([createdAt])
+}

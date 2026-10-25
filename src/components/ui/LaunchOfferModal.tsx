@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ArrowRight, CheckCircle2, ShieldCheck, Sparkles } from "lucide-react";
 import { LAUNCH_OFFER } from "@/lib/offer-config";
@@ -11,6 +12,7 @@ const SESSION_SHOWN_KEY = "saviora_launch_offer_shown_session";
 const CONVERTED_KEY = "saviora_launch_offer_converted";
 
 export function LaunchOfferModal() {
+  const pathname = usePathname();
   const [mounted, setMounted] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
@@ -111,7 +113,18 @@ export function LaunchOfferModal() {
     };
   }, [triggerModal, isOpen, handleClose]);
 
-  if (!mounted || !LAUNCH_OFFER.enabled) return null;
+  const isDashboardOrAdmin =
+    pathname?.startsWith("/admin") ||
+    pathname?.startsWith("/login-admin") ||
+    pathname?.startsWith("/dashboard") ||
+    pathname?.startsWith("/budgets") ||
+    pathname?.startsWith("/expenses") ||
+    pathname?.startsWith("/income") ||
+    pathname?.startsWith("/savings") ||
+    pathname?.startsWith("/reports") ||
+    pathname?.startsWith("/settings");
+
+  if (!mounted || !LAUNCH_OFFER.enabled || isDashboardOrAdmin) return null;
 
   return (
     <AnimatePresence>

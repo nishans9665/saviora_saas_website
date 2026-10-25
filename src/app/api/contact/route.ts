@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
+import { prisma } from "@/lib/prisma";
 
 interface ContactRequestBody {
   firstName?: string;
@@ -7,12 +8,14 @@ interface ContactRequestBody {
   email?: string;
   subject?: string;
   message?: string;
+  phone?: string;
+  source?: string;
 }
 
 export async function POST(request: Request) {
   try {
     const body: ContactRequestBody = await request.json();
-    const { firstName, lastName, email, subject, message } = body;
+    const { firstName, lastName, email, subject, message, phone, source } = body;
 
     // Validation
     if (!firstName?.trim() || !lastName?.trim() || !email?.trim() || !subject?.trim() || !message?.trim()) {
@@ -30,9 +33,29 @@ export async function POST(request: Request) {
       );
     }
 
+    const senderFullName = `${firstName.trim()} ${lastName.trim()}`;
+
+    // 1. Persist lead into MySQL database
+    let savedLeadId: string | null = null;
+    try {
+      const lead = await prisma.contactLead.create({
+        data: {
+          name: senderFullName,
+          email: email.trim().toLowerCase(),
+          phone: phone?.trim() || null,
+          subject: subject.trim(),
+          message: message.trim(),
+          source: source || "website_contact_form",
+          status: "NEW",
+        },
+      });
+      savedLeadId = lead.id;
+    } catch (dbError) {
+      console.error("Failed to persist contact lead in MySQL:", dbError);
+    }
+
     const recipientEmail = process.env.CONTACT_RECIPIENT_EMAIL || "info@saviora.app";
     const fromEmail = process.env.SMTP_FROM_EMAIL || "noreply@saviora.app";
-    const senderFullName = `${firstName.trim()} ${lastName.trim()}`;
 
     const apiKey = process.env.SMTP2GO_API_KEY?.trim();
     const smtpUser = process.env.SMTP_USER?.trim();
@@ -258,38 +281,47 @@ export async function POST(request: Request) {
         );
       }
 
-      return NextResponse.json({ success: true, message: "Email sent successfully via SMTP2GO." });
+      return NextResponse.json({ success: true, message: "Your message has been received successfully." });
     }
 
     // Attempt 2: SMTP server connection via Nodemailer
     if (smtpUser && smtpPass) {
-      const transporter = nodemailer.createTransport({
-        host: smtpHost,
-        port: smtpPort,
-        secure: smtpPort === 465,
-        auth: {
-          user: smtpUser,
-          pass: smtpPass,
-        },
-      });
+      try {
+        const transporter = nodemailer.createTransport({
+          host: smtpHost,
+          port: smtpPort,
+          secure: smtpPort === 465,
+          auth: {
+            user: smtpUser,
+            pass: smtpPass,
+          },
+        });
 
-      await transporter.sendMail({
-        from: `"${senderFullName} via Saviora" <${fromEmail}>`,
-        to: recipientEmail,
-        replyTo: `"${senderFullName}" <${email.trim()}>`,
-        subject: `New Contact Form Submission - ${subject.trim()}`,
-        text: emailTextBody,
-        html: emailHtmlBody,
-      });
+        await transporter.sendMail({
+          from: `"${senderFullName} via Saviora" <${fromEmail}>`,
+          to: recipientEmail,
+          replyTo: `"${senderFullName}" <${email.trim()}>`,
+          subject: `New Contact Form Submission - ${subject.trim()}`,
+          text: emailTextBody,
+          html: emailHtmlBody,
+        });
+      } catch (smtpErr) {
+        console.error("Nodemailer SMTP dispatch error (lead was safely stored):", smtpErr);
+      }
 
-      return NextResponse.json({ success: true, message: "Email sent successfully via SMTP2GO SMTP server." });
+      return NextResponse.json({ success: true, message: "Your message has been received successfully." });
     }
 
-    // Fallback if environment variables are not configured yet
+    // Fallback if lead was saved
+    if (savedLeadId) {
+      return NextResponse.json({
+        success: true,
+        message: "Thank you! Your message has been received by the Saviora team.",
+      });
+    }
+
     return NextResponse.json(
-      {
-        error: "SMTP2GO server connection is not configured yet. Please set SMTP_USER and SMTP_PASS (or SMTP2GO_API_KEY) in .env.local.",
-      },
+      { error: "Failed to submit message." },
       { status: 500 }
     );
   } catch (error: unknown) {

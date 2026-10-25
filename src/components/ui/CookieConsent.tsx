@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 import { Cookie, ShieldCheck, Settings2, X, Check, Lock, Info } from "lucide-react";
 
@@ -15,6 +16,7 @@ export interface CookiePreferences {
 const STORAGE_KEY = "saviora_cookie_consent_v1";
 
 export function CookieConsent() {
+  const pathname = usePathname();
   const [mounted, setMounted] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
   const [isPreferencesOpen, setIsPreferencesOpen] = useState(false);
@@ -103,7 +105,18 @@ export function CookieConsent() {
     saveConsent(preferences);
   };
 
-  if (!mounted) return null;
+  const isDashboardOrAdmin =
+    pathname?.startsWith("/admin") ||
+    pathname?.startsWith("/login-admin") ||
+    pathname?.startsWith("/dashboard") ||
+    pathname?.startsWith("/budgets") ||
+    pathname?.startsWith("/expenses") ||
+    pathname?.startsWith("/income") ||
+    pathname?.startsWith("/savings") ||
+    pathname?.startsWith("/reports") ||
+    pathname?.startsWith("/settings");
+
+  if (!mounted || isDashboardOrAdmin) return null;
 
   return (
     <>
