@@ -6,6 +6,7 @@ import { Navbar } from "@/components/ui/Navbar";
 import { Footer } from "@/components/ui/Footer";
 import { prisma } from "@/lib/prisma";
 import { sanitizeHtml } from "@/lib/sanitize";
+import { cn } from "@/lib/utils";
 import {
   Calendar,
   Clock,
@@ -20,9 +21,65 @@ import {
   ChevronRight,
   Zap,
   Sparkles,
+  TrendingUp,
+  Receipt,
+  PieChart,
+  Target,
+  BarChart3,
+  Globe,
 } from "lucide-react";
 
 export const dynamic = "force-dynamic";
+
+const FEATURED_PAGES = [
+  {
+    name: "Income Tracker",
+    description: "Track earnings, sources, and monthly cash flow.",
+    href: "/income-tracker",
+    icon: TrendingUp,
+    badge: "Popular",
+    iconBg: "bg-emerald-50 text-emerald-600 dark:bg-emerald-950/60 dark:text-emerald-400 border-emerald-100/80 dark:border-emerald-900/40",
+  },
+  {
+    name: "Expense Tracker",
+    description: "Record daily spending, organize categories, and track habits.",
+    href: "/expense-tracker",
+    icon: Receipt,
+    badge: "Popular",
+    iconBg: "bg-orange-50 text-orange-600 dark:bg-orange-950/60 dark:text-orange-400 border-orange-100/80 dark:border-orange-900/40",
+  },
+  {
+    name: "Monthly Budget Planning",
+    description: "Category spending limits, remaining balances, and strict controls.",
+    href: "/monthly-budget-planning",
+    icon: PieChart,
+    badge: "Popular",
+    iconBg: "bg-teal-50 text-teal-600 dark:bg-teal-950/60 dark:text-teal-400 border-teal-100/80 dark:border-teal-900/40",
+  },
+  {
+    name: "Savings Goal Tracker",
+    description: "Define targets, record contributions, and track progress.",
+    href: "/savings-goals",
+    icon: Target,
+    badge: "Popular",
+    iconBg: "bg-purple-50 text-purple-600 dark:bg-purple-950/60 dark:text-purple-400 border-purple-100/80 dark:border-purple-900/40",
+  },
+  {
+    name: "Financial Analytics & Reports",
+    description: "Visual expense reports, category shares, and cash flow trends.",
+    href: "/financial-analytics",
+    icon: BarChart3,
+    iconBg: "bg-amber-50 text-amber-600 dark:bg-amber-950/60 dark:text-amber-400 border-amber-100/80 dark:border-amber-900/40",
+  },
+  {
+    name: "Multi-Currency Management",
+    description: "Manage finances in your preferred currency with flexible settings.",
+    href: "/multi-currency-management",
+    icon: Globe,
+    badge: "New",
+    iconBg: "bg-sky-50 text-sky-600 dark:bg-sky-950/70 dark:text-sky-400 border-sky-200/70 dark:border-sky-800/50",
+  },
+];
 
 interface BlogPostPageProps {
   params: Promise<{ slug: string }>;
@@ -355,7 +412,9 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                   </p>
                   <div className="pt-2">
                     <Link
-                      href="/register"
+                      href="https://cloud.saviora.app/register"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-white text-emerald-800 text-xs font-bold hover:bg-emerald-50 transition-all shadow-md hover:shadow-lg hover:scale-[1.02]"
                     >
                       <span>Start Free Today</span>
@@ -463,49 +522,63 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 </div>
               )}
 
-              {/* 4. Featured Pages / Product Highlights */}
-              <div className="rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800/80 p-6 shadow-xs space-y-3">
-                <h3 className="text-sm font-bold text-slate-900 dark:text-white flex items-center gap-2 pb-2 border-b border-slate-100 dark:border-slate-800">
-                  <Zap className="w-4 h-4 text-emerald-600" />
-                  <span>Featured Pages</span>
-                </h3>
-                <div className="space-y-2">
-                  {[
-                    {
-                      title: "Income Tracker",
-                      desc: "Track earnings, sources & cash flow",
-                      href: "/income-tracker",
-                    },
-                    {
-                      title: "Expense Tracker",
-                      desc: "Record spending & daily habits",
-                      href: "/expense-tracker",
-                    },
-                    {
-                      title: "Budget Planner",
-                      desc: "Set monthly category budgets",
-                      href: "/#features",
-                    },
-                    {
-                      title: "Savings Goals",
-                      desc: "Automated micro-saving algorithm",
-                      href: "/#features",
-                    },
-                  ].map((feat) => (
-                    <Link
-                      key={feat.title}
-                      href={feat.href}
-                      className="p-2.5 rounded-xl border border-slate-100 dark:border-slate-800 hover:border-emerald-200 dark:hover:border-emerald-800 hover:bg-emerald-50/40 dark:hover:bg-emerald-950/20 transition-all block group"
-                    >
-                      <div className="flex items-center justify-between text-xs font-bold text-slate-800 dark:text-slate-200 group-hover:text-emerald-600 dark:group-hover:text-emerald-400">
-                        <span>{feat.title}</span>
-                        <ChevronRight className="w-3.5 h-3.5 text-slate-400 group-hover:translate-x-0.5 group-hover:text-emerald-600 transition-all" />
-                      </div>
-                      <p className="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">
-                        {feat.desc}
-                      </p>
-                    </Link>
-                  ))}
+              {/* 4. Featured Pages / Core Features */}
+              <div className="rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800/80 p-5 sm:p-6 shadow-xs space-y-3.5">
+                <div className="pb-3 border-b border-slate-100 dark:border-slate-800">
+                  <div className="flex items-center gap-2 mb-1">
+                    <Zap className="w-4 h-4 text-emerald-600 dark:text-emerald-400 flex-shrink-0 fill-emerald-600/20" />
+                    <h3 className="font-bold text-slate-900 dark:text-white text-sm tracking-tight">
+                      Featured Pages
+                    </h3>
+                  </div>
+                  <p className="text-xs text-slate-500 dark:text-slate-400">
+                    Everything you need to track, save and grow your money.
+                  </p>
+                </div>
+
+                <div className="space-y-1">
+                  {FEATURED_PAGES.map((item) => {
+                    const Icon = item.icon;
+                    return (
+                      <Link
+                        key={item.name}
+                        href={item.href}
+                        className="flex items-center justify-between p-2.5 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800/60 transition-all duration-200 group/item focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500"
+                      >
+                        <div className="flex items-center gap-3 min-w-0">
+                          {/* Icon Tile */}
+                          <div
+                            className={cn(
+                              "w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0 border transition-transform duration-200 group-hover/item:scale-105",
+                              item.iconBg
+                            )}
+                          >
+                            <Icon className="w-5 h-5" />
+                          </div>
+
+                          {/* Text */}
+                          <div className="min-w-0">
+                            <div className="flex items-center gap-2 mb-0.5">
+                              <span className="text-xs sm:text-sm font-semibold text-slate-900 dark:text-white group-hover/item:text-emerald-600 dark:group-hover/item:text-emerald-400 transition-colors truncate">
+                                {item.name}
+                              </span>
+                              {item.badge && (
+                                <span className="inline-flex items-center text-[10px] font-bold px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 dark:bg-emerald-950/80 dark:text-emerald-300">
+                                  {item.badge}
+                                </span>
+                              )}
+                            </div>
+                            <p className="text-xs text-slate-500 dark:text-slate-400 leading-snug line-clamp-1">
+                              {item.description}
+                            </p>
+                          </div>
+                        </div>
+
+                        {/* Right Arrow */}
+                        <ArrowRight className="w-4 h-4 text-slate-300 dark:text-slate-600 group-hover/item:text-emerald-600 dark:group-hover/item:text-emerald-400 group-hover/item:translate-x-1 transition-all duration-200 flex-shrink-0 ml-2" />
+                      </Link>
+                    );
+                  })}
                 </div>
               </div>
             </aside>

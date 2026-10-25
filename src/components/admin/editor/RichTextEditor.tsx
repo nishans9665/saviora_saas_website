@@ -500,7 +500,7 @@ export function RichTextEditor({
     if (!editor) return;
     const html = `
       <div style="text-align: center; margin: 1.5rem 0;">
-        <a href="https://saviora.app/register" class="article-cta-btn" target="_blank" rel="noopener noreferrer">
+        <a href="https://cloud.saviora.app/register" class="article-cta-btn" target="_blank" rel="noopener noreferrer">
           Get Started with Saviora Free →
         </a>
       </div>
