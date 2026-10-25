@@ -2,8 +2,21 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
+import dynamic from "next/dynamic";
 import Image from "next/image";
 import Link from "next/link";
+
+const RichTextEditor = dynamic(
+  () => import("./editor/RichTextEditor").then((mod) => mod.RichTextEditor),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="w-full h-[450px] rounded-xl bg-slate-50 border border-slate-200 animate-pulse flex items-center justify-center text-xs text-slate-400 font-medium">
+        Loading rich text editor...
+      </div>
+    ),
+  }
+);
 import {
   Save,
   ArrowLeft,
@@ -103,9 +116,6 @@ export function BlogForm({
   const [isDraggingFeatured, setIsDraggingFeatured] = useState(false);
   const featuredFileInputRef = useRef<HTMLInputElement>(null);
 
-  // Content image upload state
-  const contentImageInputRef = useRef<HTMLInputElement>(null);
-  const [isUploadingContentImg, setIsUploadingContentImg] = useState(false);
 
   const [isSaving, setIsSaving] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
@@ -135,29 +145,6 @@ export function BlogForm({
     );
   };
 
-  const insertFormatting = (prefix: string, suffix: string = "") => {
-    const textarea = document.getElementById("post-content-area") as HTMLTextAreaElement | null;
-    if (!textarea) return;
-
-    const start = textarea.selectionStart;
-    const end = textarea.selectionEnd;
-    const previousContent = textarea.value;
-    const selectedText = previousContent.substring(start, end);
-
-    const replacement = `${prefix}${selectedText || "text"}${suffix}`;
-    const newContent =
-      previousContent.substring(0, start) + replacement + previousContent.substring(end);
-
-    setContent(newContent);
-
-    setTimeout(() => {
-      textarea.focus();
-      textarea.setSelectionRange(
-        start + prefix.length,
-        start + prefix.length + (selectedText.length || 4)
-      );
-    }, 0);
-  };
 
   // Helper to upload a file to /api/admin/upload
   const uploadFileToServer = async (file: File): Promise<string> => {
@@ -238,30 +225,6 @@ export function BlogForm({
     }
   };
 
-  // Handle image upload into article markdown content
-  const handleContentImageUpload = async (file: File) => {
-    if (!file) return;
-
-    setIsUploadingContentImg(true);
-    try {
-      const publicUrl = await uploadFileToServer(file);
-      const cleanName = file.name
-        .replace(/\.[^/.]+$/, "")
-        .replace(/[-_]/g, " ")
-        .trim();
-      const alt = cleanName.charAt(0).toUpperCase() + cleanName.slice(1);
-
-      // Insert markdown image tag
-      insertFormatting(`\n![${alt}](`, `${publicUrl})\n`);
-    } catch (err: any) {
-      alert(err.message || "Failed to upload image into content.");
-    } finally {
-      setIsUploadingContentImg(false);
-      if (contentImageInputRef.current) {
-        contentImageInputRef.current.value = "";
-      }
-    }
-  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -455,123 +418,24 @@ export function BlogForm({
             </div>
           </div>
 
-          {/* Main Content & Formatting Toolbar */}
+          {/* Main Content & Rich Text Editor */}
           <div className="p-5 rounded-xl bg-white border border-slate-200 shadow-xs space-y-3">
             <div className="flex items-center justify-between">
-              <label className="block text-xs font-semibold text-slate-700">
-                Article Content (Markdown / HTML Supported) <span className="text-rose-500">*</span>
-              </label>
-              <span className="text-[11px] text-slate-400">Supports Headings, Lists, Images &amp; Links</span>
+              <div>
+                <label className="block text-xs font-semibold text-slate-800">
+                  Article Content <span className="text-rose-500">*</span>
+                </label>
+                <p className="text-[11px] text-slate-400">
+                  Rich visual editor with headings, tables, callouts, embeds, image upload, and HTML source sync.
+                </p>
+              </div>
             </div>
 
-            {/* Quick formatting toolbar */}
-            <div className="flex flex-wrap items-center gap-1 p-1.5 rounded-lg bg-slate-50 border border-slate-200">
-              <button
-                type="button"
-                onClick={() => insertFormatting("## ")}
-                className="p-1.5 rounded-md text-slate-600 hover:text-slate-900 hover:bg-slate-200 text-xs font-bold"
-                title="Heading 2"
-              >
-                H2
-              </button>
-              <button
-                type="button"
-                onClick={() => insertFormatting("### ")}
-                className="p-1.5 rounded-md text-slate-600 hover:text-slate-900 hover:bg-slate-200 text-xs font-bold"
-                title="Heading 3"
-              >
-                H3
-              </button>
-              <span className="w-px h-4 bg-slate-300 mx-1" />
-              <button
-                type="button"
-                onClick={() => insertFormatting("**", "**")}
-                className="p-1.5 rounded-md text-slate-600 hover:text-slate-900 hover:bg-slate-200"
-                title="Bold"
-              >
-                <Bold className="w-3.5 h-3.5" />
-              </button>
-              <button
-                type="button"
-                onClick={() => insertFormatting("*", "*")}
-                className="p-1.5 rounded-md text-slate-600 hover:text-slate-900 hover:bg-slate-200"
-                title="Italic"
-              >
-                <Italic className="w-3.5 h-3.5" />
-              </button>
-              <span className="w-px h-4 bg-slate-300 mx-1" />
-              <button
-                type="button"
-                onClick={() => insertFormatting("- ")}
-                className="p-1.5 rounded-md text-slate-600 hover:text-slate-900 hover:bg-slate-200"
-                title="Bullet List"
-              >
-                <List className="w-3.5 h-3.5" />
-              </button>
-              <button
-                type="button"
-                onClick={() => insertFormatting("> ")}
-                className="p-1.5 rounded-md text-slate-600 hover:text-slate-900 hover:bg-slate-200"
-                title="Blockquote"
-              >
-                <Quote className="w-3.5 h-3.5" />
-              </button>
-              <button
-                type="button"
-                onClick={() => insertFormatting("[Link Title](", ")")}
-                className="p-1.5 rounded-md text-slate-600 hover:text-slate-900 hover:bg-slate-200"
-                title="Insert Link"
-              >
-                <LinkIcon className="w-3.5 h-3.5" />
-              </button>
-
-              <span className="w-px h-4 bg-slate-300 mx-1" />
-
-              {/* Upload image from PC into content */}
-              <input
-                ref={contentImageInputRef}
-                type="file"
-                accept="image/*"
-                className="hidden"
-                onChange={(e) => {
-                  if (e.target.files && e.target.files[0]) {
-                    handleContentImageUpload(e.target.files[0]);
-                  }
-                }}
-              />
-              <button
-                type="button"
-                onClick={() => contentImageInputRef.current?.click()}
-                disabled={isUploadingContentImg}
-                className="inline-flex items-center gap-1 px-2 py-1 rounded-md text-emerald-700 bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 text-xs font-semibold cursor-pointer disabled:opacity-50"
-                title="Upload image from computer and insert into article"
-              >
-                {isUploadingContentImg ? (
-                  <Loader2 className="w-3.5 h-3.5 animate-spin" />
-                ) : (
-                  <Upload className="w-3.5 h-3.5" />
-                )}
-                <span>Upload Image</span>
-              </button>
-
-              <button
-                type="button"
-                onClick={() => insertFormatting("![Alt Text](", ")")}
-                className="p-1.5 rounded-md text-slate-600 hover:text-slate-900 hover:bg-slate-200"
-                title="Insert Image URL"
-              >
-                <ImageIcon className="w-3.5 h-3.5" />
-              </button>
-            </div>
-
-            <textarea
-              id="post-content-area"
+            <RichTextEditor
               value={content}
-              onChange={(e) => setContent(e.target.value)}
-              rows={16}
-              placeholder="Start writing your article here..."
-              className="w-full p-4 bg-white border border-slate-300 rounded-lg text-slate-900 text-xs leading-relaxed font-mono focus:outline-none focus:ring-2 focus:ring-emerald-500"
-              required
+              onChange={setContent}
+              placeholder="Start drafting your article..."
+              minHeight="460px"
             />
           </div>
 
