@@ -66,13 +66,6 @@ export function AdminSidebar({ currentAdmin }: AdminSidebarProps) {
       visible: isAdminOrSuper,
     },
     {
-      name: "Website Pages",
-      href: "/admin/pages",
-      icon: Globe,
-      exact: false,
-      visible: true,
-    },
-    {
       name: "Admin Users",
       href: "/admin/users",
       icon: Users,
