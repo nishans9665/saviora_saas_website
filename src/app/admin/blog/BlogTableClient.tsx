@@ -224,17 +224,15 @@ export function BlogTableClient({
                     </td>
                     <td className="py-3.5 px-4 text-right">
                       <div className="flex items-center justify-end gap-1.5">
-                        {post.status === "PUBLISHED" && (
-                          <a
-                            href={`/blog/${post.slug}`}
-                            target="_blank"
-                            rel="noreferrer"
-                            className="p-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-600 hover:text-slate-900 transition-colors cursor-pointer"
-                            title="Preview Public Article"
-                          >
-                            <ExternalLink className="w-3.5 h-3.5" />
-                          </a>
-                        )}
+                        <a
+                          href={`/blog/${post.slug}`}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="p-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-600 hover:text-slate-900 transition-colors cursor-pointer"
+                          title={post.status === "PUBLISHED" ? "View Live Article" : "Preview Draft Article"}
+                        >
+                          <ExternalLink className="w-3.5 h-3.5" />
+                        </a>
                         <Link
                           href={`/admin/blog/${post.id}/edit`}
                           className="p-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-600 hover:text-slate-900 transition-colors"

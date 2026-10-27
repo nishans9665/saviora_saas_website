@@ -27,7 +27,9 @@ import {
   Target,
   BarChart3,
   Globe,
+  AlertTriangle,
 } from "lucide-react";
+import { getAdminSession } from "@/lib/auth/session";
 
 export const dynamic = "force-dynamic";
 
@@ -90,7 +92,7 @@ export async function generateMetadata({
 }: BlogPostPageProps): Promise<Metadata> {
   const { slug } = await params;
   const post = await prisma.blogPost.findUnique({
-    where: { slug, status: "PUBLISHED" },
+    where: { slug },
     select: {
       title: true,
       seoTitle: true,
@@ -138,8 +140,13 @@ export async function generateMetadata({
 
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const { slug } = await params;
+  const admin = await getAdminSession().catch(() => null);
+
   const post = await prisma.blogPost.findUnique({
-    where: { slug, status: "PUBLISHED" },
+    where: {
+      slug,
+      ...(admin ? {} : { status: "PUBLISHED" }),
+    },
     include: {
       author: { select: { name: true } },
       categories: { include: { category: true } },
@@ -312,6 +319,25 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               <span>Back to all articles</span>
             </Link>
           </div>
+
+          {/* Admin Preview Notice for Non-Published Posts */}
+          {post.status !== "PUBLISHED" && (
+            <div className="mb-6 p-4 rounded-2xl bg-amber-500/10 border border-amber-500/30 text-amber-800 dark:text-amber-300 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs">
+              <div className="flex items-center gap-2.5">
+                <AlertTriangle className="w-4 h-4 text-amber-500 shrink-0" />
+                <span>
+                  <strong>Admin Preview Mode:</strong> This article status is <strong>{post.status}</strong>. It is currently hidden from public visitors.
+                </span>
+              </div>
+              <Link
+                href={`/admin/blog/${post.id}/edit`}
+                className="inline-flex items-center gap-1 font-semibold underline hover:text-amber-950 dark:hover:text-amber-100"
+              >
+                <span>Edit in Dashboard</span>
+                <ChevronRight className="w-3.5 h-3.5" />
+              </Link>
+            </div>
+          )}
 
           {/* Two-Column Grid: 70% Left Article Content + 30% Right Sidebar */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 xl:gap-12 items-start">
