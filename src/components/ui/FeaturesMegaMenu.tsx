@@ -78,20 +78,32 @@ export const CORE_FEATURES: FeatureItem[] = [
   },
 ];
 
-export const FEATURED_MORE_FEATURE: FeatureItem = {
-  name: "Multi-Currency Management",
-  description: "Manage finances in your preferred currency with flexible regional settings.",
-  href: "/multi-currency-management",
-  icon: Globe,
-  badge: "New",
-  iconBg: "bg-sky-100 text-sky-600 dark:bg-sky-950/70 dark:text-sky-400 border-sky-200/70 dark:border-sky-800/50",
-};
+export const MORE_FEATURES: FeatureItem[] = [
+  {
+    name: "Multi-Currency Management",
+    description: "Manage finances in your preferred currency with flexible regional settings.",
+    href: "/multi-currency-management",
+    icon: Globe,
+    badge: "New",
+    iconBg: "bg-sky-100 text-sky-600 dark:bg-sky-950/70 dark:text-sky-400 border-sky-200/70 dark:border-sky-800/50",
+  },
+  {
+    name: "Recurring Transactions",
+    description: "Automate recurring income, expenses, and repeating schedules.",
+    href: "/features/recurring-transactions",
+    icon: RefreshCw,
+    badge: "New",
+    iconBg: "bg-teal-50 text-teal-600 dark:bg-teal-950/60 dark:text-teal-400 border-teal-100/80 dark:border-teal-900/40",
+  },
+];
+
+export const FEATURED_MORE_FEATURE: FeatureItem = MORE_FEATURES[0];
 
 export const COMING_SOON_FEATURES: UpcomingFeatureItem[] = [
   {
-    name: "Recurring Transactions",
-    description: "Automate regular income and expense entries.",
-    icon: RefreshCw,
+    name: "Bill Reminders & Alerts",
+    description: "Advance notices before repeating bills fall due.",
+    icon: Clock,
     badge: "Coming Soon",
     iconBg: "bg-rose-50 text-rose-500 dark:bg-rose-950/50 dark:text-rose-400 border-rose-100/80 dark:border-rose-900/40",
   },
@@ -233,41 +245,49 @@ export function FeaturesMegaMenu({
                 </p>
               </div>
 
-              {/* Featured Available Feature: Multi-Currency Management */}
-              <Link
-                href={FEATURED_MORE_FEATURE.href}
-                onClick={onClose}
-                className="flex items-center justify-between p-3.5 rounded-2xl bg-emerald-50/70 hover:bg-emerald-50 dark:bg-emerald-950/25 dark:hover:bg-emerald-950/40 border border-emerald-200/90 dark:border-emerald-800/60 transition-all duration-200 group/featured shadow-2xs hover:shadow-xs mb-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500"
-              >
-                <div className="flex items-center gap-3 min-w-0">
-                  <div
-                    className={cn(
-                      "w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0 border transition-transform duration-200 group-hover/featured:scale-105",
-                      FEATURED_MORE_FEATURE.iconBg
-                    )}
-                  >
-                    <Globe className="w-5 h-5" />
-                  </div>
-                  
-                  <div className="min-w-0">
-                    <div className="flex items-center gap-2 mb-0.5">
-                      <span className="text-sm font-bold text-slate-900 dark:text-white group-hover/featured:text-primary-700 dark:group-hover/featured:text-emerald-300 transition-colors truncate">
-                        {FEATURED_MORE_FEATURE.name}
-                      </span>
-                      {FEATURED_MORE_FEATURE.badge && (
-                        <span className="inline-flex items-center text-[10px] font-bold px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 dark:bg-emerald-950/80 dark:text-emerald-300">
-                          {FEATURED_MORE_FEATURE.badge}
-                        </span>
-                      )}
-                    </div>
-                    <p className="text-xs text-slate-600 dark:text-slate-300 leading-snug line-clamp-2">
-                      {FEATURED_MORE_FEATURE.description}
-                    </p>
-                  </div>
-                </div>
+              {/* Available More Features */}
+              <div className="space-y-2 mb-3.5">
+                {MORE_FEATURES.map((item) => {
+                  const Icon = item.icon;
+                  return (
+                    <Link
+                      key={item.name}
+                      href={item.href}
+                      onClick={onClose}
+                      className="flex items-center justify-between p-2.5 rounded-2xl bg-emerald-50/70 hover:bg-emerald-50 dark:bg-emerald-950/25 dark:hover:bg-emerald-950/40 border border-emerald-200/90 dark:border-emerald-800/60 transition-all duration-200 group/featured shadow-2xs hover:shadow-xs focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500"
+                    >
+                      <div className="flex items-center gap-3 min-w-0">
+                        <div
+                          className={cn(
+                            "w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 border transition-transform duration-200 group-hover/featured:scale-105",
+                            item.iconBg
+                          )}
+                        >
+                          <Icon className="w-4 h-4" />
+                        </div>
+                        
+                        <div className="min-w-0">
+                          <div className="flex items-center gap-2 mb-0.5">
+                            <span className="text-sm font-bold text-slate-900 dark:text-white group-hover/featured:text-primary-700 dark:group-hover/featured:text-emerald-300 transition-colors truncate">
+                              {item.name}
+                            </span>
+                            {item.badge && (
+                              <span className="inline-flex items-center text-[10px] font-bold px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 dark:bg-emerald-950/80 dark:text-emerald-300">
+                                {item.badge}
+                              </span>
+                            )}
+                          </div>
+                          <p className="text-xs text-slate-600 dark:text-slate-300 leading-snug line-clamp-1">
+                            {item.description}
+                          </p>
+                        </div>
+                      </div>
 
-                <ArrowRight className="w-4 h-4 text-primary-600 dark:text-primary-400 group-hover/featured:translate-x-1 transition-all duration-200 flex-shrink-0 ml-2" />
-              </Link>
+                      <ArrowRight className="w-4 h-4 text-primary-600 dark:text-primary-400 group-hover/featured:translate-x-1 transition-all duration-200 flex-shrink-0 ml-2" />
+                    </Link>
+                  );
+                })}
+              </div>
             </div>
 
             {/* Coming Soon Section */}
@@ -328,3 +348,4 @@ export function FeaturesMegaMenu({
     </div>
   );
 }
+
