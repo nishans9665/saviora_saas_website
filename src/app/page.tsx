@@ -98,6 +98,7 @@ const jsonLdData = [
       "Expense Tracking",
       "Monthly Budget Planning",
       "Savings Goal Tracker",
+      "Recurring Transactions",
       "Financial Health Analytics",
       "Multi-Currency Support",
       "Exportable PDF and CSV Reports",
