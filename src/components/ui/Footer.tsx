@@ -135,6 +135,9 @@ export function Footer() {
               <li>
                 <Link href="/income-tracker" className="text-slate-500 hover:text-primary-500 dark:text-slate-400 dark:hover:text-primary-400 transition-colors">Income Tracker</Link>
               </li>
+                <li>
+                  <Link href="/features/recurring-transactions" className="text-slate-500 hover:text-primary-500 dark:text-slate-400 dark:hover:text-primary-400 transition-colors">Recurring Transactions</Link>
+                </li>
               <li>
                 <Link href="/#features" className="text-slate-500 hover:text-primary-500 dark:text-slate-400 dark:hover:text-primary-400 transition-colors">Features</Link>
               </li>
@@ -238,3 +241,4 @@ export function Footer() {
     </footer>
   );
 }
+

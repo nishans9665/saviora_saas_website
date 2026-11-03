@@ -12,7 +12,7 @@ import { AnnouncementBar } from "./AnnouncementBar";
 import {
   FeaturesMegaMenu,
   CORE_FEATURES,
-  FEATURED_MORE_FEATURE,
+  MORE_FEATURES,
 } from "./FeaturesMegaMenu";
 
 export function Navbar() {
@@ -268,29 +268,35 @@ export function Navbar() {
                       <span>More Features</span>
                     </div>
 
-                    <div>
-                      <Link
-                        href={FEATURED_MORE_FEATURE.href}
-                        className="flex items-center justify-between text-sm font-medium text-slate-700 dark:text-slate-200 hover:text-primary-600 dark:hover:text-primary-400 py-1.5 px-2 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors"
-                        onClick={() => setMobileMenuOpen(false)}
-                      >
-                        <span className="flex items-center gap-2.5">
-                          <span
-                            className={cn(
-                              "w-7 h-7 rounded-lg flex items-center justify-center flex-shrink-0 border",
-                              FEATURED_MORE_FEATURE.iconBg
-                            )}
+                    <div className="space-y-1">
+                      {MORE_FEATURES.map((item) => {
+                        const Icon = item.icon;
+                        return (
+                          <Link
+                            key={item.name}
+                            href={item.href}
+                            className="flex items-center justify-between text-sm font-medium text-slate-700 dark:text-slate-200 hover:text-primary-600 dark:hover:text-primary-400 py-1.5 px-2 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors"
+                            onClick={() => setMobileMenuOpen(false)}
                           >
-                            <Globe className="w-3.5 h-3.5" />
-                          </span>
-                          <span>{FEATURED_MORE_FEATURE.name}</span>
-                        </span>
-                        {FEATURED_MORE_FEATURE.badge && (
-                          <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 dark:bg-emerald-950/80 dark:text-emerald-300">
-                            {FEATURED_MORE_FEATURE.badge}
-                          </span>
-                        )}
-                      </Link>
+                            <span className="flex items-center gap-2.5">
+                              <span
+                                className={cn(
+                                  "w-7 h-7 rounded-lg flex items-center justify-center flex-shrink-0 border",
+                                  item.iconBg
+                                )}
+                              >
+                                <Icon className="w-3.5 h-3.5" />
+                              </span>
+                              <span>{item.name}</span>
+                            </span>
+                            {item.badge && (
+                              <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 dark:bg-emerald-950/80 dark:text-emerald-300">
+                                {item.badge}
+                              </span>
+                            )}
+                          </Link>
+                        );
+                      })}
                     </div>
                   </div>
 
