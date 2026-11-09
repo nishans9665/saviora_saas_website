@@ -93,7 +93,7 @@ export function SavingsFAQ() {
         </div>
 
         {/* 2-Column Accordion (5 left, 5 right) */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-1 gap-4 lg:gap-6 items-start">
           {renderColumn(leftFaqs)}
           {renderColumn(rightFaqs)}
         </div>

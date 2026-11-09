@@ -76,7 +76,7 @@ export function BudgetFAQ() {
               <span>FREQUENTLY ASKED QUESTIONS</span>
             </div>
             <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900">
-              Frequently Asked Questions About Monthly Budget Planning
+              Monthly Budget Planning FAQs
             </h2>
           </div>
 
@@ -94,7 +94,7 @@ export function BudgetFAQ() {
         </div>
 
         {/* 2-Column Accordion */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-1 gap-4 lg:gap-6 items-start">
           {renderColumn(leftFaqs)}
           {renderColumn(rightFaqs)}
         </div>
