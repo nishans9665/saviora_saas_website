@@ -358,9 +358,9 @@ export function RecurringHero() {
                 </div>
 
                 {/* Subtitle clarification */}
-                <p className="mt-3 text-center text-[11px] text-slate-400">
+                {/* <p className="mt-3 text-center text-[11px] text-slate-400">
                   Illustrative demonstration. Automates transaction entries and records, not bank withdrawals.
-                </p>
+                </p> */}
 
               </div>
 
