@@ -78,6 +78,7 @@ export function Navbar() {
 
   const standardNavLinks = [
     { name: "Pricing", href: "/pricing" },
+    { name: "Free Tools", href: "/free-tools" },
     { name: "FAQ", href: "/#faq" },
     { name: "About Us", href: "/about" },
     { name: "Contact Us", href: "/contact" },
