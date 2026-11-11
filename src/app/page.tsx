@@ -26,9 +26,9 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://saviora.app/images/og-image.png",
-        width: 1200,
-        height: 630,
+        url: "https://saviora.app/images/android-chrome-512x512.png",
+        width: 512,
+        height: 512,
         alt: "Saviora personal finance app for expense tracking and budgeting",
       },
     ],
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     title: "Free Expense Tracker & Budget Planner App | Saviora",
     description:
       "Track income and expenses, plan monthly budgets, and monitor savings goals with Saviora, your personal finance app. Start your 30-day Pro trial today.",
-    images: ["https://saviora.app/assets/logo/social-share-logo.png"],
+    images: ["https://saviora.app/assets/logo/android-chrome-512x512.png"],
   },
 };
 
