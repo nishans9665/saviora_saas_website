@@ -68,7 +68,7 @@ export function RecurringFinalCTA() {
                     target="_blank"
                     className="flex items-center justify-center gap-2"
                   >
-                    <span>Start Your 90-Day Free Trial</span>
+                    <span>Start Your 30-Day Free Trial</span>
                     <ArrowRight className="w-4 h-4 ml-1" />
                   </Link>
                 </Button>
@@ -89,7 +89,7 @@ export function RecurringFinalCTA() {
               <div className="flex flex-wrap items-center gap-x-6 gap-y-2.5 text-xs sm:text-sm font-medium text-slate-600">
                 <div className="flex items-center gap-1.5">
                   <CheckCircle2 className="w-4 h-4 text-[#22c55e] flex-shrink-0" />
-                  <span>90-Day Pro Free Trial</span>
+                  <span>30-Day Pro Free Trial</span>
                 </div>
                 <div className="flex items-center gap-1.5">
                   <CheckCircle2 className="w-4 h-4 text-[#22c55e] flex-shrink-0" />

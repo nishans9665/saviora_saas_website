@@ -110,7 +110,7 @@ export function AnalyticsHero() {
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-[#22c55e] flex-shrink-0" />
-                <span>90-day free trial, no card required</span>
+                <span>30-day free trial, no card required</span>
               </div>
             </div>
           </div>

@@ -47,7 +47,7 @@ export function SavingsFinalCTA() {
               </h2>
 
               <p className="text-base sm:text-lg text-slate-600 leading-relaxed max-w-xl mb-8">
-                Create your savings goals, record your contributions, and keep track of your progress. Try Saviora Pro free for 90 days and explore all its features.
+                Create your savings goals, record your contributions, and keep track of your progress. Try Saviora Pro free for 30 days and explore all its features.
               </p>
 
               {/* Action Buttons */}
@@ -63,7 +63,7 @@ export function SavingsFinalCTA() {
                     target="_blank"
                     className="flex items-center justify-center"
                   >
-                    <span>Start Your 90-Day Pro Trial</span>
+                    <span>Start Your 30-Day Pro Trial</span>
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </Link>
                 </Button>

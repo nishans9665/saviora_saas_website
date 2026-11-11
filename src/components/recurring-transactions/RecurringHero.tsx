@@ -156,7 +156,7 @@ export function RecurringHero() {
                   target="_blank"
                   className="flex items-center justify-center gap-2"
                 >
-                  <span>Start 90-Day Free Trial</span>
+                  <span>Start 30-Day Free Trial</span>
                   <ArrowRight className="w-4 h-4" />
                 </Link>
               </Button>

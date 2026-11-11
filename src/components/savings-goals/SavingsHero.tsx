@@ -78,7 +78,7 @@ export function SavingsHero() {
                   target="_blank"
                   className="flex items-center justify-center"
                 >
-                  <span>Start Your 90-Day Pro Trial</span>
+                  <span>Start Your 30-Day Pro Trial</span>
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Link>
               </Button>
@@ -174,7 +174,7 @@ export function SavingsHero() {
                         <span>Current Plan</span>
                         <span className="bg-emerald-100 text-emerald-700 px-1 py-0.5 rounded text-[8px]">Trial</span>
                       </div>
-                      <div className="text-[11px] font-bold text-slate-800 mt-0.5">76 Days Remaining</div>
+                      <div className="text-[11px] font-bold text-slate-800 mt-0.5">21 Days Remaining</div>
                       <div className="w-full bg-[#22c55e] text-white text-[10px] font-semibold py-1 rounded text-center mt-1.5">
                         Upgrade Now
                       </div>

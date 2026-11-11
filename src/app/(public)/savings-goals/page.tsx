@@ -105,7 +105,7 @@ const jsonLdData = [
       "@type": "Offer",
       price: "0",
       priceCurrency: "USD",
-      description: "90-day free trial with full Pro access, no credit card required.",
+      description: "30-day free trial with full Pro access, no credit card required.",
     },
     featureList: [
       "Create Personalized Savings Goals",

@@ -61,7 +61,7 @@ export function SavingsWhySaviora() {
                   className="bg-[#22c55e] hover:bg-[#16a34a] text-white font-semibold rounded-full px-8 py-3.5 shadow-md shadow-[#22c55e]/25 hover:shadow-lg hover:shadow-[#22c55e]/35 hover:-translate-y-0.5 transition-all duration-300 justify-center cursor-pointer"
                 >
                   <Link href="https://cloud.saviora.app/register" target="_blank" className="flex items-center">
-                    <span>Start Your 90-Day Pro Trial</span>
+                    <span>Start Your 30-Day Pro Trial</span>
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </Link>
                 </Button>
