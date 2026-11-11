@@ -63,6 +63,6 @@ export const savingsFaqData: SavingsFAQItem[] = [
     id: "faq-savings-10",
     question: "Is the Savings Goals feature free?",
     answer:
-      "Saviora offers a 90-day free trial with full access to all Pro features—including Savings Goals—with no credit card required to start. After the trial, you can choose from affordable, transparent subscription options.",
+      "Saviora offers a 30-day free trial with full access to all Pro features—including Savings Goals—with no credit card required to start. After the trial, you can choose from affordable, transparent subscription options.",
   },
 ];

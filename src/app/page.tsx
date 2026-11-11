@@ -12,14 +12,14 @@ import { FinalCTA } from "@/components/sections/FinalCTA";
 export const metadata: Metadata = {
   title: "Free Expense Tracker & Budget Planner App | Saviora",
   description:
-    "Track income and expenses, plan monthly budgets, and monitor savings goals with Saviora, your personal finance app. Start your 90-day Pro trial today.",
+    "Track income and expenses, plan monthly budgets, and monitor savings goals with Saviora, your personal finance app. Start your 30-day Pro trial today.",
   alternates: {
     canonical: "https://saviora.app/",
   },
   openGraph: {
     title: "Free Expense Tracker & Budget Planner App | Saviora",
     description:
-      "Track income and expenses, plan monthly budgets, and monitor savings goals with Saviora, your personal finance app. Start your 90-day Pro trial today.",
+      "Track income and expenses, plan monthly budgets, and monitor savings goals with Saviora, your personal finance app. Start your 30-day Pro trial today.",
     url: "https://saviora.app/",
     siteName: "Saviora",
     locale: "en_US",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Free Expense Tracker & Budget Planner App | Saviora",
     description:
-      "Track income and expenses, plan monthly budgets, and monitor savings goals with Saviora, your personal finance app. Start your 90-day Pro trial today.",
+      "Track income and expenses, plan monthly budgets, and monitor savings goals with Saviora, your personal finance app. Start your 30-day Pro trial today.",
     images: ["https://saviora.app/assets/logo/social-share-logo.png"],
   },
 };
@@ -91,7 +91,7 @@ const jsonLdData = [
       "@type": "Offer",
       price: "0",
       priceCurrency: "USD",
-      description: "90-day free trial with full Pro access, no credit card required.",
+      description: "30-day free trial with full Pro access, no credit card required.",
     },
     featureList: [
       "Income Tracking",

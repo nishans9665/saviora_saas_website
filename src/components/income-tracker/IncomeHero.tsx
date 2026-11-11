@@ -112,7 +112,7 @@ export function IncomeHero() {
                 onClick={handlePrimaryCtaClick}
               >
                 <Link href="https://cloud.saviora.app/register" target="_blank" className="flex items-center justify-center">
-                  <span>Start Your 90-Day Pro Trial</span>
+                  <span>Start Your 30-Day Pro Trial</span>
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Link>
               </Button>

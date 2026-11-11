@@ -110,7 +110,7 @@ export function AnalyticsHero() {
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-[#22c55e] flex-shrink-0" />
-                <span>90-day free trial, no card required</span>
+                <span>30-day free trial, no card required</span>
               </div>
             </div>
           </div>
@@ -177,7 +177,7 @@ export function AnalyticsHero() {
                         <span>Plan</span>
                         <span className="bg-emerald-100 text-emerald-700 px-1 py-0.2 rounded text-[7px]">Trial</span>
                       </div>
-                      <div className="text-[10px] font-bold text-slate-800">76 Days Left</div>
+                      <div className="text-[10px] font-bold text-slate-800">21 Days Remaining</div>
                     </div>
                     <div className="flex items-center justify-between text-[9px] text-slate-500 px-1">
                       <span className="flex items-center gap-1 font-medium"><Sun className="w-2.5 h-2.5 text-amber-500" /> Light</span>

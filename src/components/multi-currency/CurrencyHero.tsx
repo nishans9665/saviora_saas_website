@@ -107,7 +107,7 @@ export function CurrencyHero() {
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-primary-500 flex-shrink-0" />
-                <span>No credit card required for 90-day trial</span>
+                <span>No credit card required for 30-day trial</span>
               </div>
             </div>
 

@@ -153,15 +153,15 @@ export function LaunchOfferModal() {
               </div>
 
               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-100/70 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-400 text-xs font-semibold uppercase tracking-wider mb-3 border border-emerald-200 dark:border-emerald-800">
-                <Sparkles className="w-3.5 h-3.5" /> 90-Day Launch Offer
+                <Sparkles className="w-3.5 h-3.5" /> 30-Day Launch Offer
               </span>
 
               <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mb-3 leading-tight">
-                Your 90 Days of Pro Are Waiting
+                Your 30 Days of Pro Are Waiting
               </h2>
 
               <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 mb-6 leading-relaxed">
-                Get full access to Saviora Pro free for 90 days. Track your money, manage budgets, build savings goals, and understand your financial progress.
+                Get full access to Saviora Pro free for 30 days. Track your money, manage budgets, build savings goals, and understand your financial progress.
               </p>
 
               {/* Primary CTA */}
