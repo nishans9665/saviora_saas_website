@@ -97,19 +97,13 @@ export function CountryFlag({ code, className = "w-5 h-3.5" }: CountryFlagProps)
 
     case "LK":
       return (
-        <svg viewBox="0 0 640 480" className={className} aria-label="Sri Lanka Flag">
-          <path fill="#ffbe29" d="M0 0h640v480H0z" />
-          <path fill="#005a36" d="M40 40h70v400H40z" />
-          <path fill="#eb7400" d="M120 40h70v400h-70z" />
-          <path fill="#8d153a" d="M200 40h400v400H200z" />
-          {/* Simplified Golden Lion representation */}
-          <path fill="#ffbe29" d="M420 180c-40-30-80 0-90 40 30-20 60 10 70 30 20 0 50-20 20-70zm-60 90c-30 0-40 40-70 50 30 10 60-10 70-50zm60 40c20 30 60 20 80 0-30 0-50-20-80 0z" />
-          <circle cx="430" cy="190" r="10" fill="#8d153a" />
-          <circle cx="230" cy="70" r="12" fill="#ffbe29" />
-          <circle cx="570" cy="70" r="12" fill="#ffbe29" />
-          <circle cx="230" cy="410" r="12" fill="#ffbe29" />
-          <circle cx="570" cy="410" r="12" fill="#ffbe29" />
-        </svg>
+        // eslint-disable-next-line @next/next/no-img-element
+        <img
+          src="/Flag_of_Sri_Lanka.svg.webp"
+          alt="Sri Lanka Flag"
+          className={`${className.replace(/\bobject-cover\b/g, "")} object-fill inline-block`}
+          loading="eager"
+        />
       );
 
     case "SG":
