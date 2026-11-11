@@ -320,7 +320,7 @@ export function FreeToolsHubView() {
                   key={id}
                   className="bg-white border border-gray-200/80 rounded-2xl p-3.5 text-center shadow-2xs hover:border-emerald-400 transition"
                 >
-                  <CountryFlag code={p.code} className="w-8 h-6 rounded shadow-xs mx-auto mb-1 shrink-0" />
+                  <CountryFlag code={p.code} className="w-9 h-6 rounded shadow-xs mx-auto mb-1 shrink-0" />
                   <div className="text-xs font-bold text-gray-900 mt-1.5 truncate">
                     {p.name}
                   </div>
