@@ -115,7 +115,7 @@ export function CookieConsent() {
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: 80, opacity: 0 }}
             transition={{ type: "spring", damping: 25, stiffness: 300 }}
-            className="fixed bottom-0 inset-x-0 z-50 pointer-events-auto bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl border-t border-slate-200/90 dark:border-slate-800 shadow-2xl py-3 px-4 sm:px-6 md:px-8"
+            className="print:hidden fixed bottom-0 inset-x-0 z-50 pointer-events-auto bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl border-t border-slate-200/90 dark:border-slate-800 shadow-2xl py-3 px-4 sm:px-6 md:px-8"
           >
             <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-3 md:gap-6">
               {/* Left Side: Icon + GDPR Tag + Copy */}
