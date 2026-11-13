@@ -123,10 +123,10 @@ export function RecurringFeatures() {
                     </p>
                   </div>
 
-                  <div className="mt-6 pt-4 border-t border-slate-100 flex items-center text-xs font-semibold text-[#16a34a] group-hover:text-[#15803d]">
+                  {/* <div className="mt-6 pt-4 border-t border-slate-100 flex items-center text-xs font-semibold text-[#16a34a] group-hover:text-[#15803d]">
                     <span>Learn more in documentation</span>
                     <ArrowRight className="w-3.5 h-3.5 ml-1.5 transition-transform duration-200 group-hover:translate-x-1" />
-                  </div>
+                  </div> */}
                 </div>
               </AnimatedSection>
             );
