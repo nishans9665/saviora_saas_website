@@ -224,7 +224,7 @@ export function RecurringHero() {
                     aria-label="Add Recurring transaction demonstration"
                   >
                     <Plus className="w-3.5 h-3.5" />
-                    <span>+ Add Recurring</span>
+                    <span>Add Recurring</span>
                   </button>
                 </div>
 
