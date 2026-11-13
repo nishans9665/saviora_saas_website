@@ -101,7 +101,7 @@ export function CountryFlag({ code, className = "w-5 h-3.5" }: CountryFlagProps)
         <img
           src="/Flag_of_Sri_Lanka.svg.webp"
           alt="Sri Lanka Flag"
-          className={`${className.replace(/\bobject-cover\b/g, "")} object-fill inline-block`}
+          className={`${className.replace(/\bobject-(?:cover|fill)\b/g, "")} object-contain inline-block`}
           loading="eager"
         />
       );

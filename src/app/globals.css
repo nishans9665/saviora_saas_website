@@ -69,3 +69,42 @@ body {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+/* Print optimization for professional PDF generation */
+@media print {
+  /* Hide website chrome and interactive UI elements */
+  header,
+  footer,
+  nav,
+  aside,
+  [role="banner"],
+  [role="navigation"],
+  .print\:hidden {
+    display: none !important;
+  }
+
+  body, html {
+    background: #ffffff !important;
+    color: #0f172a !important;
+    font-size: 10.5pt !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+  }
+
+  main {
+    padding: 0 !important;
+    margin: 0 !important;
+    background: transparent !important;
+  }
+
+  .print-avoid-break {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+  @page {
+    margin: 10mm 12mm;
+    size: auto;
+  }
+}

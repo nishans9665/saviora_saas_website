@@ -11,6 +11,19 @@ const TOOLS = [
   "overtime-calculator",
 ];
 
+const LOAN_TOOLS = [
+  "loan-financial-tools",
+  "loan-emi-calculator",
+  "personal-loan-calculator",
+  "home-loan-calculator",
+  "vehicle-loan-calculator",
+  "simple-interest-calculator",
+  "compound-interest-calculator",
+  "fixed-deposit-calculator",
+  "credit-card-interest-calculator",
+  "debt-repayment-calculator",
+];
+
 const COUNTRIES = [
   "usa",
   "uk",
@@ -34,6 +47,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.95,
     },
     ...TOOLS.map((tool) => ({
+      url: `${baseUrl}/free-tools/${tool}`,
+      lastModified: currentDate,
+      changeFrequency: "weekly" as const,
+      priority: 0.9,
+    })),
+    ...LOAN_TOOLS.map((tool) => ({
       url: `${baseUrl}/free-tools/${tool}`,
       lastModified: currentDate,
       changeFrequency: "weekly" as const,

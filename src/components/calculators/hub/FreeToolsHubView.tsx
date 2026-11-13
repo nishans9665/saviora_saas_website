@@ -178,6 +178,20 @@ export function FreeToolsHubView() {
               Calculate salaries, progressive income taxes, retirement contributions, overtime, and statutory benefits across 8 major economies with zero registration.
             </p>
 
+            {/* Category Navigation Banner */}
+            <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
+              <span className="px-4 py-2 rounded-xl text-xs sm:text-sm font-bold bg-emerald-600 text-white shadow-xs">
+                Salary &amp; Tax Tools (8 Tools)
+              </span>
+              <Link
+                href="/free-tools/loan-financial-tools"
+                className="px-4 py-2 rounded-xl text-xs sm:text-sm font-bold bg-white text-gray-700 hover:text-emerald-700 hover:bg-emerald-50/50 border border-gray-200 shadow-2xs transition flex items-center gap-1.5"
+              >
+                <span>New: Loan &amp; Financial Tools (9 Tools)</span>
+                <ArrowRight className="w-3.5 h-3.5 text-emerald-600" />
+              </Link>
+            </div>
+
             {/* Trust Badges */}
             <div className="mt-8 flex flex-wrap items-center justify-center gap-6 text-xs text-gray-700 font-medium">
               <div className="flex items-center gap-2">
