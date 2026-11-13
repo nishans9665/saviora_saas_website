@@ -94,7 +94,7 @@ export function CurrencyFinalCTA() {
               <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-xs sm:text-sm font-medium text-slate-600">
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="w-4 h-4 text-primary-500 flex-shrink-0" />
-                  <span>30-day free trial</span>
+                  <span>90-day free trial</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="w-4 h-4 text-primary-500 flex-shrink-0" />

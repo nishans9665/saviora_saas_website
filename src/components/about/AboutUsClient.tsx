@@ -912,7 +912,7 @@ export function AboutUsClient() {
 
                 <div className="flex items-center justify-center gap-2 text-xs font-medium text-emerald-400">
                   <CheckCircle2 className="w-3.5 h-3.5 sm:w-4 sm:h-4 flex-shrink-0" />
--                  <span>30-day free trial • No credit card required</span>
+-                  <span>90-day free trial • No credit card required</span>
                 </div>
               </div>
             </AnimatedSection>
