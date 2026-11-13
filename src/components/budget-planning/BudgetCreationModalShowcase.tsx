@@ -388,10 +388,10 @@ export function BudgetCreationModalShowcase() {
                   </div>
                 </form>
 
-                <div className="mt-3 pt-2 text-[10px] text-slate-400 text-center flex items-center justify-center gap-1">
+                {/* <div className="mt-3 pt-2 text-[10px] text-slate-400 text-center flex items-center justify-center gap-1">
                   <Info className="w-3 h-3" />
                   <span>Visual demonstration of Saviora&apos;s budget creation modal</span>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
