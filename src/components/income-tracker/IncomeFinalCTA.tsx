@@ -64,7 +64,7 @@ export function IncomeFinalCTA() {
               </h2>
 
               <p className="text-sm sm:text-base text-slate-600 leading-relaxed max-w-xl mb-6">
-                Join thousands of users who are managing their money with more clarity. Try Saviora Pro free for 30 days and explore all features.
+                Join thousands of users who are managing their money with more clarity. Try Saviora Pro free for 90 days and explore all features.
               </p>
 
               {/* Action Buttons */}
@@ -76,7 +76,7 @@ export function IncomeFinalCTA() {
                   onClick={handleTrialClick}
                 >
                   <Link href="https://cloud.saviora.app/register" target="_blank" className="flex items-center justify-center">
-                    <span>Start Your 30-Day Pro Trial</span>
+                    <span>Start Your 90-Day Pro Trial</span>
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </Link>
                 </Button>

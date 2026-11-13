@@ -125,7 +125,7 @@ export function Hero() {
               className="w-full sm:w-auto text-sm sm:text-base bg-[#22c55e] hover:bg-[#16a34a] text-white font-semibold shadow-lg shadow-[#22c55e]/25 hover:shadow-xl hover:shadow-[#22c55e]/35 hover:-translate-y-0.5 px-7 py-3.5 sm:py-4 rounded-full transition-all duration-300 cursor-pointer justify-center"
             >
               <Link href="https://cloud.saviora.app/register" target="_blank" className="flex items-center justify-center">
-                <span>Start 30 Days Free</span>
+                <span>Start 90 Days Free</span>
                 <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
               </Link>
             </Button>
@@ -156,7 +156,7 @@ export function Hero() {
             </div>
             <div className="flex items-center gap-2">
               <CheckCircle2 className="w-4 h-4 text-[#22c55e] flex-shrink-0" />
-              <span>30 days Pro access</span>
+              <span>90 days Pro access</span>
             </div>
             <div className="flex items-center gap-2">
               <CheckCircle2 className="w-4 h-4 text-[#22c55e] flex-shrink-0" />

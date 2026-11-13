@@ -11,10 +11,10 @@ const plans = [
   {
     id: "free-trial",
     name: "Free Trial",
-    tagline: "Full access to Saviora Pro for 30 days.",
+    tagline: "Full access to Saviora Pro for 90 days.",
     price: "$0",
     period: "",
-    subLabel: "30-day free trial · No credit card required",
+    subLabel: "90-day free trial · No credit card required",
     buttonText: LAUNCH_OFFER.pricingTrialCta,
     buttonVariant: "outline" as const,
     recommended: false,
@@ -86,7 +86,7 @@ const plans = [
 ];
 
 const comparisonFeatures = [
-  { name: "30-Day Full Access",           freeTrial: true,  proMonthly: false, proYearly: false },
+  { name: "90-Day Full Access",           freeTrial: true,  proMonthly: false, proYearly: false },
   { name: "Unlimited Income",             freeTrial: true,  proMonthly: true,  proYearly: true  },
   { name: "Unlimited Expenses",           freeTrial: true,  proMonthly: true,  proYearly: true  },
   { name: "Unlimited Budgets",            freeTrial: true,  proMonthly: true,  proYearly: true  },
@@ -106,7 +106,7 @@ const comparisonFeatures = [
 ];
 
 const trustPoints = [
-  { icon: Star,      text: "30-Day Full Premium Trial" },
+  { icon: Star,      text: "90-Day Full Premium Trial" },
   { icon: Shield,    text: "No Credit Card Required" },
   { icon: RefreshCw, text: "Cancel Anytime" },
   { icon: Lock,      text: "SSL Encrypted" },
@@ -168,7 +168,7 @@ export function Pricing() {
           </h2>
           <p className="text-lg text-slate-600 dark:text-slate-400 mb-2">
             Choose the perfect plan to take control of your finances.
-            Start with a <strong className="text-slate-800 dark:text-slate-200">30-day free trial</strong> and upgrade anytime.
+            Start with a <strong className="text-slate-800 dark:text-slate-200">90-day free trial</strong> and upgrade anytime.
           </p>
           <p className="text-sm text-slate-500 dark:text-slate-500 font-medium">
             No hidden fees. Cancel anytime.
@@ -426,7 +426,7 @@ export function Pricing() {
                   </Link>
                 </Button>
                 <p className="text-[10px] sm:text-xs text-slate-500 mt-4">
-                  {LAUNCH_OFFER.trustText} · 30-day full access · Cancel anytime
+                  {LAUNCH_OFFER.trustText} · 90-day full access · Cancel anytime
                 </p>
               </div>
             </div>

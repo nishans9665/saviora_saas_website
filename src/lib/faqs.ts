@@ -17,7 +17,7 @@ export const faqs: FAQItem[] = [
   {
     question: "Is Saviora free to use?",
     answer:
-      "Yes. Every new user receives a full 30-day free trial with access to all Pro features. After your trial ends, you can continue using Saviora by subscribing to our affordable Monthly or Yearly Pro plan.",
+      "Yes. Every new user receives a full 90-day free trial with access to all Pro features. After your trial ends, you can continue using Saviora by subscribing to our affordable Monthly or Yearly Pro plan.",
   },
   {
     question: "Can I manage multiple currencies?",

@@ -58,7 +58,7 @@ export function ExpenseFinalCTA() {
               </h2>
 
               <p className="text-sm sm:text-base text-slate-600 leading-relaxed max-w-md mb-6">
-                Start organizing your expenses, understand your spending habits, and build a clearer picture of your finances with Saviora. Try Saviora Pro free for 30 days and explore all features.
+                Start organizing your expenses, understand your spending habits, and build a clearer picture of your finances with Saviora. Try Saviora Pro free for 90 days and explore all features.
               </p>
 
               {/* Action Buttons */}
@@ -70,7 +70,7 @@ export function ExpenseFinalCTA() {
                   onClick={handleTrialClick}
                 >
                   <Link href="https://cloud.saviora.app/register" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center">
-                    <span>Start Your 30-Day Pro Trial</span>
+                    <span>Start Your 90-Day Pro Trial</span>
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </Link>
                 </Button>

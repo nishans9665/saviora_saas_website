@@ -136,7 +136,7 @@ export function CurrencySetupSteps() {
                   rel="noopener noreferrer"
                   className="flex items-center"
                 >
-                  <span>Start Your 30-Day Pro Trial</span>
+                  <span>Start Your 90-Day Pro Trial</span>
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Link>
               </Button>

@@ -141,7 +141,7 @@ export function Features() {
             href="/pricing"
             className="inline-flex items-center gap-2 text-sm sm:text-base font-semibold text-[#16a34a] hover:text-[#15803d] dark:text-emerald-400 dark:hover:text-emerald-300 hover:underline transition-colors"
           >
-            <span>Explore all Saviora Pro features &amp; 30-day free trial</span>
+            <span>Explore all Saviora Pro features &amp; 90-day free trial</span>
             <ArrowRight className="w-4 h-4" />
           </Link>
         </AnimatedSection>

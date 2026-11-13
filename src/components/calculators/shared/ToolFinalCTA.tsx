@@ -70,7 +70,7 @@ export function ToolFinalCTA({
             <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs font-medium text-slate-600">
               <div className="flex items-center gap-1.5">
                 <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0" />
-                <span>30-Day Free Pro Trial</span>
+                <span>90-Day Free Pro Trial</span>
               </div>
               <div className="flex items-center gap-1.5">
                 <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0" />

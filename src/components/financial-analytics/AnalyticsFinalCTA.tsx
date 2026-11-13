@@ -93,7 +93,7 @@ export function AnalyticsFinalCTA() {
                 </div>
                 <div className="flex items-center gap-1.5">
                   <CheckCircle2 className="w-4 h-4 text-[#22c55e] flex-shrink-0" />
-                  <span>30-day free trial</span>
+                  <span>90-day free trial</span>
                 </div>
                 <div className="flex items-center gap-1.5">
                   <CheckCircle2 className="w-4 h-4 text-[#22c55e] flex-shrink-0" />

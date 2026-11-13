@@ -9,17 +9,17 @@ import { faqs } from "@/lib/faqs";
 
 export const metadata: Metadata = {
   title: {
-    absolute: "Saviora Pricing | Plans & 30-Day Free Trial",
+    absolute: "Saviora Pricing | Plans & 90-Day Free Trial",
   },
   description:
-    "Explore Saviora pricing and features. Try Saviora Pro free for 30 days, then choose the monthly or yearly plan that fits your needs.",
+    "Explore Saviora pricing and features. Try Saviora Pro free for 90 days, then choose the monthly or yearly plan that fits your needs.",
   alternates: {
     canonical: "/pricing",
   },
   openGraph: {
-    title: "Saviora Pricing | Plans & 30-Day Free Trial",
+    title: "Saviora Pricing | Plans & 90-Day Free Trial",
     description:
-      "Explore Saviora pricing and features. Try Saviora Pro free for 30 days, then choose the monthly or yearly plan that fits your needs.",
+      "Explore Saviora pricing and features. Try Saviora Pro free for 90 days, then choose the monthly or yearly plan that fits your needs.",
     url: "https://saviora.app/pricing",
     siteName: "Saviora",
     type: "website",
@@ -34,9 +34,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Saviora Pricing | Plans & 30-Day Free Trial",
+    title: "Saviora Pricing | Plans & 90-Day Free Trial",
     description:
-      "Explore Saviora pricing and features. Try Saviora Pro free for 30 days, then choose the monthly or yearly plan that fits your needs.",
+      "Explore Saviora pricing and features. Try Saviora Pro free for 90 days, then choose the monthly or yearly plan that fits your needs.",
     images: ["https://saviora.app/images/android-chrome-512x512.png"],
   },
 };
@@ -47,9 +47,9 @@ const jsonLdData = [
     "@type": "WebPage",
     "@id": "https://saviora.app/pricing#webpage",
     url: "https://saviora.app/pricing",
-    name: "Saviora Pricing | Plans & 30-Day Free Trial",
+    name: "Saviora Pricing | Plans & 90-Day Free Trial",
     description:
-      "Explore Saviora pricing and features. Try Saviora Pro free for 30 days, then choose the monthly or yearly plan that fits your needs.",
+      "Explore Saviora pricing and features. Try Saviora Pro free for 90 days, then choose the monthly or yearly plan that fits your needs.",
     isPartOf: {
       "@type": "WebSite",
       "@id": "https://saviora.app/#website",
@@ -82,14 +82,14 @@ const jsonLdData = [
     operatingSystem: "Web",
     url: "https://saviora.app/pricing",
     description:
-      "Saviora personal finance management app offering 30-day free trial, expense tracking, budget planning, and savings goals.",
+      "Saviora personal finance management app offering 90-day free trial, expense tracking, budget planning, and savings goals.",
     offers: [
       {
         "@type": "Offer",
         name: "Free Trial",
         price: "0",
         priceCurrency: "USD",
-        description: "30-day free trial with full Pro access, no credit card required.",
+        description: "90-day free trial with full Pro access, no credit card required.",
       },
       {
         "@type": "Offer",

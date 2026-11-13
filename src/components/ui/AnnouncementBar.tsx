@@ -71,10 +71,10 @@ export function AnnouncementBar() {
             <span className="hidden md:inline-flex items-center gap-2">
               <span className="px-2.5 py-0.5 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-emerald-400 text-[11px] font-bold uppercase tracking-wider">
                 <Sparkles className="w-3 h-3 text-emerald-400 inline mr-1 animate-pulse" />
-                🎉 30-Day Launch Offer
+                🎉 90-Day Launch Offer
               </span>
               <span className="text-slate-200 font-normal">
-                Get Saviora Pro <strong className="font-bold text-white">FREE for 30 days</strong>
+                Get Saviora Pro <strong className="font-bold text-white">FREE for 90 days</strong>
               </span>
               <span className="font-semibold text-emerald-400 group-hover:text-emerald-300 group-hover:translate-x-1 transition-all ml-1">
                 &rarr; Start Now
@@ -84,7 +84,7 @@ export function AnnouncementBar() {
             {/* Mobile / Tablet compact message */}
             <span className="inline-flex md:hidden items-center gap-1.5 text-xs font-semibold">
               <span className="px-2 py-0.5 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-emerald-400 text-[10px] sm:text-[11px] font-bold uppercase tracking-wider whitespace-nowrap">
-                🎉 30 Days Free
+                🎉 90 Days Free
               </span>
               <span className="text-emerald-400 font-bold whitespace-nowrap">
                 &rarr; Start Now
