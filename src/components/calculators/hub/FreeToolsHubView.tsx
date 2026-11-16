@@ -187,7 +187,14 @@ export function FreeToolsHubView() {
                 href="/free-tools/loan-financial-tools"
                 className="px-4 py-2 rounded-xl text-xs sm:text-sm font-bold bg-white text-gray-700 hover:text-emerald-700 hover:bg-emerald-50/50 border border-gray-200 shadow-2xs transition flex items-center gap-1.5"
               >
-                <span>New: Loan &amp; Financial Tools (9 Tools)</span>
+                <span>Loan &amp; Financial Tools (9 Tools)</span>
+                <ArrowRight className="w-3.5 h-3.5 text-emerald-600" />
+              </Link>
+              <Link
+                href="/free-tools/investment-savings-tools"
+                className="px-4 py-2 rounded-xl text-xs sm:text-sm font-bold bg-white text-gray-700 hover:text-emerald-700 hover:bg-emerald-50/50 border border-gray-200 shadow-2xs transition flex items-center gap-1.5"
+              >
+                <span>New: Investment &amp; Savings Tools (10 Tools)</span>
                 <ArrowRight className="w-3.5 h-3.5 text-emerald-600" />
               </Link>
             </div>
