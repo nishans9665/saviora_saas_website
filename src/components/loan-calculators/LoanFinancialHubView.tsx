@@ -211,7 +211,7 @@ export function LoanFinancialHubView() {
           </p>
         </div>
         <Link
-          href="/free-tools/salary-and-tax-tools"
+          href="/free-tools/salary-tax-calculators"
           className="whitespace-nowrap px-4 py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-xs shadow-md transition flex items-center gap-1.5"
         >
           <span>Explore Salary &amp; Tax Tools</span>

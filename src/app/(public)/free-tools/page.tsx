@@ -2,51 +2,64 @@ import React from "react";
 import type { Metadata } from "next";
 import { Navbar } from "@/components/ui/Navbar";
 import { Footer } from "@/components/ui/Footer";
-import { FreeToolsHubView } from "@/components/calculators/hub/FreeToolsHubView";
+import { MainFreeToolsDirectoryView } from "@/components/free-tools/MainFreeToolsDirectoryView";
 
 export const metadata: Metadata = {
   title: {
-    absolute: "Free Salary, Tax & Statutory Calculators Sri Lanka | Saviora",
+    absolute: "Free Financial Calculators & Money Tools | Saviora",
   },
   description:
-    "Free interactive salary and tax calculators for Sri Lanka. Calculate gross-to-net salary, IRD progressive APIT income tax, EPF, ETF, VAT, gratuity, and overtime accurately.",
+    "Explore free online financial calculators by Saviora. Calculate salary, income tax, loan payments, investment returns, savings goals, and more. No registration required.",
   keywords: [
-    "salary calculator Sri Lanka",
-    "free salary calculator",
-    "income tax calculator Sri Lanka",
-    "APIT calculator Sri Lanka",
-    "EPF calculator Sri Lanka",
-    "ETF calculator Sri Lanka",
-    "take-home salary calculator",
-    "VAT calculator Sri Lanka",
-    "gratuity calculator Sri Lanka",
-    "overtime calculator Sri Lanka",
+    "free financial calculators",
+    "financial planning tools",
+    "money management tools",
+    "personal finance calculators",
+    "online loan calculator",
+    "salary calculator",
+    "investment calculator",
+    "savings calculator",
+    "free online calculators",
+    "EMI calculator",
   ],
   alternates: {
     canonical: "https://saviora.app/free-tools",
   },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
-    title: "Free Salary, Tax & Statutory Calculators Sri Lanka | Saviora",
+    title: "Free Financial Calculators & Money Tools | Saviora",
     description:
-      "Calculate your net take-home salary, IRD progressive income tax, EPF, ETF, VAT, gratuity, and overtime with official Sri Lankan statutory accuracy.",
+      "Explore free online financial calculators by Saviora. Calculate salary, income tax, loan payments, investment returns, savings goals, and more. No registration required.",
     url: "https://saviora.app/free-tools",
     siteName: "Saviora",
+    locale: "en_US",
     type: "website",
     images: [
       {
         url: "https://saviora.app/images/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Free Salary and Tax Tools – Saviora",
+        alt: "Free Financial Calculators & Money Management Tools – Saviora",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Free Salary, Tax & Statutory Calculators Sri Lanka | Saviora",
+    title: "Free Financial Calculators & Money Tools | Saviora",
     description:
-      "Calculate your net take-home salary, IRD progressive income tax, EPF, ETF, VAT, gratuity, and overtime with official Sri Lankan statutory accuracy.",
+      "Explore free online financial calculators by Saviora. Calculate salary, income tax, loan payments, investment returns, savings goals, and more. No registration required.",
     images: ["https://saviora.app/images/og-image.png"],
+    creator: "@Saviora",
   },
 };
 
@@ -56,9 +69,18 @@ const jsonLd = [
     "@type": "WebPage",
     "@id": "https://saviora.app/free-tools#webpage",
     url: "https://saviora.app/free-tools",
-    name: "Free Salary, Tax & Statutory Calculators Sri Lanka | Saviora",
+    name: "Free Financial Calculators & Money Management Tools | Saviora",
     description:
-      "Free interactive salary and tax calculators for Sri Lanka. Calculate gross-to-net salary, IRD progressive APIT income tax, EPF, ETF, VAT, gratuity, and overtime.",
+      "Explore free online financial calculators by Saviora. Calculate salary, income tax, loan payments, investment returns, savings goals, and more. No registration required.",
+    publisher: {
+      "@type": "Organization",
+      name: "Saviora",
+      url: "https://saviora.app",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://saviora.app/icon.png",
+      },
+    },
   },
   {
     "@context": "https://schema.org",
@@ -80,7 +102,7 @@ const jsonLd = [
   },
 ];
 
-export default function FreeToolsPage() {
+export default function FreeToolsDirectoryPage() {
   return (
     <>
       <script
@@ -89,7 +111,7 @@ export default function FreeToolsPage() {
       />
       <Navbar />
       <main>
-        <FreeToolsHubView />
+        <MainFreeToolsDirectoryView />
       </main>
       <Footer />
     </>

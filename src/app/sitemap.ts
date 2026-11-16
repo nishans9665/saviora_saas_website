@@ -11,6 +11,8 @@ const TOOLS = [
   "overtime-calculator",
 ];
 
+const SALARY_TAX_CATEGORY = ["salary-tax-calculators"];
+
 const LOAN_TOOLS = [
   "loan-financial-tools",
   "loan-emi-calculator",
@@ -60,6 +62,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "daily",
       priority: 0.95,
     },
+    ...SALARY_TAX_CATEGORY.map((hub) => ({
+      url: `${baseUrl}/free-tools/${hub}`,
+      lastModified: currentDate,
+      changeFrequency: "weekly" as const,
+      priority: 0.9,
+    })),
     ...TOOLS.map((tool) => ({
       url: `${baseUrl}/free-tools/${tool}`,
       lastModified: currentDate,

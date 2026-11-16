@@ -1,5 +1,5 @@
 import { permanentRedirect } from "next/navigation";
 
 export default function SalaryAndTaxToolsRedirect() {
-  permanentRedirect("/free-tools");
+  permanentRedirect("/free-tools/salary-tax-calculators");
 }
