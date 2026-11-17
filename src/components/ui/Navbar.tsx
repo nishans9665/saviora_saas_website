@@ -3,7 +3,7 @@
 import * as React from "react";
 import Link from "next/link";
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
-import { Menu, X, ArrowRight, ChevronDown, Zap, Globe } from "lucide-react";
+import { Menu, X, ArrowRight, ChevronDown, Zap, Globe, Sparkles } from "lucide-react";
 import { Button } from "./Button";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
@@ -14,15 +14,27 @@ import {
   CORE_FEATURES,
   MORE_FEATURES,
 } from "./FeaturesMegaMenu";
+import {
+  FreeToolsMegaMenu,
+  FREE_TOOLS_CATEGORIES,
+} from "./FreeToolsMegaMenu";
 
 export function Navbar() {
   const { scrollY } = useScroll();
   const [isScrolled, setIsScrolled] = React.useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
+  
+  // Features Mega Menu state
   const [featuresDropdownOpen, setFeaturesDropdownOpen] = React.useState(false);
-  const [mobileFeaturesOpen, setMobileFeaturesOpen] = React.useState(true);
-  const navContainerRef = React.useRef<HTMLDivElement>(null);
+  const [mobileFeaturesOpen, setMobileFeaturesOpen] = React.useState(false);
   const timeoutRef = React.useRef<NodeJS.Timeout | null>(null);
+
+  // Free Tools Mega Menu state
+  const [freeToolsDropdownOpen, setFreeToolsDropdownOpen] = React.useState(false);
+  const [mobileFreeToolsOpen, setMobileFreeToolsOpen] = React.useState(false);
+  const freeToolsTimeoutRef = React.useRef<NodeJS.Timeout | null>(null);
+
+  const navContainerRef = React.useRef<HTMLDivElement>(null);
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     if (latest > 50 && !isScrolled) {
@@ -32,11 +44,17 @@ export function Navbar() {
     }
   });
 
+  // Features hover handlers
   const handleMouseEnter = () => {
     if (timeoutRef.current) {
       clearTimeout(timeoutRef.current);
       timeoutRef.current = null;
     }
+    if (freeToolsTimeoutRef.current) {
+      clearTimeout(freeToolsTimeoutRef.current);
+      freeToolsTimeoutRef.current = null;
+    }
+    setFreeToolsDropdownOpen(false);
     setFeaturesDropdownOpen(true);
   };
 
@@ -49,6 +67,29 @@ export function Navbar() {
     }, 150);
   };
 
+  // Free Tools hover handlers
+  const handleFreeToolsMouseEnter = () => {
+    if (freeToolsTimeoutRef.current) {
+      clearTimeout(freeToolsTimeoutRef.current);
+      freeToolsTimeoutRef.current = null;
+    }
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+      timeoutRef.current = null;
+    }
+    setFeaturesDropdownOpen(false);
+    setFreeToolsDropdownOpen(true);
+  };
+
+  const handleFreeToolsMouseLeave = () => {
+    if (freeToolsTimeoutRef.current) {
+      clearTimeout(freeToolsTimeoutRef.current);
+    }
+    freeToolsTimeoutRef.current = setTimeout(() => {
+      setFreeToolsDropdownOpen(false);
+    }, 150);
+  };
+
   React.useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
       if (
@@ -56,12 +97,14 @@ export function Navbar() {
         !navContainerRef.current.contains(event.target as Node)
       ) {
         setFeaturesDropdownOpen(false);
+        setFreeToolsDropdownOpen(false);
       }
     }
 
     function handleKeyDown(event: KeyboardEvent) {
       if (event.key === "Escape") {
         setFeaturesDropdownOpen(false);
+        setFreeToolsDropdownOpen(false);
       }
     }
 
@@ -73,12 +116,13 @@ export function Navbar() {
       if (timeoutRef.current) {
         clearTimeout(timeoutRef.current);
       }
+      if (freeToolsTimeoutRef.current) {
+        clearTimeout(freeToolsTimeoutRef.current);
+      }
     };
   }, []);
 
-  const standardNavLinks = [
-    { name: "Pricing", href: "/pricing" },
-    { name: "Free Tools", href: "/free-tools" },
+  const otherNavLinks = [
     { name: "FAQ", href: "/#faq" },
     { name: "About Us", href: "/about" },
     { name: "Contact Us", href: "/contact" },
@@ -148,8 +192,45 @@ export function Navbar() {
             </button>
           </div>
 
-          {/* Standard Navigation Links */}
-          {standardNavLinks.map((link) => (
+          {/* Pricing Link */}
+          <Link
+            href="/pricing"
+            className="text-sm font-medium text-slate-600 hover:text-primary-500 dark:text-slate-300 dark:hover:text-primary-400 transition-colors"
+          >
+            Pricing
+          </Link>
+
+          {/* Free Tools Dropdown Trigger */}
+          <div
+            className="relative"
+            onMouseEnter={handleFreeToolsMouseEnter}
+            onMouseLeave={handleFreeToolsMouseLeave}
+          >
+            <Link
+              href="/free-tools"
+              onClick={() => setFreeToolsDropdownOpen(false)}
+              className={cn(
+                "inline-flex items-center gap-1.5 text-sm font-medium transition-colors py-2 focus:outline-none cursor-pointer select-none",
+                freeToolsDropdownOpen
+                  ? "text-primary-600 dark:text-primary-400 font-semibold"
+                  : "text-slate-600 hover:text-primary-500 dark:text-slate-300 dark:hover:text-primary-400"
+              )}
+              aria-expanded={freeToolsDropdownOpen}
+              aria-haspopup="true"
+              aria-label="Free Tools navigation menu"
+            >
+              <span>Free Tools</span>
+              <ChevronDown
+                className={cn(
+                  "w-4 h-4 transition-transform duration-200",
+                  freeToolsDropdownOpen && "rotate-180 text-primary-600 dark:text-primary-400"
+                )}
+              />
+            </Link>
+          </div>
+
+          {/* Remaining Standard Navigation Links */}
+          {otherNavLinks.map((link) => (
             <Link
               key={link.name}
               href={link.href}
@@ -166,6 +247,14 @@ export function Navbar() {
           onClose={() => setFeaturesDropdownOpen(false)}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
+        />
+
+        {/* Three-Column Free Tools Mega Menu */}
+        <FreeToolsMegaMenu
+          isOpen={freeToolsDropdownOpen}
+          onClose={() => setFreeToolsDropdownOpen(false)}
+          onMouseEnter={handleFreeToolsMouseEnter}
+          onMouseLeave={handleFreeToolsMouseLeave}
         />
 
         {/* Desktop Actions */}
@@ -305,8 +394,104 @@ export function Navbar() {
               )}
             </div>
 
+            {/* Pricing Link in Mobile */}
+            <Link
+              href="/pricing"
+              className="text-base font-medium text-slate-600 hover:text-primary-500 dark:text-slate-300 py-1"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Pricing
+            </Link>
+
+            {/* Free Tools Collapsible Accordion Group in Mobile */}
+            <div>
+              <button
+                type="button"
+                onClick={() => setMobileFreeToolsOpen(!mobileFreeToolsOpen)}
+                className="w-full flex items-center justify-between text-base font-semibold text-slate-900 dark:text-white py-1 cursor-pointer"
+              >
+                <span>Free Tools</span>
+                <ChevronDown
+                  className={cn(
+                    "w-4 h-4 transition-transform duration-200 text-slate-400",
+                    mobileFreeToolsOpen && "rotate-180"
+                  )}
+                />
+              </button>
+
+              {mobileFreeToolsOpen && (
+                <div className="mt-3 pl-3 border-l-2 border-emerald-200 dark:border-emerald-800 space-y-4">
+                  {/* Directory All Tools Link */}
+                  <Link
+                    href="/free-tools"
+                    className="flex items-center justify-between text-xs font-bold text-emerald-700 dark:text-emerald-300 bg-emerald-50 dark:bg-emerald-950/60 p-2.5 rounded-xl border border-emerald-200 dark:border-emerald-800/60"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    <span className="flex items-center gap-1.5">
+                      <Sparkles className="w-3.5 h-3.5 text-emerald-600" />
+                      <span>Browse All 27 Free Tools Directory</span>
+                    </span>
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </Link>
+
+                  {/* Categories Breakdown */}
+                  {FREE_TOOLS_CATEGORIES.map((category) => {
+                    const CatIcon = category.icon;
+                    return (
+                      <div key={category.id}>
+                        <Link
+                          href={category.hubHref}
+                          onClick={() => setMobileMenuOpen(false)}
+                          className="flex items-center justify-between text-xs font-bold text-slate-900 dark:text-white mb-2 hover:text-primary-600 transition-colors"
+                        >
+                          <span className="flex items-center gap-1.5">
+                            <CatIcon className="w-3.5 h-3.5 text-primary-600" />
+                            <span>{category.title}</span>
+                          </span>
+                          <span className="text-[10px] text-slate-400 font-normal">
+                            {category.badge} →
+                          </span>
+                        </Link>
+
+                        <div className="space-y-1">
+                          {category.tools.slice(0, 5).map((item) => {
+                            const Icon = item.icon;
+                            return (
+                              <Link
+                                key={item.name}
+                                href={item.href}
+                                className="flex items-center justify-between text-sm font-medium text-slate-700 dark:text-slate-200 hover:text-primary-600 dark:hover:text-primary-400 py-1 px-2 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors"
+                                onClick={() => setMobileMenuOpen(false)}
+                              >
+                                <span className="flex items-center gap-2">
+                                  <Icon className="w-3.5 h-3.5 text-slate-400" />
+                                  <span className="text-xs">{item.name}</span>
+                                </span>
+                                {item.tag && (
+                                  <span className="text-[9px] font-bold px-1.5 py-0.2 rounded-full bg-emerald-100 text-emerald-800 dark:bg-emerald-950/80 dark:text-emerald-300">
+                                    {item.tag}
+                                  </span>
+                                )}
+                              </Link>
+                            );
+                          })}
+                          <Link
+                            href={category.hubHref}
+                            onClick={() => setMobileMenuOpen(false)}
+                            className="block text-xs font-semibold text-primary-600 dark:text-primary-400 px-2 pt-1 hover:underline"
+                          >
+                            + View all in {category.title.split(" ")[0]} →
+                          </Link>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              )}
+            </div>
+
             {/* Other standard nav links */}
-            {standardNavLinks.map((link) => (
+            {otherNavLinks.map((link) => (
               <Link
                 key={link.name}
                 href={link.href}
