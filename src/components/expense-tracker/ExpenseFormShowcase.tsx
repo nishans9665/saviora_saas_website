@@ -388,9 +388,9 @@ export function ExpenseFormShowcase() {
 
                 </form>
 
-                <p className="text-[10px] text-slate-400 text-center mt-3 pt-2 border-t border-slate-100">
+                {/* <p className="text-[10px] text-slate-400 text-center mt-3 pt-2 border-t border-slate-100">
                   Interactive preview reproducing Saviora&apos;s real Add Expense form.
-                </p>
+                </p> */}
 
               </div>
             </div>

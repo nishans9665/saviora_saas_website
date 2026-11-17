@@ -207,7 +207,7 @@ export function BudgetAnalytics() {
           </div>
 
           <div className="mt-6 pt-4 border-t border-slate-200/80 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-2">
-            <span>Consistent color coding: Red highlights categories where actual exceeds budget.</span>
+            {/* <span>Consistent color coding: Red highlights categories where actual exceeds budget.</span> */}
             {/* <span className="font-medium text-emerald-700">Illustrative sample view</span> */}
           </div>
         </div>

@@ -93,9 +93,8 @@ export function IncomeFAQ() {
                 {item.question}
               </h3>
               <ChevronDown
-                className={`w-5 h-5 text-slate-400 flex-shrink-0 transition-transform duration-300 ${
-                  isOpen ? "rotate-180 text-[#22c55e]" : ""
-                }`}
+                className={`w-5 h-5 text-slate-400 flex-shrink-0 transition-transform duration-300 ${isOpen ? "rotate-180 text-[#22c55e]" : ""
+                  }`}
               />
             </button>
 
@@ -118,7 +117,7 @@ export function IncomeFAQ() {
   return (
     <section className="py-20 sm:py-24 bg-white relative" id="faq">
       <div className="container mx-auto px-4 md:px-6">
-        
+
         {/* Top Header with Contact Support button */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 sm:mb-14">
           <div>
@@ -142,7 +141,7 @@ export function IncomeFAQ() {
         </div>
 
         {/* 2-Column Accordion */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-1 gap-4 lg:gap-6 items-start">
           {renderFaqColumn(leftFaqs)}
           {renderFaqColumn(rightFaqs)}
         </div>

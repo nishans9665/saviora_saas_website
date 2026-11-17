@@ -167,9 +167,9 @@ export function BudgetAssignedExpenses() {
                   )}
                 </div>
 
-                <div className="mt-4 pt-3 border-t border-slate-100 text-center text-[10px] text-slate-400">
+                {/* <div className="mt-4 pt-3 border-t border-slate-100 text-center text-[10px] text-slate-400">
                   Illustrative assigned expense breakdown based on Saviora Budget Management
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

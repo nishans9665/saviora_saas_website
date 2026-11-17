@@ -439,9 +439,9 @@ export function AnalyticsHero() {
                   </div>
 
                   {/* Footnote */}
-                  <div className="text-[9px] text-slate-400 text-center pt-1 border-t border-slate-50">
+                  {/* <div className="text-[9px] text-slate-400 text-center pt-1 border-t border-slate-50">
                     Product preview: actual Saviora Expense Analytics interface demonstration
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>

@@ -141,7 +141,7 @@ export function ExpenseFAQ() {
         </div>
 
         {/* 2-Column Accordion */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-1 gap-4 lg:gap-6 items-start">
           {renderFaqColumn(leftFaqs)}
           {renderFaqColumn(rightFaqs)}
         </div>

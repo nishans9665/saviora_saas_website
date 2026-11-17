@@ -304,9 +304,9 @@ export function SavingsHero() {
                   </div>
 
                   {/* Footer note: visual product demonstration */}
-                  <div className="text-[10px] text-slate-400 text-center pt-1 border-t border-slate-50">
+                  {/* <div className="text-[10px] text-slate-400 text-center pt-1 border-t border-slate-50">
                     Product preview: representative dashboard interface demonstration
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>

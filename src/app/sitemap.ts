@@ -1,10 +1,103 @@
 import type { MetadataRoute } from "next";
 
+const TOOLS = [
+  "salary-calculator",
+  "income-tax-calculator",
+  "take-home-salary-calculator",
+  "epf-calculator",
+  "etf-calculator",
+  "vat-calculator",
+  "gratuity-calculator",
+  "overtime-calculator",
+];
+
+const SALARY_TAX_CATEGORY = ["salary-tax-calculators"];
+
+const LOAN_TOOLS = [
+  "loan-financial-tools",
+  "loan-emi-calculator",
+  "personal-loan-calculator",
+  "home-loan-calculator",
+  "vehicle-loan-calculator",
+  "simple-interest-calculator",
+  "compound-interest-calculator",
+  "fixed-deposit-calculator",
+  "credit-card-interest-calculator",
+  "debt-repayment-calculator",
+];
+
+const INVESTMENT_TOOLS = [
+  "investment-savings-tools",
+  "investment-return-calculator",
+  "sip-calculator",
+  "savings-goal-calculator",
+  "retirement-calculator",
+  "investment-profit-loss-calculator",
+  "inflation-calculator",
+  "monthly-savings-calculator",
+  "roi-calculator",
+  "investment-growth-calculator",
+  "emergency-fund-calculator",
+];
+
+const COUNTRIES = [
+  "usa",
+  "uk",
+  "australia",
+  "canada",
+  "india",
+  "sri-lanka",
+  "singapore",
+  "uae",
+];
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://saviora.app";
   const currentDate = new Date();
 
-  return [
+  const toolRoutes: MetadataRoute.Sitemap = [
+    {
+      url: `${baseUrl}/free-tools`,
+      lastModified: currentDate,
+      changeFrequency: "daily",
+      priority: 0.95,
+    },
+    ...SALARY_TAX_CATEGORY.map((hub) => ({
+      url: `${baseUrl}/free-tools/${hub}`,
+      lastModified: currentDate,
+      changeFrequency: "weekly" as const,
+      priority: 0.9,
+    })),
+    ...TOOLS.map((tool) => ({
+      url: `${baseUrl}/free-tools/${tool}`,
+      lastModified: currentDate,
+      changeFrequency: "weekly" as const,
+      priority: 0.9,
+    })),
+    ...LOAN_TOOLS.map((tool) => ({
+      url: `${baseUrl}/free-tools/${tool}`,
+      lastModified: currentDate,
+      changeFrequency: "weekly" as const,
+      priority: 0.9,
+    })),
+    ...INVESTMENT_TOOLS.map((tool) => ({
+      url: `${baseUrl}/free-tools/${tool}`,
+      lastModified: currentDate,
+      changeFrequency: "weekly" as const,
+      priority: 0.9,
+    })),
+
+    ...TOOLS.flatMap((tool) =>
+      COUNTRIES.map((country) => ({
+        url: `${baseUrl}/free-tools/${tool}/${country}`,
+        lastModified: currentDate,
+        changeFrequency: "weekly" as const,
+        priority: 0.85,
+      }))
+    ),
+  ];
+
+  const staticRoutes: MetadataRoute.Sitemap = [
     {
       url: baseUrl,
       lastModified: currentDate,
@@ -13,6 +106,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/features`,
+      lastModified: currentDate,
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/features/recurring-transactions`,
       lastModified: currentDate,
       changeFrequency: "weekly",
       priority: 0.9,
@@ -114,4 +213,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.4,
     },
   ];
+
+  return [...toolRoutes, ...staticRoutes];
 }
