@@ -143,10 +143,10 @@ export function RelatedTools({
           <p className="text-sm text-gray-700 mt-1">{subtitle}</p>
         </div>
         <Link
-          href="/free-tools"
+          href="/free-tools/salary-tax-calculators"
           className="text-sm font-semibold text-emerald-800 hover:text-emerald-900 flex items-center gap-1.5 transition whitespace-nowrap"
         >
-          View all 8 calculators
+          View all 8 salary & tax calculators
           <ArrowRight className="w-4 h-4" />
         </Link>
       </div>

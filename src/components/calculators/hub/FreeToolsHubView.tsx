@@ -162,7 +162,7 @@ export function FreeToolsHubView() {
         <div className="absolute inset-0 bg-[radial-gradient(#10b981_1px,transparent_1px)] [background-size:24px_24px] opacity-15 pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <Breadcrumb items={[{ label: "Free Tools" }]} />
+          <Breadcrumb items={[{ label: "Free Tools", href: "/free-tools" }, { label: "Salary & Tax Calculators" }]} />
 
           <div className="text-center max-w-3xl mx-auto mt-6">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 border border-emerald-200/80 text-emerald-800 text-xs font-semibold mb-6 shadow-xs">
@@ -179,15 +179,28 @@ export function FreeToolsHubView() {
             </p>
 
             {/* Category Navigation Banner */}
-            <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
+            <div className="mt-8 flex flex-wrap items-center justify-center gap-2.5">
+              <Link
+                href="/free-tools"
+                className="px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-white text-gray-700 hover:text-emerald-700 hover:bg-emerald-50/50 border border-gray-200 shadow-2xs transition flex items-center gap-1.5"
+              >
+                <span>← All Tools Directory</span>
+              </Link>
               <span className="px-4 py-2 rounded-xl text-xs sm:text-sm font-bold bg-emerald-600 text-white shadow-xs">
                 Salary &amp; Tax Tools (8 Tools)
               </span>
               <Link
                 href="/free-tools/loan-financial-tools"
-                className="px-4 py-2 rounded-xl text-xs sm:text-sm font-bold bg-white text-gray-700 hover:text-emerald-700 hover:bg-emerald-50/50 border border-gray-200 shadow-2xs transition flex items-center gap-1.5"
+                className="px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-white text-gray-700 hover:text-emerald-700 hover:bg-emerald-50/50 border border-gray-200 shadow-2xs transition flex items-center gap-1.5"
               >
-                <span>New: Loan &amp; Financial Tools (9 Tools)</span>
+                <span>Loan &amp; Financial Tools (9 Tools)</span>
+                <ArrowRight className="w-3.5 h-3.5 text-emerald-600" />
+              </Link>
+              <Link
+                href="/free-tools/investment-savings-tools"
+                className="px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-white text-gray-700 hover:text-emerald-700 hover:bg-emerald-50/50 border border-gray-200 shadow-2xs transition flex items-center gap-1.5"
+              >
+                <span>Investment &amp; Savings Tools (10 Tools)</span>
                 <ArrowRight className="w-3.5 h-3.5 text-emerald-600" />
               </Link>
             </div>

@@ -169,10 +169,16 @@ export function Footer() {
                 <Link href="/pricing" className="text-slate-500 hover:text-primary-500 dark:text-slate-400 dark:hover:text-primary-400 transition-colors">Pricing</Link>
               </li>
               <li>
-                <Link href="/free-tools" className="text-slate-500 hover:text-primary-500 dark:text-slate-400 dark:hover:text-primary-400 transition-colors">Salary & Tax Tools</Link>
+                <Link href="/free-tools" className="text-slate-500 hover:text-primary-500 dark:text-slate-400 dark:hover:text-primary-400 transition-colors">Free Financial Tools</Link>
+              </li>
+              <li>
+                <Link href="/free-tools/salary-tax-calculators" className="text-slate-500 hover:text-primary-500 dark:text-slate-400 dark:hover:text-primary-400 transition-colors">Salary & Tax Tools</Link>
               </li>
               <li>
                 <Link href="/free-tools/loan-financial-tools" className="text-slate-500 hover:text-primary-500 dark:text-slate-400 dark:hover:text-primary-400 transition-colors">Loan & Financial Tools</Link>
+              </li>
+              <li>
+                <Link href="/free-tools/investment-savings-tools" className="text-slate-500 hover:text-primary-500 dark:text-slate-400 dark:hover:text-primary-400 transition-colors">Investment & Savings Tools</Link>
               </li>
               <li>
                 <Link href="/blog" className="text-slate-500 hover:text-primary-500 dark:text-slate-400 dark:hover:text-primary-400 transition-colors">Blog</Link>

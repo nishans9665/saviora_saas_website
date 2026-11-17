@@ -11,6 +11,8 @@ const TOOLS = [
   "overtime-calculator",
 ];
 
+const SALARY_TAX_CATEGORY = ["salary-tax-calculators"];
+
 const LOAN_TOOLS = [
   "loan-financial-tools",
   "loan-emi-calculator",
@@ -22,6 +24,20 @@ const LOAN_TOOLS = [
   "fixed-deposit-calculator",
   "credit-card-interest-calculator",
   "debt-repayment-calculator",
+];
+
+const INVESTMENT_TOOLS = [
+  "investment-savings-tools",
+  "investment-return-calculator",
+  "sip-calculator",
+  "savings-goal-calculator",
+  "retirement-calculator",
+  "investment-profit-loss-calculator",
+  "inflation-calculator",
+  "monthly-savings-calculator",
+  "roi-calculator",
+  "investment-growth-calculator",
+  "emergency-fund-calculator",
 ];
 
 const COUNTRIES = [
@@ -46,6 +62,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "daily",
       priority: 0.95,
     },
+    ...SALARY_TAX_CATEGORY.map((hub) => ({
+      url: `${baseUrl}/free-tools/${hub}`,
+      lastModified: currentDate,
+      changeFrequency: "weekly" as const,
+      priority: 0.9,
+    })),
     ...TOOLS.map((tool) => ({
       url: `${baseUrl}/free-tools/${tool}`,
       lastModified: currentDate,
@@ -58,6 +80,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly" as const,
       priority: 0.9,
     })),
+    ...INVESTMENT_TOOLS.map((tool) => ({
+      url: `${baseUrl}/free-tools/${tool}`,
+      lastModified: currentDate,
+      changeFrequency: "weekly" as const,
+      priority: 0.9,
+    })),
+
     ...TOOLS.flatMap((tool) =>
       COUNTRIES.map((country) => ({
         url: `${baseUrl}/free-tools/${tool}/${country}`,
