@@ -90,8 +90,8 @@ export function Footer() {
   return (
     <footer className="bg-white border-t border-slate-200 dark:bg-slate-950 dark:border-slate-800 pt-16 pb-8">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 mb-12">
-          <div className="col-span-2 lg:col-span-2">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 lg:grid-cols-6 gap-8 mb-12">
+          <div className="col-span-2 sm:col-span-3 md:col-span-2 lg:col-span-2">
             <Link href="/" className="flex items-center gap-2 mb-4">
               <Image src={logoSaviora} alt="Saviora" width={250} height={80} unoptimized priority className="h-15 w-auto object-contain" />
             </Link>
@@ -138,9 +138,9 @@ export function Footer() {
               <li>
                 <Link href="/income-tracker" className="text-slate-500 hover:text-primary-500 dark:text-slate-400 dark:hover:text-primary-400 transition-colors">Income Tracker</Link>
               </li>
-                <li>
-                  <Link href="/features/recurring-transactions" className="text-slate-500 hover:text-primary-500 dark:text-slate-400 dark:hover:text-primary-400 transition-colors">Recurring Transactions</Link>
-                </li>
+              <li>
+                <Link href="/features/recurring-transactions" className="text-slate-500 hover:text-primary-500 dark:text-slate-400 dark:hover:text-primary-400 transition-colors">Recurring Transactions</Link>
+              </li>
               <li>
                 <Link href="/savings-goals" className="text-slate-500 hover:text-primary-500 dark:text-slate-400 dark:hover:text-primary-400 transition-colors">Savings Goals</Link>
               </li>
@@ -153,9 +153,24 @@ export function Footer() {
               <li>
                 <Link href="/#dashboard" className="text-slate-500 hover:text-primary-500 dark:text-slate-400 dark:hover:text-primary-400 transition-colors">Dashboard</Link>
               </li>
-              {/* <li>
-                <Link href="/changelog" className="text-slate-500 hover:text-primary-500 dark:text-slate-400 dark:hover:text-primary-400 transition-colors">Changelog</Link>
-              </li> */}
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="font-semibold text-slate-900 dark:text-slate-100 mb-4">Free Tools</h3>
+            <ul className="space-y-3">
+              <li>
+                <Link href="/free-tools" className="text-slate-500 hover:text-primary-500 dark:text-slate-400 dark:hover:text-primary-400 transition-colors">Free Financial Tools</Link>
+              </li>
+              <li>
+                <Link href="/free-tools/salary-tax-calculators" className="text-slate-500 hover:text-primary-500 dark:text-slate-400 dark:hover:text-primary-400 transition-colors">Salary &amp; Tax Tools</Link>
+              </li>
+              <li>
+                <Link href="/free-tools/loan-financial-tools" className="text-slate-500 hover:text-primary-500 dark:text-slate-400 dark:hover:text-primary-400 transition-colors">Loan &amp; Financial Tools</Link>
+              </li>
+              <li>
+                <Link href="/free-tools/investment-savings-tools" className="text-slate-500 hover:text-primary-500 dark:text-slate-400 dark:hover:text-primary-400 transition-colors">Investment &amp; Savings Tools</Link>
+              </li>
             </ul>
           </div>
 
@@ -167,18 +182,6 @@ export function Footer() {
               </li>
               <li>
                 <Link href="/pricing" className="text-slate-500 hover:text-primary-500 dark:text-slate-400 dark:hover:text-primary-400 transition-colors">Pricing</Link>
-              </li>
-              <li>
-                <Link href="/free-tools" className="text-slate-500 hover:text-primary-500 dark:text-slate-400 dark:hover:text-primary-400 transition-colors">Free Financial Tools</Link>
-              </li>
-              <li>
-                <Link href="/free-tools/salary-tax-calculators" className="text-slate-500 hover:text-primary-500 dark:text-slate-400 dark:hover:text-primary-400 transition-colors">Salary & Tax Tools</Link>
-              </li>
-              <li>
-                <Link href="/free-tools/loan-financial-tools" className="text-slate-500 hover:text-primary-500 dark:text-slate-400 dark:hover:text-primary-400 transition-colors">Loan & Financial Tools</Link>
-              </li>
-              <li>
-                <Link href="/free-tools/investment-savings-tools" className="text-slate-500 hover:text-primary-500 dark:text-slate-400 dark:hover:text-primary-400 transition-colors">Investment & Savings Tools</Link>
               </li>
               <li>
                 <Link href="/blog" className="text-slate-500 hover:text-primary-500 dark:text-slate-400 dark:hover:text-primary-400 transition-colors">Blog</Link>

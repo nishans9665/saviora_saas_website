@@ -251,46 +251,45 @@ export function MainFreeToolsDirectoryView() {
   return (
     <div className="min-h-screen bg-white text-slate-900 font-sans">
       {/* 1. HERO SECTION */}
-      <section className="relative pt-32 sm:pt-36 lg:pt-40 pb-16 sm:pb-24 overflow-hidden bg-white">
+      <section className="relative pt-24 sm:pt-28 md:pt-32 pb-12 sm:pb-16 lg:pb-20 overflow-hidden bg-white">
         {/* Subtle Ambient Background Glow matching Homepage Hero */}
         <div className="absolute inset-0 w-full h-full pointer-events-none overflow-hidden z-0">
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-[1400px] h-[580px] bg-[radial-gradient(ellipse_75%_55%_at_50%_0%,rgba(34,197,94,0.12),transparent_75%)]" />
-          <div className="absolute top-10 -left-20 w-[450px] h-[450px] bg-emerald-400/8 rounded-full blur-[110px] pointer-events-none" />
-          <div className="absolute top-10 -right-20 w-[450px] h-[450px] bg-emerald-300/8 rounded-full blur-[110px] pointer-events-none" />
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-[1400px] h-[480px] bg-[radial-gradient(ellipse_75%_55%_at_50%_0%,rgba(34,197,94,0.12),transparent_75%)]" />
+          <div className="absolute top-10 -left-20 w-[400px] h-[400px] bg-emerald-400/8 rounded-full blur-[110px] pointer-events-none" />
+          <div className="absolute top-10 -right-20 w-[400px] h-[400px] bg-emerald-300/8 rounded-full blur-[110px] pointer-events-none" />
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center max-w-4xl mx-auto flex flex-col items-center">
             {/* Top Pill Badge */}
-            <div className="mb-5 sm:mb-6">
-              <span className="inline-flex items-center gap-2 py-1.5 px-4 rounded-full bg-emerald-50 text-[#16a34a] text-xs sm:text-sm font-semibold border border-[#22c55e]/25 shadow-xs">
+            <div className="mb-4 sm:mb-5">
+              <span className="inline-flex items-center gap-2 py-1 px-3.5 sm:py-1.5 sm:px-4 rounded-full bg-emerald-50 text-[#16a34a] text-xs sm:text-sm font-semibold border border-[#22c55e]/25 shadow-xs">
                 <Sparkles className="w-3.5 h-3.5 text-[#22c55e] flex-shrink-0" />
                 <span>FREE FINANCIAL TOOLS</span>
               </span>
             </div>
 
-            {/* Main Headline */}
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl font-extrabold tracking-tight text-slate-900 leading-[1.12] mb-6">
-              Free Financial Calculators <br className="hidden sm:inline" />
-              &amp;{" "}
-              <span className="text-[#22c55e] relative inline-block">
+            {/* Main Headline - Balanced & Device-Responsive */}
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[44px] xl:text-5xl font-extrabold tracking-tight text-slate-900 leading-[1.2] sm:leading-[1.2] mb-4 sm:mb-6 max-w-3xl lg:max-w-4xl mx-auto">
+              Free Financial Calculators &amp;{" "}
+              <span className="text-[#22c55e] inline-block">
                 Money Management Tools
               </span>
             </h1>
 
             {/* Supporting Text */}
-            <p className="text-base sm:text-lg md:text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed mb-8 sm:mb-10 font-normal">
+            <p className="text-sm sm:text-base md:text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed mb-6 sm:mb-8 font-normal">
               Explore Saviora&apos;s collection of free online financial calculators and money management tools.
               Calculate loan payments, estimate income taxes, plan investments, track savings goals, and make smarter
               financial decisions with easy-to-use tools. No registration required.
             </p>
 
             {/* Action Buttons */}
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-3.5 sm:gap-4 mb-10 w-full sm:w-auto">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mb-8 sm:mb-10 w-full sm:w-auto">
               <a
                 href="#tools-categories"
                 onClick={handleScrollToCategories}
-                className="w-full sm:w-auto text-sm sm:text-base bg-[#22c55e] hover:bg-[#16a34a] text-white font-semibold shadow-lg shadow-[#22c55e]/25 hover:shadow-xl hover:shadow-[#22c55e]/35 hover:-translate-y-0.5 px-8 py-3.5 sm:py-4 rounded-full transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer"
+                className="w-full sm:w-auto text-sm sm:text-base bg-[#22c55e] hover:bg-[#16a34a] text-white font-semibold shadow-md shadow-[#22c55e]/20 hover:shadow-lg hover:shadow-[#22c55e]/30 hover:-translate-y-0.5 px-6 sm:px-8 py-3 sm:py-3.5 rounded-full transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer"
               >
                 <span>Explore Free Tools</span>
                 <ArrowRight className="w-4 h-4" />
@@ -300,7 +299,7 @@ export function MainFreeToolsDirectoryView() {
                 href={LAUNCH_OFFER.registerUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto text-sm sm:text-base bg-white border border-slate-200 text-slate-800 shadow-xs hover:shadow-md hover:border-slate-300 px-7 py-3.5 sm:py-4 rounded-full transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer"
+                className="w-full sm:w-auto text-sm sm:text-base bg-white border border-slate-200 text-slate-800 shadow-2xs hover:shadow-xs hover:border-slate-300 px-6 sm:px-7 py-3 sm:py-3.5 rounded-full transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer"
               >
                 <span>Start Managing Your Money</span>
                 <ArrowUpRight className="w-4 h-4 text-slate-500" />
@@ -308,22 +307,22 @@ export function MainFreeToolsDirectoryView() {
             </div>
 
             {/* Quick Metrics Bar */}
-            <div className="w-full max-w-3xl pt-8 border-t border-slate-200/80 grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
+            <div className="w-full max-w-3xl pt-6 sm:pt-7 border-t border-slate-200/80 grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 text-center">
               <div className="p-2">
-                <p className="text-2xl sm:text-3xl font-extrabold text-slate-900">27</p>
-                <p className="text-xs text-slate-500 font-medium mt-1">Free Calculators</p>
+                <p className="text-xl sm:text-2xl md:text-3xl font-extrabold text-slate-900">27</p>
+                <p className="text-[11px] sm:text-xs text-slate-500 font-medium mt-1">Free Calculators</p>
               </div>
               <div className="p-2">
-                <p className="text-2xl sm:text-3xl font-extrabold text-[#16a34a]">3</p>
-                <p className="text-xs text-slate-500 font-medium mt-1">Core Categories</p>
+                <p className="text-xl sm:text-2xl md:text-3xl font-extrabold text-[#16a34a]">3</p>
+                <p className="text-[11px] sm:text-xs text-slate-500 font-medium mt-1">Core Categories</p>
               </div>
               <div className="p-2">
-                <p className="text-2xl sm:text-3xl font-extrabold text-slate-900">11</p>
-                <p className="text-xs text-slate-500 font-medium mt-1">Supported Currencies</p>
+                <p className="text-xl sm:text-2xl md:text-3xl font-extrabold text-slate-900">11</p>
+                <p className="text-[11px] sm:text-xs text-slate-500 font-medium mt-1">Supported Currencies</p>
               </div>
               <div className="p-2">
-                <p className="text-2xl sm:text-3xl font-extrabold text-[#16a34a]">100%</p>
-                <p className="text-xs text-slate-500 font-medium mt-1">Free &amp; Browser-Based</p>
+                <p className="text-xl sm:text-2xl md:text-3xl font-extrabold text-[#16a34a]">100%</p>
+                <p className="text-[11px] sm:text-xs text-slate-500 font-medium mt-1">Free &amp; Browser-Based</p>
               </div>
             </div>
           </div>
