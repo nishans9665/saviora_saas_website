@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { Play, CheckCircle2, ShieldCheck, X } from "lucide-react";
+import { Play, CheckCircle2, ShieldCheck, X, Sparkles } from "lucide-react";
 import heroMobileImg from "@/assets/hero/Saviora-mobile-screen.png";
 import heroLaptopImg from "@/assets/hero/Saviora_Financial_Dashboard.png";
 import googlePlayBadgeImg from "@/assets/hero/google-play.png";
@@ -21,7 +21,7 @@ export function Hero() {
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 xl:gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-10 xl:gap-16 items-center">
           
           {/* ==================================================== */}
           {/* LEFT COLUMN: Headline, copy, CTAs & Trust Badges */}
@@ -30,30 +30,28 @@ export function Hero() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="lg:col-span-6 xl:col-span-5 text-center lg:text-left flex flex-col items-center lg:items-start"
+            className="lg:col-span-5 xl:col-span-5 text-center lg:text-left flex flex-col items-center lg:items-start lg:pr-4 xl:pr-6"
           >
             {/* Top Pill Badge */}
             <div className="inline-flex items-center gap-2 py-1.5 px-3.5 rounded-full bg-emerald-50 dark:bg-emerald-950/60 text-[#16a34a] dark:text-emerald-400 text-xs sm:text-sm font-semibold border border-[#22c55e]/25 shadow-xs mb-5 sm:mb-6">
-              <svg className="w-4 h-4 text-[#22c55e] flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.551 0 .9993.4482.9993.9993.0001.5511-.4482.9997-.9993.9997m-11.046 0c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.5511 0 .9993.4482.9993.9993 0 .5511-.4482.9997-.9993.9997m11.4045-6.02l1.9973-3.4592a.416.416 0 00-.1521-.5676.416.416 0 00-.5676.1521l-2.0223 3.503C15.5902 8.4116 13.8533 8.12 12 8.12s-3.5902.2916-5.1368.8307L4.8409 5.4477a.4161.4161 0 00-.5677-.1521.4157.4157 0 00-.1521.5676l1.9973 3.4592C2.6889 11.1867.3432 14.6589 0 18.761h24c-.3432-4.1021-2.6889-7.5743-6.1185-9.4396"/>
-              </svg>
+              <Sparkles className="w-3.5 h-3.5 text-[#22c55e] flex-shrink-0" />
               <span>Smart Personal Finance &amp; Budget Tracking</span>
             </div>
 
             {/* Main Headline */}
-            <h1 className="text-4xl sm:text-4xl lg:text-[40px] xl:text-[50px] font-extrabold tracking-tight text-slate-900 dark:text-white leading-[1.14] mb-5">
+            <h1 className="text-3xl sm:text-4xl lg:text-[34px] xl:text-[46px] font-extrabold tracking-tight text-slate-900 dark:text-white leading-[1.15] mb-5">
               Take Control of Your <br className="hidden sm:inline" />
               Money with{" "}
               <span className="text-[#22c55e] dark:text-emerald-400 relative inline-block">
                 Saviora
-                <svg className="absolute -bottom-2 left-0 w-full h-3 text-[#22c55e]/30" viewBox="0 0 100 20" preserveAspectRatio="none">
-                  <path d="M0 15 Q 50 0, 100 15" stroke="currentColor" strokeWidth="4" fill="none" strokeLinecap="round" />
+                <svg className="absolute -bottom-2 left-0 w-full h-3 text-[#ee9229]" viewBox="0 0 100 20" preserveAspectRatio="none">
+                  <path d="M0 15 Q 50 0, 100 15" stroke="#ee9229" strokeWidth="4" fill="none" strokeLinecap="round" />
                 </svg>
               </span>
             </h1>
 
             {/* Supporting Subtitle */}
-            <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed mb-7 sm:mb-8 max-w-xl font-normal">
+            <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed mb-7 sm:mb-8 max-w-lg lg:max-w-[420px] xl:max-w-lg font-normal">
               Track income and expenses, plan monthly budgets, monitor savings goals, and achieve your financial goals with a simple, all-in-one app.
             </p>
 
@@ -116,15 +114,15 @@ export function Hero() {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.15 }}
-            className="lg:col-span-6 xl:col-span-7 relative flex items-center justify-center lg:justify-end mt-4 lg:mt-0"
+            className="lg:col-span-7 xl:col-span-7 relative flex items-center justify-center lg:justify-end mt-8 lg:mt-0 lg:pl-6 xl:pl-8"
           >
             {/* Soft Organic Green Blob Backdrop */}
             <div className="absolute top-1/2 left-1/2 -translate-x-[40%] -translate-y-[48%] w-[320px] sm:w-[460px] md:w-[540px] lg:w-[500px] xl:w-[580px] h-[300px] sm:h-[400px] md:h-[460px] lg:h-[430px] xl:h-[490px] bg-gradient-to-tr from-emerald-100/70 via-emerald-50/50 to-transparent dark:from-emerald-950/40 dark:via-emerald-900/20 dark:to-transparent rounded-[50px] sm:rounded-[80px] lg:rounded-[90px] rotate-[-6deg] pointer-events-none -z-0" />
 
             {/* Devices Composite Row */}
-            <div className="relative z-10 flex items-center justify-center">
+            <div className="relative z-10 flex items-center justify-center lg:justify-end">
               {/* Foreground: Mobile Phone Screen */}
-              <div className="relative z-20 w-[160px] sm:w-[220px] md:w-[260px] lg:w-[240px] xl:w-[285px] flex-shrink-0 -mr-12 sm:-mr-20 md:-mr-24 lg:-mr-22 xl:-mr-26 drop-shadow-2xl">
+              <div className="relative z-20 w-[115px] sm:w-[160px] md:w-[190px] lg:w-[170px] xl:w-[215px] 2xl:w-[230px] flex-shrink-0 -mr-3 sm:-mr-4 md:-mr-5 lg:-mr-4 xl:-mr-5 drop-shadow-[0_20px_35px_rgba(0,0,0,0.18)]">
                 <Image
                   src={heroMobileImg}
                   alt="Saviora Mobile App Screen"
@@ -135,8 +133,8 @@ export function Hero() {
                 />
               </div>
 
-              {/* Background / Right: Laptop Financial Dashboard */}
-              <div className="relative z-10 w-[290px] sm:w-[420px] md:w-[500px] lg:w-[460px] xl:w-[540px] flex-shrink-0 drop-shadow-2xl">
+              {/* Background / Right: Laptop Financial Dashboard - Crystal Sharp Natural View */}
+              <div className="relative z-10 w-[245px] sm:w-[370px] md:w-[450px] lg:w-[420px] xl:w-[530px] 2xl:w-[570px] flex-shrink-0 drop-shadow-[0_25px_45px_rgba(0,0,0,0.16)] dark:drop-shadow-[0_25px_45px_rgba(0,0,0,0.45)]">
                 <Image
                   src={heroLaptopImg}
                   alt="Saviora Financial Dashboard on Laptop"
