@@ -29,7 +29,7 @@ export function Navbar() {
   const [mobileFeaturesOpen, setMobileFeaturesOpen] = React.useState(false);
   const timeoutRef = React.useRef<NodeJS.Timeout | null>(null);
 
-  // Free Tools Mega Menu state
+  // Free Tools Menu state
   const [freeToolsDropdownOpen, setFreeToolsDropdownOpen] = React.useState(false);
   const [mobileFreeToolsOpen, setMobileFreeToolsOpen] = React.useState(false);
   const freeToolsTimeoutRef = React.useRef<NodeJS.Timeout | null>(null);
@@ -200,7 +200,7 @@ export function Navbar() {
             Pricing
           </Link>
 
-          {/* Free Tools Dropdown Trigger */}
+          {/* Free Tools Dropdown Trigger with Centered One-Column Menu */}
           <div
             className="relative"
             onMouseEnter={handleFreeToolsMouseEnter}
@@ -227,6 +227,14 @@ export function Navbar() {
                 )}
               />
             </Link>
+
+            {/* One-Column Free Tools Menu */}
+            <FreeToolsMegaMenu
+              isOpen={freeToolsDropdownOpen}
+              onClose={() => setFreeToolsDropdownOpen(false)}
+              onMouseEnter={handleFreeToolsMouseEnter}
+              onMouseLeave={handleFreeToolsMouseLeave}
+            />
           </div>
 
           {/* Remaining Standard Navigation Links */}
@@ -247,14 +255,6 @@ export function Navbar() {
           onClose={() => setFeaturesDropdownOpen(false)}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
-        />
-
-        {/* Three-Column Free Tools Mega Menu */}
-        <FreeToolsMegaMenu
-          isOpen={freeToolsDropdownOpen}
-          onClose={() => setFreeToolsDropdownOpen(false)}
-          onMouseEnter={handleFreeToolsMouseEnter}
-          onMouseLeave={handleFreeToolsMouseLeave}
         />
 
         {/* Desktop Actions */}
@@ -403,7 +403,7 @@ export function Navbar() {
               Pricing
             </Link>
 
-            {/* Free Tools Collapsible Accordion Group in Mobile */}
+            {/* Free Tools Collapsible Accordion Group in Mobile (Main Pages Only, No Sub-Tools) */}
             <div>
               <button
                 type="button"
@@ -420,70 +420,52 @@ export function Navbar() {
               </button>
 
               {mobileFreeToolsOpen && (
-                <div className="mt-3 pl-3 border-l-2 border-emerald-200 dark:border-emerald-800 space-y-4">
+                <div className="mt-3 pl-3 border-l-2 border-emerald-200 dark:border-emerald-800 space-y-2">
                   {/* Directory All Tools Link */}
                   <Link
                     href="/free-tools"
                     className="flex items-center justify-between text-xs font-bold text-emerald-700 dark:text-emerald-300 bg-emerald-50 dark:bg-emerald-950/60 p-2.5 rounded-xl border border-emerald-200 dark:border-emerald-800/60"
                     onClick={() => setMobileMenuOpen(false)}
                   >
-                    <span className="flex items-center gap-1.5">
+                    <span className="flex items-center gap-2">
                       <Sparkles className="w-3.5 h-3.5 text-emerald-600" />
                       <span>Browse All 27 Free Tools Directory</span>
                     </span>
                     <ArrowRight className="w-3.5 h-3.5" />
                   </Link>
 
-                  {/* Categories Breakdown */}
+                  {/* Main Category Pages Only */}
                   {FREE_TOOLS_CATEGORIES.map((category) => {
                     const CatIcon = category.icon;
                     return (
-                      <div key={category.id}>
-                        <Link
-                          href={category.hubHref}
-                          onClick={() => setMobileMenuOpen(false)}
-                          className="flex items-center justify-between text-xs font-bold text-slate-900 dark:text-white mb-2 hover:text-primary-600 transition-colors"
-                        >
-                          <span className="flex items-center gap-1.5">
-                            <CatIcon className="w-3.5 h-3.5 text-primary-600" />
-                            <span>{category.title}</span>
-                          </span>
-                          <span className="text-[10px] text-slate-400 font-normal">
-                            {category.badge} →
-                          </span>
-                        </Link>
-
-                        <div className="space-y-1">
-                          {category.tools.slice(0, 5).map((item) => {
-                            const Icon = item.icon;
-                            return (
-                              <Link
-                                key={item.name}
-                                href={item.href}
-                                className="flex items-center justify-between text-sm font-medium text-slate-700 dark:text-slate-200 hover:text-primary-600 dark:hover:text-primary-400 py-1 px-2 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors"
-                                onClick={() => setMobileMenuOpen(false)}
-                              >
-                                <span className="flex items-center gap-2">
-                                  <Icon className="w-3.5 h-3.5 text-slate-400" />
-                                  <span className="text-xs">{item.name}</span>
-                                </span>
-                                {item.tag && (
-                                  <span className="text-[9px] font-bold px-1.5 py-0.2 rounded-full bg-emerald-100 text-emerald-800 dark:bg-emerald-950/80 dark:text-emerald-300">
-                                    {item.tag}
-                                  </span>
-                                )}
-                              </Link>
-                            );
-                          })}
-                          <Link
-                            href={category.hubHref}
-                            onClick={() => setMobileMenuOpen(false)}
-                            className="block text-xs font-semibold text-primary-600 dark:text-primary-400 px-2 pt-1 hover:underline"
+                      <Link
+                        key={category.id}
+                        href={category.hubHref}
+                        onClick={() => setMobileMenuOpen(false)}
+                        className="flex items-center justify-between p-2 rounded-xl text-slate-700 dark:text-slate-200 hover:text-primary-600 dark:hover:text-primary-400 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors"
+                      >
+                        <span className="flex items-center gap-2.5 min-w-0">
+                          <span
+                            className={cn(
+                              "w-7 h-7 rounded-lg flex items-center justify-center border flex-shrink-0",
+                              category.headerBg,
+                              category.headerBorder,
+                              category.iconColor
+                            )}
                           >
-                            + View all in {category.title.split(" ")[0]} →
-                          </Link>
-                        </div>
-                      </div>
+                            <CatIcon className="w-3.5 h-3.5" />
+                          </span>
+                          <span className="min-w-0">
+                            <span className="text-xs font-bold block truncate text-slate-900 dark:text-white">
+                              {category.title}
+                            </span>
+                            <span className="text-[10px] text-slate-400 block truncate">
+                              {category.badge}
+                            </span>
+                          </span>
+                        </span>
+                        <ArrowRight className="w-3.5 h-3.5 text-slate-300 dark:text-slate-600 flex-shrink-0" />
+                      </Link>
                     );
                   })}
                 </div>
