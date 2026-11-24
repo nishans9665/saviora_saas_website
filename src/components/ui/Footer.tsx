@@ -90,16 +90,16 @@ export function Footer() {
   return (
     <footer className="bg-white border-t border-slate-200 dark:bg-slate-950 dark:border-slate-800 pt-16 pb-8">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 lg:grid-cols-6 gap-8 mb-12">
-          <div className="col-span-2 sm:col-span-3 md:col-span-2 lg:col-span-2">
+        <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-12 gap-6 sm:gap-6 lg:gap-8 xl:gap-10 mb-12">
+          <div className="col-span-2 sm:col-span-4 lg:col-span-4">
             <Link href="/" className="flex items-center gap-2 mb-4">
               <Image src={logoSaviora} alt="Saviora" width={250} height={80} unoptimized priority className="h-15 w-auto object-contain" />
             </Link>
-            <p className="text-slate-500 dark:text-slate-400 max-w-sm mb-4">
+            <p className="text-slate-500 dark:text-slate-400 max-w-sm sm:max-w-xl lg:max-w-sm mb-4 text-sm sm:text-base leading-relaxed">
               Take control of your finances with smart budgeting, expense tracking, savings goals, and powerful financial insights - all in one secure platform.
             </p>
 
-            <div className="space-y-2 mb-6">
+            <div className="flex flex-wrap items-center gap-x-6 gap-y-2 mb-6">
               <div className="flex items-center gap-2 text-xs font-medium text-slate-700 dark:text-slate-300">
                 <span className="text-emerald-500 font-bold">✓</span> Secure Payments
               </div>
@@ -126,7 +126,7 @@ export function Footer() {
             </div>
           </div>
 
-          <div>
+          <div className="col-span-1 sm:col-span-1 lg:col-span-2">
             <h3 className="font-semibold text-slate-900 dark:text-slate-100 mb-4">Features</h3>
             <ul className="space-y-3">
               <li>
@@ -156,7 +156,7 @@ export function Footer() {
             </ul>
           </div>
 
-          <div>
+          <div className="col-span-1 sm:col-span-1 lg:col-span-2">
             <h3 className="font-semibold text-slate-900 dark:text-slate-100 mb-4">Free Tools</h3>
             <ul className="space-y-3">
               <li>
@@ -174,7 +174,7 @@ export function Footer() {
             </ul>
           </div>
 
-          <div>
+          <div className="col-span-1 sm:col-span-1 lg:col-span-2">
             <h3 className="font-semibold text-slate-900 dark:text-slate-100 mb-4">Company</h3>
             <ul className="space-y-3">
               <li>
@@ -198,7 +198,7 @@ export function Footer() {
             </ul>
           </div>
 
-          <div>
+          <div className="col-span-1 sm:col-span-1 lg:col-span-2">
             <h3 className="font-semibold text-slate-900 dark:text-slate-100 mb-4">Legal</h3>
             <ul className="space-y-3 mb-4">
               <li>

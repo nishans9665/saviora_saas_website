@@ -145,7 +145,7 @@ export function Navbar() {
       {/* Container with relative positioning for Mega Menu anchoring */}
       <div
         ref={navContainerRef}
-        className="container mx-auto px-4 md:px-6 flex items-center justify-between py-2 sm:py-3 relative"
+        className="container mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between py-2 sm:py-3 relative"
       >
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
@@ -156,12 +156,12 @@ export function Navbar() {
             height={71}
             unoptimized
             priority
-            className="h-8 sm:h-10 md:h-12 w-auto object-contain"
+            className="h-8 sm:h-9 lg:h-11 w-auto object-contain"
           />
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-7">
+        <nav className="hidden lg:flex items-center gap-5 xl:gap-7">
           
           {/* Features Dropdown Trigger */}
           <div
@@ -258,7 +258,7 @@ export function Navbar() {
         />
 
         {/* Desktop Actions */}
-        <div className="hidden md:flex items-center gap-4">
+        <div className="hidden lg:flex items-center gap-3 xl:gap-4">
           <Link
             href="https://cloud.saviora.app/login"
             target="_blank"
@@ -273,14 +273,23 @@ export function Navbar() {
           </Button>
         </div>
 
-        {/* Mobile Menu Toggle Button */}
-        <button
-          className="md:hidden p-2 text-slate-600 dark:text-slate-300"
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
-        >
-          {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-        </button>
+        {/* Tablet & Mobile Right Action Group (Get Started Free on Tablet + Hamburger) */}
+        <div className="lg:hidden flex items-center gap-2 sm:gap-3">
+          <Button asChild size="sm" className="hidden sm:inline-flex lg:hidden h-9 px-3.5 sm:px-4 text-xs sm:text-sm font-semibold shadow-xs">
+            <Link href="https://cloud.saviora.app/register" target="_blank">
+              <span>Get Started Free</span>
+              <ArrowRight className="w-3.5 h-3.5 ml-1" />
+            </Link>
+          </Button>
+
+          <button
+            className="p-2 text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-colors cursor-pointer rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
+          >
+            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Menu */}
@@ -289,7 +298,7 @@ export function Navbar() {
           initial={{ opacity: 0, height: 0 }}
           animate={{ opacity: 1, height: "auto" }}
           exit={{ opacity: 0, height: 0 }}
-          className="md:hidden bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 max-h-[calc(100vh-80px)] overflow-y-auto"
+          className="lg:hidden bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 max-h-[calc(100vh-80px)] overflow-y-auto shadow-xl"
         >
           <div className="container mx-auto px-4 py-4 flex flex-col gap-3">
             
