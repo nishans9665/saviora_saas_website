@@ -33,11 +33,11 @@ export function Showcases() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           
           {/* Savings Goal Showcase */}
           <AnimatedSection delay={0.1} className="h-full">
-            <div className="glass-card rounded-2xl p-8 h-full flex flex-col">
+            <div className="glass-card rounded-2xl p-6 sm:p-8 h-full flex flex-col">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-10 h-10 rounded-full bg-emerald-100 dark:bg-emerald-900/50 flex items-center justify-center text-emerald-600 dark:text-emerald-400">
                   <Target className="w-5 h-5" />
@@ -50,27 +50,27 @@ export function Showcases() {
               
               <div className="space-y-4 mt-auto">
                 <div>
-                  <div className="flex justify-between text-sm mb-2">
+                  <div className="flex items-center justify-between text-xs sm:text-sm mb-2 gap-2">
                     <span className="font-medium text-slate-900 dark:text-white">Emergency Fund</span>
-                    <span className="text-slate-500">$4,500 / $5,000</span>
+                    <span className="text-slate-500 dark:text-slate-400 whitespace-nowrap font-medium">$4,500 / $5,000</span>
                   </div>
                   <div className="w-full h-2 bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
                     <div className="h-full bg-purple-500 rounded-full w-[90%]"></div>
                   </div>
                 </div>
                 <div>
-                  <div className="flex justify-between text-sm mb-2">
+                  <div className="flex items-center justify-between text-xs sm:text-sm mb-2 gap-2">
                     <span className="font-medium text-slate-900 dark:text-white">New Car</span>
-                    <span className="text-slate-500">$8,500 / $10,000</span>
+                    <span className="text-slate-500 dark:text-slate-400 whitespace-nowrap font-medium">$8,500 / $10,000</span>
                   </div>
                   <div className="w-full h-2 bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
                     <div className="h-full bg-emerald-500 rounded-full w-[85%]"></div>
                   </div>
                 </div>
                 <div>
-                  <div className="flex justify-between text-sm mb-2">
+                  <div className="flex items-center justify-between text-xs sm:text-sm mb-2 gap-2">
                     <span className="font-medium text-slate-900 dark:text-white">Vacation</span>
-                    <span className="text-slate-500">$1,200 / $3,000</span>
+                    <span className="text-slate-500 dark:text-slate-400 whitespace-nowrap font-medium">$1,200 / $3,000</span>
                   </div>
                   <div className="w-full h-2 bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
                     <div className="h-full bg-blue-500 rounded-full w-[40%]"></div>
@@ -127,19 +127,21 @@ export function Showcases() {
           </AnimatedSection>
 
           {/* Financial Health Showcase */}
-          <AnimatedSection delay={0.3} className="h-full">
-            <div className="glass-card rounded-2xl p-8 h-full flex flex-col">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 rounded-full bg-rose-100 dark:bg-rose-900/50 flex items-center justify-center text-rose-600 dark:text-rose-400">
-                  <HeartPulse className="w-5 h-5" />
+          <AnimatedSection delay={0.3} className="h-full sm:col-span-2 lg:col-span-1">
+            <div className="glass-card rounded-2xl p-6 sm:p-8 h-full flex flex-col sm:flex-row lg:flex-col items-center justify-between gap-6">
+              <div className="sm:max-w-md lg:max-w-none text-left">
+                <div className="flex items-center gap-3 mb-4 sm:mb-6">
+                  <div className="w-10 h-10 rounded-full bg-rose-100 dark:bg-rose-900/50 flex items-center justify-center text-rose-600 dark:text-rose-400">
+                    <HeartPulse className="w-5 h-5" />
+                  </div>
+                  <h3 className="font-semibold text-lg text-slate-900 dark:text-white">Financial Health</h3>
                 </div>
-                <h3 className="font-semibold text-lg text-slate-900 dark:text-white">Financial Health</h3>
+                <p className="text-slate-600 dark:text-slate-400 mb-0">
+                  Get an instant read on your financial stability with our proprietary health score algorithm that tracks liquidity, debt ratio, and savings velocity.
+                </p>
               </div>
-              <p className="text-slate-600 dark:text-slate-400 mb-8 flex-grow">
-                Get an instant read on your financial stability with our proprietary health score.
-              </p>
               
-              <div className="flex flex-col items-center justify-center mt-auto">
+              <div className="flex flex-col items-center justify-center flex-shrink-0 mt-auto sm:mt-0 lg:mt-auto">
                 <div className="relative w-32 h-32 mb-4">
                   <svg viewBox="0 0 100 100" className="w-full h-full transform -rotate-90">
                     <circle cx="50" cy="50" r="45" fill="none" stroke="currentColor" className="text-slate-200 dark:text-slate-800" strokeWidth="10" />
