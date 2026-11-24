@@ -5,7 +5,7 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { Play, CheckCircle2, ShieldCheck, X, Sparkles } from "lucide-react";
 import heroMobileImg from "@/assets/hero/Saviora-mobile-screen.png";
-import heroLaptopImg from "@/assets/hero/Saviora_Financial_Dashboard.png";
+import heroLaptopImg from "@/assets/hero/Saviora_Financial_Dashboard_1.png.png";
 import googlePlayBadgeImg from "@/assets/hero/google-play.png";
 
 export function Hero() {
@@ -13,7 +13,7 @@ export function Hero() {
 
   return (
     <section className="relative pt-32 sm:pt-36 lg:pt-38 pb-16 lg:pb-24 overflow-hidden bg-white dark:bg-slate-950">
-      
+
       {/* Subtle Background Radial Glow */}
       <div className="absolute inset-0 w-full h-full pointer-events-none overflow-hidden z-0">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-[1400px] h-[520px] bg-[radial-gradient(ellipse_75%_55%_at_50%_0%,rgba(34,197,94,0.10),transparent_75%)] dark:bg-[radial-gradient(ellipse_75%_55%_at_50%_0%,rgba(34,197,94,0.14),transparent_75%)]" />
@@ -22,7 +22,7 @@ export function Hero() {
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-10 xl:gap-16 items-center">
-          
+
           {/* ==================================================== */}
           {/* LEFT COLUMN: Headline, copy, CTAs & Trust Badges */}
           {/* ==================================================== */}
